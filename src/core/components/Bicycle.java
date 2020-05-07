@@ -1,4 +1,11 @@
 package core.components;
 
-public class Bicycle {
+public abstract class Bicycle {
+    private final int id = generateUniqueID();
+    private static int numberOfBicycles = 0;
+
+    private int generateUniqueID() {
+        return ++numberOfBicycles;
+    }
+
 }
