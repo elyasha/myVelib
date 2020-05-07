@@ -1,4 +1,4 @@
 package core;
 
-public class Vmax {
+public class Vmax extends Card {
 }

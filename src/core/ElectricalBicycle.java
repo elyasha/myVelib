@@ -1,4 +1,4 @@
 package core;
 
-public class ElectricalBicycle {
+public class ElectricalBicycle extends Bicycle {
 }

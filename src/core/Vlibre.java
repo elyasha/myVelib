@@ -1,4 +1,4 @@
 package core;
 
-public class Vlibre {
+public class Vlibre extends Card {
 }

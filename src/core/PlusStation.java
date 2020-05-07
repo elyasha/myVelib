@@ -1,4 +1,4 @@
 package core;
 
-public class PlusStation {
+public class PlusStation extends Station {
 }
