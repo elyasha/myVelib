@@ -8,5 +8,11 @@ public abstract class Station {
         return ++numberOfStations;
     }
 
+    private int numberOfParkingSlots;
+    private float latitude;
+    private float longitude;
+    private String status;  // Can be "on service" of "offline"
+
+
 
 }
