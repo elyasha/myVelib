@@ -26,3 +26,8 @@ hs_err_pid*
 .idea/
 MyVelib.iml
 
+/bin/
+
+.classpath
+
+.project
