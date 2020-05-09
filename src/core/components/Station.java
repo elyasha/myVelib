@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Station {
-    private final int id = generateUniqueID();
+    private final int id;
     private static int numberOfStations = 0;
  
     private int numberOfParkingSlots;
@@ -14,6 +14,7 @@ public abstract class Station {
     List<ParkingSlot> parkingSlots = new ArrayList<ParkingSlot>();
     
     public Station(int numberOfParkingSlots, float latitude, float longitude, boolean status) {
+    	this.id = generateUniqueID();
     	this.latitude = latitude;
     	this.longitude = longitude;
     	this.status = status;

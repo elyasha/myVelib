@@ -19,6 +19,6 @@ public class User {
     private float timeCreditBalance = 0;  // [minutes]
     private float allMoneyCharged = 0;
     private float currentMoneyCharged;
-
-
+    
+    
 }
