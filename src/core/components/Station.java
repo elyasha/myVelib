@@ -27,7 +27,7 @@ public abstract class Station {
         return ++numberOfStations;
     }
     
-    private List generateAllSlots(List parkingSlots) {
+    private List<ParkingSlot> generateAllSlots(List<ParkingSlot> parkingSlots) {
     	for (int cpt = 0; cpt < this.numberOfParkingSlots; cpt++) {
     		ParkingSlot slot = new ParkingSlot();
     		parkingSlots.add(slot);
@@ -35,6 +35,9 @@ public abstract class Station {
     	return parkingSlots;
     }
     
+    public int getId() {
+    	return this.id;
+    }
     public int getNumberOfParkingSlots() {
     	return this.numberOfParkingSlots;
     }
@@ -43,12 +46,20 @@ public abstract class Station {
     	return this.status;
     }
     
-    public List getPostition() {
+    public void setStatus(boolean new_status) {
+    	this.status = new_status;
+    }
+    
+    public List<Float> getPostition() {
     	List<Float> coords = new ArrayList<Float>(2);
     	coords.add(this.latitude);
     	coords.add(this.longitude);
     	return coords;
     }
     
+    public void setPostition(float latitude, float longitude) {
+    	this.latitude = latitude;
+    	this.longitude = longitude;
+    }
     
 }
