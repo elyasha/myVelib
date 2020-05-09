@@ -1,5 +1,7 @@
 package core.components;
 
+import java.util.Objects;
+
 public class ParkingSlot {
 	private final int id = generateUniqueID();
 	private static int numberOfSlots = 0;
@@ -25,4 +27,29 @@ public class ParkingSlot {
 		return this.id;
 	}
 
+	public static int getNumberOfSlots() {
+		return numberOfSlots;
+	}
+
+	@Override
+	public String toString() {
+		return "ParkingSlot{" +
+				"id=" + id +
+				", state=" + state +
+				'}';
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		ParkingSlot that = (ParkingSlot) o;
+		return id == that.id &&
+				state == that.state;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, state);
+	}
 }
