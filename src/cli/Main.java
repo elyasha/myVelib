@@ -1,6 +1,6 @@
 package cli;
 
-import cli.commands.AddUser;
+import cli.commands.*;
 
 public class Main {
 
@@ -13,47 +13,50 @@ public class Main {
         }
 
         // Check the type of first argument and delegate the work for each class
-        if (args[0].equals("addUser")) {
-            // TODO: implement the command
-            AddUser.main(args);
+        switch (args[0]) {
+            case "addUser":
+                AddUser.main(args);
 
-        } else if (args[0].equals("display")) {
+                break;
+            case "display":
+                Display.main(args);
+                break;
+            case "displayStation":
+                DisplayStation.main(args);
+                break;
+            case "displayUser":
+                DisplayUser.main(args);
+                break;
+            case "exit":
+                Exit.main(args);
+                break;
+            case "help":
+                Help.main(args);
+                break;
+            case "offline":
+                Offline.main(args);
+                break;
+            case "online":
+                Online.main(args);
+                break;
+            case "rentBike":
+                RentBike.main(args);
+                break;
+            case "returnBike":
+                ReturnBike.main(args);
+                break;
+            case "setup":
+                Setup.main(args);
 
-            // TODO: implement the command
-        } else if (args[0].equals("displayStation")) {
+                break;
+            case "sortStation":
+                SortStation.main(args);
 
-            // TODO: implement the command
-        } else if (args[0].equals("displayUser")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("exit")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("help")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("offline")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("online")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("rentBike")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("returnBike")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("setup")) {
-            // TODO: implement the command
-
-        } else if (args[0].equals("sortStation")) {
-            // TODO: implement the command
-
-        } else {
-            System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help]");
-        // TODO: Learn how to use exceptions and error in Java
-            System.exit(1);
+                break;
+            default:
+                System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help]");
+                // TODO: Learn how to use exceptions and error in Java
+                System.exit(1);
         }
 
     }
