@@ -1,10 +1,21 @@
 package cli;
 
+import cli.commands.AddUser;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        // Check in there is any argument for the program
+        if (args.length == 0) {
+            System.out.println("Please add some argument! For help: myvelib help");
+            System.exit(1);
+        }
+
+        // Check the type of first argument and delegate the work for each class
         if (args[0].equals("addUser")) {
             // TODO: implement the command
+            AddUser.main(args);
 
         } else if (args[0].equals("display")) {
 
@@ -42,6 +53,7 @@ public class Main {
         } else {
             System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help]");
         // TODO: Learn how to use exceptions and error in Java
+            System.exit(1);
         }
 
     }
