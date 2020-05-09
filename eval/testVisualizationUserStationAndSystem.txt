@@ -1,0 +1,13 @@
+Visualisation of user, station and system state
+1. a manager (or a user) of myVelib request to see the current state of a user with given
+ID
+2. the system displays a report of the requested user (including its balance, time credit,
+number of rides, etc).
+3. a manager (or a user) of myVelib request to see the current state of a station with
+given ID
+4. the system displays a report of the requested station (including num. of free/occupied
+slots, current state, its occupation etc)
+5. a manager (or a user) of myVelib request to see the current state of a the entire
+system
+6. the system displays a summary report of the system (including list of online/oine
+stations, list of users of myVelib , etc.)
