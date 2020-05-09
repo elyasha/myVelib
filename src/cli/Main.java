@@ -45,9 +45,11 @@ public class Main {
             case "returnBike":
                 ReturnBike.main(args);
                 break;
+            case "runTest":
+                RunTest.main(args);
+                break;
             case "setup":
                 Setup.main(args);
-
                 break;
             case "sortStation":
                 SortStation.main(args);
