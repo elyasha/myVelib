@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class Setup {
+public class Setup implements Command {
     /**
      *
      * setup <velibnetworkName>: to create a myVelib network with given name and

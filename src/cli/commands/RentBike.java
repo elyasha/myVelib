@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class RentBike {
+public class RentBike implements Command {
     /**
      *
      * rentBike <userID, stationID> : to let the user userID renting a bike from station

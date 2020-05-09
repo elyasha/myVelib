@@ -1,4 +1,4 @@
 package cli.commands;
 
-public class Help {
+public class Help implements Command {
 }

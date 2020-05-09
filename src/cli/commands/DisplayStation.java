@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class DisplayStation {
+public class DisplayStation implements Command {
     /**
      *
      * displayStation<velibnetworkName, stationID> : to display the statistics (as of

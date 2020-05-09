@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class AddUser {
+public class AddUser implements Command {
     /**
      *
      * addUser <userName,cardType, velibnetworkName> :

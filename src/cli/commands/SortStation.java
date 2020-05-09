@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class SortStation {
+public class SortStation implements Command {
     /**
      *
      * sortStation<velibnetworkName, sortpolicy> : to display the stations in increas-

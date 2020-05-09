@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class ReturnBike {
+public class ReturnBike implements Command {
     /**
      *
      * returnBike <userID, stationID, time> : to let the user userID returning a bike

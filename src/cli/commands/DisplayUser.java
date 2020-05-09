@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class DisplayUser {
+public class DisplayUser implements Command {
     /**
      *
      * displayUser<velibnetworkName, userID> : to display the statistics (as of Sec-

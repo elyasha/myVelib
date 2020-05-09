@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class Offline {
+public class Offline implements Command {
     /**
      *
      * offline <velibnetworkName, stationID> : to put offline the station stationID

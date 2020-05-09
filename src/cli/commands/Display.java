@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class Display {
+public class Display implements Command {
     /**
      *
      * display <velibnetworkName>: to display the entire status (stations, parking bays,

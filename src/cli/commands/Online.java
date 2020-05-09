@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class Online {
+public class Online implements Command {
     /**
      *
      * online <velibnetworkName, stationID> : to put online the station stationID of
