@@ -7,16 +7,16 @@ public abstract class Station {
     private final int id = generateUniqueID();
     private static int numberOfStations = 0;
 
+    private int generateUniqueID() {
+        return ++numberOfStations;
+    }
     private int numberOfParkingSlots;
     private float latitude;
     private float longitude;
     private boolean status;  // Can be "on service" of "offline"
-    List<ParkingSlot> parkingSlots = new ArrayList<ParkingSlot>();
+    private List<ParkingSlot> parkingSlots = new ArrayList<ParkingSlot>();
 
 
-    private int generateUniqueID() {
-        return ++numberOfStations;
-    }
 
     private List<ParkingSlot> generateAllSlots(List<ParkingSlot> parkingSlots) {
         for (int cpt = 0; cpt < this.numberOfParkingSlots; cpt++) {
@@ -54,4 +54,15 @@ public abstract class Station {
         this.longitude = longitude;
     }
 
+    public void setNumberOfParkingSlots(int numberOfParkingSlots) {
+        this.numberOfParkingSlots = numberOfParkingSlots;
+    }
+
+    public List<ParkingSlot> getParkingSlots() {
+        return parkingSlots;
+    }
+
+    public void setParkingSlots(List<ParkingSlot> parkingSlots) {
+        this.parkingSlots = parkingSlots;
+    }
 }
