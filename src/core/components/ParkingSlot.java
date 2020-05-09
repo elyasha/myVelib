@@ -2,19 +2,19 @@ package core.components;
 
 public class ParkingSlot {
 	private final int id = generateUniqueID();
-	private static int numberOfParkingSlots = 0;
+	private static int numberOfSlots = 0;
 	private int state; // 0 = free, 1 = occupied and 2 out-of-order
 	
 	private int generateUniqueID() {
-        return ++numberOfParkingSlots;
+        return ++numberOfSlots;
     }
 	
 	public ParkingSlot() {
 		this.state = 0;
 	}
 	
-	public void setState(int new_state) {
-		this.state = new_state;
+	public void setState(int state) {
+		this.state = state;
 	}
 	
 	public int getState() {
