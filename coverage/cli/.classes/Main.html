@@ -1,0 +1,148 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Main</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">cli</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Main (cli)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Main</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 34)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package cli;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import cli.commands.*;
+<i>4</i>&nbsp;
+<b class="nc"><i>5</i>&nbsp;public class Main {</b>
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;    public static void main(String[] args) {
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;        // Check in there is any argument for the program
+<b class="nc"><i>10</i>&nbsp;        if (args.length == 0) {</b>
+<b class="nc"><i>11</i>&nbsp;            System.out.println(&quot;Please add some argument! For help: myvelib help&quot;);</b>
+<b class="nc"><i>12</i>&nbsp;            System.exit(1);</b>
+<i>13</i>&nbsp;        }
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;        // Check the type of first argument and delegate the work for each class
+<b class="nc"><i>16</i>&nbsp;        switch (args[0]) {</b>
+<i>17</i>&nbsp;            case &quot;addUser&quot;:
+<b class="nc"><i>18</i>&nbsp;                AddUser.main(args);</b>
+<i>19</i>&nbsp;
+<b class="nc"><i>20</i>&nbsp;                break;</b>
+<i>21</i>&nbsp;            case &quot;display&quot;:
+<b class="nc"><i>22</i>&nbsp;                Display.main(args);</b>
+<b class="nc"><i>23</i>&nbsp;                break;</b>
+<i>24</i>&nbsp;            case &quot;displayStation&quot;:
+<b class="nc"><i>25</i>&nbsp;                DisplayStation.main(args);</b>
+<b class="nc"><i>26</i>&nbsp;                break;</b>
+<i>27</i>&nbsp;            case &quot;displayUser&quot;:
+<b class="nc"><i>28</i>&nbsp;                DisplayUser.main(args);</b>
+<b class="nc"><i>29</i>&nbsp;                break;</b>
+<i>30</i>&nbsp;            case &quot;exit&quot;:
+<b class="nc"><i>31</i>&nbsp;                Exit.main(args);</b>
+<b class="nc"><i>32</i>&nbsp;                break;</b>
+<i>33</i>&nbsp;            case &quot;help&quot;:
+<b class="nc"><i>34</i>&nbsp;                Help.main(args);</b>
+<b class="nc"><i>35</i>&nbsp;                break;</b>
+<i>36</i>&nbsp;            case &quot;offline&quot;:
+<b class="nc"><i>37</i>&nbsp;                Offline.main(args);</b>
+<b class="nc"><i>38</i>&nbsp;                break;</b>
+<i>39</i>&nbsp;            case &quot;online&quot;:
+<b class="nc"><i>40</i>&nbsp;                Online.main(args);</b>
+<b class="nc"><i>41</i>&nbsp;                break;</b>
+<i>42</i>&nbsp;            case &quot;rentBike&quot;:
+<b class="nc"><i>43</i>&nbsp;                RentBike.main(args);</b>
+<b class="nc"><i>44</i>&nbsp;                break;</b>
+<i>45</i>&nbsp;            case &quot;returnBike&quot;:
+<b class="nc"><i>46</i>&nbsp;                ReturnBike.main(args);</b>
+<b class="nc"><i>47</i>&nbsp;                break;</b>
+<i>48</i>&nbsp;            case &quot;runTest&quot;:
+<b class="nc"><i>49</i>&nbsp;                RunTest.main(args);</b>
+<b class="nc"><i>50</i>&nbsp;                break;</b>
+<i>51</i>&nbsp;            case &quot;setup&quot;:
+<b class="nc"><i>52</i>&nbsp;                Setup.main(args);</b>
+<b class="nc"><i>53</i>&nbsp;                break;</b>
+<i>54</i>&nbsp;            case &quot;sortStation&quot;:
+<b class="nc"><i>55</i>&nbsp;                SortStation.main(args);</b>
+<i>56</i>&nbsp;
+<b class="nc"><i>57</i>&nbsp;                break;</b>
+<i>58</i>&nbsp;            default:
+<b class="nc"><i>59</i>&nbsp;                System.out.println(&quot;Not the good usage of the myVelib program. Please see the documentation [myvelib help]&quot;);</b>
+<i>60</i>&nbsp;                // TODO: Learn how to use exceptions and error in Java
+<b class="nc"><i>61</i>&nbsp;                System.exit(1);</b>
+<i>62</i>&nbsp;        }
+<i>63</i>&nbsp;
+<b class="nc"><i>64</i>&nbsp;    }</b>
+<i>65</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-21 02:19</div>
+</div>
+</body>
+</html>
