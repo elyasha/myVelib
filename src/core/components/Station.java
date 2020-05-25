@@ -65,4 +65,23 @@ public abstract class Station {
     public void setParkingSlots(List<ParkingSlot> parkingSlots) {
         this.parkingSlots = parkingSlots;
     }
+    
+    public boolean GetExistTypeBike(Bicycle bike) {
+    	for(ParkingSlot slot: parkingSlots) {
+    		if (slot.getTypeBike()==bike) {
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    
+    public boolean GetOneSlotFree() {
+    	for(ParkingSlot slot: parkingSlots) {
+    		if (slot.getState() == 0) {
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    
 }
