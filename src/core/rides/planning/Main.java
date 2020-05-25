@@ -27,6 +27,8 @@ public class Main {
 			// Compute the nearest station for the starting point
 			distanceSq = Math.pow(coords.get(0)- coordsStart.get(0), 2)+Math.pow(coords.get(1)- coordsStart.get(1), 2);
 			distance = Math.sqrt(distanceSq);
+			
+			// We want to be sure there exists 'our' bike in the station
 			if (distance < bestDistanceStart && station.GetExistTypeBike(bike)) {
 				bestDistanceStart =  distance;
 				bestStationStart = station;
@@ -36,6 +38,8 @@ public class Main {
 			// Compute the nearest station for the ending point
 			distanceSq = Math.pow(coords.get(0)- coordsEnd.get(0), 2)+Math.pow(coords.get(1)- coordsEnd.get(1), 2);
 			distance = Math.sqrt(distanceSq);
+			
+			// We want to be sure there exists a free slot in the station
 			if (distance < bestDistanceEnd && station.GetOneSlotFree()) {
 				bestDistanceEnd =  distance;
 				bestStationEnd = station;
