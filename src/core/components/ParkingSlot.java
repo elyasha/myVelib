@@ -6,6 +6,7 @@ public class ParkingSlot {
 	private final int id = generateUniqueID();
 	private static int numberOfSlots = 0;
 	private int state; // 0 = free, 1 = occupied and 2 out-of-order
+	private Bicycle bike;
 	
 	private int generateUniqueID() {
         return ++numberOfSlots;
@@ -37,6 +38,14 @@ public class ParkingSlot {
 				"id=" + id +
 				", state=" + state +
 				'}';
+	}
+	
+	public void setTypeBike(Bicycle bike) {
+		this.bike = bike;
+	}
+	
+	public Bicycle getTypeBike() {
+		return this.bike;
 	}
 
 	@Override
