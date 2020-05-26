@@ -78,7 +78,7 @@ closest station to the destination location exists). If no such a \plus" station
 then this policy behaves normally (as a minimal walking distance).
 - [ ] preservation of uniformity of bicycles distribution amongst stations: with
 this policy the choice of the source and destination station is aected by the number
-of available bikes (at source station) and free slots (at destination). Specically, let
+of available bikes (at source station) and free slots (at destination). Specifically, let
 s0 be the closest station to the starting location with at least one available bike of the
 wanted kind, and sd be the station closest to the destination location with at least
 one free parking slot. Then if a station s0
@@ -114,13 +114,13 @@ those based on the following criteria:
 - [ ] most used station: stations are sorted w.r.t. the total number of renting + drop-
 ping operations
 - [ ] least occupied station: stations are sorted w.r.t. the rate of occupation (ratio
-between free time over occupied time of parking bays). This allows for gure out
+between free time over occupied time of parking bays). This allows for figure out
 policy to increase the use of less occupied stations (for example by electing the least
 occupied stations to the \plus" category so to attract users to drop bikes).
 
 Remark (``an OPEN-CLOSE solution``). Your design should match as much as possible
 the open-close principle. Using of design patterns should be properly documented in the
-project report explicitly describing to to full which requirement of the myVelib system a
+project report explicitly describing to to fulfil which requirement of the myVelib system a
 design pattern has been applied.
 
 ## 2.5 Use case scenario
@@ -177,8 +177,8 @@ simulations (by dierent users, on dierent stations, and with dierent duration
 user are displayed
 - [ ]  the statistics (computed w.r.t. the rental records added in previous step) for each
 station are displayed
-- [ ] stations are displayed sorted w.r.t. the most used station (rst)
-- [ ] stations are displayed sorted w.r.t. the least occupied station (rst)
+- [ ] stations are displayed sorted w.r.t. the most used station (first)
+- [ ] stations are displayed sorted w.r.t. the least occupied station (first)
 
 
 # 3 Part 2: myVelib user interface
@@ -256,4 +256,39 @@ testScenarioNoutput.txt.
 
 # 4 Project testing
 
+In order to evaluate your implementations we (the Testers of your project) require you (the
+Developers) to equip your projects with both standard Junit tests (for each class) and
+a test scenario, described below. Both JUnit tests and the test scenario are mandatory
+parts of your project realisations, as we (the Testers) will resort to both of them to test
+your implementations.
 
+## 4.1 JUnit tests
+
+Each class in your project must contain JUnit tests for the most significant methods (i.e.
+excluded getters and setters).
+``Hint``: if you follow a ``Test Driven Development`` approach you will end up naturally having
+all JUnit tests for all of your classes.
+
+## 4.2 Test scenario
+
+In order to test your solution you are required to include in the project
+- [ ] one initial configuration file (called my velib.ini), automatically loaded at starting
+of the system,
+- [ ] at least one test-scenario file (called testScenario1.txt).
+
+``Configuration file``: An initial configuration file must ensure that, at startup (after loading this file) the system contains at leas the \standard" setup corresponding to the default
+version of the CLI command setup.
+
+``Test-scenario file``: A test-scenario file contains a number of CLUI commands whose
+execution allows for reproducing a given test scenario, typically setting up a given config-
+uration of the myvelib system (i.e. creation of some velib network, adding of some users,
+simulation of some rental/returning of bikes, simulation of planning of a ride, computation
+of statistics for the stations and the users, etc.). You may include several test-scenario
+files (e.g. testScenario1.txt, testScenario2.txt, ...). For each test-scenario file you
+provide us with you MUST include a description of its content (what does it test?) in the
+report. We are going to run each test-scenario file through the runtest command of the
+CLUI (see CLUI commands above):
+
+````shell
+runtest testScenario1.txt
+````
