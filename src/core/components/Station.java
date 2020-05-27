@@ -1,61 +1,41 @@
 package core.components;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Station {
     private final int id = generateUniqueID();
     private static int numberOfStations = 0;
+    private Point coordinate;
+    private boolean onService;  // Can be "on service" (true) of "offline" (false)
+    private List<ParkingSlot> parkingSlots;
+    private Terminal stationTerminal;
 
     private int generateUniqueID() {
         return ++numberOfStations;
     }
-    private int numberOfParkingSlots;
-    private float latitude;
-    private float longitude;
-    private boolean status;  // Can be "on service" of "offline"
-    private List<ParkingSlot> parkingSlots = new ArrayList<ParkingSlot>();
 
-
-
-    private List<ParkingSlot> generateAllSlots(List<ParkingSlot> parkingSlots) {
-        for (int cpt = 0; cpt < this.numberOfParkingSlots; cpt++) {
-            ParkingSlot slot = new ParkingSlot();
-            parkingSlots.add(slot);
-        }
-        return parkingSlots;
-    }
+    // Getters and setters
 
     public int getId() {
         return this.id;
     }
 
-    public int getNumberOfParkingSlots() {
-        return this.numberOfParkingSlots;
+    public boolean isOnService() {
+        return onService;
     }
 
-    public boolean getStatus() {
-        return this.status;
+    public void setOnService(boolean onService) {
+        this.onService = onService;
     }
 
-    public void setStatus(boolean new_status) {
-        this.status = new_status;
+    public Point getCoordinate() {
+        return coordinate;
     }
 
-    public List<Float> getPosition() {
-        List<Float> coords = new ArrayList<Float>(2);
-        coords.add(this.latitude);
-        coords.add(this.longitude);
-        return coords;
-    }
-
-    public void setPosition(float latitude, float longitude) {
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
-
-    public void setNumberOfParkingSlots(int numberOfParkingSlots) {
-        this.numberOfParkingSlots = numberOfParkingSlots;
+    public void setCoordinate(Point coordinate) {
+        this.coordinate = coordinate;
     }
 
     public List<ParkingSlot> getParkingSlots() {
@@ -65,7 +45,25 @@ public abstract class Station {
     public void setParkingSlots(List<ParkingSlot> parkingSlots) {
         this.parkingSlots = parkingSlots;
     }
-    
+
+    public Terminal getStationTerminal() {
+        return stationTerminal;
+    }
+
+    public static int getNumberOfStations() {
+        return numberOfStations;
+    }
+
+    // Written methods
+
+    private List<ParkingSlot> generateAllSlots(List<ParkingSlot> parkingSlots) {
+        for (int cpt = 0; cpt < this.parkingSlots.size(); cpt++) {
+            ParkingSlot slot = new ParkingSlot();
+            parkingSlots.add(slot);
+        }
+        return parkingSlots;
+    }
+
     public boolean GetExistTypeBike(Bicycle bike) {
     	for(ParkingSlot slot: parkingSlots) {
     		if (slot.getTypeBike()==bike) {
