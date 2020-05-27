@@ -17,7 +17,7 @@ bicycles), etc.
 # 2 Requirements (core application)
 
 ## 2.1 Components of my Velib system
-- [ ] Station : a station is where bicycles can be ``rented`` and ``dropped``. It consists of a
+- [x] Station : a station is where bicycles can be ``rented`` and ``dropped``. It consists of a
                 number of ``parking slots`` where bikes are stored and of a ``terminal`` which users can 
                 interact with in order for ``renting bicycles``. Parking slots can be be occupied by a
                 ``bicycle``, ``free`` or ``out-of-order``. A station is located in a specific place specified by ``GPS
@@ -28,15 +28,15 @@ bicycles), etc.
                 has a ``unique numerical ID`` and so each parking slot (within a station) has a unique
                 numerical ID.
 
-- [ ] Bicycle : there exists two kind of bicycles, ``mechanical`` and ``electrical``. Each bicycle
+- [x] Bicycle : there exists two kind of bicycles, ``mechanical`` and ``electrical``. Each bicycle
                 has a unique numerical ID.
-- [ ] User : has a ``name``, a ``unique numerical ID``, a ``geographical position`` (GPS coordinates)
+- [x] User : has a ``name``, a ``unique numerical ID``, a ``geographical position`` (GPS coordinates)
              a ``credit card`` and might have a ``registration card``. In case a user holds a card she has
              also a ``time-credit balance`` (expressed in minutes) representing the credit gained by
              returning bicycles to "plus" stations. The time credit is used to compute the actual
              cost of a bike ride. The user has also a ``balance of total charges`` representing the total
              amount of money she has been charged for using bicycle of the myVelib system.
-- [ ] Cards : there are two kinds of registration cards: ``Vlibre`` and ``Vmax``
+- [x] Cards : there are two kinds of registration cards: ``Vlibre`` and ``Vmax``
 
 ## 2.1.1 Cost for using the bicycles
 On returning of a velib to a station the system will (automatically) compute the corresponding cost of the ride based on the ride duration (in minutes), the kind of bike, and on
