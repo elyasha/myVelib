@@ -10,7 +10,7 @@ public abstract class Station {
     private Point coordinate;
     private boolean onService;  // Can be "on service" (true) of "offline" (false)
     private List<ParkingSlot> parkingSlots;
-    private Terminal stationTerminal;
+    private Terminal terminal;
 
     private int generateUniqueID() {
         return ++numberOfStations;
@@ -47,7 +47,7 @@ public abstract class Station {
     }
 
     public Terminal getStationTerminal() {
-        return stationTerminal;
+        return terminal;
     }
 
     public static int getNumberOfStations() {
