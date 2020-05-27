@@ -1,6 +1,7 @@
 package core.components;
 
 
+import java.awt.*;
 import java.util.Objects;
 
 public class User {
@@ -13,14 +14,30 @@ public class User {
 
     private String name;
     private String lastName;
-    private double latitude;
-    private double longitude;
-    private Card userCard;
+    private Point coordinate;
+    private Card card; // registration card
     private int creditCardNumber;
-    private int registrationCard;
     private float timeCreditBalance = 0;  // [minutes]
     private float allMoneyCharged = 0;
-    private float currentMoneyCharged;
+    private float currentMoneyCharged = 0;
+
+
+    // Constructor
+
+    public User(String name, String lastName, Point coordinate, int creditCardNumber) {
+        this.name = name;
+        this.lastName = lastName;
+        this.coordinate = coordinate;
+        this.creditCardNumber = creditCardNumber;
+        this.card = null;
+        this.timeCreditBalance = 0;
+        this.allMoneyCharged = 0;
+        this.currentMoneyCharged = 0;
+    }
+
+
+    // Getters
+
 
     public int getId() {
         return id;
@@ -38,24 +55,16 @@ public class User {
         return lastName;
     }
 
-    public double getLatitude() {
-        return latitude;
+    public Point getCoordinate() {
+        return coordinate;
     }
 
-    public double getLongitude() {
-        return longitude;
-    }
-
-    public Card getUserCard() {
-        return userCard;
+    public Card getCard() {
+        return card;
     }
 
     public int getCreditCardNumber() {
         return creditCardNumber;
-    }
-
-    public int getRegistrationCard() {
-        return registrationCard;
     }
 
     public float getTimeCreditBalance() {
@@ -70,6 +79,8 @@ public class User {
         return currentMoneyCharged;
     }
 
+    // Setters
+
     public void setName(String name) {
         this.name = name;
     }
@@ -78,24 +89,16 @@ public class User {
         this.lastName = lastName;
     }
 
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
+    public void setCoordinate(Point coordinate) {
+        this.coordinate = coordinate;
     }
 
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
-
-    public void setUserCard(Card userCard) {
-        this.userCard = userCard;
+    public void setCard(Card card) {
+        this.card = card;
     }
 
     public void setCreditCardNumber(int creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
-    }
-
-    public void setRegistrationCard(int registrationCard) {
-        this.registrationCard = registrationCard;
     }
 
     public void setTimeCreditBalance(float timeCreditBalance) {
@@ -116,11 +119,9 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                ", userCard=" + userCard +
+                ", coordinate=" + coordinate +
+                ", card=" + card +
                 ", creditCardNumber=" + creditCardNumber +
-                ", registrationCard=" + registrationCard +
                 ", timeCreditBalance=" + timeCreditBalance +
                 ", allMoneyCharged=" + allMoneyCharged +
                 ", currentMoneyCharged=" + currentMoneyCharged +
@@ -132,21 +133,30 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id &&
-                Double.compare(user.latitude, latitude) == 0 &&
-                Double.compare(user.longitude, longitude) == 0 &&
-                creditCardNumber == user.creditCardNumber &&
-                registrationCard == user.registrationCard &&
-                Float.compare(user.timeCreditBalance, timeCreditBalance) == 0 &&
-                Float.compare(user.allMoneyCharged, allMoneyCharged) == 0 &&
-                Float.compare(user.currentMoneyCharged, currentMoneyCharged) == 0 &&
-                Objects.equals(name, user.name) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(userCard, user.userCard);
+        return id == user.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, lastName, latitude, longitude, userCard, creditCardNumber, registrationCard, timeCreditBalance, allMoneyCharged, currentMoneyCharged);
+        return Objects.hash(id, name, lastName, coordinate, card, creditCardNumber, timeCreditBalance, allMoneyCharged, currentMoneyCharged);
     }
+
+    // Written methods
+
+    public void addCard(String cardType) {
+
+        if (cardType.equals("Vlible")) {
+            this.card = new Vlibre();
+        }
+        else if (cardType.equals("Vmax")) {
+            this.card = new Vmax();
+        }
+        else {
+            System.out.println("Error! The type does not exist.");
+        }
+    }
+
+
+
+
 }
