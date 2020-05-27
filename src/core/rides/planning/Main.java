@@ -1,54 +1,54 @@
 package core.rides.planning;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import core.components.*;
+import core.system.MyVelibSystem;
 
 public class Main {
-	
-	
-	public List<Station> getBestStation(List<Float> coordsStart,List<Float> coordsEnd, Bicycle bike) {
-		Manager manager = new Manager();
-		List<Float> coords = new ArrayList<Float>(2);
-		double distance, distanceSq;
-		double bestDistanceStart = Double.POSITIVE_INFINITY; 
-		double bestDistanceEnd = Double.POSITIVE_INFINITY;
-		Station bestStationStart = null;
-		Station bestStationEnd = null;
-		List<Station> allStations;
-		List<Station> bestStations = new ArrayList<Station>(2);
-		
-		allStations = manager.getAllStations();
-		
-		
-		for (Station station : allStations) {
-			
-			coords = station.getPosition();
-			
-			// Compute the nearest station for the starting point
-			distanceSq = Math.pow(coords.get(0)- coordsStart.get(0), 2)+Math.pow(coords.get(1)- coordsStart.get(1), 2);
-			distance = Math.sqrt(distanceSq);
-			
-			// We want to be sure there exists 'our' bike in the station
-			if (distance < bestDistanceStart && station.GetExistTypeBike(bike)) {
-				bestDistanceStart =  distance;
-				bestStationStart = station;
-			}
-			
-			
-			// Compute the nearest station for the ending point
-			distanceSq = Math.pow(coords.get(0)- coordsEnd.get(0), 2)+Math.pow(coords.get(1)- coordsEnd.get(1), 2);
-			distance = Math.sqrt(distanceSq);
-			
-			// We want to be sure there exists a free slot in the station
-			if (distance < bestDistanceEnd && station.GetOneSlotFree()) {
-				bestDistanceEnd =  distance;
-				bestStationEnd = station;
-			}
-			
-		}
-		bestStations.add(bestStationStart);
-		bestStations.add(bestStationEnd);
-		
-		return bestStations;
-	}
+
+
+    public List<Station> getBestStation(Point coordsStart, Point coordsEnd, Bicycle bike) {
+        MyVelibSystem system = new MyVelibSystem();
+        Point coords;
+        double distance, distanceSq;
+        double bestDistanceStart = Double.POSITIVE_INFINITY;
+        double bestDistanceEnd = Double.POSITIVE_INFINITY;
+        Station bestStationStart = null;
+        Station bestStationEnd = null;
+        List<Station> allStations;
+        List<Station> bestStations = new ArrayList<Station>(2);
+
+        allStations = system.getStations();
+
+
+        for (Station station : allStations) {
+
+            coords = station.getCoordinate();
+
+            // Compute the nearest station for the starting point
+            distance = Math.sqrt(Math.pow(coords.getX()- coordsStart.getX(), 2)+Math.pow(coords.getY()- coordsStart.getY(), 2));
+
+            // We want to be sure there exists 'our' bike in the station
+            if (distance < bestDistanceStart && station.GetExistTypeBike(bike)) {
+                bestDistanceStart =  distance;
+                bestStationStart = station;
+            }
+
+
+            // Compute the nearest station for the ending point
+            distance = Math.sqrt(Math.pow(coords.getX()- coordsEnd.getX(), 2)+Math.pow(coords.getY()- coordsEnd.getY(), 2));
+
+            // We want to be sure there exists a free slot in the station
+            if (distance < bestDistanceEnd && station.GetOneSlotFree()) {
+                bestDistanceEnd =  distance;
+                bestStationEnd = station;
+            }
+
+        }
+        bestStations.add(bestStationStart);
+        bestStations.add(bestStationEnd);
+
+        return bestStations;
+    }
 }
