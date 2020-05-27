@@ -42,9 +42,9 @@ bicycles), etc.
 On returning of a velib to a station the system will (automatically) compute the corresponding cost of the ride based on the ride duration (in minutes), the kind of bike, and on
 the type of card a user has.
 
-- [ ] if a user has ``no card`` the cost is ``1 Euro per hour (for mechanical bikes)`` and ``2 Euro
+- [x] if a user has ``no card`` the cost is ``1 Euro per hour (for mechanical bikes)`` and ``2 Euro
 per hour (for electrical bikes)``
-- [ ] if a user has a ``Vlibre`` card the cost is: ``0 Euro for the first hour then 1 euro per each
+- [x] if a user has a ``Vlibre`` card the cost is: ``0 Euro for the first hour then 1 euro per each
 successive hour (for mechanical)`` and ``1 Euro for the first hour then 2 euros per each
 successive hour (for electrical bikes)``. If a ride lasts longer than 60min the actual
 time balance exceeding 60min is computed by deducing from the user's time-credit
@@ -53,7 +53,7 @@ user won't be charged any extra min (beyond 1h) but it's time-credit will be upd
 to 5min (deducing the 15min in excess to the free hour). On the other hand if the
 ride lasts 135min, the user will be charged for 135-20 = 115min, hence for the 55min
 in excess of an hour, and so on.
-- [ ] if a user has Vmax card the cost is: 0 Euro for the first hour then 1 euro per each successive
+- [x] if a user has Vmax card the cost is: 0 Euro for the first hour then 1 euro per each successive
 hour (independently of the kind of bike)
 
 ## 2.2 Rides planning
