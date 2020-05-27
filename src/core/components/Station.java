@@ -28,6 +28,7 @@ public abstract class Station {
 
     public void setOnService(boolean onService) {
         this.onService = onService;
+        this.terminal.setOnService(onService);
     }
 
     public Point getCoordinate() {
