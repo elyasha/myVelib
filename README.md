@@ -111,8 +111,7 @@ statistics:
 Furthermore myVelib should support dierent policies for sorting stations including
 those based on the following criteria:
 
-- [ ] most used station: stations are sorted w.r.t. the total number of renting + drop-
-ping operations
+- [ ] most used station: stations are sorted w.r.t. the total number of renting + dropping operations
 - [ ] least occupied station: stations are sorted w.r.t. the rate of occupation (ratio
 between free time over occupied time of parking bays). This allows for figure out
 policy to increase the use of less occupied stations (for example by electing the least

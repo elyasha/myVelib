@@ -12,6 +12,7 @@ public abstract class Station {
     private List<ParkingSlot> parkingSlots;
     private Terminal terminal;
     private double money;
+    private int numberOfLocations;
 
     private int generateUniqueID() {
         return ++numberOfStations;
@@ -64,6 +65,14 @@ public abstract class Station {
         this.money = money;
     }
 
+    public int getNumberOfLocations() {
+        return numberOfLocations;
+    }
+
+    public void setNumberOfLocations(int numberOfLocations) {
+        this.numberOfLocations = numberOfLocations;
+    }
+
     // Written methods
 
     private List<ParkingSlot> generateAllSlots(List<ParkingSlot> parkingSlots) {
@@ -114,6 +123,10 @@ public abstract class Station {
         } else {
             this.money -= money;
         }
+    }
+
+    public void addNumberOfLocations(int number) {
+        this.numberOfLocations += number;
     }
     
 }

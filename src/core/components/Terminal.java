@@ -96,6 +96,8 @@ public final class Terminal {
         // Return bicycle
         System.out.println(user + "You rent is finalized!");
 
+        station.addNumberOfLocations(1);
+
 
     }
 

@@ -1,8 +1,3 @@
-Setting up of myVelib
-1. the user sets up an instance of the myVelib system: he/she create a myVelib with N
-stations, summing up to a total of M parking slots, the 70% of which is occupied by
-available bicycles (30% of which are electrical the rest mechanical). The N stations
-should be placed randomly (in a uniform manner) over a square surface of area 1010
-square kilometres (roughly the surface of Paris intramuros).
-2. the user add some user to the myVelib system some of which are card holder, some
-not.
+myvelib setup
+myvelib setup
+myvelib
