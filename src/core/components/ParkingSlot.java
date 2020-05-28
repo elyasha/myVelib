@@ -19,7 +19,20 @@ public class ParkingSlot {
 	public void setState(int state) {
 		this.state = state;
 	}
-	
+
+	public void setState(int state, Bicycle bicycle) {
+		this.state = state;
+		this.bike = bicycle;
+	}
+
+	public Bicycle getBike() {
+		return bike;
+	}
+
+	public void setBike(Bicycle bike) {
+		this.bike = bike;
+	}
+
 	public int getState() {
 		return this.state;
 	}

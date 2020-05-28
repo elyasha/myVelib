@@ -65,7 +65,7 @@ public abstract class Station {
         return parkingSlots;
     }
 
-    public boolean GetExistTypeBike(Bicycle bike) {
+    public boolean getExistTypeBike(Bicycle bike) {
     	for(ParkingSlot slot: parkingSlots) {
     		if (slot.getTypeBike()==bike) {
     			return true;
@@ -74,13 +74,25 @@ public abstract class Station {
     	return false;
     }
     
-    public boolean GetOneSlotFree() {
+    public boolean getOneSlotFree() {
     	for(ParkingSlot slot: parkingSlots) {
     		if (slot.getState() == 0) {
     			return true;
     		}
     	}
     	return false;
+    }
+
+
+    public ParkingSlot getParkingSlotTypeBicycle(Bicycle bike) {
+        ParkingSlot slot = null;
+        for(ParkingSlot slot_i: parkingSlots) {
+            if (slot_i.getTypeBike()==bike) {
+                slot = slot_i;
+                break;
+            }
+        }
+        return slot;
     }
     
 }

@@ -2,6 +2,7 @@ package core.components;
 
 
 import java.awt.*;
+import java.time.LocalTime;
 import java.util.Objects;
 
 public class User {
@@ -20,6 +21,9 @@ public class User {
     private float timeCreditBalance = 0;  // [minutes]
     private float allMoneyCharged = 0;
     private float currentMoneyCharged = 0;
+    private boolean hasBicycle;
+    private int rentStationID;
+    private LocalTime rentTime; // [minutes]
 
 
     // Constructor
@@ -33,6 +37,7 @@ public class User {
         this.timeCreditBalance = 0;
         this.allMoneyCharged = 0;
         this.currentMoneyCharged = 0;
+        this.hasBicycle = false;
     }
 
 
@@ -79,6 +84,18 @@ public class User {
         return currentMoneyCharged;
     }
 
+    public boolean isHasBicycle() {
+        return hasBicycle;
+    }
+
+    public int getRentStationID() {
+        return rentStationID;
+    }
+
+    public LocalTime getRentTime() {
+        return rentTime;
+    }
+
     // Setters
 
     public void setName(String name) {
@@ -111,6 +128,18 @@ public class User {
 
     public void setCurrentMoneyCharged(float currentMoneyCharged) {
         this.currentMoneyCharged = currentMoneyCharged;
+    }
+
+    public void setHasBicycle(boolean hasBicycle) {
+        this.hasBicycle = hasBicycle;
+    }
+
+    public void setRentStationID(int rentStationID) {
+        this.rentStationID = rentStationID;
+    }
+
+    public void setRentTime(LocalTime rentTime) {
+        this.rentTime = rentTime;
     }
 
     @Override

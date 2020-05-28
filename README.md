@@ -58,16 +58,16 @@ hour (independently of the kind of bike)
 
 ## 2.2 Rides planning
 
-- [ ] The myVelib system must be equipped with a functionality that helps users to plan a ride
+- [x] The myVelib system must be equipped with a functionality that helps users to plan a ride
 from a starting location to a destination location. Given the starting and destination GPS
 coordinates the ride planning functionality will identify the \optimal" start and end stations
 from/to where the bike should be taken/dropped according to the following criteria:
 
-- [ ] the start, respectively the end, station, for a ride should be as close as possible to
+- [x] the start, respectively the end, station, for a ride should be as close as possible to
 the starting, respectively to the destination, location of the ride.
-- [ ] the start station should have one bike of the desired kind (electrical or mechanical)
+- [x] the start station should have one bike of the desired kind (electrical or mechanical)
 available for renting
-- [ ] the end station should have at least one free parking slot.
+- [x] the end station should have at least one free parking slot.
 
 OPTIONAL ride-planning policies
 - [ ] avoid \plus" stations: like minimal walking distance but return station cannot be

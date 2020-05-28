@@ -1,12 +1,10 @@
 package core.system;
 
-import core.components.Bicycle;
-import core.components.Card;
-import core.components.Station;
-import core.components.User;
+import core.components.*;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class MyVelibSystem {
     private List<Station> stations;
@@ -72,4 +70,75 @@ public class MyVelibSystem {
     public int hashCode() {
         return Objects.hash(stations, users, bicycles, cards);
     }
+
+
+    public void rentBike(int userID, int StationID) {
+        Station station = null;
+        User user = null;
+
+        // Get station with StationID
+        for (Station station_i : stations) {
+            if (station_i.getId() == StationID) {
+                station = station_i;
+                break;
+            }
+        }
+
+        if (station == null) {
+            System.out.println("ERROR ! There is no station with this stationID!");
+        }
+
+        // Get user with userID
+        for (User user_i : users) {
+            if (user_i.getId() == userID) {
+                user = user_i;
+                break;
+            }
+        }
+
+        if (user == null) {
+            System.out.println("ERROR ! There is no user with this userID!");
+        }
+
+        // Ask user for the bicycle type
+        // declaring a scanner object for to ask input to the user
+        String bicycleType;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.println("Enter the bicycle type (Electrical/Mechanical)");
+            bicycleType = scanner.nextLine();
+        }
+        while ((!bicycleType.equals("Electrical") || !bicycleType.equals("Mechanical")));
+        {
+            System.out.println("Enter the bicycle type (Electrical/Mechanical)");
+            bicycleType = scanner.nextLine();
+        }
+
+        // Check bicycle type
+        if (bicycleType.equals("Electrical")) {
+            Bicycle electricalBicycle = new ElectricalBicycle();
+
+            // Ask terminal to rent a bike for the given station
+            if (station.getExistTypeBike(electricalBicycle)) {
+                station.getStationTerminal().rentBicycle(electricalBicycle, user, station);
+                // Make parking slot free
+            } else {
+                System.out.println("ERROR ! There are no electrical bicycles!");
+            }
+        } else {
+            Bicycle mechanicalBicycle = new MechanicalBicycle();
+
+            // Ask terminal to rent a bike for the given station
+            if (station.getExistTypeBike(mechanicalBicycle)) {
+                station.getStationTerminal().rentBicycle(mechanicalBicycle, user, station);
+                // Make parking slot free
+            } else {
+                System.out.println("ERROR ! There are no mechanical bicycles!");
+            }
+        }
+
+
+    }
+
+
 }
