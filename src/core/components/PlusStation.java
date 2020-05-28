@@ -1,7 +1,14 @@
 package core.components;
 
-public class PlusStation extends Station {
+import java.awt.*;
+import java.util.List;
 
-	public PlusStation() {
+public class PlusStation extends Station {
+	public PlusStation(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots, double money, int numberOfLocations) {
+		super(coordinate, onService, parkingSlots, money, numberOfLocations);
+	}
+
+	public PlusStation(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots) {
+		super(coordinate, onService, parkingSlots);
 	}
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Manager extends User {
-	public Manager(String name, String lastName, Point coordinate, int creditCardNumber) {
-		super(name, lastName, coordinate, creditCardNumber);
+	public Manager(String name, Point coordinate, int creditCardNumber, double money) {
+		super(name, coordinate, creditCardNumber, money);
 	}
 }

@@ -11,12 +11,14 @@ public final class Terminal {
     private boolean onService;
     private int stationID;
 
-    public Terminal() {
+    public Terminal(int stationID) {
         this.onService = false; // It won't work by default
+        this.stationID = stationID;
     }
 
-    public Terminal(boolean onService) {
+    public Terminal(boolean onService, int stationID) {
         this.onService = onService;
+        this.stationID = stationID;
     }
 
 

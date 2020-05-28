@@ -14,7 +14,6 @@ public class User {
     }
 
     private String name;
-    private String lastName;
     private Point coordinate;
     private Card card; // registration card
     private int creditCardNumber;
@@ -29,9 +28,8 @@ public class User {
 
     // Constructor
 
-    public User(String name, String lastName, Point coordinate, int creditCardNumber, double money) {
+    public User(String name, Point coordinate, int creditCardNumber, double money) {
         this.name = name;
-        this.lastName = lastName;
         this.coordinate = coordinate;
         this.creditCardNumber = creditCardNumber;
         this.card = null;
@@ -56,10 +54,6 @@ public class User {
 
     public String getName() {
         return name;
-    }
-
-    public String getLastName() {
-        return lastName;
     }
 
     public Point getCoordinate() {
@@ -108,10 +102,6 @@ public class User {
         this.name = name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public void setCoordinate(Point coordinate) {
         this.coordinate = coordinate;
     }
@@ -157,7 +147,6 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
                 ", coordinate=" + coordinate +
                 ", card=" + card +
                 ", creditCardNumber=" + creditCardNumber +
@@ -177,7 +166,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, lastName, coordinate, card, creditCardNumber, timeCreditBalance, allMoneyCharged, currentMoneyCharged);
+        return Objects.hash(id, name, coordinate, card, creditCardNumber, timeCreditBalance, allMoneyCharged, currentMoneyCharged);
     }
 
     // Written methods

@@ -18,6 +18,29 @@ public abstract class Station {
         return ++numberOfStations;
     }
 
+    // Constructor
+
+    public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots, double money, int numberOfLocations) {
+        this.coordinate = coordinate;
+        this.onService = onService;
+        this.parkingSlots = parkingSlots;
+        this.terminal = new Terminal(onService, this.id);
+        this.money = money;
+        this.numberOfLocations = numberOfLocations;
+    }
+
+    public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots) {
+        this.coordinate = coordinate;
+        this.onService = onService;
+        this.parkingSlots = parkingSlots;
+        this.terminal = new Terminal(onService, this.id);
+        this.money = 0;
+        this.numberOfLocations = 0;
+    }
+
+
+
+
     // Getters and setters
 
     public int getId() {
