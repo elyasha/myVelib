@@ -1,3 +1,3 @@
-mechanical,1
-electrical,2
-bicycleType,price
+bicycleType;price
+mechanical;1
+electrical;2
