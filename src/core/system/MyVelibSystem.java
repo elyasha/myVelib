@@ -11,6 +11,7 @@ public class MyVelibSystem {
     private List<User> users;
     private List<Bicycle> bicycles;
     private List<Card> cards;
+    private double money;
 
 
     public List<Station> getStations() {
@@ -43,6 +44,14 @@ public class MyVelibSystem {
 
     public void setCards(List<Card> cards) {
         this.cards = cards;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
     }
 
     @Override
@@ -119,7 +128,7 @@ public class MyVelibSystem {
             Bicycle electricalBicycle = new ElectricalBicycle();
 
             // Ask terminal to rent a bike for the given station
-            if (station.getExistTypeBike(electricalBicycle)) {
+            if (station.getExistTypeBike(electricalBicycle) && station.isOnService()) {
                 station.getStationTerminal().rentBicycle(electricalBicycle, user, station);
                 // Make parking slot free
             } else {
@@ -129,7 +138,7 @@ public class MyVelibSystem {
             Bicycle mechanicalBicycle = new MechanicalBicycle();
 
             // Ask terminal to rent a bike for the given station
-            if (station.getExistTypeBike(mechanicalBicycle)) {
+            if (station.getExistTypeBike(mechanicalBicycle) && station.isOnService()) {
                 station.getStationTerminal().rentBicycle(mechanicalBicycle, user, station);
                 // Make parking slot free
             } else {
@@ -138,6 +147,18 @@ public class MyVelibSystem {
         }
 
 
+    }
+
+    public void addMoney(double money) {
+        this.money += money;
+    }
+
+    public void removeMoney(double money) {
+        if (this.money - money < 0) {
+            System.out.println("ERROR! You don't have the money bro.");
+        } else {
+            this.money -= money;
+        }
     }
 
 

@@ -93,14 +93,14 @@ of sd.
 
 ## 2.3 Rental and returning a bicycle
 
-- [ ] To rent a bicycle a user must get to one station, identify herself (either through a velib-card
+- [x] To rent a bicycle a user must get to one station, identify herself (either through a velib-card
 or through a credit-card) and pick up one of the available bikes. A user can only rent at
 most one bicycle (i.e. if she has a bicycle and has not yet returned it, she cannot rent a
 second one). To return a bicycle a user must park it to a free (and on-duty) parking bay
 of some station. When the bike is returned the cost for the ride is computed and user is
 automatically charged (if a charge applies).
 
-## 2.4 Computing statistis and sorting of stations
+## 2.4 Computing statistics and sorting of stations
 
 The myVelib system should support the following functionalities for computing relevant
 statistics:

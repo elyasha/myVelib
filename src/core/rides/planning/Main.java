@@ -30,7 +30,7 @@ public class Main {
             distance = Math.sqrt(Math.pow(coords.getX()- coordsStart.getX(), 2)+Math.pow(coords.getY()- coordsStart.getY(), 2));
 
             // We want to be sure there exists 'our' bike in the station
-            if (distance < bestDistanceStart && station.getExistTypeBike(bike)) {
+            if (distance < bestDistanceStart && station.getExistTypeBike(bike) && station.isOnService()) {
                 bestDistanceStart =  distance;
                 bestStationStart = station;
             }
@@ -40,7 +40,7 @@ public class Main {
             distance = Math.sqrt(Math.pow(coords.getX()- coordsEnd.getX(), 2)+Math.pow(coords.getY()- coordsEnd.getY(), 2));
 
             // We want to be sure there exists a free slot in the station
-            if (distance < bestDistanceEnd && station.getOneSlotFree()) {
+            if (distance < bestDistanceEnd && station.getOneSlotFree() && station.isOnService()) {
                 bestDistanceEnd =  distance;
                 bestStationEnd = station;
             }

@@ -21,6 +21,7 @@ public class User {
     private float timeCreditBalance = 0;  // [minutes]
     private float allMoneyCharged = 0;
     private float currentMoneyCharged = 0;
+    private double money;
     private boolean hasBicycle;
     private int rentStationID;
     private LocalTime rentTime; // [minutes]
@@ -28,7 +29,7 @@ public class User {
 
     // Constructor
 
-    public User(String name, String lastName, Point coordinate, int creditCardNumber) {
+    public User(String name, String lastName, Point coordinate, int creditCardNumber, double money) {
         this.name = name;
         this.lastName = lastName;
         this.coordinate = coordinate;
@@ -38,6 +39,7 @@ public class User {
         this.allMoneyCharged = 0;
         this.currentMoneyCharged = 0;
         this.hasBicycle = false;
+        this.money = money;
     }
 
 
@@ -96,6 +98,10 @@ public class User {
         return rentTime;
     }
 
+    public double getMoney() {
+        return money;
+    }
+
     // Setters
 
     public void setName(String name) {
@@ -142,6 +148,10 @@ public class User {
         this.rentTime = rentTime;
     }
 
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -185,6 +195,31 @@ public class User {
         }
     }
 
+    public void addMoney(double money) {
+        this.money += money;
+    }
+
+    public void removeMoney(double money){
+        if (this.money - money < 0) {
+            System.out.println("ATTENTION! You are negative.");
+        }
+        this.money -= money;
+
+    }
+
+    public void addTimeCredit(double time){
+        this.timeCreditBalance += time;
+    }
+
+    public void removeTimeCredit(double time) {
+        if (this.timeCreditBalance - time < 0) {
+            System.out.println("You cannot have a negative time credit balance!");
+        }
+        else {
+            this.timeCreditBalance -= time;
+        }
+
+    }
 
 
 

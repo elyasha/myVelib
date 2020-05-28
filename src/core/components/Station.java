@@ -11,6 +11,7 @@ public abstract class Station {
     private boolean onService;  // Can be "on service" (true) of "offline" (false)
     private List<ParkingSlot> parkingSlots;
     private Terminal terminal;
+    private double money;
 
     private int generateUniqueID() {
         return ++numberOfStations;
@@ -55,6 +56,14 @@ public abstract class Station {
         return numberOfStations;
     }
 
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
     // Written methods
 
     private List<ParkingSlot> generateAllSlots(List<ParkingSlot> parkingSlots) {
@@ -93,6 +102,18 @@ public abstract class Station {
             }
         }
         return slot;
+    }
+
+    public void addMoney(double money) {
+        this.money += money;
+    }
+
+    public void removeMoney(double money) {
+        if (this.money - money < 0) {
+            System.out.println("ERROR! You don't have the money bro.");
+        } else {
+            this.money -= money;
+        }
     }
     
 }

@@ -1,14 +1,18 @@
 package core.renting;
 
 import core.components.*;
+import core.system.MyVelibSystem;
 import org.junit.jupiter.params.shadow.com.univocity.parsers.csv.Csv;
 
 import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
 
 public class Main {
 
-    public double getCostWithoutTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime) {
+    private static final double TIME_ADDED_BY_PLUS_STATION = 5;
+
+    public static double getCostWithoutTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime) {
 
         double cost = 0;
 
@@ -56,7 +60,7 @@ public class Main {
         return cost;
     }
 
-    public double getCostWithTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user){
+    public static double getCostWithTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user){
 
         double cost = 0;
         double hours;
@@ -91,6 +95,36 @@ public class Main {
         }
         return cost;
     }
+
+    public static double computeRentTime(User user) {
+        LocalTime startTime;
+        startTime = user.getRentTime();
+        // Save endTime
+        LocalTime endTime;
+        endTime = LocalTime.now();
+
+        if (startTime == null) {
+            System.out.println("User did not rent any bicycle.");
+            return 0;
+        }
+
+        double intervalOfTime;
+        intervalOfTime = endTime.getHour()*60 + endTime.getMinute()-startTime.getHour()*60-startTime.getMinute();
+
+        return intervalOfTime;
+
+    }
+
+    public static void chargingUser(User user, double priceToBePayed, Station station) {
+        // We assume the client is rich
+        user.setAllMoneyCharged((float) (user.getAllMoneyCharged() + priceToBePayed));
+        user.removeMoney(priceToBePayed);
+        station.addMoney(priceToBePayed);
+        if (station instanceof PlusStation) {
+            user.addTimeCredit(TIME_ADDED_BY_PLUS_STATION);
+        }
+    }
+
 
 
 
