@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CardFactory {
 
-    public void addVmax(MyVelibSystem system, User user) {
+    public static void addVmax(MyVelibSystem system, User user) {
         List<User> users = system.getUsers();
 
         // Check if the user is on the system and has no card
@@ -22,7 +22,7 @@ public class CardFactory {
         }
     }
 
-    public void addVlibre(MyVelibSystem system, User user) {
+    public static void addVlibre(MyVelibSystem system, User user) {
         List<User> users = system.getUsers();
 
         // Check if the user is on the system and has no card
