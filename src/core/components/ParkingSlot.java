@@ -7,7 +7,12 @@ public class ParkingSlot {
 	private static int numberOfSlots = 0;
 	private int state; // 0 = free, 1 = occupied and 2 out-of-order
 	private Bicycle bike;
-	
+
+	public ParkingSlot(int state, Bicycle bicycle) {
+		this.state = state;
+		this.bike = bicycle;
+	}
+
 	private int generateUniqueID() {
         return ++numberOfSlots;
     }
