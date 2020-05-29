@@ -134,7 +134,7 @@ stations, summing up to a total of M parking slots, the 70% of which is occupied
 available bicycles (30% of which are electrical the rest mechanical). The N stations
 should be placed randomly (in a uniform manner) over a square surface of area 1010
 square kilometres (roughly the surface of Paris intramuros).
-- [ ] The user add some user to the myVelib system some of which are card holder, some
+- [x] The user add some user to the myVelib system some of which are card holder, some
 not.
 ### Rental of a bike
 
