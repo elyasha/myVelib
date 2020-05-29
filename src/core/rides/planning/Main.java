@@ -8,7 +8,7 @@ import core.system.MyVelibSystem;
 public class Main {
 
 
-    public List<Station> getBestStation(Point coordsStart, Point coordsEnd, Bicycle bike) {
+    public static List<Station> getBestStation(Point coordsStart, Point coordsEnd, Bicycle bike) {
         MyVelibSystem system = new MyVelibSystem();
         Point coords;
         double distance;

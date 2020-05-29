@@ -1,8 +1,9 @@
 package core.components;
-
+import core.rides.planning.Main;
 
 import java.awt.*;
 import java.time.LocalTime;
+import java.util.List;
 import java.util.Objects;
 
 public class User {
@@ -208,6 +209,24 @@ public class User {
             this.timeCreditBalance -= time;
         }
 
+    }
+    
+    public void rentBicyclePlanning(Point coordsStart, Point coordsEnd, Bicycle bicycle) {
+    	List<Station> allStations;
+    	Terminal termStart;
+    	Terminal termEnd;
+    	
+    	// Get best start and end stations
+    	allStations = Main.getBestStation(coordsStart,coordsEnd,bicycle);
+    	
+    	// Get terminals of start and end stations 
+    	termStart = allStations.get(0).getStationTerminal();
+    	termEnd = allStations.get(1).getStationTerminal();
+    	
+    	// Rent on terminal start
+    	termStart.rentBicycle(bicycle, this, allStations.get(0));
+    	
+    	// Drop on terminal end ? How can we know the time ? 
     }
 
 
