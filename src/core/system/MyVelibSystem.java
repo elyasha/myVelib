@@ -9,8 +9,6 @@ import java.util.Scanner;
 public class MyVelibSystem {
     private List<Station> stations;
     private List<User> users;
-    private List<Bicycle> bicycles;
-    private List<Card> cards;
     private double money;
 
 
@@ -30,22 +28,6 @@ public class MyVelibSystem {
         this.users = users;
     }
 
-    public List<Bicycle> getBicycles() {
-        return bicycles;
-    }
-
-    public void setBicycles(List<Bicycle> bicycles) {
-        this.bicycles = bicycles;
-    }
-
-    public List<Card> getCards() {
-        return cards;
-    }
-
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
-    }
-
     public double getMoney() {
         return money;
     }
@@ -54,13 +36,37 @@ public class MyVelibSystem {
         this.money = money;
     }
 
+
+    // Constructor
+
+
+    public MyVelibSystem(List<Station> stations, List<User> users, double money) {
+        this.stations = stations;
+        this.users = users;
+        this.money = money;
+    }
+
+    public MyVelibSystem(List<Station> stations) {
+        this.stations = stations;
+        this.users = null;
+        this.money = 0;
+    }
+
+    public MyVelibSystem() {
+        this.stations = null;
+        this.users = null;
+        this.money = 0;
+    }
+
+
+
+
+
     @Override
     public String toString() {
         return "MyVelibSystem{" +
                 "stations=" + stations +
                 ", users=" + users +
-                ", bicycles=" + bicycles +
-                ", cards=" + cards +
                 '}';
     }
 
@@ -70,14 +76,12 @@ public class MyVelibSystem {
         if (o == null || getClass() != o.getClass()) return false;
         MyVelibSystem that = (MyVelibSystem) o;
         return Objects.equals(stations, that.stations) &&
-                Objects.equals(users, that.users) &&
-                Objects.equals(bicycles, that.bicycles) &&
-                Objects.equals(cards, that.cards);
+                Objects.equals(users, that.users);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(stations, users, bicycles, cards);
+        return Objects.hash(stations, users);
     }
 
 
