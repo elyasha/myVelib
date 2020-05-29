@@ -2,6 +2,7 @@ package core.system;
 
 import core.components.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
@@ -10,6 +11,7 @@ public class MyVelibSystem {
     private List<Station> stations;
     private List<User> users;
     private double money;
+    private String name;
 
 
     public List<Station> getStations() {
@@ -36,6 +38,13 @@ public class MyVelibSystem {
         this.money = money;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     // Constructor
 
@@ -48,13 +57,13 @@ public class MyVelibSystem {
 
     public MyVelibSystem(List<Station> stations) {
         this.stations = stations;
-        this.users = null;
+        this.users = new ArrayList<User>();
         this.money = 0;
     }
 
     public MyVelibSystem() {
-        this.stations = null;
-        this.users = null;
+        this.stations = new ArrayList<Station>();
+        this.users = new ArrayList<User>();
         this.money = 0;
     }
 
