@@ -40,7 +40,7 @@ public class Main {
             distance = Math.sqrt(Math.pow(coords.getX()- coordsEnd.getX(), 2)+Math.pow(coords.getY()- coordsEnd.getY(), 2));
 
             // We want to be sure there exists a free slot in the station
-            if (distance < bestDistanceEnd && station.getOneSlotFree() && station.isOnService()) {
+            if (distance < bestDistanceEnd && station.hasOneSlotFree() && station.isOnService()) {
                 bestDistanceEnd =  distance;
                 bestStationEnd = station;
             }

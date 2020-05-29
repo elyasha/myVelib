@@ -115,13 +115,23 @@ public abstract class Station {
     	return false;
     }
     
-    public boolean getOneSlotFree() {
+    public boolean hasOneSlotFree() {
     	for(ParkingSlot slot: parkingSlots) {
     		if (slot.getState() == 0) {
     			return true;
     		}
     	}
     	return false;
+    }
+
+    public ParkingSlot getOneFreeSlot() {
+        for (ParkingSlot slot: parkingSlots
+             ) {
+            if (slot.getState() == 0) {
+                return slot;
+            }
+        }
+        return null;
     }
 
 

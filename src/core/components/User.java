@@ -214,19 +214,31 @@ public class User {
     public void rentBicyclePlanning(Point coordsStart, Point coordsEnd, Bicycle bicycle) {
     	List<Station> allStations;
     	Terminal termStart;
-    	Terminal termEnd;
     	
     	// Get best start and end stations
     	allStations = Main.getBestStation(coordsStart,coordsEnd,bicycle);
     	
     	// Get terminals of start and end stations 
     	termStart = allStations.get(0).getStationTerminal();
-    	termEnd = allStations.get(1).getStationTerminal();
-    	
     	// Rent on terminal start
     	termStart.rentBicycle(bicycle, this, allStations.get(0));
     	
     	// Drop on terminal end ? How can we know the time ? 
+    }
+
+    public void dropBicyclePlanning(Point coordsStart, Point coordsEnd, Bicycle bicycle) {
+        List<Station> allStations;
+        Terminal termEnd;
+
+        // Get best start and end stations
+        allStations = Main.getBestStation(coordsStart,coordsEnd,bicycle);
+
+        // Get terminals of start and end stations
+        termEnd = allStations.get(1).getStationTerminal();
+        // Rent on terminal start
+        termEnd.dropBicycle(bicycle, this, allStations.get(1));
+
+        // Drop on terminal end ? How can we know the time ?
     }
 
 
