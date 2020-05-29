@@ -17,7 +17,7 @@ public class User {
     private String name;
     private Point coordinate;
     private Card card; // registration card
-    private int creditCardNumber;
+    private long creditCardNumber;
     private float timeCreditBalance = 0;  // [minutes]
     private float allMoneyCharged = 0;
     private float currentMoneyCharged = 0;
@@ -29,7 +29,7 @@ public class User {
 
     // Constructor
 
-    public User(String name, Point coordinate, int creditCardNumber, double money) {
+    public User(String name, Point coordinate, long creditCardNumber, double money) {
         this.name = name;
         this.coordinate = coordinate;
         this.creditCardNumber = creditCardNumber;
@@ -65,7 +65,7 @@ public class User {
         return card;
     }
 
-    public int getCreditCardNumber() {
+    public long getCreditCardNumber() {
         return creditCardNumber;
     }
 
@@ -111,7 +111,7 @@ public class User {
         this.card = card;
     }
 
-    public void setCreditCardNumber(int creditCardNumber) {
+    public void setCreditCardNumber(long creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
