@@ -81,7 +81,7 @@ public class InitialSetup {
         for (int i = 0; i < numberOfPlusStations; i++) {
         	
             // Create the standard stations and be sure two stations are not at the same place
-        	while (station.equals(null)) {
+        	while (station == null) {
         		// Coordinate x will be an integer between 0 and squareSide
             	// Coordinate y will be an integer between 0 and squareSide
         		int x = rand.nextInt((int) squareSide);
@@ -93,7 +93,7 @@ public class InitialSetup {
         
         for (int i = 0; i < numberOfStandardStations; i++) {
             // Create the standard stations and be sure two stations are not at the same place
-        	while (station.equals(null)) {
+        	while (station == null) {
         		// Coordinate x will be an integer between 0 and squareSide
             	// Coordinate y will be an integer between 0 and squareSide
         		int x = rand.nextInt((int) squareSide);
