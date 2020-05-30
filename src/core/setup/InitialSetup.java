@@ -5,15 +5,17 @@ import core.components.factories.CardFactory;
 import core.components.factories.ParkingSlotsFactory;
 import core.components.factories.StationFactory;
 import core.components.factories.UserFactory;
+import core.components.factories.PointFactory;
 import core.system.MyVelibSystem;
 import core.system.MyVelibSystemFactory;
 
+
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.Random;
 
 public class InitialSetup {
 
@@ -73,43 +75,53 @@ public class InitialSetup {
 
         // stations
         List<Station> stations = new ArrayList<Station>();
-
+        Station station = null;
+    	Random rand = new Random();
+        
         for (int i = 0; i < numberOfPlusStations; i++) {
-            // Create the point to random // TODO: Learn know to do the random stuff
-            // TODO: Create a test to check if there is already a station when creating one
-
-            // Create the plus stations
-            Station station = StationFactory.addPlusStation(system0, new Point(0, 0), true, allSlots);
-
+        	
+            // Create the standard stations and be sure two stations are not at the same place
+        	while (station.equals(null)) {
+        		// Coordinate x will be an integer between 0 and squareSide
+            	// Coordinate y will be an integer between 0 and squareSide
+        		int x = rand.nextInt((int) squareSide);
+            	int y = rand.nextInt((int) squareSide);
+        		station = StationFactory.addPlusStation(system0, PointFactory.addPoint(x, y), true, allSlots);
+        	}
+        	station = null;
         }
-
+        
         for (int i = 0; i < numberOfStandardStations; i++) {
-            // Create the point to random // TODO: Learn know to do the random stuff
-            // TODO: Create a test to check if there is already a station when creating one
-
-            // Create the standard stations
-            Station station = StationFactory.addStandardStation(system0, new Point(0, 0), true, allSlots);
-
+            // Create the standard stations and be sure two stations are not at the same place
+        	while (station.equals(null)) {
+        		// Coordinate x will be an integer between 0 and squareSide
+            	// Coordinate y will be an integer between 0 and squareSide
+        		int x = rand.nextInt((int) squareSide);
+            	int y = rand.nextInt((int) squareSide);
+        		station = StationFactory.addStandardStation(system0, PointFactory.addPoint(x, y), true, allSlots);
+        	}
+        	station = null;
+            
+         
         }
-
-
-
-
-
-
-
-
 
 
         // Add User without card
-        UserFactory.addUser(system0,"Matheus" , new Point(0, 0),30109903, 100000000);
+        int x,y;
+        x = rand.nextInt((int) squareSide);
+    	y = rand.nextInt((int) squareSide);
+        UserFactory.addUser(system0,"Matheus" , PointFactory.addPoint(x, y),30109903, 1000);
 
         // Add User with Vmax
-        User user = UserFactory.addUser(system0, "Charlito", new Point(1, 1), 192340, 0);
+        x = rand.nextInt((int) squareSide);
+    	y = rand.nextInt((int) squareSide);
+        User user = UserFactory.addUser(system0, "Charlito", PointFactory.addPoint(x, y), 192340, 0);
         CardFactory.addVmax(system0, user);
 
         // Add User with Vlibre
-        User user2 = UserFactory.addUser(system0, "Charlito2", new Point(1, 1), 192340, 0);
+        x = rand.nextInt((int) squareSide);
+    	y = rand.nextInt((int) squareSide);
+        User user2 = UserFactory.addUser(system0, "Valdisa", PointFactory.addPoint(x, y), 124340, 0);
         CardFactory.addVlibre(system0, user2);
 
 
