@@ -23,7 +23,7 @@ public class InitialSetup {
     private static final double PERCENTAGE_OF_ELECTRICAL_BICYCLE = 0.3;
     private static final double PERCENTAGE_OF_PLUS_STATIONS = 0.5;
 
-    public static void main(String[] args) {
+    public static MyVelibSystem getInitialSetupSystem(String[] args) {
 
         // Creation of the myVelib system
         MyVelibSystem system0 = MyVelibSystemFactory.createMyVelibSystem();
@@ -68,7 +68,7 @@ public class InitialSetup {
 
         // parkingSlots
         List<ParkingSlot> electricalSlots = ParkingSlotsFactory.createElectricalBicycleSlots(numberOfElectricalBicycleSlots);
-        List<ParkingSlot> mechanicalSlots = ParkingSlotsFactory.createElectricalBicycleSlots(numberOfMechanicalBicycleSlots);
+        List<ParkingSlot> mechanicalSlots = ParkingSlotsFactory.createMechanicalBicycleSlots(numberOfMechanicalBicycleSlots);
         List<ParkingSlot> freeSlots = ParkingSlotsFactory.createFreeParkingSlots(numberOfFreeSlots);
         List<ParkingSlot> allSlots = Stream.concat(freeSlots.stream(), mechanicalSlots.stream()).collect(Collectors.toList());
         allSlots = Stream.concat(allSlots.stream(), electricalSlots.stream()).collect(Collectors.toList());
@@ -125,8 +125,14 @@ public class InitialSetup {
         CardFactory.addVlibre(system0, user2);
 
 
-        System.out.println(system0);
+//        System.out.println(system0);
 
+        return system0;
+
+    }
+
+    public static void main(String[] args) {
+        MyVelibSystem system0 = getInitialSetupSystem(args);
     }
 
 }

@@ -1,14 +1,11 @@
 package core.components.factories;
 
-import core.components.ElectricalBicycle;
-import core.components.MechanicalBicycle;
-import core.components.ParkingSlot;
-import core.components.Station;
+import core.components.*;
 import core.system.MyVelibSystem;
 
 public class BicycleFactory {
 
-    public void addElectricalBicycle(MyVelibSystem system, Station station) {
+    public static void addElectricalBicycle(MyVelibSystem system, Station station) {
 
         // Check the station (parkingSlot available)
         ParkingSlot freeSlot = station.getOneFreeSlot();
@@ -18,7 +15,7 @@ public class BicycleFactory {
 
             // Add to station
             freeSlot.setState(1);
-            freeSlot.setBike(bicycle);
+            freeSlot.setBicycle(bicycle);
         } else {
             System.out.println("There is no available slot!");
         }
@@ -26,7 +23,11 @@ public class BicycleFactory {
 
     }
 
-    public void addMechanicalBicycle(MyVelibSystem system, Station station) {
+    public static Bicycle createElectricalBicycle() {
+        return new ElectricalBicycle();
+    }
+
+    public static void addMechanicalBicycle(MyVelibSystem system, Station station) {
         // Check the station (parkingSlot available)
         ParkingSlot freeSlot = station.getOneFreeSlot();
         if (freeSlot != null) {
@@ -35,9 +36,13 @@ public class BicycleFactory {
 
             // Add to station
             freeSlot.setState(1);
-            freeSlot.setBike(bicycle);
+            freeSlot.setBicycle(bicycle);
         } else {
             System.out.println("There is no available slot!");
         }
+    }
+
+    public static Bicycle createMechanicalBicycle() {
+        return new MechanicalBicycle();
     }
 }

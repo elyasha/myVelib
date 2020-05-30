@@ -106,13 +106,37 @@ public abstract class Station {
         return parkingSlots;
     }
 
-    public boolean getExistTypeBike(Bicycle bike) {
-    	for(ParkingSlot slot: parkingSlots) {
-    		if (slot.getTypeBike()==bike) {
-    			return true;
-    		}
-    	}
-    	return false;
+    public boolean getExistTypeBike(Bicycle bicycle) {
+        if (bicycle instanceof ElectricalBicycle) {
+            return hasAvailableElectricalBicycle();
+        }
+        else if (bicycle instanceof MechanicalBicycle) {
+            return hasAvailableMechanicalBicycle();
+        }
+        else {
+            return false;
+        }
+
+    }
+
+    public boolean hasAvailableElectricalBicycle() {
+        for(ParkingSlot slot: parkingSlots) {
+            System.out.println(slot.getBicycle());
+            if (slot.getBicycle() instanceof ElectricalBicycle) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean hasAvailableMechanicalBicycle() {
+        for(ParkingSlot slot: parkingSlots) {
+            System.out.println(slot.getBicycle());
+            if (slot.getBicycle() instanceof MechanicalBicycle) {
+                return true;
+            }
+        }
+        return false;
     }
     
     public boolean hasOneSlotFree() {
@@ -135,10 +159,36 @@ public abstract class Station {
     }
 
 
-    public ParkingSlot getParkingSlotTypeBicycle(Bicycle bike) {
+    public ParkingSlot getParkingSlotTypeBicycle(Bicycle bicycle) {
+        ParkingSlot slot;
+        if (bicycle instanceof ElectricalBicycle) {
+            slot = getElectricalParkingSlot();
+        }
+        else if (bicycle instanceof MechanicalBicycle) {
+            slot = getMechanicalParkingSlot();
+        }
+        else {
+            slot = null;
+        }
+
+        return slot;
+    }
+
+    public ParkingSlot getElectricalParkingSlot() {
         ParkingSlot slot = null;
         for(ParkingSlot slot_i: parkingSlots) {
-            if (slot_i.getTypeBike()==bike) {
+            if (slot_i.getBicycle() instanceof  ElectricalBicycle) {
+                slot = slot_i;
+                break;
+            }
+        }
+        return slot;
+    }
+
+    public ParkingSlot getMechanicalParkingSlot() {
+        ParkingSlot slot = null;
+        for(ParkingSlot slot_i: parkingSlots) {
+            if (slot_i.getBicycle() instanceof  MechanicalBicycle) {
                 slot = slot_i;
                 break;
             }

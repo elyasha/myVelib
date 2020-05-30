@@ -1,5 +1,6 @@
 package core.components;
 import core.rides.planning.Main;
+import core.system.MyVelibSystem;
 
 import java.awt.*;
 import java.time.LocalTime;
@@ -22,7 +23,7 @@ public class User {
     private float allMoneyCharged = 0;
     private float currentMoneyCharged = 0;
     private double money;
-    private boolean hasBicycle;
+    private Bicycle bicycle;
     private int rentStationID;
     private LocalTime rentTime; // [minutes]
 
@@ -37,7 +38,7 @@ public class User {
         this.timeCreditBalance = 0;
         this.allMoneyCharged = 0;
         this.currentMoneyCharged = 0;
-        this.hasBicycle = false;
+        this.bicycle = null;
         this.money = money;
     }
 
@@ -81,8 +82,8 @@ public class User {
         return currentMoneyCharged;
     }
 
-    public boolean isHasBicycle() {
-        return hasBicycle;
+    public Bicycle getBicycle() {
+        return bicycle;
     }
 
     public int getRentStationID() {
@@ -127,8 +128,8 @@ public class User {
         this.currentMoneyCharged = currentMoneyCharged;
     }
 
-    public void setHasBicycle(boolean hasBicycle) {
-        this.hasBicycle = hasBicycle;
+    public void setBicycle(Bicycle bicycle) {
+        this.bicycle = bicycle;
     }
 
     public void setRentStationID(int rentStationID) {
@@ -211,27 +212,28 @@ public class User {
 
     }
     
-    public void rentBicyclePlanning(Point coordsStart, Point coordsEnd, Bicycle bicycle) {
+    public void rentBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
     	List<Station> allStations;
     	Terminal termStart;
     	
     	// Get best start and end stations
-    	allStations = Main.getBestStation(coordsStart,coordsEnd,bicycle);
-    	
+    	allStations = Main.getBestStation(system, coordsStart,coordsEnd,bicycle);
+//        System.out.println(allStations);  // [null, null]
     	// Get terminals of start and end stations 
     	termStart = allStations.get(0).getStationTerminal();
+//        System.out.println(termStart);
     	// Rent on terminal start
     	termStart.rentBicycle(bicycle, this, allStations.get(0));
     	
     	// Drop on terminal end ? How can we know the time ? 
     }
 
-    public void dropBicyclePlanning(Point coordsStart, Point coordsEnd, Bicycle bicycle) {
+    public void dropBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
         List<Station> allStations;
         Terminal termEnd;
 
         // Get best start and end stations
-        allStations = Main.getBestStation(coordsStart,coordsEnd,bicycle);
+        allStations = Main.getBestStation(system, coordsStart,coordsEnd,bicycle);
 
         // Get terminals of start and end stations
         termEnd = allStations.get(1).getStationTerminal();

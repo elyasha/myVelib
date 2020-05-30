@@ -1,8 +1,6 @@
 package core.components;
 
 import java.sql.Time;
-import java.time.Clock;
-import java.time.Instant;
 import java.time.LocalTime;
 import core.renting.*;
 
@@ -39,7 +37,7 @@ public final class Terminal {
         // Planning checks if there is a bicycle, we don't need to check again
 
         // A user can only rent 1 bicycle
-        if (user.isHasBicycle()) {
+        if (user.getBicycle() != null) {
             System.out.println("You cannot rent another bicycle! Please drop your bicycle first.");
         }
         else {
@@ -57,13 +55,13 @@ public final class Terminal {
             user.setRentTime(localTime);
 
             // Set hasBicycle = true and rentStationID in User
-            user.setHasBicycle(true);
+            user.setBicycle(bicycle);
             user.setRentStationID(stationID);
 
             // Change the state of parkingSlot
             ParkingSlot slot = station.getParkingSlotTypeBicycle(bicycle);
             slot.setState(0);
-            slot.setBike(null);
+            slot.setBicycle(null);
 
         }
 
@@ -87,13 +85,13 @@ public final class Terminal {
         user.setRentTime(null);
 
         // Set hasBicycle = true and rentStationID in User
-        user.setHasBicycle(false);
+        user.setBicycle(null);
         user.setRentStationID(-1); // an impossible id
 
         // Change the state of parkingSlot
         ParkingSlot slot = station.getParkingSlotTypeBicycle(bicycle);
         slot.setState(1);
-        slot.setBike(bicycle);
+        slot.setBicycle(bicycle);
 
         // Return bicycle
         System.out.println(user + "You rent is finalized!");

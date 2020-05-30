@@ -3,6 +3,7 @@ package core.components;
 import java.util.Objects;
 
 public abstract class Card {
+
     private final int id = generateUniqueID();
     private static int numberOfCards = 0;
 

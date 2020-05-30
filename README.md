@@ -129,7 +129,7 @@ describe a few examples of realistic interactions between the user of the myVeli
 and the myVelib framework.
 
 ### Setting up of myVelib
-- [ ] The user sets up an instance of the myVelib system: he/she create a myVelib with N
+- [x] The user sets up an instance of the myVelib system: he/she create a myVelib with N
 stations, summing up to a total of M parking slots, the 70% of which is occupied by
 available bicycles (30% of which are electrical the rest mechanical). The N stations
 should be placed randomly (in a uniform manner) over a square surface of area 1010
