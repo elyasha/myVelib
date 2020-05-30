@@ -37,7 +37,7 @@ public class Main {
 //            System.out.println(station.getParkingSlots());
             // We want to be sure there exists 'our' bike in the station
 //            System.out.println();
-            System.out.println(station.getExistTypeBike(bicycle));
+//            System.out.println(station.getExistTypeBike(bicycle));
 //            System.out.println(station.isOnService());
 //            System.out.println();
             if (distance < bestDistanceStart && station.getExistTypeBike(bicycle) && station.isOnService()) {
@@ -56,12 +56,12 @@ public class Main {
                 bestStationEnd = station;
             }
 
-            System.out.println(bestDistanceStart);
-            System.out.println(bestStationStart);
-            System.out.println("=====================");
-            System.out.println(bestDistanceEnd);
-            System.out.println(bestStationEnd);
-            System.out.println();
+//            System.out.println(bestDistanceStart);
+//            System.out.println(bestStationStart);
+//            System.out.println("=====================");
+//            System.out.println(bestDistanceEnd);
+//            System.out.println(bestStationEnd);
+//            System.out.println();
 
         }
         bestStations.add(bestStationStart);

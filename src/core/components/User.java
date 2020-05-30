@@ -155,6 +155,10 @@ public class User {
                 ", timeCreditBalance=" + timeCreditBalance +
                 ", allMoneyCharged=" + allMoneyCharged +
                 ", currentMoneyCharged=" + currentMoneyCharged +
+                ", money=" + money +
+                ", bicycle=" + bicycle +
+                ", rentStationID=" + rentStationID +
+                ", rentTime=" + rentTime +
                 '}';
     }
 
@@ -228,21 +232,55 @@ public class User {
     	// Drop on terminal end ? How can we know the time ? 
     }
 
-    public void dropBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
+    // TODO: Refactor this method (we need to divide this method - start and end stations)
+    // TODO: Remove bicycle, because
+    public void dropBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd) {
         List<Station> allStations;
         Terminal termEnd;
+        Bicycle bicycle = this.bicycle;
 
-        // Get best start and end stations
-        allStations = Main.getBestStation(system, coordsStart,coordsEnd,bicycle);
+        // Check if the user has indeed a bicycle
+        if (this.bicycle == null) {
+            System.out.println("You have not a bicycle!!!");
+        }
+        else {
+            // Get best start and end stations
+            allStations = Main.getBestStation(system, coordsStart,coordsEnd,this.bicycle);
 
-        // Get terminals of start and end stations
-        termEnd = allStations.get(1).getStationTerminal();
-        // Rent on terminal start
-        termEnd.dropBicycle(bicycle, this, allStations.get(1));
+            // Get terminals of start and end stations
+            termEnd = allStations.get(1).getStationTerminal();
+            // Rent on terminal start
+            termEnd.dropBicycle(bicycle, this, allStations.get(1));
 
-        // Drop on terminal end ? How can we know the time ?
+            // Drop on terminal end ? How can we know the time ?
+        }
+
+
     }
 
+    public void dropBicyclePlanningWithIntervalOfTime(MyVelibSystem system, Point coordsStart, Point coordsEnd, double intervalOfTime) {
+        List<Station> allStations;
+        Terminal termEnd;
+        Bicycle bicycle = this.bicycle;
+
+        // Check if the user has indeed a bicycle
+        if (this.bicycle == null) {
+            System.out.println("You have not a bicycle!!!");
+        }
+        else {
+            // Get best start and end stations
+            allStations = Main.getBestStation(system, coordsStart,coordsEnd,this.bicycle);
+
+            // Get terminals of start and end stations
+            termEnd = allStations.get(1).getStationTerminal();
+            // Rent on terminal start
+            termEnd.dropBicycleWithIntervalOfTime(bicycle, this, allStations.get(1), intervalOfTime);
+
+            // Drop on terminal end ? How can we know the time ?
+        }
+
+
+    }
 
 
 }

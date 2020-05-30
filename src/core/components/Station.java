@@ -121,7 +121,7 @@ public abstract class Station {
 
     public boolean hasAvailableElectricalBicycle() {
         for(ParkingSlot slot: parkingSlots) {
-            System.out.println(slot.getBicycle());
+//            System.out.println(slot.getBicycle());
             if (slot.getBicycle() instanceof ElectricalBicycle) {
                 return true;
             }
@@ -131,7 +131,7 @@ public abstract class Station {
 
     public boolean hasAvailableMechanicalBicycle() {
         for(ParkingSlot slot: parkingSlots) {
-            System.out.println(slot.getBicycle());
+//            System.out.println(slot.getBicycle());
             if (slot.getBicycle() instanceof MechanicalBicycle) {
                 return true;
             }

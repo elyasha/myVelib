@@ -2,6 +2,7 @@ package core.components;
 
 import java.sql.Time;
 import java.time.LocalTime;
+
 import core.renting.*;
 
 public final class Terminal {
@@ -39,8 +40,7 @@ public final class Terminal {
         // A user can only rent 1 bicycle
         if (user.getBicycle() != null) {
             System.out.println("You cannot rent another bicycle! Please drop your bicycle first.");
-        }
-        else {
+        } else {
             // If there is a bicycle available
             System.out.println("Here you go!" + user);
             if (bicycle instanceof ElectricalBicycle) {
@@ -68,13 +68,12 @@ public final class Terminal {
 
     }
 
-    public void dropBicycle(Bicycle bicycle, User user, Station station) {
-
+    public void dropBicycleWithIntervalOfTime(Bicycle bicycle, User user, Station station, double intervalOfTime) {
         // Compute the time of the journey
-        double intervalOfTime; // [minutes]
-        intervalOfTime = Main.computeRentTime(user);
+//        System.out.println(intervalOfTime);
         Time intervalOfTimeTIME;
-        intervalOfTimeTIME = new Time(0, (int) intervalOfTime,0);
+        intervalOfTimeTIME = new Time(0, (int) intervalOfTime, 0);
+        System.out.println(intervalOfTimeTIME);
         // Compute the rent cost for the user
         double rentCost = Main.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
 
@@ -94,7 +93,47 @@ public final class Terminal {
         slot.setBicycle(bicycle);
 
         // Return bicycle
+        System.out.println();
         System.out.println(user + "You rent is finalized!");
+        System.out.println();
+        System.out.println(rentCost);
+
+        station.addNumberOfLocations(1);
+    }
+
+
+    public void dropBicycle(Bicycle bicycle, User user, Station station) {
+
+        // Compute the time of the journey
+        double intervalOfTime; // [minutes]
+        intervalOfTime = Main.computeRentTime(user);
+        System.out.println(intervalOfTime);
+        Time intervalOfTimeTIME;
+        intervalOfTimeTIME = new Time(0, (int) intervalOfTime, 0);
+        System.out.println(intervalOfTimeTIME);
+        // Compute the rent cost for the user
+        double rentCost = Main.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
+
+        // Take the money of the user !!!!
+        Main.chargingUser(user, rentCost, station);
+
+        // Changer rentTime
+        user.setRentTime(null);
+
+        // Set hasBicycle = true and rentStationID in User
+        user.setBicycle(null);
+        user.setRentStationID(-1); // an impossible id
+
+        // Change the state of parkingSlot
+        ParkingSlot slot = station.getParkingSlotTypeBicycle(bicycle);
+        slot.setState(1);
+        slot.setBicycle(bicycle);
+
+        // Return bicycle
+        System.out.println();
+        System.out.println(user + "You rent is finalized!");
+        System.out.println();
+        System.out.println(rentCost);
 
         station.addNumberOfLocations(1);
 

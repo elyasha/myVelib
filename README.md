@@ -138,11 +138,11 @@ square kilometres (roughly the surface of Paris intramuros).
 not.
 ### Rental of a bike
 
-- [ ] a user (card holder or not) rent a bike of a given type from a given station at a given
+- [x] a user (card holder or not) rent a bike of a given type from a given station at a given
 moment in time
-- [ ] the user returns the bike to another station after a given duration (expressed in
+- [x] the user returns the bike to another station after a given duration (expressed in
 minutes).
-- [ ] the user get charged for the corresponding amount (possibly 0) and possibly receive
+- [x] the user get charged for the corresponding amount (possibly 0) and possibly receive
 a time-credit (possibly 0)
 
 ### Visualisation of user, station and system state
