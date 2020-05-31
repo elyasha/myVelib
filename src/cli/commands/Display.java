@@ -10,11 +10,19 @@ public class Display implements Command {
      */
 
     public static void main(String[] args) {
-        System.out.println("The display command!");
+
+        if (!hasGoodInput(args)) {
+            wrongArgumentHelp();
+        }
+        else {
+            System.out.println("The display command!");
+            // TODO: Design command
+        }
     }
 
     public static void helpCommand(String[] args) {
-        // TODO
+        System.out.println("The display command!");
+        System.out.println("display <velibnetworkName>: to display the entire status (stations, parking bays, users) of an a myVelib network velibnetworkName.");
     }
 
     public static void wrongArgumentHelp() {
@@ -23,7 +31,7 @@ public class Display implements Command {
     }
 
 
-    public boolean hasGoodInput(String[] args) {
-        return false;
+    public static boolean hasGoodInput(String[] args) {
+        return args.length == 1;
     }
 }
