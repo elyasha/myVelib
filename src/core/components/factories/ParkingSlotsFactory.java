@@ -11,7 +11,7 @@ public class ParkingSlotsFactory {
 
     public static List<ParkingSlot> createFreeParkingSlots(int numberOfParkingSlots) {
 
-        List<ParkingSlot> slots = new ArrayList<ParkingSlot>();
+        List<ParkingSlot> slots = new ArrayList<>();
         for (int i = 0; i < numberOfParkingSlots; i++) {
             slots.add(new ParkingSlot());
         }
@@ -22,9 +22,7 @@ public class ParkingSlotsFactory {
 
     public static ParkingSlot createFreeParkingSlot() {
 
-        ParkingSlot parkingSlot = new ParkingSlot();
-
-        return parkingSlot;
+        return new ParkingSlot();
     }
 
     public static ParkingSlot createElectricalBicycleSlot() {
@@ -32,7 +30,7 @@ public class ParkingSlotsFactory {
     }
 
     public static List<ParkingSlot> createElectricalBicycleSlots(int numberOfBicycles) {
-        List<ParkingSlot> slots = new ArrayList<ParkingSlot>();
+        List<ParkingSlot> slots = new ArrayList<>();
 
         for (int i = 0; i < numberOfBicycles; i++) {
             ElectricalBicycle bicycle = new ElectricalBicycle();
@@ -48,7 +46,7 @@ public class ParkingSlotsFactory {
     }
 
     public static List<ParkingSlot> createMechanicalBicycleSlots(int numberOfBicycles) {
-        List<ParkingSlot> slots = new ArrayList<ParkingSlot>();
+        List<ParkingSlot> slots = new ArrayList<>();
 
         for (int i = 0; i < numberOfBicycles; i++) {
             MechanicalBicycle bicycle = new MechanicalBicycle();

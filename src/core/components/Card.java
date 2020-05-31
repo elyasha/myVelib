@@ -2,6 +2,9 @@ package core.components;
 
 import java.util.Objects;
 
+/**
+ * The (abstract) Card class : it implements the card object
+ */
 public abstract class Card {
 
     /**
