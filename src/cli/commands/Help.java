@@ -3,11 +3,15 @@ package cli.commands;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * This is the Help class that implements the help command of the CLI.
+ */
 public class Help implements Command {
     /**
+     * main() is the implementation of the command. It will interact with the core.Main application
      * help command
      *
-     * @param args
+     * @param args the arguments of the command
      */
     public static void main(String[] args) {
 
@@ -72,11 +76,20 @@ public class Help implements Command {
 
     }
 
+    /**
+     * This method implements all the help that will be displayed to the user if he enters a wrong input
+     */
     public static void wrongArgumentHelp() {
         System.out.println("There is a problem with the arguments passed!");
         System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
     }
 
+    /**
+     * This methods is used to check if the command has good input from the user
+     *
+     * @param args the arguments of the command
+     * @return true, if the command has good input. false, otherwise
+     */
     public static boolean hasGoodInput(String[] args) {
         if (args.length == 0) {
             return true;
@@ -93,6 +106,11 @@ public class Help implements Command {
         return false;
     }
 
+    /**
+     * This is the help command: it displays a message to better explain the command itself
+     *
+     * @param args the arguments of the command
+     */
     public static void helpCommand(String[] args) {
         System.out.println();
         System.out.println("CLI to interact with myVelib");
