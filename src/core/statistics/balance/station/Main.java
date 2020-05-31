@@ -1,9 +1,10 @@
 package core.statistics.balance.station;
 
+import core.components.SortStationByMostUsed;
 import core.components.Station;
-import core.components.factories.StationFactory;
 import core.system.MyVelibSystem;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -14,7 +15,7 @@ public class Main {
         for (Station station : system.getStations()
         ) {
             // Check to see if station has a higher numberOfLocations
-            if (station.getNumberOfLocations() > mostUsedStation.getNumberOfLocations()) {
+            if (station.getNumberOfDroppings() > mostUsedStation.getNumberOfDroppings()) {
                 mostUsedStation = station;
             }
         }
@@ -27,7 +28,7 @@ public class Main {
         Station leastOccupiedStation = system.getStations().get(0); // Take the first station
 
         // We are going to see how many free slots there are in the station and compare them
-
+        // TODO: Design method
 
         return leastOccupiedStation;
     }
@@ -83,8 +84,25 @@ public class Main {
 
     }
 
-    public static void sortStationByMostUsed(List<Station> stations) {
-        // TODO
+    public static int getNumberOfRentings(Station station) {
+        return station.getNumberOfRentings();
+    }
+
+    public static int getNumberOfDroppings(Station station) {
+        return station.getNumberOfDroppings();
+    }
+
+    public static double computeAverageRateOfOccupation(Station station) {
+        // TODO: Design method
+        return 0;
+    }
+
+    public static List<Station> sortStationByMostUsed(List<Station> stations) {
+
+        SortStationByMostUsed mostUsedComparator = new SortStationByMostUsed();
+        Collections.sort(stations, mostUsedComparator);
+
+        return stations;
     }
 
     public static void sortStationByLeastOccupied(List<Station> stations) {

@@ -57,6 +57,7 @@ public final class Terminal {
             // Set hasBicycle = true and rentStationID in User
             user.setBicycle(bicycle);
             user.setRentStationID(stationID);
+            user.addRenting();
 
             // Change the state of parkingSlot
             ParkingSlot slot = station.getParkingSlotTypeBicycle(bicycle);
@@ -79,6 +80,17 @@ public final class Terminal {
 
         // Take the money of the user !!!!
         Main.chargingUser(user, rentCost, station);
+
+        // Add user spent time to the type of bicycle
+        if(bicycle instanceof ElectricalBicycle) {
+            user.addSpentTimeOnElectricalBicycle(intervalOfTime);
+        }
+        else if (bicycle instanceof MechanicalBicycle) {
+            user.addSpentTimeOnMechanicalBicycle(intervalOfTime);
+        }
+        else {
+            System.out.println("ERROR!");
+        }
 
         // Changer rentTime
         user.setRentTime(null);

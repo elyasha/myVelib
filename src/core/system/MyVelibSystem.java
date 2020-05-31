@@ -175,15 +175,33 @@ public class MyVelibSystem {
     }
 
     public void displayUserReport(User user) {
-        // TODO: Create the method
+        // Check if user is on the system
+        if (this.getUsers().contains(user)){
+            System.out.println();
+            System.out.println("USER REPORT: " + user);
+            System.out.println(user);
+            System.out.println();
+        }
+        // TODO: [No priority] Change a little
+
     }
 
     public void displayStationReport(Station station) {
-        // TODO: Design method
+        if (this.getStations().contains(station)){
+            System.out.println();
+            System.out.println("STATION REPORT: " + station);
+            System.out.println(station);
+            System.out.println();
+        }
+        // TODO: [No priority] Change a little
     }
 
     public void displaySystemReport() {
-        // TODO: Design method
+        System.out.println();
+        System.out.println("SYSTEM REPORT: " + this);
+        System.out.println(this);
+        System.out.println();
+        // TODO: [No priority] Change a little
     }
 
 

@@ -1,6 +1,7 @@
 package core.components;
 import core.rides.planning.Main;
 import core.system.MyVelibSystem;
+import jdk.swing.interop.SwingInterOpUtils;
 
 import java.awt.*;
 import java.time.LocalTime;
@@ -26,6 +27,9 @@ public class User {
     private Bicycle bicycle;
     private int rentStationID;
     private LocalTime rentTime; // [minutes]
+    private int numberOfRentings = 0;
+    private double timeSpentOnElectricalBicycle = 0;
+    private double timeSpentOnMechanicalBicycle = 0;
 
 
     // Constructor
@@ -98,6 +102,18 @@ public class User {
         return money;
     }
 
+    public int getNumberOfRentings() {
+        return numberOfRentings;
+    }
+
+    public double getTimeSpentOnElectricalBicycle() {
+        return timeSpentOnElectricalBicycle;
+    }
+
+    public double getTimeSpentOnMechanicalBicycle() {
+        return timeSpentOnMechanicalBicycle;
+    }
+
     // Setters
 
     public void setName(String name) {
@@ -142,6 +158,18 @@ public class User {
 
     public void setMoney(double money) {
         this.money = money;
+    }
+
+    public void setNumberOfRentings(int numberOfRentings) {
+        this.numberOfRentings = numberOfRentings;
+    }
+
+    public void setTimeSpentOnElectricalBicycle(double timeSpentOnElectricalBicycle) {
+        this.timeSpentOnElectricalBicycle = timeSpentOnElectricalBicycle;
+    }
+
+    public void setTimeSpentOnMechanicalBicycle(double timeSpentOnMechanicalBicycle) {
+        this.timeSpentOnMechanicalBicycle = timeSpentOnMechanicalBicycle;
     }
 
     @Override
@@ -282,23 +310,69 @@ public class User {
 
     }
 
-    public int seeMyStatus() {
-        //TODO: Design method
-        return 0;
+    public void addRenting() {
+        this.numberOfRentings += 1;
     }
 
-    public int seeCurrentStatus(int userID) {
-        // TODO: Create a method
-
-        return 0;
+    public void addSpentTimeOnElectricalBicycle(double intervalOfTime) {
+        this.timeSpentOnElectricalBicycle += intervalOfTime;
     }
 
-    public void seeStationCurrentStation(MyVelibSystem system, int stationID) {
-        // TODO: Design method
+    public void addSpentTimeOnMechanicalBicycle(double intervalOfTime) {
+        this.timeSpentOnMechanicalBicycle += intervalOfTime;
+    }
+
+    public void seeMyStatus() {
+        System.out.println(this);
+    }
+
+    public void seeCurrentStatus(MyVelibSystem system, int userID) {
+        if (this.id == userID) {
+            this.seeMyStatus();
+            System.out.println();
+        }
+        else {
+            System.out.println("You are not allowed to see other people information!");
+            System.out.println("Please ask a manager for this information!");
+            System.out.println();
+        }
+
+    }
+
+    public void seeCurrentStationState(MyVelibSystem system, int stationID) {
+        // user can only see what is in its system
+        if (system.getUsers().contains(this)) {
+
+            Station currentStation = null;
+            // Check to see if the station exists
+            for (Station station: system.getStations()
+                 ) {
+                if (station.getId() == stationID) {
+                    currentStation = station;
+                    break;
+                }
+            }
+
+            if (currentStation == null) {
+                System.out.println("The station does not exist in our system!");
+            }
+            else {
+                System.out.println();
+                System.out.println("STATION REPORT");
+                System.out.println(currentStation);
+                System.out.println();
+            }
+
+        }
     }
 
     public void displaySystemReport(MyVelibSystem system) {
-        // TODO: Design method
+        if (system.getUsers().contains(this)) {
+            System.out.println();
+            System.out.println("SYSTEM REPORT");
+            System.out.println(system);
+            System.out.println();
+        }
     }
 
 

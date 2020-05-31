@@ -2,31 +2,70 @@ package core.components;
 import core.system.MyVelibSystem;
 
 import java.awt.*;
-import java.util.List;
 //import java.awt.List;
-import java.util.ArrayList;
+
 
 public class Manager extends User {
 	public Manager(String name, Point coordinate, int creditCardNumber, double money) {
 		super(name, coordinate, creditCardNumber, money);
 	}
 
-	public int seeMyStatus() {
-		//TODO: Design method
-		return 0;
+	public void seeMyStatus() {
+		System.out.println(this);
 	}
 
-	public int seeCurrentStatus(int userID) {
-		// TODO: Create a method
+	public void seeCurrentStatus(MyVelibSystem system, int userID) {
+		User currentUser = null;
 
-		return 0;
+		for (User user: system.getUsers()) {
+			if (user.getId() == userID){
+				currentUser = user;
+				break;
+			}
+		}
+
+		if (currentUser == null) {
+			System.out.println("This user is not in the system!");
+		}
+
+		else {
+			System.out.println(currentUser);
+		}
+
+
 	}
 
-	public void seeStationCurrentStation(MyVelibSystem system, int stationID) {
-		// TODO: Design method
+	public void seeCurrentStationState(MyVelibSystem system, int stationID) {
+		// Manager can see all systems
+		System.out.println();
+		Station currentStation = null;
+		// Check to see if the station exists
+		for (Station station: system.getStations()
+		) {
+			if (station.getId() == stationID) {
+				currentStation = station;
+				break;
+			}
+		}
+
+		if (currentStation == null) {
+			System.out.println("The station does not exist in our system!");
+		}
+		else {
+			System.out.println();
+			System.out.println("STATION REPORT");
+			System.out.println(currentStation);
+			System.out.println();
+		}
+
+
 	}
 
 	public void displaySystemReport(MyVelibSystem system) {
-		// TODO: Design method
+		// Manager can see all systems
+		System.out.println();
+		System.out.println("SYSTEM REPORT");
+		System.out.println(system);
+		System.out.println();
 	}
 }

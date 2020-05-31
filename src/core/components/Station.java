@@ -1,7 +1,6 @@
 package core.components;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Station {
@@ -12,7 +11,9 @@ public abstract class Station {
     private List<ParkingSlot> parkingSlots;
     private Terminal terminal;
     private double money;
-    private int numberOfLocations;
+    private int numberOfDroppings;
+    private int numberOfRentings;
+
 
     private int generateUniqueID() {
         return ++numberOfStations;
@@ -20,13 +21,13 @@ public abstract class Station {
 
     // Constructor
 
-    public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots, double money, int numberOfLocations) {
+    public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots, double money, int numberOfDroppings) {
         this.coordinate = coordinate;
         this.onService = onService;
         this.parkingSlots = parkingSlots;
         this.terminal = new Terminal(onService, this.id);
         this.money = money;
-        this.numberOfLocations = numberOfLocations;
+        this.numberOfDroppings = numberOfDroppings;
     }
 
     public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots) {
@@ -35,11 +36,8 @@ public abstract class Station {
         this.parkingSlots = parkingSlots;
         this.terminal = new Terminal(onService, this.id);
         this.money = 0;
-        this.numberOfLocations = 0;
+        this.numberOfDroppings = 0;
     }
-
-
-
 
     // Getters and setters
 
@@ -88,12 +86,20 @@ public abstract class Station {
         this.money = money;
     }
 
-    public int getNumberOfLocations() {
-        return numberOfLocations;
+    public int getNumberOfDroppings() {
+        return numberOfDroppings;
     }
 
-    public void setNumberOfLocations(int numberOfLocations) {
-        this.numberOfLocations = numberOfLocations;
+    public void setNumberOfDroppings(int numberOfDroppings) {
+        this.numberOfDroppings = numberOfDroppings;
+    }
+
+    public int getNumberOfRentings() {
+        return numberOfRentings;
+    }
+
+    public void setNumberOfRentings(int numberOfRentings) {
+        this.numberOfRentings = numberOfRentings;
     }
 
     // Written methods
@@ -209,7 +215,7 @@ public abstract class Station {
     }
 
     public void addNumberOfLocations(int number) {
-        this.numberOfLocations += number;
+        this.numberOfDroppings += number;
     }
     
 }
