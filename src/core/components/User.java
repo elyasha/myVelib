@@ -282,5 +282,19 @@ public class User {
 
     }
 
+    public int seeCurrentStatus(int userID) {
+        // TODO: Create a method
+
+        return 0;
+    }
+
+    public void seeStationCurrentStation(MyVelibSystem system, int stationID) {
+        // TODO: Design method
+    }
+
+    public void displaySystemReport(MyVelibSystem system) {
+        // TODO: Design method
+    }
+
 
 }

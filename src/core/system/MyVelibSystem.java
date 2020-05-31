@@ -174,5 +174,20 @@ public class MyVelibSystem {
         }
     }
 
+    public void displayUserReport(User user) {
+        // TODO: Create the method
+    }
+
+    public void displayStationReport(Station station) {
+        // TODO: Design method
+    }
+
+    public void displaySystemReport() {
+        // TODO: Design method
+    }
+
+
+
+
 
 }
