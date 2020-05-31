@@ -16,7 +16,6 @@ public class Main {
         switch (args[0]) {
             case "addUser":
                 AddUser.main(args);
-
                 break;
             case "display":
                 Display.main(args);

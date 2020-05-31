@@ -11,4 +11,10 @@ public class SortStation implements Command {
     public static void main(String[] args) {
         System.out.println("The sortStation command!");
     }
+
+    public static void helpCommand(String[] args) {
+        // TODO:
+    }
+
+
 }

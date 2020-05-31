@@ -22,4 +22,13 @@ public class Setup implements Command {
     public static void main(String[] args) {
         System.out.println("The setup command!");
     }
+
+    public static void helpCommand(String[] args) {
+        // TODO
+    }
+
+
+    public boolean hasGoodInput(String[] args) {
+        return false;
+    }
 }

@@ -11,4 +11,10 @@ public class RunTest implements Command{
     public static void main(String[] args) {
         System.out.println("The runTest");
     }
+
+    public static void helpCommand(String[] args) {
+        // TODO
+    }
+
+
 }
