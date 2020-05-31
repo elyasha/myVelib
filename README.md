@@ -105,8 +105,8 @@ automatically charged (if a charge applies).
 The myVelib system should support the following functionalities for computing relevant
 statistics:
 
-- [ ] User balance
-- [ ] Station balance
+- [x] User balance
+- [x] Station balance
 
 Furthermore myVelib should support dierent policies for sorting stations including
 those based on the following criteria:
@@ -162,11 +162,11 @@ stations, list of users of myVelib , etc.)
 
 ### Simulation of a planning ride
 
-- [ ] a user at a given position require a ride planning to reach a destination position
-- [ ] the user receives the source and destination stations
-- [ ] the user retrieve a bicycle from the source station of the planned ride at a given
+- [x] a user at a given position require a ride planning to reach a destination position
+- [x] the user receives the source and destination stations
+- [x] the user retrieve a bicycle from the source station of the planned ride at a given
 instant of time
-- [ ] the user that is holding a bicycle returns it (in a given free slot) at a given station at
+- [x] the user that is holding a bicycle returns it (in a given free slot) at a given station at
 a given instant of time.
 
 ### Computation of statistics

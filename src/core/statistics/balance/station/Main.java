@@ -32,12 +32,13 @@ public class Main {
         return leastOccupiedStation;
     }
 
+
     public static void stationBalance(MyVelibSystem system) {
         // Calculate the average station balance
         double averageStationBalance = 0; // Initialize the average to zero
 
-        for (Station station: system.getStations()
-             ) {
+        for (Station station : system.getStations()
+        ) {
             averageStationBalance += station.getMoney();
         }
 
@@ -52,8 +53,8 @@ public class Main {
         // Calculate the station that gained the most in the myVelib system
         Station stationWhoGainedTheMost = system.getStations().get(0); // Take the first
 
-        for (Station station: system.getStations()
-             ) {
+        for (Station station : system.getStations()
+        ) {
             if (station.getMoney() > stationWhoGainedTheMost.getMoney()) {
                 stationWhoGainedTheMost = station;
             }
@@ -66,7 +67,7 @@ public class Main {
         // Calculate the station that gained the least in the myVelib system
         Station stationWhoGainedTheLeast = system.getStations().get(0); // Take the first
 
-        for (Station station: system.getStations()
+        for (Station station : system.getStations()
         ) {
             if (station.getMoney() < stationWhoGainedTheLeast.getMoney()) {
                 stationWhoGainedTheLeast = station;
@@ -80,5 +81,13 @@ public class Main {
 
         // TODO: (Charlito) See if we can add more stuff here and maybe refactor the methods
 
+    }
+
+    public static void sortStationByMostUsed(List<Station> stations) {
+        // TODO
+    }
+
+    public static void sortStationByLeastOccupied(List<Station> stations) {
+        // TODO
     }
 }
