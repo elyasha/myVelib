@@ -14,7 +14,10 @@ public class AddUser implements Command {
     }
 
     public static void helpCommand(String[] args) {
-        // TODO
+        System.out.println("The addUser command!");
+        System.out.println("addUser <userName,cardType, velibnetworkName> :");
+        System.out.println("to add a user with name {userName} and card {cardType: Vmax/Vlibre/none}");
+        System.out.println("(i.e. ``none'' if the user has no card) to a myVelib network {velibnetworkName}");
     }
 
     public static void wrongArgumentHelp() {
@@ -24,6 +27,24 @@ public class AddUser implements Command {
 
 
     public boolean hasGoodInput(String[] args) {
-        return false;
+        // Check the quantity of arguments in this command
+        if (args.length != 3){
+            return false;
+        }
+        else{
+            // Check if the cardType is well written
+            if (!args[1].equals("Vmax") && !args[1].equals("Vlibre")) {
+                CardTypeError();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    }
+
+    private static void CardTypeError() {
+        System.out.println("There is an error in the card type!");
+        System.out.println("Please, add a coherent card type (Vmax, Vlibre, none)");
     }
 }
