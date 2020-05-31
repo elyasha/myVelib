@@ -11,6 +11,11 @@ public class Manager extends User {
 		super(name, coordinate, creditCardNumber, money);
 	}
 
+	public int seeMyStatus() {
+		//TODO: Design method
+		return 0;
+	}
+
 	public int seeCurrentStatus(int userID) {
 		// TODO: Create a method
 
