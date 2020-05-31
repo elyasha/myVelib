@@ -1,6 +1,6 @@
 package cli.commands;
 
-public class RunTest {
+public class RunTest implements Command{
     /**
      *
      * the runTest command
