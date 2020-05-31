@@ -105,10 +105,38 @@ automatically charged (if a charge applies).
 The myVelib system should support the following functionalities for computing relevant
 statistics:
 
-- [x] User balance
-- [x] Station balance
+### User balance
 
-Furthermore myVelib should support dierent policies for sorting stations including
+- [ ] The number of rides
+- [ ] the total time spent on a bicycle
+- [ ] the total amount of charges for all
+      rides performed by a user
+- [ ] the time-credit earned by a user
+ 
+### Station balance
+
+- [ ] total number of rents operation,
+- [ ] return operations performed on the station.
+- [ ] It should also allow to compute
+      the average rate of occupation of a given station over a given time window
+````shell
+for [ts, te] with delta = te - ts; 
+The rate of occupation of a station is given by:
+
+rate = (sum(i=1, numberOfParkingSlots, ti ^ delta) / (delta * numberOfParkingSlots);
+
+````
+where N is the number of parking slots in the station, ti
+is the time the i-th slot
+has being occupied during the time window [ts; te]. Notice that in the computation
+of occupation rate of a station if a parking slot is out-of-service then it should be
+accounted as being occupied (independently of whether it holds a bicycle or not).
+
+
+
+
+
+Furthermore myVelib should support different policies for sorting stations including
 those based on the following criteria:
 
 - [ ] most used station: stations are sorted w.r.t. the total number of renting + dropping operations
