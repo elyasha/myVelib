@@ -23,6 +23,8 @@ public class Help implements Command {
                     case "addUser":
                         AddUser.helpCommand(args);
                         break;
+                    case "addManager":
+                        AddManager.helpCommand(args);
                     case "display":
                         Display.helpCommand(args);
                         break;
