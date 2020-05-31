@@ -46,10 +46,10 @@ public class Help implements Command {
                     case "online":
                         Online.helpCommand(args);
                         break;
-                    case "rentBike":
+                    case "rentBicycle":
                         RentBicycle.helpCommand(args);
                         break;
-                    case "returnBike":
+                    case "returnBicycle":
                         ReturnBicycle.helpCommand(args);
                         break;
                     case "runTest":

@@ -38,10 +38,10 @@ public class Main {
             case "online":
                 Online.main(args);
                 break;
-            case "rentBike":
+            case "rentBicycle":
                 RentBicycle.main(args);
                 break;
-            case "returnBike":
+            case "returnBicycle":
                 ReturnBicycle.main(args);
                 break;
             case "runTest":

@@ -3,17 +3,25 @@ package cli.commands;
 public class RentBicycle implements Command {
     /**
      *
-     * rentBike <userID, stationID> : to let the user userID renting a bike from station
+     * rentBicycle <userID, stationID> : to let the user userID renting a bike from station
      * stationID (if no bikes are available should behave accordingly)
      *
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("The rentBike command!");
+        if (!hasGoodInput(args)) {
+            wrongArgumentHelp();
+        }
+        else {
+            System.out.println("The rentBicycle command!");
+            // TODO: Design command
+        }
     }
 
     public static void helpCommand(String[] args) {
-        // TODO
+        System.out.println("The rentBicycle command!");
+        System.out.println("rentBicycle <userID, stationID> : to let the user userID renting a bike from station stationID (if no bikes are available should behave accordingly)");
+
     }
 
     public static void wrongArgumentHelp() {
@@ -22,7 +30,8 @@ public class RentBicycle implements Command {
     }
 
 
-    public boolean hasGoodInput(String[] args) {
-        return false;
+    public static boolean hasGoodInput(String[] args) {
+        return args.length == 2;
+        // TODO: Check to see if it is an integer
     }
 }

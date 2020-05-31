@@ -3,16 +3,24 @@ package cli.commands;
 public class Exit implements Command{
     /**
      *
-     * Exit command
+     * Exit command: this commands exists the myVelib application
      *
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("The exit command!");
+        if (!hasGoodInput(args)) {
+            wrongArgumentHelp();
+        }
+        else {
+            System.out.println("The exit command!");
+            System.exit(0);
+
+        }
     }
 
     public static void helpCommand(String[] args) {
-        // TODO
+        System.out.println("The exit command!");
+        System.out.println("Exit command: this commands exists the myVelib application");
     }
 
     public static void wrongArgumentHelp() {
@@ -21,7 +29,7 @@ public class Exit implements Command{
     }
 
 
-    public boolean hasGoodInput(String[] args) {
-        return false;
+    public static boolean hasGoodInput(String[] args) {
+        return args.length == 0;
     }
 }

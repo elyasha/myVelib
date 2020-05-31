@@ -9,11 +9,18 @@ public class Online implements Command {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("The online command!");
+        if (!hasGoodInput(args)) {
+            wrongArgumentHelp();
+        }
+        else {
+            System.out.println("The online command!");
+            // TODO: Design command
+        }
     }
 
     public static void helpCommand(String[] args) {
-        // TODO
+        System.out.println("The online command!");
+        System.out.println("online <velibnetworkName, stationID> : to put online the station stationID of the myVelib network velibnetworkName");
     }
 
     public static void wrongArgumentHelp() {
@@ -22,7 +29,9 @@ public class Online implements Command {
     }
 
 
-    public boolean hasGoodInput(String[] args) {
-        return false;
+    public static boolean hasGoodInput(String[] args) {
+        return args.length == 2;
+        // TODO: Check to see if it is an integer
+
     }
 }

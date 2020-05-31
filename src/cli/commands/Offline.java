@@ -9,11 +9,18 @@ public class Offline implements Command {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("The offline command!");
+        if (!hasGoodInput(args)) {
+            wrongArgumentHelp();
+        }
+        else {
+            System.out.println("The offline command!");
+            // TODO: Design command
+        }
     }
 
     public static void helpCommand(String[] args) {
-        // TODO
+        System.out.println("The offline command!");
+        System.out.println("offline <velibnetworkName, stationID> : to put offline the station stationID of the myVelib network velibnetworkName");
     }
 
     public static void wrongArgumentHelp() {
@@ -21,7 +28,10 @@ public class Offline implements Command {
         System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
     }
 
-    public boolean hasGoodInput(String[] args) {
-        return false;
+    public static boolean hasGoodInput(String[] args) {
+        return args.length == 2;
+        // TODO: Check to see if it is an integer
     }
 }
+
+
