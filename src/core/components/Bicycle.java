@@ -19,6 +19,7 @@ public abstract class Bicycle {
 
     /**
      * This methods generate an unique id each time a bicycle object is created
+     *
      * @return the unique id, that is given by the number of bicycles in the application
      */
     private int generateUniqueID() {
@@ -27,6 +28,7 @@ public abstract class Bicycle {
 
     /**
      * getter for id
+     *
      * @return id
      */
     public int getId() {
@@ -35,6 +37,7 @@ public abstract class Bicycle {
 
     /**
      * getter for numberOfBicycles
+     *
      * @return numberOfBicycles
      */
     public static int getNumberOfBicycles() {
@@ -43,6 +46,7 @@ public abstract class Bicycle {
 
     /**
      * the toString method for the Bicycle class with some representation for the class
+     *
      * @return a message that represents the class
      */
     @Override
@@ -54,6 +58,7 @@ public abstract class Bicycle {
 
     /**
      * equals method for the Bicycle class
+     *
      * @param o an object
      * @return true, if the two objects are "equal"; false, otherwise
      */
@@ -67,6 +72,7 @@ public abstract class Bicycle {
 
     /**
      * hashCode method for the Bicycle class
+     *
      * @return hash(id)
      */
     @Override

@@ -60,7 +60,6 @@ public class RentalBicycle {
         userVmax.dropBicyclePlanningWithIntervalOfTime(system0, PointFactory.addPoint(234, 234), PointFactory.addPoint(0, 0), RENT_TIME_FOR_USER_WITH_VMAX);
 
 
-
         // User with Vlibre
         double RENT_TIME_FOR_USER_WITH_VLIBRE = 240;
         userVlibre.dropBicyclePlanningWithIntervalOfTime(system0, PointFactory.addPoint(234, 234), PointFactory.addPoint(0, 0), RENT_TIME_FOR_USER_WITH_VLIBRE);

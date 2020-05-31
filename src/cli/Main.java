@@ -11,6 +11,7 @@ public class Main {
     /**
      * main() is the implementation of the Main class for the CLI application.
      * It is here that we define how the CLI application will run and responds to the user.
+     *
      * @param args the arguments of the command
      */
     public static void main(String[] args) {

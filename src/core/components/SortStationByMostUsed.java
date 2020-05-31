@@ -9,6 +9,7 @@ public class SortStationByMostUsed implements Comparator<Station> {
 
     /**
      * This method is used to compare two stations
+     *
      * @param o1 the station o1
      * @param o2 the station o2
      * @return an integer that represents whether or not the o1 station is more used than the o2 station

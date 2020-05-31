@@ -19,7 +19,6 @@ public abstract class Card {
     private static int numberOfCards = 0;
 
     /**
-     *
      * This methods generate an unique ID when we create a new object
      *
      * @return ++numberOfCards
@@ -29,7 +28,6 @@ public abstract class Card {
     }
 
     /**
-     *
      * id getter
      *
      * @return the generated id of the new object
@@ -39,7 +37,6 @@ public abstract class Card {
     }
 
     /**
-     *
      * numberOfCards getter
      *
      * @return the number of Cards in the application
@@ -50,7 +47,6 @@ public abstract class Card {
 
 
     /**
-     *
      * toString method of the Card class
      *
      * @return : a standard class toString
@@ -63,9 +59,7 @@ public abstract class Card {
     }
 
     /**
-     *
      * equals method of the Card class
-     *
      *
      * @param o : an object o
      * @return : id == card.id
@@ -79,7 +73,6 @@ public abstract class Card {
     }
 
     /**
-     *
      * hashCode method of the Card class
      * we compare with respect to the id
      *

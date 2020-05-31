@@ -1,7 +1,9 @@
 package core.rides.planning;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+
 import core.components.*;
 import core.system.MyVelibSystem;
 
@@ -41,18 +43,18 @@ public class Main {
 //            System.out.println(station.isOnService());
 //            System.out.println();
             if (distance < bestDistanceStart && station.getExistTypeBike(bicycle) && station.isOnService()) {
-                bestDistanceStart =  distance;
+                bestDistanceStart = distance;
                 bestStationStart = station;
 
             }
 
 
             // Compute the nearest station for the ending point
-            distance = Math.sqrt(Math.pow(coords.getX()- coordsEnd.getX(), 2)+Math.pow(coords.getY()- coordsEnd.getY(), 2));
+            distance = Math.sqrt(Math.pow(coords.getX() - coordsEnd.getX(), 2) + Math.pow(coords.getY() - coordsEnd.getY(), 2));
 
             // We want to be sure there exists a free slot in the station
             if (distance < bestDistanceEnd && station.hasOneSlotFree() && station.isOnService()) {
-                bestDistanceEnd =  distance;
+                bestDistanceEnd = distance;
                 bestStationEnd = station;
             }
 

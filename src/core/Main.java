@@ -16,6 +16,7 @@ public class Main {
 
     /**
      * a getter for systems
+     *
      * @return All systems of the myVelib app
      */
     public static List<MyVelibSystem> getSystems() {
@@ -24,6 +25,7 @@ public class Main {
 
     /**
      * A setter for systems
+     *
      * @param systems A list of systems that is used to set all systems in the application
      */
     public static void setSystems(List<MyVelibSystem> systems) {
@@ -32,6 +34,7 @@ public class Main {
 
     /**
      * This is the main() method of our myVelib application. The myVelib application itself
+     *
      * @param args the arguments of our core myVelib application
      */
     public static void main(String[] args) {
@@ -54,18 +57,11 @@ public class Main {
         // Output: Execute the commands in file.txt
 
 
-
-
-
-
-
-
-
-
     }
 
     /**
      * A method to add a new system to the systems variable
+     *
      * @param system A system that will be added to the Main class (of the myVelib app)
      */
     public static void addMyVelibSystem(MyVelibSystem system) {

@@ -27,30 +27,25 @@ public class Main {
             } else if (card instanceof Vmax) {
                 if (intervalOfTime.getHours() >= 1) {
                     cost = (intervalOfTime.getHours() * 1);
-                }
-                else {
+                } else {
                     cost = 0;
                 }
 
             } else {
                 cost = intervalOfTime.getHours() * 2;
             }
-        }
-
-        else if (bicycle instanceof MechanicalBicycle) {
+        } else if (bicycle instanceof MechanicalBicycle) {
             if (card instanceof Vlibre) {
                 if (intervalOfTime.getHours() >= 1) {
                     cost = (intervalOfTime.getHours() * 1);
-                }
-                else {
+                } else {
                     cost = 0; // TODO: Learn know to import CSV file
                 }
 
             } else if (card instanceof Vmax) {
                 if (intervalOfTime.getHours() >= 1) {
                     cost = (intervalOfTime.getHours() * 1);
-                }
-                else {
+                } else {
                     cost = 0; // TODO: Learn know to import CSV file
                 }
 
@@ -60,7 +55,7 @@ public class Main {
         return cost;
     }
 
-    public static double getCostWithTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user){
+    public static double getCostWithTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user) {
 
         double cost = 0;
         double hours;
@@ -69,27 +64,24 @@ public class Main {
             System.out.println("ERROR ! TIME CREDIT MUST BE POSITIVE");
         }
         if (timeCredit == 0) {
-            cost = getCostWithoutTimeCredit(bicycle,card,intervalOfTime);
-        }
-        else {
-            if (intervalOfTime.getHours()*60 + intervalOfTime.getMinutes() - timeCredit > 0) {
-                hours = (intervalOfTime.getHours()*60 + intervalOfTime.getMinutes() - timeCredit)/60;
+            cost = getCostWithoutTimeCredit(bicycle, card, intervalOfTime);
+        } else {
+            if (intervalOfTime.getHours() * 60 + intervalOfTime.getMinutes() - timeCredit > 0) {
+                hours = (intervalOfTime.getHours() * 60 + intervalOfTime.getMinutes() - timeCredit) / 60;
 
                 cost = getCostWithoutTimeCredit(bicycle, card, new Time((int) hours, 0, 0));
 
                 user.setTimeCreditBalance(0);
 
-            }
-            else if (intervalOfTime.getHours()*60 + intervalOfTime.getMinutes() - timeCredit == 0) {
+            } else if (intervalOfTime.getHours() * 60 + intervalOfTime.getMinutes() - timeCredit == 0) {
                 cost = 0; //
                 // the new timeCredit = 0
                 user.setTimeCreditBalance(0);
 
-            }
-            else if (intervalOfTime.getHours()*60 + intervalOfTime.getMinutes() - timeCredit < 0) {
+            } else if (intervalOfTime.getHours() * 60 + intervalOfTime.getMinutes() - timeCredit < 0) {
                 cost = 0;
                 // the new timeCredit < the old timeCredit
-                user.setTimeCreditBalance((float) (timeCredit - (intervalOfTime.getHours()*60 + intervalOfTime.getMinutes())));
+                user.setTimeCreditBalance((float) (timeCredit - (intervalOfTime.getHours() * 60 + intervalOfTime.getMinutes())));
             }
 
         }
@@ -109,7 +101,7 @@ public class Main {
         }
 
         double intervalOfTime;
-        intervalOfTime = endTime.getHour()*60 + endTime.getMinute()-startTime.getHour()*60-startTime.getMinute();
+        intervalOfTime = endTime.getHour() * 60 + endTime.getMinute() - startTime.getHour() * 60 - startTime.getMinute();
 
         return intervalOfTime;
 
@@ -124,8 +116,6 @@ public class Main {
             user.addTimeCredit(TIME_ADDED_BY_PLUS_STATION);
         }
     }
-
-
 
 
 }

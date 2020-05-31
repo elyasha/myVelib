@@ -5,10 +5,10 @@ package core.components;
  */
 public class ElectricalBicycle extends Bicycle {
 
-	/**
-	 * This is the electrical bicycle constructor that inherits from the super class Bicycle
-	 */
-	public ElectricalBicycle() {
-		super();
-	}
+    /**
+     * This is the electrical bicycle constructor that inherits from the super class Bicycle
+     */
+    public ElectricalBicycle() {
+        super();
+    }
 }

@@ -1,4 +1,5 @@
 package core.components;
+
 import core.rides.planning.Main;
 import core.system.MyVelibSystem;
 import jdk.swing.interop.SwingInterOpUtils;
@@ -209,11 +210,9 @@ public class User {
 
         if (cardType.equals("Vlible")) {
             this.card = new Vlibre();
-        }
-        else if (cardType.equals("Vmax")) {
+        } else if (cardType.equals("Vmax")) {
             this.card = new Vmax();
-        }
-        else {
+        } else {
             System.out.println("Error! The type does not exist.");
         }
     }
@@ -222,7 +221,7 @@ public class User {
         this.money += money;
     }
 
-    public void removeMoney(double money){
+    public void removeMoney(double money) {
         if (this.money - money < 0) {
             System.out.println("ATTENTION! You are negative.");
         }
@@ -230,34 +229,33 @@ public class User {
 
     }
 
-    public void addTimeCredit(double time){
+    public void addTimeCredit(double time) {
         this.timeCreditBalance += time;
     }
 
     public void removeTimeCredit(double time) {
         if (this.timeCreditBalance - time < 0) {
             System.out.println("You cannot have a negative time credit balance!");
-        }
-        else {
+        } else {
             this.timeCreditBalance -= time;
         }
 
     }
-    
+
     public void rentBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
-    	List<Station> allStations;
-    	Terminal termStart;
-    	
-    	// Get best start and end stations
-    	allStations = Main.getBestStation(system, coordsStart,coordsEnd,bicycle);
+        List<Station> allStations;
+        Terminal termStart;
+
+        // Get best start and end stations
+        allStations = Main.getBestStation(system, coordsStart, coordsEnd, bicycle);
 //        System.out.println(allStations);  // [null, null]
-    	// Get terminals of start and end stations 
-    	termStart = allStations.get(0).getStationTerminal();
+        // Get terminals of start and end stations
+        termStart = allStations.get(0).getStationTerminal();
 //        System.out.println(termStart);
-    	// Rent on terminal start
-    	termStart.rentBicycle(bicycle, this, allStations.get(0));
-    	
-    	// Drop on terminal end ? How can we know the time ? 
+        // Rent on terminal start
+        termStart.rentBicycle(bicycle, this, allStations.get(0));
+
+        // Drop on terminal end ? How can we know the time ?
     }
 
     // TODO: Refactor this method (we need to divide this method - start and end stations)
@@ -270,10 +268,9 @@ public class User {
         // Check if the user has indeed a bicycle
         if (this.bicycle == null) {
             System.out.println("You have not a bicycle!!!");
-        }
-        else {
+        } else {
             // Get best start and end stations
-            allStations = Main.getBestStation(system, coordsStart,coordsEnd,this.bicycle);
+            allStations = Main.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
 
             // Get terminals of start and end stations
             termEnd = allStations.get(1).getStationTerminal();
@@ -294,10 +291,9 @@ public class User {
         // Check if the user has indeed a bicycle
         if (this.bicycle == null) {
             System.out.println("You have not a bicycle!!!");
-        }
-        else {
+        } else {
             // Get best start and end stations
-            allStations = Main.getBestStation(system, coordsStart,coordsEnd,this.bicycle);
+            allStations = Main.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
 
             // Get terminals of start and end stations
             termEnd = allStations.get(1).getStationTerminal();
@@ -330,8 +326,7 @@ public class User {
         if (this.id == userID) {
             this.seeMyStatus();
             System.out.println();
-        }
-        else {
+        } else {
             System.out.println("You are not allowed to see other people information!");
             System.out.println("Please ask a manager for this information!");
             System.out.println();
@@ -345,8 +340,8 @@ public class User {
 
             Station currentStation = null;
             // Check to see if the station exists
-            for (Station station: system.getStations()
-                 ) {
+            for (Station station : system.getStations()
+            ) {
                 if (station.getId() == stationID) {
                     currentStation = station;
                     break;
@@ -355,8 +350,7 @@ public class User {
 
             if (currentStation == null) {
                 System.out.println("The station does not exist in our system!");
-            }
-            else {
+            } else {
                 System.out.println();
                 System.out.println("STATION REPORT");
                 System.out.println(currentStation);

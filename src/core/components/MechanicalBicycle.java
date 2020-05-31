@@ -7,10 +7,10 @@ import core.components.Bicycle;
  */
 public class MechanicalBicycle extends Bicycle {
 
-	/**
-	 * The mechanical bicycle constructor that inherits from the super class Bicycle
-	 */
-	public MechanicalBicycle() {
-		super();
-	}
+    /**
+     * The mechanical bicycle constructor that inherits from the super class Bicycle
+     */
+    public MechanicalBicycle() {
+        super();
+    }
 }

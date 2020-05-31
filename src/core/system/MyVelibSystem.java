@@ -68,9 +68,6 @@ public class MyVelibSystem {
     }
 
 
-
-
-
     @Override
     public String toString() {
         return "MyVelibSystem{" +
@@ -176,7 +173,7 @@ public class MyVelibSystem {
 
     public void displayUserReport(User user) {
         // Check if user is on the system
-        if (this.getUsers().contains(user)){
+        if (this.getUsers().contains(user)) {
             System.out.println();
             System.out.println("USER REPORT: " + user);
             System.out.println(user);
@@ -187,7 +184,7 @@ public class MyVelibSystem {
     }
 
     public void displayStationReport(Station station) {
-        if (this.getStations().contains(station)){
+        if (this.getStations().contains(station)) {
             System.out.println();
             System.out.println("STATION REPORT: " + station);
             System.out.println(station);
@@ -203,9 +200,6 @@ public class MyVelibSystem {
         System.out.println();
         // TODO: [No priority] Change a little
     }
-
-
-
 
 
 }

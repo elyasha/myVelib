@@ -9,10 +9,9 @@ import core.system.MyVelibSystem;
 public class Main {
 
     public static int getNumberOfRides(User user) {
-        if (user.getBicycle() == null){
+        if (user.getBicycle() == null) {
             return user.getNumberOfRentings();
-        }
-        else {
+        } else {
             System.out.println("You last ride is still active!");
             return user.getNumberOfRentings();
         }
@@ -21,11 +20,9 @@ public class Main {
     public static double getTimeSpentOnBicycle(User user, Bicycle bicycle) {
         if (bicycle instanceof ElectricalBicycle) {
             return getTimeSpentOnElectricalBicycle(user);
-        }
-        else if (bicycle instanceof MechanicalBicycle) {
+        } else if (bicycle instanceof MechanicalBicycle) {
             return getTimeSpentOnMechanicalBicycle(user);
-        }
-        else {
+        } else {
             return 0;
         }
     }

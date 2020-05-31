@@ -27,7 +27,7 @@ public abstract class Station {
 
     /**
      * The onService parameter
-     *
+     * <p>
      * if true, the station is on service
      * if false, the station is not on service
      */
@@ -61,6 +61,7 @@ public abstract class Station {
 
     /**
      * This method generate an unique id
+     *
      * @return the unique id
      */
     private int generateUniqueID() {
@@ -71,10 +72,11 @@ public abstract class Station {
 
     /**
      * A Station constructor
-     * @param coordinate coordinate that will be used to place a plus station
-     * @param onService a boolean parameter to know if the station will be on service
-     * @param parkingSlots a list of parking slots that will populate the plus station
-     * @param money the initial money that the station will have
+     *
+     * @param coordinate        coordinate that will be used to place a plus station
+     * @param onService         a boolean parameter to know if the station will be on service
+     * @param parkingSlots      a list of parking slots that will populate the plus station
+     * @param money             the initial money that the station will have
      * @param numberOfDroppings the number of droppings (or locations)
      */
     public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots, double money, int numberOfDroppings) {
@@ -88,8 +90,9 @@ public abstract class Station {
 
     /**
      * A (simpler) Station constructor
-     * @param coordinate coordinate that will be used to place a plus station
-     * @param onService a boolean parameter to know if the station will be on service
+     *
+     * @param coordinate   coordinate that will be used to place a plus station
+     * @param onService    a boolean parameter to know if the station will be on service
      * @param parkingSlots a list of parking slots that will populate the plus station
      */
     public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots) {
@@ -105,6 +108,7 @@ public abstract class Station {
 
     /**
      * getter for id
+     *
      * @return the id
      */
     public int getId() {
@@ -113,6 +117,7 @@ public abstract class Station {
 
     /**
      * getter for onService parameter
+     *
      * @return onService parameter
      */
     public boolean isOnService() {
@@ -121,6 +126,7 @@ public abstract class Station {
 
     /**
      * setter for onService parameter
+     *
      * @param onService a boolean that will be used to set onService parameter
      */
     public void setOnService(boolean onService) {
@@ -130,6 +136,7 @@ public abstract class Station {
 
     /**
      * getter for coordinate
+     *
      * @return coordinate
      */
     public Point getCoordinate() {
@@ -138,6 +145,7 @@ public abstract class Station {
 
     /**
      * setter for coordinate (maybe the relevance of this method could be discussed)
+     *
      * @param coordinate coordinate that will be used to set the station coordinate
      */
     public void setCoordinate(Point coordinate) {
@@ -146,6 +154,7 @@ public abstract class Station {
 
     /**
      * getter for the list of parking slots
+     *
      * @return parkingSlots (a list of parking slots)
      */
     public List<ParkingSlot> getParkingSlots() {
@@ -154,6 +163,7 @@ public abstract class Station {
 
     /**
      * setter for parkingSlots
+     *
      * @param parkingSlots a list of parking slots
      */
     public void setParkingSlots(List<ParkingSlot> parkingSlots) {
@@ -162,6 +172,7 @@ public abstract class Station {
 
     /**
      * getter for the terminal of the station
+     *
      * @return the terminal object
      */
     public Terminal getStationTerminal() {
@@ -170,6 +181,7 @@ public abstract class Station {
 
     /**
      * getter for the number of stations
+     *
      * @return number of stations in the application
      */
     public static int getNumberOfStations() {
@@ -178,6 +190,7 @@ public abstract class Station {
 
     /**
      * getter for the money parameter
+     *
      * @return the total amount of money that stations has (it can be used to see the station profit)
      */
     public double getMoney() {
@@ -186,6 +199,7 @@ public abstract class Station {
 
     /**
      * setter for the money parameter
+     *
      * @param money the total amount of money that the station has
      */
     public void setMoney(double money) {
@@ -194,6 +208,7 @@ public abstract class Station {
 
     /**
      * getter for the number of droppings (or complete locations)
+     *
      * @return the number of droppings
      */
     public int getNumberOfDroppings() {
@@ -202,6 +217,7 @@ public abstract class Station {
 
     /**
      * setter for the number of droppings
+     *
      * @param numberOfDroppings the number of complete locations (or droppings)
      */
     public void setNumberOfDroppings(int numberOfDroppings) {
@@ -210,6 +226,7 @@ public abstract class Station {
 
     /**
      * getter for the number of rentings
+     *
      * @return the number of rentings
      */
     public int getNumberOfRentings() {
@@ -218,6 +235,7 @@ public abstract class Station {
 
     /**
      * setter for the number of rentings
+     *
      * @param numberOfRentings the number of rentings to be used in the setting process
      */
     public void setNumberOfRentings(int numberOfRentings) {
@@ -228,6 +246,7 @@ public abstract class Station {
 
     /**
      * This method generates free parking slots and return all the parking slots (with memory allocation)
+     *
      * @param parkingSlots a list of parking slots (that may be empty)
      * @return a complete list of parking slots (that has memory allocation)
      */
@@ -241,17 +260,16 @@ public abstract class Station {
 
     /**
      * This method will return a boolean that represents the existence or not of give bicycle type
+     *
      * @param bicycle a bicycle object, either electrical or mechanical bicycle
      * @return true, if the station has a bicycle of the same type. false, otherwise
      */
     public boolean getExistTypeBike(Bicycle bicycle) {
         if (bicycle instanceof ElectricalBicycle) {
             return hasAvailableElectricalBicycle();
-        }
-        else if (bicycle instanceof MechanicalBicycle) {
+        } else if (bicycle instanceof MechanicalBicycle) {
             return hasAvailableMechanicalBicycle();
-        }
-        else {
+        } else {
             return false;
         }
 
@@ -259,10 +277,11 @@ public abstract class Station {
 
     /**
      * This method is used to see if a station has an available electrical bicycle to be rented
+     *
      * @return true, if the station has an available electrical bicycle. false, otherwise
      */
     public boolean hasAvailableElectricalBicycle() {
-        for(ParkingSlot slot: parkingSlots) {
+        for (ParkingSlot slot : parkingSlots) {
 //            System.out.println(slot.getBicycle());
             if (slot.getBicycle() instanceof ElectricalBicycle) {
                 return true;
@@ -273,10 +292,11 @@ public abstract class Station {
 
     /**
      * This method is used to see if a station has an available mechanical bicycle to be rented
+     *
      * @return true, if the station has an available mechanical bicycle. false, otherwise
      */
     public boolean hasAvailableMechanicalBicycle() {
-        for(ParkingSlot slot: parkingSlots) {
+        for (ParkingSlot slot : parkingSlots) {
 //            System.out.println(slot.getBicycle());
             if (slot.getBicycle() instanceof MechanicalBicycle) {
                 return true;
@@ -287,24 +307,26 @@ public abstract class Station {
 
     /**
      * This method checks if a station has a free slot
+     *
      * @return true, if the station has a free slot. false, otherwise
      */
     public boolean hasOneSlotFree() {
-    	for(ParkingSlot slot: parkingSlots) {
-    		if (slot.getState() == 0) {
-    			return true;
-    		}
-    	}
-    	return false;
+        for (ParkingSlot slot : parkingSlots) {
+            if (slot.getState() == 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
      * This method is a getter for a free slot. If it has not a free slot, it returns null
+     *
      * @return a free slot if the station has any. null, otherwise
      */
     public ParkingSlot getOneFreeSlot() {
-        for (ParkingSlot slot: parkingSlots
-             ) {
+        for (ParkingSlot slot : parkingSlots
+        ) {
             if (slot.getState() == 0) {
                 return slot;
             }
@@ -315,6 +337,7 @@ public abstract class Station {
 
     /**
      * This method gets a parking slot for the type of bicycle that is passed as argument
+     *
      * @param bicycle any bicycle in the application (can be electrical or mechanical)
      * @return a slot of the give bicycle if there is any. null, otherwise
      */
@@ -322,11 +345,9 @@ public abstract class Station {
         ParkingSlot slot;
         if (bicycle instanceof ElectricalBicycle) {
             slot = getElectricalParkingSlot();
-        }
-        else if (bicycle instanceof MechanicalBicycle) {
+        } else if (bicycle instanceof MechanicalBicycle) {
             slot = getMechanicalParkingSlot();
-        }
-        else {
+        } else {
             slot = null;
         }
 
@@ -335,12 +356,13 @@ public abstract class Station {
 
     /**
      * This method get an electrical parking slot (that is a parking slot that has an electrical bicycle) if there is any
+     *
      * @return an electrical parking slot if there is any in the station. null, otherwise
      */
     public ParkingSlot getElectricalParkingSlot() {
         ParkingSlot slot = null;
-        for(ParkingSlot slot_i: parkingSlots) {
-            if (slot_i.getBicycle() instanceof  ElectricalBicycle) {
+        for (ParkingSlot slot_i : parkingSlots) {
+            if (slot_i.getBicycle() instanceof ElectricalBicycle) {
                 slot = slot_i;
                 break;
             }
@@ -350,12 +372,13 @@ public abstract class Station {
 
     /**
      * This method get a mechanical parking slot (that is a parking slot that has an mechanical bicycle) if there is any
+     *
      * @return a mechanical parking slot if there is any in the station. null, otherwise
      */
     public ParkingSlot getMechanicalParkingSlot() {
         ParkingSlot slot = null;
-        for(ParkingSlot slot_i: parkingSlots) {
-            if (slot_i.getBicycle() instanceof  MechanicalBicycle) {
+        for (ParkingSlot slot_i : parkingSlots) {
+            if (slot_i.getBicycle() instanceof MechanicalBicycle) {
                 slot = slot_i;
                 break;
             }
@@ -365,6 +388,7 @@ public abstract class Station {
 
     /**
      * This methods adds money in the station
+     *
      * @param money The amount of money to be added to the station
      */
     public void addMoney(double money) {
@@ -373,6 +397,7 @@ public abstract class Station {
 
     /**
      * This methods removes money in the station
+     *
      * @param money The amount of money to be removed from the station
      */
     public void removeMoney(double money) {
@@ -385,10 +410,11 @@ public abstract class Station {
 
     /**
      * This methods adds the number of droppings
+     *
      * @param number The number that will be used to increase the number of droppings
      */
     public void addNumberOfDroppings(int number) {
         this.numberOfDroppings += number;
     }
-    
+
 }

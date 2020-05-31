@@ -76,51 +76,51 @@ public class InitialSetup {
         // stations
         List<Station> stations = new ArrayList<Station>();
         Station station = null;
-    	Random rand = new Random();
-        
+        Random rand = new Random();
+
         for (int i = 0; i < numberOfPlusStations; i++) {
-        	
+
             // Create the standard stations and be sure two stations are not at the same place
-        	while (station == null) {
-        		// Coordinate x will be an integer between 0 and squareSide
-            	// Coordinate y will be an integer between 0 and squareSide
-        		int x = rand.nextInt((int) squareSide);
-            	int y = rand.nextInt((int) squareSide);
-        		station = StationFactory.addPlusStation(system0, PointFactory.addPoint(x, y), true, allSlots);
-        	}
-        	station = null;
+            while (station == null) {
+                // Coordinate x will be an integer between 0 and squareSide
+                // Coordinate y will be an integer between 0 and squareSide
+                int x = rand.nextInt((int) squareSide);
+                int y = rand.nextInt((int) squareSide);
+                station = StationFactory.addPlusStation(system0, PointFactory.addPoint(x, y), true, allSlots);
+            }
+            station = null;
         }
-        
+
         for (int i = 0; i < numberOfStandardStations; i++) {
             // Create the standard stations and be sure two stations are not at the same place
-        	while (station == null) {
-        		// Coordinate x will be an integer between 0 and squareSide
-            	// Coordinate y will be an integer between 0 and squareSide
-        		int x = rand.nextInt((int) squareSide);
-            	int y = rand.nextInt((int) squareSide);
-        		station = StationFactory.addStandardStation(system0, PointFactory.addPoint(x, y), true, allSlots);
-        	}
-        	station = null;
-            
-         
+            while (station == null) {
+                // Coordinate x will be an integer between 0 and squareSide
+                // Coordinate y will be an integer between 0 and squareSide
+                int x = rand.nextInt((int) squareSide);
+                int y = rand.nextInt((int) squareSide);
+                station = StationFactory.addStandardStation(system0, PointFactory.addPoint(x, y), true, allSlots);
+            }
+            station = null;
+
+
         }
 
 
         // Add User without card
-        int x,y;
+        int x, y;
         x = rand.nextInt((int) squareSide);
-    	y = rand.nextInt((int) squareSide);
-        UserFactory.addUser(system0,"Matheus" , PointFactory.addPoint(x, y),30109903, 1000);
+        y = rand.nextInt((int) squareSide);
+        UserFactory.addUser(system0, "Matheus", PointFactory.addPoint(x, y), 30109903, 1000);
 
         // Add User with Vmax
         x = rand.nextInt((int) squareSide);
-    	y = rand.nextInt((int) squareSide);
+        y = rand.nextInt((int) squareSide);
         User user = UserFactory.addUser(system0, "Charlito", PointFactory.addPoint(x, y), 192340, 0);
         CardFactory.addVmax(system0, user);
 
         // Add User with Vlibre
         x = rand.nextInt((int) squareSide);
-    	y = rand.nextInt((int) squareSide);
+        y = rand.nextInt((int) squareSide);
         User user2 = UserFactory.addUser(system0, "Valdisa", PointFactory.addPoint(x, y), 124340, 0);
         CardFactory.addVlibre(system0, user2);
 
