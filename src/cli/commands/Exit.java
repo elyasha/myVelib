@@ -15,6 +15,11 @@ public class Exit implements Command{
         // TODO
     }
 
+    public static void wrongArgumentHelp() {
+        System.out.println("There is a problem with the arguments passed!");
+        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+    }
+
 
     public boolean hasGoodInput(String[] args) {
         return false;

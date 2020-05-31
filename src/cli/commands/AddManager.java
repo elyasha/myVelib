@@ -37,4 +37,9 @@ public class AddManager implements Command {
         System.out.println("There is an error in the card type!");
         System.out.println("Please, add a coherent card type (Vmax, Vlibre, none)");
     }
+
+    public static void wrongArgumentHelp() {
+        System.out.println("There is a problem with the arguments passed!");
+        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+    }
 }
