@@ -29,7 +29,7 @@ public abstract class Card {
      *
      * id getter
      *
-     * @return
+     * @return the generated id of the new object
      */
     public int getId() {
         return id;
@@ -39,7 +39,7 @@ public abstract class Card {
      *
      * numberOfCards getter
      *
-     * @return
+     * @return the number of Cards in the application
      */
     public static int getNumberOfCards() {
         return numberOfCards;
