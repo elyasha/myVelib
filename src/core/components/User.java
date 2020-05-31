@@ -282,6 +282,11 @@ public class User {
 
     }
 
+    public int seeMyStatus() {
+        //TODO: Design method
+        return 0;
+    }
+
     public int seeCurrentStatus(int userID) {
         // TODO: Create a method
 
