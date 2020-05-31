@@ -8,7 +8,7 @@ public class Main {
 
         // Check in there is any argument for the program
         if (args.length == 0) {
-            System.out.println("Please add some argument! For help: myvelib help");
+            Help.wrongArgumentHelp();
             System.exit(1);
         }
 
