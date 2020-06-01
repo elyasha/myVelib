@@ -50,6 +50,8 @@ public class InitialSetup {
         // Name of the myVelib system
         String name = args[0];
 
+        system0.setName(name);
+
         // Quantity of stations
         int numberOfStations = Integer.parseInt(args[1]);
 

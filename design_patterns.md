@@ -2,7 +2,7 @@
 
 1. Factory pattern (for class creation)
 2. Strategy pattern (for classes that use multiple algorithms - renting planning)
-3. Observer pattern (mettre à jour les utisateurs sur le nombre de stations)
-4. Visitor pattern (paiement des velos)
-5. Singleton pattern (pour les factories)
-6. Observer pattern (terminal doit être informé si la station est en service)
+3. Observer pattern (update users on number of stations)
+4. Visitor pattern (rides payment)
+5. Singleton pattern (to classes that will have only one instance)
+6. Observer pattern (terminal must be informed if the station is on service or not)

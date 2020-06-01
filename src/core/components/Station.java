@@ -4,6 +4,7 @@ import core.components.factories.ParkingSlotsFactory;
 
 import java.awt.*;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * The Station class : This class defines what stations are and how they behave
@@ -241,6 +242,54 @@ public abstract class Station {
     public void setNumberOfRentings(int numberOfRentings) {
         this.numberOfRentings = numberOfRentings;
     }
+
+    /**
+     * toString method for Station
+     * @return a string that represents the station
+     */
+    @Override
+    public String toString() {
+        return "Station{" +
+                "id=" + id +
+                ", coordinate=" + coordinate +
+                ", onService=" + onService +
+                ", parkingSlots=" + parkingSlots +
+                ", terminal=" + terminal +
+                ", money=" + money +
+                ", numberOfDroppings=" + numberOfDroppings +
+                ", numberOfRentings=" + numberOfRentings +
+                '}';
+    }
+
+    /**
+     * equals method for Station
+     * @param o an object
+     * @return true or false
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Station station = (Station) o;
+        return id == station.id &&
+                onService == station.onService &&
+                Double.compare(station.money, money) == 0 &&
+                numberOfDroppings == station.numberOfDroppings &&
+                numberOfRentings == station.numberOfRentings &&
+                Objects.equals(coordinate, station.coordinate) &&
+                Objects.equals(parkingSlots, station.parkingSlots) &&
+                Objects.equals(terminal, station.terminal);
+    }
+
+    /**
+     * hashCode method for Station
+     * @return hash(id, coordinate, onService, parkingSlots, terminal, money, numberOfDroppings, numberOfRentings)
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, coordinate, onService, parkingSlots, terminal, money, numberOfDroppings, numberOfRentings);
+    }
+
 
     // Written methods
 
