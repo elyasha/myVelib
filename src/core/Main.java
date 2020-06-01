@@ -2,6 +2,7 @@ package core;
 
 import core.system.MyVelibSystem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ public class Main {
     /**
      * This is where all systems will be saved when running the application
      */
-    private static List<MyVelibSystem> systems;
+    private static List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
 
     /**
      * a getter for systems
