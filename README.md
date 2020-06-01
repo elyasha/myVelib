@@ -107,16 +107,16 @@ statistics:
 
 ### User balance
 
-- [ ] The number of rides
-- [ ] the total time spent on a bicycle
-- [ ] the total amount of charges for all
-      rides performed by a user
-- [ ] the time-credit earned by a user
+- [x] The number of rides
+- [x] the total time spent on a bicycle
+- [x] the total amount of charges for all
+     rides performed by a user
+- [x] the time-credit earned by a user
  
 ### Station balance
 
-- [ ] total number of rents operation,
-- [ ] return operations performed on the station.
+- [x] total number of rents operation,
+- [x] return operations performed on the station.
 - [ ] It should also allow to compute
       the average rate of occupation of a given station over a given time window
 ````shell
@@ -139,7 +139,7 @@ accounted as being occupied (independently of whether it holds a bicycle or not)
 Furthermore myVelib should support different policies for sorting stations including
 those based on the following criteria:
 
-- [ ] most used station: stations are sorted w.r.t. the total number of renting + dropping operations
+- [x] most used station: stations are sorted w.r.t. the total number of renting + dropping operations
 - [ ] least occupied station: stations are sorted w.r.t. the rate of occupation (ratio
 between free time over occupied time of parking bays). This allows for figure out
 policy to increase the use of less occupied stations (for example by electing the least
@@ -190,11 +190,11 @@ stations, list of users of myVelib , etc.)
 
 ### Simulation of a planning ride
 
-- [x] a user at a given position require a ride planning to reach a destination position
-- [x] the user receives the source and destination stations
-- [x] the user retrieve a bicycle from the source station of the planned ride at a given
+- [ ] a user at a given position require a ride planning to reach a destination position
+- [ ] the user receives the source and destination stations
+- [ ] the user retrieve a bicycle from the source station of the planned ride at a given
 instant of time
-- [x] the user that is holding a bicycle returns it (in a given free slot) at a given station at
+- [ ] the user that is holding a bicycle returns it (in a given free slot) at a given station at
 a given instant of time.
 
 ### Computation of statistics
@@ -247,28 +247,28 @@ over an area you may assume either being circular of radium s or squared of side
 account and how stations are distributed over it).Furthermore the network should
 be initially populated with a nbikes bikes randomly distributed over the nstations
 stations
-- [ ] ``addUser <userName,cardType, velibnetworkName>``: to add a user with name
+- [x] ``addUser <userName,cardType, velibnetworkName>``: to add a user with name
 userName and card cardType (i.e. ``none'' if the user has no card) to a myVelib net-
 work velibnetworkName
-- [ ] ``offline <velibnetworkName, stationID>``: to put oine the station stationID
+- [x] ``offline <velibnetworkName, stationID>``: to put oine the station stationID
 of the myVelib network velibnetworkName
-- [ ] ``online <velibnetworkName, stationID>``: to put online the station stationID of
+- [x] ``online <velibnetworkName, stationID>``: to put online the station stationID of
 the myVelib network velibnetworkName
 - [ ] ``rentBike <userID, stationID>``: to let the user userID renting a bike from station
 stationID (if no bikes are available should behave accordingly)
 - [ ] ``returnBike <userID, stationID, time>``: to let the user userID returning a bike
 to station stationID at a given instant of time time (if no parking bay is available
 should behave accordingly). This command should display the cost of the rent
-- [ ] ``displayStation<velibnetworkName, stationID>``: to display the statistics (as of
+- [x] ``displayStation<velibnetworkName, stationID>``: to display the statistics (as of
 Section 2.4) of station stationID of a myVelib network velibnetwork.
-- [ ] ``displayUser<velibnetworkName, userID>``: to display the statistics (as of Sec-
+- [x] ``displayUser<velibnetworkName, userID>``: to display the statistics (as of Sec-
 tion 2.4) of user userID of a myVelib network velibnetwork.
 - [ ] ``sortStation<velibnetworkName, sortpolicy>``: to display the stations in increas-
 ing order w.r.t. to the sorting policy (as of Section 2.4) of user sortpolicy.
-- [ ] ``display <velibnetworkName>``: to display the entire status (stations, parking bays,
+- [x] ``display <velibnetworkName>``: to display the entire status (stations, parking bays,
 users) of an a myVelib network velibnetworkName.
 
-- [ ] to be completed ...
+- [x] to be completed ... (the help command and exit command)
 
 It should be possible to write those commands on the CLUI and to run the com-
 mands in an interactive way: the program read the commands from testScenarioN.txt
