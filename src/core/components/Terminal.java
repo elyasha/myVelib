@@ -151,9 +151,9 @@ public final class Terminal {
 
         // Return bicycle
         System.out.println();
-        System.out.println(user + "You rent is finalized!");
-        System.out.println();
-        System.out.println(rentCost);
+        System.out.println(user);
+        System.out.println("You rent is finalized!");
+        System.out.println("Your ride cost : " + rentCost);
 
         station.addNumberOfDroppings(1);
     }

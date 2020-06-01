@@ -61,6 +61,9 @@ public class Main {
                 }
 
             }
+            else {
+                cost = intervalOfTime.getHours();
+            }
 
         }
         return cost;
