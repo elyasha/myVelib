@@ -466,4 +466,12 @@ public abstract class Station {
         this.numberOfDroppings += number;
     }
 
+    /**
+     * This methods adds the number of rentings
+     *
+     * @param number The number that will be used to increase the number of rentings
+     */
+    public void addNumberOfRentings(int number) {
+        this.numberOfRentings += number;
+    }
 }

@@ -102,6 +102,8 @@ public final class Terminal {
             slot.setState(0);
             slot.setBicycle(null);
 
+            station.addNumberOfRentings(1);
+
         }
 
 
