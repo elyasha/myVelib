@@ -1,5 +1,12 @@
 package cli.commands;
 
+import core.Main;
+import core.components.User;
+import core.components.factories.UserFactory;
+import core.system.MyVelibSystem;
+
+import java.util.List;
+
 /**
  * This is the Display class that implements the display command of the CLI.
  */
@@ -17,7 +24,20 @@ public class Display implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The display command!");
-            // TODO: Design command
+            List<MyVelibSystem> systems = Main.getSystems();
+            MyVelibSystem currentSystem = null;
+            for (MyVelibSystem system: systems){
+                if (system.getName() == args[0]){
+                    currentSystem = system;
+                    break;
+                }
+            }
+            if (currentSystem != null){
+                currentSystem.toString();
+            }
+            else{
+                System.out.println("The system does not exist");
+            }
         }
     }
 
