@@ -1,5 +1,13 @@
 package cli.commands;
 
+import cli.RunCommand;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This is the RunTest class that implements the runTest command of the CLI.
  */
@@ -14,8 +22,52 @@ public class RunTest implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The runTest command");
-            // TODO: Design command
+//            System.out.println("The runTest command");
+            if (args.length == 0) {
+                // While loop to run commands
+                System.out.println("Please add an argument with the path to the file that you are going to test!");
+                System.out.println("Usage: runTest [fileName.txt]");
+
+            }
+            else {
+
+                String fileName = args[0];
+
+                // Read file.txt and execute commands
+                // TODO: check commands
+                List<String> textFile = readTextFile(fileName);
+
+//            System.out.println(textFile.get(2));
+                // Read file line by line (check if the first word is a command)
+
+                boolean fileHasProblem = false; // We assume the file is correct
+
+                // Check line by line
+                // TODO: Create the cli interactive functionality
+
+
+
+
+                // If success : run the file line by line
+                if (!fileHasProblem) {
+                    // run the file
+                    for (int i = 0; i < textFile.size(); i++) {
+                        // Execute the line
+                        String command = textFile.get(i).split(" ")[0];
+//                    System.out.println(command);
+                        String[] argsCommand = textFile.get(i).split(" ");
+
+                        for (int j = 0; j < argsCommand.length; j++) {
+                            System.out.println(argsCommand[j]);
+                        }
+                        RunCommand.main(argsCommand);
+
+                    }
+                }
+                else {
+                    System.out.println("You file has a syntax error!");
+                }
+            }
         }
     }
 
@@ -47,5 +99,38 @@ public class RunTest implements Command {
         return args.length <= 1;
     }
 
+    public static List<String> readTextFile(String fileName) {
 
+        List<String> returnValue = new ArrayList<String>();
+        FileReader file = null;
+        BufferedReader reader = null;
+
+        try {
+            // open input stream pointing at fileName
+            file = new FileReader(fileName);
+
+            // open input buffered reader to read file line by line
+            reader = new BufferedReader(file);
+            String line = "";
+
+            // reading input file line by line
+            while ((line = reader.readLine()) != null) {
+                returnValue.add(line);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (file != null) {
+                try {
+                    file.close();
+                    reader.close();
+
+                } catch (IOException e) {
+                    System.out.println("File not found: " + fileName);
+                    // Ignore issues during closing
+                }
+            }
+        }
+        return returnValue;
+    }
 }
