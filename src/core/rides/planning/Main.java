@@ -19,7 +19,7 @@ public class Main {
      * @param coordsStart: where the user wants to start the location
      * @param coordsEnd: where the user wants to stop the location
      * @param bicycle: the bicycle the user want to rent
-     * @return best sart and end stations
+     * @return best start and end stations
      */
     public static List<Station> getBestStation(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
         Point coords;

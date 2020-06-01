@@ -149,7 +149,7 @@ public class InitialSetup {
 
     /**
      * The main method that will just run the initial setup and save the system
-     * @param args
+     * @param args the command-line arguments
      */
     public static void main(String[] args) {
         MyVelibSystem system0 = getInitialSetupSystem(args);

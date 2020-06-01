@@ -3,7 +3,6 @@ package core.components;
 import core.system.MyVelibSystem;
 
 import java.awt.*;
-//import java.awt.List;
 
 /**
  * The Manager class: This class implements the manager object

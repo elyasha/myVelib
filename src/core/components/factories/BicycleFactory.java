@@ -35,6 +35,7 @@ public class BicycleFactory {
     /**
      * This method is responsible for creating an electrical bicycle (just an instance).
      * It is important in some packages of the project
+     * @return the new electrical bicycle instance
      */
     public static Bicycle createElectricalBicycle() {
         return new ElectricalBicycle();
@@ -63,6 +64,7 @@ public class BicycleFactory {
     /**
      * This method is responsible for creating a mechanical bicycle (just an instance).
      * It is important in some packages of the project
+     * @return the new mechanical bicycle instance
      */
     public static Bicycle createMechanicalBicycle() {
         return new MechanicalBicycle();
