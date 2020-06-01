@@ -14,9 +14,9 @@ import java.util.List;
 public class Main {
 
     /**
-     * Getter of the most used station
-     * @param system
-     * @return
+     * Getter of the most used station of a give system
+     * @param system the system that is being studied
+     * @return the station that has is most used (the number of droppings is used to compare). Return the first one, if there are more
      */
     public static Station getMostUsedStation(MyVelibSystem system) {
         Station mostUsedStation = system.getStations().get(0); // Take the first station on the system
@@ -33,6 +33,11 @@ public class Main {
         return mostUsedStation;
     }
 
+    /**
+     * Getter for the least occupied station
+     * @param system the system that is being studied
+     * @return the station that is least used (the rate of occupation is used). Return the first one, if there are more
+     */
     public static Station getLeastOccupiedStation(MyVelibSystem system) {
         Station leastOccupiedStation = system.getStations().get(0); // Take the first station
 
@@ -43,6 +48,13 @@ public class Main {
     }
 
 
+    /**
+     * This method is used to get the station balance, it is used to compute many different parameters
+     * parameter 1 : average station balance on the system
+     * parameter 2 : the station which gained the most in the system
+     * parameter 3 : the station which gained the least in the system
+     * @param system the system that will be studied
+     */
     public static void stationBalance(MyVelibSystem system) {
         // Calculate the average station balance
         double averageStationBalance = 0; // Initialize the average to zero
@@ -93,19 +105,39 @@ public class Main {
 
     }
 
+    /**
+     * Getter for the number of rentings
+     * @param station The station that will be studied
+     * @return an integer that represents the number of rentings
+     */
     public static int getNumberOfRentings(Station station) {
         return station.getNumberOfRentings();
     }
 
+    /**
+     * Getter for the number of droppings
+     * @param station The station that will be studied
+     * @return an integer that represents the number of droppings
+     */
     public static int getNumberOfDroppings(Station station) {
         return station.getNumberOfDroppings();
     }
 
+    /**
+     * This methods is used to compute the average rate of occupation of a given station
+     * @param station the station that is being studied
+     * @return a double that represents the average rate of occupation of a given station
+     */
     public static double computeAverageRateOfOccupation(Station station) {
         // TODO: Design method
         return 0;
     }
 
+    /**
+     * This method is used to sort a list of station by the most used policy
+     * @param stations the list of stations that is being used
+     * @return the list sorted
+     */
     public static List<Station> sortStationByMostUsed(List<Station> stations) {
 
         SortStationByMostUsed mostUsedComparator = new SortStationByMostUsed();
@@ -114,6 +146,10 @@ public class Main {
         return stations;
     }
 
+    /**
+     * This method is used to sort a list of station by the least occupied policy
+     * @param stations the list of stations that is being used
+     */
     public static void sortStationByLeastOccupied(List<Station> stations) {
         // TODO
     }

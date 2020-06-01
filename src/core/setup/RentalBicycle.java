@@ -8,8 +8,15 @@ import core.system.MyVelibSystem;
 
 import java.util.List;
 
+/**
+ * The RentalBicycle class : This class is responsible to implement and test the basic packages that implement the renting system
+ */
 public class RentalBicycle {
 
+    /**
+     * The main method that executes the rentBicycle methods to test whether or not the rentBicycle algorithm works
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
 
         // Setup
