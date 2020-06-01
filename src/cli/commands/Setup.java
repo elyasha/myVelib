@@ -1,5 +1,9 @@
 package cli.commands;
 
+import core.system.MyVelibSystem;
+
+import static core.setup.InitialSetup.getInitialSetupSystem;
+
 /**
  * This is the Setup class that implements the setup command of the CLI.
  */
@@ -27,7 +31,7 @@ public class Setup implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The setup command!");
-            // TODO: Design command
+            MyVelibSystem system = getInitialSetupSystem(args);
         }
     }
 
