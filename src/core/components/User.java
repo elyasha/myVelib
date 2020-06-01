@@ -10,31 +10,107 @@ import java.util.List;
 import java.util.Objects;
 
 public class User {
+
+    /**
+     * Id of the User
+     */
     private final int id = generateUniqueID();
+
+    /**
+     * Number of Users in the system
+     */
     private static int numberOfUsers = 0;
 
     private int generateUniqueID() {
         return ++numberOfUsers;
     }
 
+    /**
+     * Name of the User
+     */
     private String name;
+
+    /**
+     * Coordinate of the User
+     */
     private Point coordinate;
-    private Card card; // registration card
+
+    /**
+     * Registration card (Vilbre/Vmax/none) of the User
+     */
+    private Card card;
+
+    /**
+     * CreditCardNumnber of the User
+     */
     private long creditCardNumber;
-    private float timeCreditBalance = 0;  // [minutes]
+
+    /**
+     * Time credit balance given by some type of station for the User
+     * Expressed in minutes
+     */
+    private float timeCreditBalance = 0;
+
+    /**
+     * All money the user paid for its location
+     */
     private float allMoneyCharged = 0;
+
+    /**
+     * Current money charged for the actual location
+     */
     private float currentMoneyCharged = 0;
+
+    /**
+     * Money balance of the user
+     */
     private double money;
+
+    /**
+     * Type of Bicycle rented by the user
+     */
     private Bicycle bicycle;
+
+    /**
+     * Renting Station ID of the actual location
+     */
     private int rentStationID;
-    private LocalTime rentTime; // [minutes]
+
+    /**
+     * Renting time used to compute the cost of the actual location
+     * Expressed in minutes
+     */
+    private LocalTime rentTime;
+
+    /**
+     * Number of rentings used to compute user's statistics
+     */
     private int numberOfRentings = 0;
+
+    /**
+     * Time spend on electical bicycle used to compute user's
+     * statistics
+     * Expressed in minutes
+     */
     private double timeSpentOnElectricalBicycle = 0;
+
+    /**
+     * Time spend on mechanical bicycle used to compute user's
+     * statistics
+     * Expressed in minutes
+     */
     private double timeSpentOnMechanicalBicycle = 0;
 
 
     // Constructor
 
+    /**
+     * The User contructor
+     * @param name: name of the user
+     * @param coordinate: coordinate of the user
+     * @param creditCardNumber: credit card number of the user
+     * @param money: inital money balance of the user
+     */
     public User(String name, Point coordinate, long creditCardNumber, double money) {
         this.name = name;
         this.coordinate = coordinate;
@@ -50,125 +126,230 @@ public class User {
 
     // Getters
 
-
+    /**
+     * @return the id of the user
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @return the number of Users in the system
+     */
     public static int getNumberOfUsers() {
         return numberOfUsers;
     }
 
+    /**
+     * @return the name of the User
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return the coordinate of the user
+     */
     public Point getCoordinate() {
         return coordinate;
     }
 
+    /**
+     * @return the Card of the User (Vlibre/Vmax/none)
+     */
     public Card getCard() {
         return card;
     }
 
+    /**
+     * @return the credit card number of the user
+     */
     public long getCreditCardNumber() {
         return creditCardNumber;
     }
 
+    /**
+     * @return the time credit balance of the user
+     */
     public float getTimeCreditBalance() {
         return timeCreditBalance;
     }
 
+    /**
+     * @return All the money the user has been charged
+     */
     public float getAllMoneyCharged() {
         return allMoneyCharged;
     }
 
+    /**
+     * @return the current money charged for the user
+     */
     public float getCurrentMoneyCharged() {
         return currentMoneyCharged;
     }
 
+    /**
+     * @return the bicycle the user is using if he
+     * is in a location
+     */
     public Bicycle getBicycle() {
         return bicycle;
     }
 
+    /**
+     * @return the station ID where the user rented the
+     * bicycle he is using right now. None if he does not.
+     */
     public int getRentStationID() {
         return rentStationID;
     }
 
+    /**
+     * @return the time when he rented his last bicycle
+     */
     public LocalTime getRentTime() {
         return rentTime;
     }
 
+    /**
+     * @return the money balace of the user
+     */
     public double getMoney() {
         return money;
     }
 
+    /**
+     * @return the user's number of rentings
+     */
     public int getNumberOfRentings() {
         return numberOfRentings;
     }
 
+    /**
+     * @return the time the user spent on a electical bicycle
+     */
     public double getTimeSpentOnElectricalBicycle() {
         return timeSpentOnElectricalBicycle;
     }
 
+    /**
+     * @return the time the user spent on a mechanical bicycle
+     */
     public double getTimeSpentOnMechanicalBicycle() {
         return timeSpentOnMechanicalBicycle;
     }
 
     // Setters
 
+    /**
+     * Actualized the name of the user
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Actualized the coordinate of the user
+     * @param coordinate
+     */
     public void setCoordinate(Point coordinate) {
         this.coordinate = coordinate;
     }
 
+    /**
+     * Actualized the card of the user
+     * @param card
+     */
     public void setCard(Card card) {
         this.card = card;
     }
 
+    /**
+     * Actualized the credit card number of the user
+     * @param creditCardNumber
+     */
     public void setCreditCardNumber(long creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
+    /**
+     * Actualized the time credit balance of the user
+     * @param timeCreditBalance
+     */
     public void setTimeCreditBalance(float timeCreditBalance) {
         this.timeCreditBalance = timeCreditBalance;
     }
 
+    /**
+     * Actualized the value of all money the user has been charged
+     * @param allMoneyCharged
+     */
     public void setAllMoneyCharged(float allMoneyCharged) {
         this.allMoneyCharged = allMoneyCharged;
     }
 
+    /**
+     * Actualized the current money the user is charged
+     * @param currentMoneyCharged
+     */
     public void setCurrentMoneyCharged(float currentMoneyCharged) {
         this.currentMoneyCharged = currentMoneyCharged;
     }
 
+    /**
+     * Actualized the bicycle of the user
+     * @param bicycle
+     */
     public void setBicycle(Bicycle bicycle) {
         this.bicycle = bicycle;
     }
 
+    /**
+     * Actualized the last renting station ID of the user
+     * @param rentStationID
+     */
     public void setRentStationID(int rentStationID) {
         this.rentStationID = rentStationID;
     }
 
+    /**
+     * Actualized the acutal renting time of the user
+     * @param rentTime
+     */
     public void setRentTime(LocalTime rentTime) {
         this.rentTime = rentTime;
     }
 
+    /**
+     * Actualized the money balance of the user
+     * @param money
+     */
     public void setMoney(double money) {
         this.money = money;
     }
 
+    /**
+     * Actualized the number of rentings of the user
+     * @param numberOfRentings
+     */
     public void setNumberOfRentings(int numberOfRentings) {
         this.numberOfRentings = numberOfRentings;
     }
 
+    /**
+     * Actualized the time spent by the user on electrical bicycle
+     * @param timeSpentOnElectricalBicycle
+     */
     public void setTimeSpentOnElectricalBicycle(double timeSpentOnElectricalBicycle) {
         this.timeSpentOnElectricalBicycle = timeSpentOnElectricalBicycle;
     }
 
+    /**
+     * Actualized the time spent by the user on mechanical bicycle
+     * @param timeSpentOnMechanicalBicycle
+     */
     public void setTimeSpentOnMechanicalBicycle(double timeSpentOnMechanicalBicycle) {
         this.timeSpentOnMechanicalBicycle = timeSpentOnMechanicalBicycle;
     }
@@ -206,6 +387,10 @@ public class User {
 
     // Written methods
 
+    /**
+     * Add a new card for the user
+     * @param cardType
+     */
     public void addCard(String cardType) {
 
         if (cardType.equals("Vlible")) {
@@ -217,10 +402,18 @@ public class User {
         }
     }
 
+    /**
+     * Add money balance
+     * @param money
+     */
     public void addMoney(double money) {
         this.money += money;
     }
 
+    /**
+     * Remove money balance after droping the bicycle
+     * @param money
+     */
     public void removeMoney(double money) {
         if (this.money - money < 0) {
             System.out.println("ATTENTION! You are negative.");
@@ -229,10 +422,18 @@ public class User {
 
     }
 
+    /**
+     * Add some time credit after the user had dropped the bicycle in a good station
+     * @param time
+     */
     public void addTimeCredit(double time) {
         this.timeCreditBalance += time;
     }
 
+    /**
+     * Remove time balance after the computation of the location cost
+     * @param time
+     */
     public void removeTimeCredit(double time) {
         if (this.timeCreditBalance - time < 0) {
             System.out.println("You cannot have a negative time credit balance!");
@@ -242,6 +443,13 @@ public class User {
 
     }
 
+    /**
+     * Renting a bicycle
+     * @param system: the system the user is using
+     * @param coordsStart: the coordinate where the user want to start
+     * @param coordsEnd: the coordinate wher the user want to finish his location
+     * @param bicycle: the bicycle the user wants to rent
+     */
     public void rentBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
         List<Station> allStations;
         Terminal termStart;
@@ -260,6 +468,13 @@ public class User {
 
     // TODO: Refactor this method (we need to divide this method - start and end stations)
     // TODO: Remove bicycle, because
+
+    /**
+     * Droping a bicycle after using it
+     * @param system: the system the user is using
+     * @param coordsStart: the coordinate where the user want to start
+     * @param coordsEnd: the coordinate wher the user want to finish his location
+     */
     public void dropBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd) {
         List<Station> allStations;
         Terminal termEnd;
@@ -283,6 +498,13 @@ public class User {
 
     }
 
+    /**
+     * Droping a bicycle after using it
+     * @param system: the system the user is using
+     * @param coordsStart: the coordinate where the user want to start
+     * @param coordsEnd: the coordinate wher the user want to finish his location
+     * @param intervalOfTime: the interval of time the user used the bicycle between the renting and the droping
+     */
     public void dropBicyclePlanningWithIntervalOfTime(MyVelibSystem system, Point coordsStart, Point coordsEnd, double intervalOfTime) {
         List<Station> allStations;
         Terminal termEnd;
@@ -306,22 +528,42 @@ public class User {
 
     }
 
+    /**
+     * Increment number of rentings by one
+     * It used to compute statistics
+     */
     public void addRenting() {
         this.numberOfRentings += 1;
     }
 
+    /**
+     * Actualize the time spent on electical bicycles
+     * @param intervalOfTime
+     */
     public void addSpentTimeOnElectricalBicycle(double intervalOfTime) {
         this.timeSpentOnElectricalBicycle += intervalOfTime;
     }
 
+    /**
+     * Actualize the time spent on mechanical bicycles
+     * @param intervalOfTime
+     */
     public void addSpentTimeOnMechanicalBicycle(double intervalOfTime) {
         this.timeSpentOnMechanicalBicycle += intervalOfTime;
     }
 
+    /**
+     * Used to see the status of the user
+     */
     public void seeMyStatus() {
         System.out.println(this);
     }
 
+    /**
+     *
+     * @param system: the system the user is using
+     * @param userID: the ID the user wants to see
+     */
     public void seeCurrentStatus(MyVelibSystem system, int userID) {
         if (this.id == userID) {
             this.seeMyStatus();
@@ -334,6 +576,11 @@ public class User {
 
     }
 
+    /**
+     * Used to see the state of an existing station
+     * @param system: the system the user is using
+     * @param stationID: the station id the user wants to see
+     */
     public void seeCurrentStationState(MyVelibSystem system, int stationID) {
         // user can only see what is in its system
         if (system.getUsers().contains(this)) {
@@ -360,6 +607,10 @@ public class User {
         }
     }
 
+    /**
+     * Used to display the system the user is using
+     * @param system: the system the user is using
+     */
     public void displaySystemReport(MyVelibSystem system) {
         if (system.getUsers().contains(this)) {
             System.out.println();
