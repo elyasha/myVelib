@@ -1,9 +1,14 @@
-Computation of statistics
-1. the myVelib system stores relevant data in form of records representing N rental bike
-simulations (by diferent users, on diferent stations, and with diferent duration)
-2. the statistics (computed w.r.t. the rental records added in previous step) for each
-user are displayed
-3. the statistics (computed w.r.t. the rental records added in previous step) for each
-station are displayed
-4. stations are displayed sorted w.r.t. the most used station (first)
-5. stations are displayed sorted w.r.t. the least occupied station (first)
+setup "velib1" numberOfStations numberOfSlots squareSide numberOfBicycles
+addManager "Matheus" "none" "velib1"
+addUser "Charlito" "Vmax" "velib1"
+addUser "Valdisa" "Vlibre" "velib1"
+rentBicycle userID stationID
+returnBicycle userID stationID time
+rentBicycle userID stationID
+returnBicycle userID stationID time
+rentBicycle userID stationID
+returnBicycle userID stationID time
+rentBicycle userID stationID
+returnBicycle userID stationID time
+sortStation "velib1" "mostUsed"
+sortStation "velib1" "leastOccupied"
