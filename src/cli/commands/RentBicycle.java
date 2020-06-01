@@ -1,5 +1,13 @@
 package cli.commands;
 
+import core.Main;
+import core.components.Station;
+import core.components.User;
+import core.components.factories.BicycleFactory;
+import core.system.MyVelibSystem;
+
+import java.util.List;
+
 /**
  * This is the RentBicycle class that implements the rentBicycle command of the CLI.
  */
@@ -9,6 +17,8 @@ public class RentBicycle implements Command {
      * rentBicycle [userID, stationID] : to let the user userID renting a bike from station
      * stationID (if no bikes are available should behave accordingly)
      *
+     * The application can have many myVelib systems (networks) and so
+     *
      * @param args the arguments of the command
      */
     public static void main(String[] args) {
@@ -16,7 +26,25 @@ public class RentBicycle implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The rentBicycle command!");
-            // TODO: Design command
+            List<MyVelibSystem> systems = Main.getSystems();
+            boolean alreadyFind = false;
+            for (MyVelibSystem system: systems) {
+                for(User user: system.getUsers()){
+                    if (user.getId()==Integer.parseInt(args[0]) && !alreadyFind){
+                        for(Station station: system.getStations()){
+                            if(station.getId()==Integer.parseInt(args[1])){
+                                station.getStationTerminal().rentBicycle(BicycleFactory.createMechanicalBicycle(),user,station);
+                                alreadyFind = true;
+                            }
+                        }
+                    }
+                }
+            }
+            if(alreadyFind == false){
+                System.out.println("You cannot rent a bicycle");
+                System.out.println("The station id or/and user id do not exist");
+            }
+            // TODO: Study parameters
         }
     }
 
