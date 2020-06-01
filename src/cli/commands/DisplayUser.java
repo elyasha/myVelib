@@ -1,5 +1,12 @@
 package cli.commands;
 
+import core.Main;
+import core.components.Station;
+import core.components.User;
+import core.system.MyVelibSystem;
+
+import java.util.List;
+
 /**
  * This is the DisplayUser class that implements the displayUser command of the CLI.
  */
@@ -15,8 +22,33 @@ public class DisplayUser implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The displayUser command!");
-            // TODO: Design command
+            System.out.println("The displayStation command!");
+            List<MyVelibSystem> systems = Main.getSystems();
+            MyVelibSystem currentSystem = null;
+            User current_user = null;
+            for (MyVelibSystem system: systems){
+                if (system.getName() == args[0]){
+                    currentSystem = system;
+                    break;
+                }
+            }
+            if (currentSystem != null){
+                List<User> users = currentSystem.getUsers();
+                for(User user: users){
+                    if(user.getId() == Integer.parseInt(args[1])) {
+                        current_user = user;
+                        current_user.toString();
+                        break;
+                    }
+                }
+                if(current_user == null){
+                    System.out.println("The id of the user does not exist");
+                }
+
+            }
+            else{
+                System.out.println("The system does not exist");
+            }
         }
     }
 
