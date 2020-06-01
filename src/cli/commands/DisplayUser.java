@@ -26,27 +26,26 @@ public class DisplayUser implements Command {
             List<MyVelibSystem> systems = Main.getSystems();
             MyVelibSystem currentSystem = null;
             User currentUser = null;
-            for (MyVelibSystem system: systems){
-                if (system.getName().equals(args[0])){
+            for (MyVelibSystem system : systems) {
+                if (system.getName().equals(args[0])) {
                     currentSystem = system;
                     break;
                 }
             }
-            if (currentSystem != null){
+            if (currentSystem != null) {
                 List<User> users = currentSystem.getUsers();
-                for(User user: users){
-                    if(user.getId() == Integer.parseInt(args[1])) {
+                for (User user : users) {
+                    if (user.getId() == Integer.parseInt(args[1])) {
                         currentUser = user;
                         currentSystem.displayUserReport(currentUser);
                         break;
                     }
                 }
-                if(currentUser == null){
+                if (currentUser == null) {
                     System.out.println("The id of the user does not exist");
                 }
 
-            }
-            else{
+            } else {
                 System.out.println("The system does not exist");
             }
         }
@@ -78,8 +77,14 @@ public class DisplayUser implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
+        try {
+            int integerValue = Integer.parseInt(args[1]);
+        } catch (NumberFormatException numberFormatException) {
+            System.out.println(numberFormatException.getMessage());
+            ;
+            System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
+            return false;
+        }
         return args.length == 2;
-        // TODO: Check to see if it is an integer
-
     }
 }

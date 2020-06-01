@@ -54,8 +54,6 @@ public class SortStation implements Command {
      */
     public static boolean hasGoodInput(String[] args) {
         return args.length <= 2;
-        // TODO: Check to see if it is an integer
-
     }
 
 

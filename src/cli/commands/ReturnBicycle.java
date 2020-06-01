@@ -25,7 +25,6 @@ public class ReturnBicycle implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The returnBike command!");
-            // TODO: Design command
         }
         List<MyVelibSystem> systems = Main.getSystems();
         boolean alreadyFind = false;

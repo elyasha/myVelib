@@ -506,7 +506,7 @@ public class User {
     }
 
     // TODO: Refactor this method (we need to divide this method - start and end stations)
-    // TODO: Remove bicycle, because
+    // TODO: Remove bicycle, because it is redundant
 
     /**
      * Dropping a bicycle after using it

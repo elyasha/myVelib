@@ -73,7 +73,6 @@ public class Help implements Command {
                     default:
                         System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help [COMMAND]]");
                         // TODO: Learn how to use exceptions and error in Java
-                        System.exit(1);
                 }
 
             }

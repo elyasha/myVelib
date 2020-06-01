@@ -39,7 +39,7 @@ public class MyVelibCLI {
             String fileName = args[0];
 
             // Read file.txt and execute commands
-            // TODO: Read file, check commands and execute commands
+            // TODO: check commands
             List<String> textFile = readTextFile(fileName);
 
 //            System.out.println(textFile.get(2));
@@ -48,7 +48,7 @@ public class MyVelibCLI {
             boolean fileHasProblem = false; // We assume the file is correct
 
             // Check line by line
-            // TODO:
+            // TODO: Create the cli interactive functionality
 
 
 
@@ -56,7 +56,6 @@ public class MyVelibCLI {
             // If success : run the file line by line
             if (!fileHasProblem) {
                 // run the file
-                // TODO: Run each line
                 for (int i = 0; i < textFile.size(); i++) {
                     // Execute the line
                     String command = textFile.get(i).split(" ")[0];

@@ -72,8 +72,24 @@ public class Setup implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
+
+        if (args.length == 5) {
+            try {
+                int integerValue = Integer.parseInt(args[1]);
+                integerValue = Integer.parseInt(args[2]);
+                integerValue = Integer.parseInt(args[3]);
+                integerValue = Integer.parseInt(args[4]);
+
+            } catch (NumberFormatException numberFormatException) {
+                System.out.println(numberFormatException.getMessage());
+                System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
+                return false;
+            }
+        }
+
         return args.length == 1 || args.length == 5;
-        // TODO: Check to see if it is an integer
 
     }
 }
+
+
