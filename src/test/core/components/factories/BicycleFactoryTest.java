@@ -1,4 +1,4 @@
-package test.core.components.factories;
+package core.components.factories;
 
 import org.junit.Test;
 

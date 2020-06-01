@@ -1,4 +1,4 @@
-package test.core.statistics.balance.user;
+package core.statistics.balance.user;
 
 import org.junit.Test;
 

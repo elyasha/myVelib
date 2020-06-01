@@ -1,4 +1,4 @@
-package test.core.rides.planning;
+package core.rides.planning;
 
 import org.junit.Test;
 

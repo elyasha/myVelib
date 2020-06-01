@@ -1,4 +1,4 @@
-package test.core.statistics.balance.system;
+package core.statistics.balance.system;
 
 import static org.junit.Assert.*;
 

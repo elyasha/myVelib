@@ -1,4 +1,4 @@
-package test.core.statistics.balance.station;
+package core.statistics.balance.station;
 
 import org.junit.Test;
 

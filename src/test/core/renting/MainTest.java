@@ -1,4 +1,4 @@
-package test.core.renting;
+package core.renting;
 
 import org.junit.Test;
 

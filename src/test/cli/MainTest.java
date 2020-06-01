@@ -1,4 +1,4 @@
-package test.cli;
+package cli;
 
 import org.junit.Test;
 

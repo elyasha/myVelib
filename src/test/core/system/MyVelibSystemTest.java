@@ -1,4 +1,4 @@
-package test.core.system;
+package core.system;
 
 import org.junit.Test;
 
