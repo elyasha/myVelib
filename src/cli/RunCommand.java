@@ -6,7 +6,7 @@ import cli.commands.*;
  * The Main class for the CLI application. This class will use the main() from the commands package.
  * This will be used when calling the interpreter or running the program to read a .txt file.
  */
-public class Main {
+public class RunCommand {
 
     /**
      * main() is the implementation of the Main class for the CLI application.
@@ -16,52 +16,59 @@ public class Main {
      */
     public static void main(String[] args) {
 
+
         // Check if there is any argument for the program
         if (args.length == 0) {
             Help.wrongArgumentHelp();
             System.exit(1);
         }
 
+        String[] argsCommand = new String[args.length - 1];
+
+        for (int j = 1; j < args.length; j++) {
+            argsCommand[j - 1] = args[j];
+        }
         // Check the type of first argument and delegate the work for each class
         switch (args[0]) {
+
             case "addUser":
-                AddUser.main(args);
+                AddUser.main(argsCommand);
                 break;
             case "display":
-                Display.main(args);
+                Display.main(argsCommand);
                 break;
             case "displayStation":
-                DisplayStation.main(args);
+                DisplayStation.main(argsCommand);
                 break;
             case "displayUser":
-                DisplayUser.main(args);
+                DisplayUser.main(argsCommand);
                 break;
             case "exit":
-                Exit.main(args);
+                Exit.main(argsCommand);
                 break;
             case "help":
-                Help.main(args);
+                Help.main(argsCommand);
                 break;
             case "offline":
-                Offline.main(args);
+                Offline.main(argsCommand);
                 break;
             case "online":
-                Online.main(args);
+                Online.main(argsCommand);
                 break;
             case "rentBicycle":
-                RentBicycle.main(args);
+                RentBicycle.main(argsCommand);
                 break;
             case "returnBicycle":
-                ReturnBicycle.main(args);
+                ReturnBicycle.main(argsCommand);
                 break;
             case "runTest":
-                RunTest.main(args);
+                RunTest.main(argsCommand);
                 break;
             case "setup":
-                Setup.main(args);
+                Setup.main(argsCommand);
                 break;
             case "sortStation":
-                SortStation.main(args);
+                SortStation.main(argsCommand);
 
                 break;
             default:

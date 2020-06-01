@@ -21,49 +21,54 @@ public class Help implements Command {
             if (args.length == 0) {
                 helpCommand(args);
             } else {
+                String[] argsCommand = new String[args.length - 1];
+
+                for (int j = 1; j < args.length; j++) {
+                    argsCommand[j - 1] = args[j];
+                }
                 // sout the help for the particular command
                 // Check the type of first argument and delegate the work for each class
                 switch (args[0]) {
                     case "addUser":
-                        AddUser.helpCommand(args);
+                        AddUser.helpCommand(argsCommand);
                         break;
                     case "addManager":
-                        AddManager.helpCommand(args);
+                        AddManager.helpCommand(argsCommand);
                     case "display":
-                        Display.helpCommand(args);
+                        Display.helpCommand(argsCommand);
                         break;
                     case "displayStation":
-                        DisplayStation.helpCommand(args);
+                        DisplayStation.helpCommand(argsCommand);
                         break;
                     case "displayUser":
-                        DisplayUser.helpCommand(args);
+                        DisplayUser.helpCommand(argsCommand);
                         break;
                     case "exit":
-                        Exit.helpCommand(args);
+                        Exit.helpCommand(argsCommand);
                         break;
                     case "help":
-                        Help.helpCommand(args);
+                        Help.helpCommand(argsCommand);
                         break;
                     case "offline":
-                        Offline.helpCommand(args);
+                        Offline.helpCommand(argsCommand);
                         break;
                     case "online":
-                        Online.helpCommand(args);
+                        Online.helpCommand(argsCommand);
                         break;
                     case "rentBicycle":
-                        RentBicycle.helpCommand(args);
+                        RentBicycle.helpCommand(argsCommand);
                         break;
                     case "returnBicycle":
-                        ReturnBicycle.helpCommand(args);
+                        ReturnBicycle.helpCommand(argsCommand);
                         break;
                     case "runTest":
-                        RunTest.helpCommand(args);
+                        RunTest.helpCommand(argsCommand);
                         break;
                     case "setup":
-                        Setup.helpCommand(args);
+                        Setup.helpCommand(argsCommand);
                         break;
                     case "sortStation":
-                        SortStation.helpCommand(args);
+                        SortStation.helpCommand(argsCommand);
                         break;
                     default:
                         System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help [COMMAND]]");

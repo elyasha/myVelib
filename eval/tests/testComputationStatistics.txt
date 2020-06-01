@@ -1,14 +1,14 @@
-setup "velib1" numberOfStations numberOfSlots squareSide numberOfBicycles
+setup "velib1" 10 10 1000 5
 addManager "Matheus" "none" "velib1"
 addUser "Charlito" "Vmax" "velib1"
 addUser "Valdisa" "Vlibre" "velib1"
-rentBicycle userID stationID
-returnBicycle userID stationID time
-rentBicycle userID stationID
-returnBicycle userID stationID time
-rentBicycle userID stationID
-returnBicycle userID stationID time
-rentBicycle userID stationID
-returnBicycle userID stationID time
-sortStation "velib1" "mostUsed"
-sortStation "velib1" "leastOccupied"
+rentBicycle 1 1
+returnBicycle 1 2 80
+rentBicycle 2 3
+returnBicycle 2 8 50
+rentBicycle 3 1
+returnBicycle 3 2 100
+rentBicycle 1 1
+returnBicycle 1 2 800
+sortStation "myvelib" "mostUsed"
+sortStation "myvelib" "leastOccupied"

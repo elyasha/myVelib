@@ -182,36 +182,36 @@ a time-credit (possibly 0)
 
 ### Visualisation of user, station and system state
 
-- [ ] a manager (or a user) of myVelib request to see the current state of a user with given
+- [x] a manager (or a user) of myVelib request to see the current state of a user with given
 ID
-- [ ] the system displays a report of the requested user (including its balance, time credit,
+- [x] the system displays a report of the requested user (including its balance, time credit,
 number of rides, etc).
-- [ ] a manager (or a user) of myVelib request to see the current state of a station with
+- [x] a manager (or a user) of myVelib request to see the current state of a station with
 given ID
-- [ ] the system displays a report of the requested station (including num. of free/occupied
+- [x] the system displays a report of the requested station (including num. of free/occupied
 slots, current state, its occupation etc)
-- [ ] a manager (or a user) of myVelib request to see the current state of a the entire
+- [x] a manager (or a user) of myVelib request to see the current state of a the entire
 system
-- [ ] the system displays a summary report of the system (including list of online/oine
+- [x] the system displays a summary report of the system (including list of online/oine
 stations, list of users of myVelib , etc.)
 
 ### Simulation of a planning ride
 
-- [ ] a user at a given position require a ride planning to reach a destination position
-- [ ] the user receives the source and destination stations
-- [ ] the user retrieve a bicycle from the source station of the planned ride at a given
+- [x] a user at a given position require a ride planning to reach a destination position
+- [x] the user receives the source and destination stations
+- [x] the user retrieve a bicycle from the source station of the planned ride at a given
 instant of time
-- [ ] the user that is holding a bicycle returns it (in a given free slot) at a given station at
+- [x] the user that is holding a bicycle returns it (in a given free slot) at a given station at
 a given instant of time.
 
 ### Computation of statistics
-- [ ] the myVelib system stores relevant data in form of records representing N rental bike
+- [x] the myVelib system stores relevant data in form of records representing N rental bike
 simulations (by dierent users, on dierent stations, and with dierent duration)
-- [ ] the statistics (computed w.r.t. the rental records added in previous step) for each
+- [x] the statistics (computed w.r.t. the rental records added in previous step) for each
 user are displayed
-- [ ]  the statistics (computed w.r.t. the rental records added in previous step) for each
+- [x]  the statistics (computed w.r.t. the rental records added in previous step) for each
 station are displayed
-- [ ] stations are displayed sorted w.r.t. the most used station (first)
+- [x] stations are displayed sorted w.r.t. the most used station (first)
 - [ ] stations are displayed sorted w.r.t. the least occupied station (first)
 
 
@@ -261,9 +261,9 @@ work velibnetworkName
 of the myVelib network velibnetworkName
 - [x] ``online <velibnetworkName, stationID>``: to put online the station stationID of
 the myVelib network velibnetworkName
-- [ ] ``rentBike <userID, stationID>``: to let the user userID renting a bike from station
+- [x] ``rentBicycle <userID, stationID>``: to let the user userID renting a bike from station
 stationID (if no bikes are available should behave accordingly)
-- [ ] ``returnBike <userID, stationID, time>``: to let the user userID returning a bike
+- [x] ``returnBicycle <userID, stationID, time>``: to let the user userID returning a bike
 to station stationID at a given instant of time time (if no parking bay is available
 should behave accordingly). This command should display the cost of the rent
 - [x] ``displayStation<velibnetworkName, stationID>``: to display the statistics (as of
