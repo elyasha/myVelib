@@ -7,8 +7,17 @@ import core.system.MyVelibSystem;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ *  The Main class in statistics.balance.station : This class has all the algorithms and methods that we need to calculate the statistics
+ *  in the application for stations, that is to say, plus stations and standard stations.
+ */
 public class Main {
 
+    /**
+     * Getter of the most used station
+     * @param system
+     * @return
+     */
     public static Station getMostUsedStation(MyVelibSystem system) {
         Station mostUsedStation = system.getStations().get(0); // Take the first station on the system
 

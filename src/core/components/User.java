@@ -2,13 +2,15 @@ package core.components;
 
 import core.rides.planning.Main;
 import core.system.MyVelibSystem;
-import jdk.swing.interop.SwingInterOpUtils;
 
 import java.awt.*;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * The User class : This class defines what a user is, what a user has and how he will behave in the application
+ */
 public class User {
 
     /**
@@ -106,10 +108,11 @@ public class User {
 
     /**
      * The User contructor
-     * @param name: name of the user
-     * @param coordinate: coordinate of the user
+     *
+     * @param name:             name of the user
+     * @param coordinate:       coordinate of the user
      * @param creditCardNumber: credit card number of the user
-     * @param money: inital money balance of the user
+     * @param money:            inital money balance of the user
      */
     public User(String name, Point coordinate, long creditCardNumber, double money) {
         this.name = name;
@@ -243,117 +246,136 @@ public class User {
     // Setters
 
     /**
-     * Actualized the name of the user
-     * @param name
+     * Update the name of the user
+     *
+     * @param name name for the user
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Actualized the coordinate of the user
-     * @param coordinate
+     * Update the coordinate of the user
+     *
+     * @param coordinate coordinate that the user will be created
      */
     public void setCoordinate(Point coordinate) {
         this.coordinate = coordinate;
     }
 
     /**
-     * Actualized the card of the user
-     * @param card
+     * Update the card of the user
+     *
+     * @param card a card that will be used to set the user's card
      */
     public void setCard(Card card) {
         this.card = card;
     }
 
     /**
-     * Actualized the credit card number of the user
-     * @param creditCardNumber
+     * Update the credit card number of the user
+     *
+     * @param creditCardNumber a credit card number
      */
     public void setCreditCardNumber(long creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
     /**
-     * Actualized the time credit balance of the user
-     * @param timeCreditBalance
+     * Update the time credit balance of the user
+     *
+     * @param timeCreditBalance a double that represents the time credit balance (in minutes)
      */
     public void setTimeCreditBalance(float timeCreditBalance) {
         this.timeCreditBalance = timeCreditBalance;
     }
 
     /**
-     * Actualized the value of all money the user has been charged
-     * @param allMoneyCharged
+     * Update the value of all money the user has been charged
+     *
+     * @param allMoneyCharged the value of all money the user has been charged
      */
     public void setAllMoneyCharged(float allMoneyCharged) {
         this.allMoneyCharged = allMoneyCharged;
     }
 
     /**
-     * Actualized the current money the user is charged
-     * @param currentMoneyCharged
+     * Update the current money the user is charged
+     *
+     * @param currentMoneyCharged the current money the user is charged
      */
     public void setCurrentMoneyCharged(float currentMoneyCharged) {
         this.currentMoneyCharged = currentMoneyCharged;
     }
 
     /**
-     * Actualized the bicycle of the user
-     * @param bicycle
+     * Update the bicycle of the user
+     *
+     * @param bicycle the bicycle of the user (can be none)
      */
     public void setBicycle(Bicycle bicycle) {
         this.bicycle = bicycle;
     }
 
     /**
-     * Actualized the last renting station ID of the user
-     * @param rentStationID
+     * Update the last renting station ID of the user
+     *
+     * @param rentStationID the last renting station ID of the user
      */
     public void setRentStationID(int rentStationID) {
         this.rentStationID = rentStationID;
     }
 
     /**
-     * Actualized the acutal renting time of the user
-     * @param rentTime
+     * Update the actual renting time of the user
+     *
+     * @param rentTime the actual renting time of the user
      */
     public void setRentTime(LocalTime rentTime) {
         this.rentTime = rentTime;
     }
 
     /**
-     * Actualized the money balance of the user
-     * @param money
+     * Update the money balance of the user
+     *
+     * @param money the money balance of the user
      */
     public void setMoney(double money) {
         this.money = money;
     }
 
     /**
-     * Actualized the number of rentings of the user
-     * @param numberOfRentings
+     * Update the number of rentings of the user
+     *
+     * @param numberOfRentings the number of rentings of the user
      */
     public void setNumberOfRentings(int numberOfRentings) {
         this.numberOfRentings = numberOfRentings;
     }
 
     /**
-     * Actualized the time spent by the user on electrical bicycle
-     * @param timeSpentOnElectricalBicycle
+     * Update the time spent by the user on electrical bicycle
+     *
+     * @param timeSpentOnElectricalBicycle the time spent by the user on electrical bicycle
      */
     public void setTimeSpentOnElectricalBicycle(double timeSpentOnElectricalBicycle) {
         this.timeSpentOnElectricalBicycle = timeSpentOnElectricalBicycle;
     }
 
     /**
-     * Actualized the time spent by the user on mechanical bicycle
-     * @param timeSpentOnMechanicalBicycle
+     * Update the time spent by the user on mechanical bicycle
+     *
+     * @param timeSpentOnMechanicalBicycle the time spent by the user on mechanical bicycle
      */
     public void setTimeSpentOnMechanicalBicycle(double timeSpentOnMechanicalBicycle) {
         this.timeSpentOnMechanicalBicycle = timeSpentOnMechanicalBicycle;
     }
 
+    /**
+     * toString method for user
+     *
+     * @return a message that represent the user object
+     */
     @Override
     public String toString() {
         return "User{" +
@@ -372,6 +394,12 @@ public class User {
                 '}';
     }
 
+    /**
+     * equals method for the user
+     *
+     * @param o an object
+     * @return true, if the two objects are "equal". false, otherwise
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -380,6 +408,11 @@ public class User {
         return id == user.id;
     }
 
+    /**
+     * hashCode method for user
+     *
+     * @return hash(id, name, coordinate, card, creditCardNumber, timeCreditBalance, allMoneyCharged, currentMoneyCharged)
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, name, coordinate, card, creditCardNumber, timeCreditBalance, allMoneyCharged, currentMoneyCharged);
@@ -389,7 +422,8 @@ public class User {
 
     /**
      * Add a new card for the user
-     * @param cardType
+     *
+     * @param cardType a string for the card type (Can be Vmax, Vlibre or none)
      */
     public void addCard(String cardType) {
 
@@ -404,7 +438,8 @@ public class User {
 
     /**
      * Add money balance
-     * @param money
+     *
+     * @param money the money that will be added
      */
     public void addMoney(double money) {
         this.money += money;
@@ -412,7 +447,8 @@ public class User {
 
     /**
      * Remove money balance after droping the bicycle
-     * @param money
+     *
+     * @param money the money that will be removed
      */
     public void removeMoney(double money) {
         if (this.money - money < 0) {
@@ -424,7 +460,8 @@ public class User {
 
     /**
      * Add some time credit after the user had dropped the bicycle in a good station
-     * @param time
+     *
+     * @param time some time credit (in minutes)
      */
     public void addTimeCredit(double time) {
         this.timeCreditBalance += time;
@@ -432,7 +469,8 @@ public class User {
 
     /**
      * Remove time balance after the computation of the location cost
-     * @param time
+     *
+     * @param time time balance after the computation of the location cost
      */
     public void removeTimeCredit(double time) {
         if (this.timeCreditBalance - time < 0) {
@@ -445,10 +483,11 @@ public class User {
 
     /**
      * Renting a bicycle
-     * @param system: the system the user is using
+     *
+     * @param system:      the system the user is using
      * @param coordsStart: the coordinate where the user want to start
-     * @param coordsEnd: the coordinate wher the user want to finish his location
-     * @param bicycle: the bicycle the user wants to rent
+     * @param coordsEnd:   the coordinate wher the user want to finish his location
+     * @param bicycle:     the bicycle the user wants to rent
      */
     public void rentBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
         List<Station> allStations;
@@ -471,9 +510,10 @@ public class User {
 
     /**
      * Droping a bicycle after using it
-     * @param system: the system the user is using
+     *
+     * @param system:      the system the user is using
      * @param coordsStart: the coordinate where the user want to start
-     * @param coordsEnd: the coordinate wher the user want to finish his location
+     * @param coordsEnd:   the coordinate wher the user want to finish his location
      */
     public void dropBicyclePlanning(MyVelibSystem system, Point coordsStart, Point coordsEnd) {
         List<Station> allStations;
@@ -500,9 +540,10 @@ public class User {
 
     /**
      * Droping a bicycle after using it
-     * @param system: the system the user is using
-     * @param coordsStart: the coordinate where the user want to start
-     * @param coordsEnd: the coordinate wher the user want to finish his location
+     *
+     * @param system:         the system the user is using
+     * @param coordsStart:    the coordinate where the user want to start
+     * @param coordsEnd:      the coordinate wher the user want to finish his location
      * @param intervalOfTime: the interval of time the user used the bicycle between the renting and the droping
      */
     public void dropBicyclePlanningWithIntervalOfTime(MyVelibSystem system, Point coordsStart, Point coordsEnd, double intervalOfTime) {
@@ -537,16 +578,18 @@ public class User {
     }
 
     /**
-     * Actualize the time spent on electical bicycles
-     * @param intervalOfTime
+     * Update the time spent on electrical bicycles
+     *
+     * @param intervalOfTime an interval of time (in minutes)
      */
     public void addSpentTimeOnElectricalBicycle(double intervalOfTime) {
         this.timeSpentOnElectricalBicycle += intervalOfTime;
     }
 
     /**
-     * Actualize the time spent on mechanical bicycles
-     * @param intervalOfTime
+     * Update the time spent on mechanical bicycles
+     *
+     * @param intervalOfTime an interval of time (in minutes)
      */
     public void addSpentTimeOnMechanicalBicycle(double intervalOfTime) {
         this.timeSpentOnMechanicalBicycle += intervalOfTime;
@@ -560,7 +603,6 @@ public class User {
     }
 
     /**
-     *
      * @param system: the system the user is using
      * @param userID: the ID the user wants to see
      */
@@ -578,7 +620,8 @@ public class User {
 
     /**
      * Used to see the state of an existing station
-     * @param system: the system the user is using
+     *
+     * @param system:    the system the user is using
      * @param stationID: the station id the user wants to see
      */
     public void seeCurrentStationState(MyVelibSystem system, int stationID) {
@@ -609,6 +652,7 @@ public class User {
 
     /**
      * Used to display the system the user is using
+     *
      * @param system: the system the user is using
      */
     public void displaySystemReport(MyVelibSystem system) {
