@@ -1,5 +1,13 @@
 package cli.commands;
 
+import core.Main;
+import core.components.Station;
+import core.components.User;
+import core.components.factories.UserFactory;
+import core.system.MyVelibSystem;
+
+import java.util.List;
+
 /**
  * This is the DisplayStation class that implements the displayStation command of the CLI.
  */
@@ -16,7 +24,32 @@ public class DisplayStation implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The displayStation command!");
-            // TODO: Design command
+            List<MyVelibSystem> systems = Main.getSystems();
+            MyVelibSystem currentSystem = null;
+            Station current_station = null;
+            for (MyVelibSystem system: systems){
+                if (system.getName() == args[0]){
+                    currentSystem = system;
+                    break;
+                }
+            }
+            if (currentSystem != null){
+                List<Station> stations = currentSystem.getStations();
+                for(Station station: stations){
+                    if(station.getId() == Integer.parseInt(args[1])) {
+                        current_station = station;
+                        current_station.toString();
+                        break;
+                    }
+                }
+                if(current_station == null){
+                    System.out.println("The id of the station does not exist");
+                }
+
+            }
+            else{
+                System.out.println("The system does not exist");
+            }
         }
 
     }
