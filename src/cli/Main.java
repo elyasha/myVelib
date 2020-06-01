@@ -16,7 +16,7 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        // Check in there is any argument for the program
+        // Check if there is any argument for the program
         if (args.length == 0) {
             Help.wrongArgumentHelp();
             System.exit(1);
@@ -66,8 +66,6 @@ public class Main {
                 break;
             default:
                 System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help]");
-                // TODO: Learn how to use exceptions and error in Java
-                System.exit(1);
         }
 
     }
