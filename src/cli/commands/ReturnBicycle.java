@@ -1,5 +1,13 @@
 package cli.commands;
 
+import core.Main;
+import core.components.Station;
+import core.components.User;
+import core.components.factories.BicycleFactory;
+import core.system.MyVelibSystem;
+
+import java.util.List;
+
 /**
  * This is the ReturnBicycle class that implements the returnBicycle command of the CLI.
  */
@@ -18,6 +26,24 @@ public class ReturnBicycle implements Command {
         } else {
             System.out.println("The returnBike command!");
             // TODO: Design command
+        }
+        List<MyVelibSystem> systems = Main.getSystems();
+        boolean alreadyFind = false;
+        for (MyVelibSystem system: systems) {
+            for(User user: system.getUsers()){
+                if (user.getId()==Integer.parseInt(args[0]) && !alreadyFind){
+                    for(Station station: system.getStations()){
+                        if(station.getId()==Integer.parseInt(args[1])){
+                            station.getStationTerminal().dropBicycle(user.getBicycle(),user,station);
+                            alreadyFind = true;
+                        }
+                    }
+                }
+            }
+        }
+        if(alreadyFind == false){
+            System.out.println("You cannot drop a bicycle");
+            System.out.println("The station id or/and user id do not exist");
         }
     }
 
