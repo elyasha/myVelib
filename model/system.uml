@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>core.system</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">core.system.MyVelibSystem</node>
+    <node x="0.0" y="612.0">core.system.MyVelibSystemFactoryTest</node>
+    <node x="366.0" y="0.0">core.system.MyVelibSystemTest</node>
+    <node x="0.0" y="469.0">core.system.MyVelibSystemFactory</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="120.0" y="291.5" />
+  <SelectedNodes>
+    <node>core.system.MyVelibSystem</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
