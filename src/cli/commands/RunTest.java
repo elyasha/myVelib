@@ -10,6 +10,8 @@ import java.util.List;
 
 /**
  * This is the RunTest class that implements the runTest command of the CLI.
+ * runTest [FileName.txt] :
+ * to run a test (sequence of commands) from a file name fileName.txt
  */
 public class RunTest implements Command {
     /**
