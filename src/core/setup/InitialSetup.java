@@ -17,12 +17,31 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.Random;
 
+/**
+ * The InitialSetup class : This is the class to implement the initial setup when creating a new myvelib system or network
+ */
 public class InitialSetup {
 
+    /**
+     * Constant of station occupied percentage
+     */
     private static final double STATION_OCCUPIED_PERCENTAGE = 0.7;
+
+    /**
+     * Constant of percentage of electrical bicycles
+     */
     private static final double PERCENTAGE_OF_ELECTRICAL_BICYCLE = 0.3;
+
+    /**
+     * Constant of percentage of plus stations
+     */
     private static final double PERCENTAGE_OF_PLUS_STATIONS = 0.5;
 
+    /**
+     * This method will be used when running the initialSetup command to get an initial system with some stations, and even maybe users
+     * @param args the command line arguments
+     * @return the new system (with setup)
+     */
     public static MyVelibSystem getInitialSetupSystem(String[] args) {
 
         // Creation of the myVelib system
@@ -124,13 +143,14 @@ public class InitialSetup {
         User user2 = UserFactory.addUser(system0, "Valdisa", PointFactory.addPoint(x, y), 124340, 0);
         CardFactory.addVlibre(system0, user2);
 
-
-//        System.out.println(system0);
-
         return system0;
 
     }
 
+    /**
+     * The main method that will just run the initial setup and save the system
+     * @param args the command-line arguments
+     */
     public static void main(String[] args) {
         MyVelibSystem system0 = getInitialSetupSystem(args);
     }

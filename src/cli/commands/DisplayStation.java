@@ -28,7 +28,7 @@ public class DisplayStation implements Command {
             MyVelibSystem currentSystem = null;
             Station current_station = null;
             for (MyVelibSystem system: systems){
-                if (system.getName() == args[0]){
+                if (system.getName().equals(args[0])){
                     currentSystem = system;
                     break;
                 }
@@ -38,7 +38,7 @@ public class DisplayStation implements Command {
                 for(Station station: stations){
                     if(station.getId() == Integer.parseInt(args[1])) {
                         current_station = station;
-                        current_station.toString();
+                        currentSystem.displayStationReport(station);
                         break;
                     }
                 }

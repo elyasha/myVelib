@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>core.statistics.balance</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">core.statistics.balance.station</node>
+    <node x="0.0" y="97.0">core.statistics.balance.system</node>
+    <node x="0.0" y="194.0">core.statistics.balance.user</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="76.0" y="123.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

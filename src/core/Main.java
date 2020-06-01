@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * The Main class: This class is responsible to be the core class that executes the core package when running the java myVelib framework
+ * It is indeed the core main application itself
  */
 public class Main {
 

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>core.components</OriginalElement>
+  <nodes>
+    <node x="1339.0" y="0.0">core.components.ParkingSlot</node>
+    <node x="1622.0" y="2158.0">core.components.factories</node>
+    <node x="1232.0" y="1781.0">core.components.TerminalTest</node>
+    <node x="530.0" y="980.0">core.components.PlusStation</node>
+    <node x="1737.0" y="1781.0">core.components.BicycleTest</node>
+    <node x="1524.0" y="1781.0">core.components.ParkingSlotTest</node>
+    <node x="0.0" y="2158.0">core.components.SortStationByLeastOccupied</node>
+    <node x="2141.0" y="1781.0">core.components.SortStationByLeastOccupiedTest</node>
+    <node x="539.0" y="1781.0">core.components.Terminal</node>
+    <node x="0.0" y="0.0">core.components.User</node>
+    <node x="2002.5" y="0.0">core.components.Bicycle</node>
+    <node x="89.5" y="1574.0">core.components.Manager</node>
+    <node x="1903.0" y="278.0">core.components.MechanicalBicycle</node>
+    <node x="855.0" y="2158.0">core.components.ElectricalBicycleTest</node>
+    <node x="1565.0" y="0.0">core.components.UserTest</node>
+    <node x="983.0" y="1781.0">core.components.ManagerTest</node>
+    <node x="1835.0" y="2158.0">core.components.PlusStationTest</node>
+    <node x="1116.0" y="2158.0">core.components.MechanicalBicycleTest</node>
+    <node x="0.0" y="2059.0">core.components.Vlibre</node>
+    <node x="15.25" y="1781.0">core.components.Card</node>
+    <node x="1377.0" y="2158.0">core.components.StandardStationTest</node>
+    <node x="2107.0" y="278.0">core.components.ElectricalBicycle</node>
+    <node x="2048.0" y="2158.0">core.components.VlibreTest</node>
+    <node x="301.0" y="2158.0">core.components.SortStationByMostUsedTest</node>
+    <node x="909.0" y="980.0">core.components.StandardStation</node>
+    <node x="1939.0" y="1781.0">core.components.CardTest</node>
+    <node x="736.5" y="0.0">core.components.Station</node>
+    <node x="250.0" y="1781.0">core.components.StationTest</node>
+    <node x="594.0" y="2158.0">core.components.SortStationByMostUsed</node>
+    <node x="2221.0" y="2158.0">core.components.VmaxTest</node>
+    <node x="116.0" y="2059.0">core.components.Vmax</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="core.components.Vmax" target="core.components.Card">
+      <point x="0.0" y="-27.0" />
+      <point x="160.5" y="2034.0" />
+      <point x="148.75" y="2034.0" />
+      <point x="44.5" y="114.0" />
+    </edge>
+    <edge source="core.components.ElectricalBicycle" target="core.components.Bicycle">
+      <point x="0.0" y="-27.0" />
+      <point x="2199.0" y="253.0" />
+      <point x="2144.25" y="253.0" />
+      <point x="47.25" y="114.0" />
+    </edge>
+    <edge source="core.components.MechanicalBicycle" target="core.components.Bicycle">
+      <point x="0.0" y="-27.0" />
+      <point x="1995.0" y="253.0" />
+      <point x="2049.75" y="253.0" />
+      <point x="-47.25" y="114.0" />
+    </edge>
+    <edge source="core.components.StandardStation" target="core.components.Station">
+      <point x="0.0" y="-38.0" />
+      <point x="1101.5" y="955.0" />
+      <point x="990.0" y="955.0" />
+      <point x="84.5" y="465.0" />
+    </edge>
+    <edge source="core.components.Manager" target="core.components.User">
+      <point x="0.0" y="-81.0" />
+      <point x="0.0" y="762.0" />
+    </edge>
+    <edge source="core.components.PlusStation" target="core.components.Station">
+      <point x="0.0" y="-38.0" />
+      <point x="709.5" y="955.0" />
+      <point x="821.0" y="955.0" />
+      <point x="-84.5" y="465.0" />
+    </edge>
+    <edge source="core.components.Vlibre" target="core.components.Card">
+      <point x="0.0" y="-27.0" />
+      <point x="48.0" y="2034.0" />
+      <point x="59.75" y="2034.0" />
+      <point x="-44.5" y="114.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.44405594405594406" x="1135.551181102362" y="409.0" />
+  <SelectedNodes>
+    <node>core.components.ParkingSlot</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

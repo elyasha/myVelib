@@ -21,12 +21,12 @@ public class Offline implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The displayStation command!");
+            System.out.println("The offline command!");
             List<MyVelibSystem> systems = Main.getSystems();
             MyVelibSystem currentSystem = null;
             Station current_station = null;
             for (MyVelibSystem system: systems){
-                if (system.getName() == args[0]){
+                if (system.getName().equals(args[0])){
                     currentSystem = system;
                     break;
                 }

@@ -509,7 +509,7 @@ public class User {
     // TODO: Remove bicycle, because
 
     /**
-     * Droping a bicycle after using it
+     * Dropping a bicycle after using it
      *
      * @param system:      the system the user is using
      * @param coordsStart: the coordinate where the user want to start

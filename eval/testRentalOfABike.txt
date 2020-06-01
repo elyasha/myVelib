@@ -1,7 +1,10 @@
-Rental of a bike
-1. a user (card holder or not) rent a bike of a given type from a given station at a given
-moment in time
-2. the user returns the bike to another station after a given duration (expressed in
-minutes).
-3. the user get charged for the corresponding amount (possibly 0) and possibly receive
-a time-credit (possibly 0)
+setup "velib1" numberOfStations numberOfSlots squareSide numberOfBicycles
+addUser "Matheus" "none" "velib1"
+addUser "Charlito" "Vmax" "velib1"
+addUser "Valdisa" "Vlibre" "velib1"
+rentBicycle userID stationID
+returnBicycle userID stationID time
+rentBicycle userID stationID
+returnBicycle userID stationID time
+rentBicycle userID stationID
+returnBicycle userID stationID time

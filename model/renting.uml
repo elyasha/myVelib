@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>core.renting</OriginalElement>
+  <nodes>
+    <node x="0.0" y="207.0">core.renting.MainTest</node>
+    <node x="0.0" y="0.0">core.renting.Main</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="56.0" y="156.5" />
+  <SelectedNodes>
+    <node>core.renting.MainTest</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

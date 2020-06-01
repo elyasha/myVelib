@@ -1,7 +1,6 @@
-Simulation of a planning ride
-1. a user at a given position require a ride planning to reach a destination position
-2. the user receives the source and destination stations
-3. the user retrieve a bicycle from the source station of the planned ride at a given
-instant of time
-4. the user that is holding a bicycle returns it (in a given free slot) at a given station at
-a given instant of time.
+setup "velib1" numberOfStations numberOfSlots squareSide numberOfBicycles
+addUser "Matheus" "none" "velib1"
+addUser "Charlito" "Vmax" "velib1"
+addUser "Valdisa" "Vlibre" "velib1"
+rentBicycle userID stationID
+returnBicycle userID stationID time

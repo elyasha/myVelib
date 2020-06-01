@@ -1,0 +1,9 @@
+Computation of statistics
+1. the myVelib system stores relevant data in form of records representing N rental bike
+simulations (by diferent users, on diferent stations, and with diferent duration)
+2. the statistics (computed w.r.t. the rental records added in previous step) for each
+user are displayed
+3. the statistics (computed w.r.t. the rental records added in previous step) for each
+station are displayed
+4. stations are displayed sorted w.r.t. the most used station (first)
+5. stations are displayed sorted w.r.t. the least occupied station (first)

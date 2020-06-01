@@ -1,11 +1,9 @@
 package core.renting;
 
 import core.components.*;
-import core.system.MyVelibSystem;
 
 import java.sql.Time;
 import java.time.LocalTime;
-import java.util.Date;
 
 /**
  * The Main class of renting module : This class contains all algorithms that are needed during the renting process.
