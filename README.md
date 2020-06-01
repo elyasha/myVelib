@@ -3,6 +3,13 @@
 # myVelib
 Final project of Oriented Object programming at CentraleSupélec
 
+# Documentation
+The documentation of this project is available [here](https://elyasha.github.io/myVelib/)
+
+# Coverage report
+The coverage report of this project is available [here](https://elyasha.github.io/myVelib-coverage/)
+
+
 # Pre-requisites
 - jdk 11
 
