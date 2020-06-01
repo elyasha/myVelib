@@ -1,9 +1,20 @@
 package cli.commands;
+import core.Main;
+import core.components.Card;
+import core.components.User;
+import core.components.factories.PointFactory;
+import core.components.factories.UserFactory;
+import core.system.MyVelibSystem;
+
+
+import java.util.List;
 
 /**
  * This is the AddManager class that implements the addManager command of the CLI.
  */
 public class AddManager implements Command {
+    private static final int DEFAULT_CREDIT_CARD_NUMBER = 000;
+
     /**
      * main() is the implementation of the command. It will interact with the core.Main application
      * addManager [userName,cardType, velibnetworkName] :
@@ -18,6 +29,25 @@ public class AddManager implements Command {
         } else {
             System.out.println("The addManager command!");
             // TODO: Design the command
+            // Check if the system exists in the application
+
+            List<MyVelibSystem> systems = Main.getSystems();
+            MyVelibSystem currentSystem = null;
+            for (MyVelibSystem system: systems){
+                if (system.getName() == args[2]){
+                    currentSystem = system;
+                    break;
+                }
+            }
+            if (currentSystem != null){
+                User user = UserFactory.addManager(currentSystem,args[0],DEFAULT_CREDIT_CARD_NUMBER);
+                user.addCard(args[1]);
+            }
+            else{
+                System.out.println("The system does not exist");
+            }
+
+
         }
     }
 

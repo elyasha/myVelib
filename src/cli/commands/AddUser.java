@@ -1,9 +1,18 @@
 package cli.commands;
 
+import core.Main;
+import core.components.User;
+import core.components.factories.UserFactory;
+import core.system.MyVelibSystem;
+
+import java.util.List;
+
 /**
  * This is the AddUser class that implements the addUser command of the CLI.
  */
 public class AddUser implements Command {
+    private static final int DEFAULT_CREDIT_CARD_NUMBER = 0000;
+
     /**
      * main() is the implementation of the command. It will interact with the core.Main application
      * addUser [userName,cardType, velibnetworkName] :
@@ -14,6 +23,31 @@ public class AddUser implements Command {
      */
     public static void main(String[] args) {
         System.out.println("The addUser command!");
+        if (!hasGoodInput(args)) {
+            wrongArgumentHelp();
+        } else {
+            System.out.println("The addManager command!");
+            // TODO: Design the command
+            // Check if the system exists in the application
+
+            List<MyVelibSystem> systems = Main.getSystems();
+            MyVelibSystem currentSystem = null;
+            for (MyVelibSystem system: systems){
+                if (system.getName() == args[2]){
+                    currentSystem = system;
+                    break;
+                }
+            }
+            if (currentSystem != null){
+                User user = UserFactory.addUser(currentSystem,args[0],DEFAULT_CREDIT_CARD_NUMBER);
+                user.addCard(args[1]);
+            }
+            else{
+                System.out.println("The system does not exist");
+            }
+
+
+        }
     }
 
     /**
@@ -21,6 +55,7 @@ public class AddUser implements Command {
      *
      * @param args the arguments of the command
      */
+
     public static void helpCommand(String[] args) {
         System.out.println("The addUser command!");
         System.out.println("addUser <userName,cardType, velibnetworkName> :");
@@ -42,7 +77,7 @@ public class AddUser implements Command {
      * @param args the arguments of the command
      * @return true, if the command has good input. false, otherwise
      */
-    public boolean hasGoodInput(String[] args) {
+    public static boolean hasGoodInput(String[] args) {
         // Check the quantity of arguments in this command
         if (args.length != 3) {
             return false;
