@@ -25,9 +25,9 @@ public class DisplayUser implements Command {
             System.out.println("The displayStation command!");
             List<MyVelibSystem> systems = Main.getSystems();
             MyVelibSystem currentSystem = null;
-            User current_user = null;
+            User currentUser = null;
             for (MyVelibSystem system: systems){
-                if (system.getName() == args[0]){
+                if (system.getName().equals(args[0])){
                     currentSystem = system;
                     break;
                 }
@@ -36,12 +36,12 @@ public class DisplayUser implements Command {
                 List<User> users = currentSystem.getUsers();
                 for(User user: users){
                     if(user.getId() == Integer.parseInt(args[1])) {
-                        current_user = user;
-                        current_user.toString();
+                        currentUser = user;
+                        currentSystem.displayUserReport(currentUser);
                         break;
                     }
                 }
-                if(current_user == null){
+                if(currentUser == null){
                     System.out.println("The id of the user does not exist");
                 }
 

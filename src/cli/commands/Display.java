@@ -27,13 +27,13 @@ public class Display implements Command {
             List<MyVelibSystem> systems = Main.getSystems();
             MyVelibSystem currentSystem = null;
             for (MyVelibSystem system: systems){
-                if (system.getName() == args[0]){
+                if (system.getName().equals(args[0])){
                     currentSystem = system;
                     break;
                 }
             }
             if (currentSystem != null){
-                currentSystem.toString();
+                currentSystem.displaySystemReport();
             }
             else{
                 System.out.println("The system does not exist");

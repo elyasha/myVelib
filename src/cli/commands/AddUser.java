@@ -26,14 +26,13 @@ public class AddUser implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The addManager command!");
-            // TODO: Design the command
+            System.out.println("The addUser command!");
             // Check if the system exists in the application
 
             List<MyVelibSystem> systems = Main.getSystems();
             MyVelibSystem currentSystem = null;
             for (MyVelibSystem system: systems){
-                if (system.getName() == args[2]){
+                if (system.getName().equals(args[2])){
                     currentSystem = system;
                     break;
                 }
