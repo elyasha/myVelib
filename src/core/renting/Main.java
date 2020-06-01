@@ -12,6 +12,13 @@ public class Main {
 
     private static final double TIME_ADDED_BY_PLUS_STATION = 5;
 
+    /**
+     * Used to compute the cost according to some criteria
+     * @param bicycle: Type of bicycle the user wants to rent
+     * @param card: type of card the user is using
+     * @param intervalOfTime: interval of renting time used to compute the cost
+     * @return cost
+     */
     public static double getCostWithoutTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime) {
 
         double cost = 0;
@@ -55,6 +62,15 @@ public class Main {
         return cost;
     }
 
+    /**
+     * sed to compute the cost according to some criteria
+     * @param bicycle: Type of bicycle the user wants to rent
+     * @param card: type of card the user is using
+     * @param intervalOfTime: interval of renting time used to compute the cost
+     * @param timeCredit: User's time credit
+     * @param user: user who wants to rent a bicycle
+     * @return cost
+     */
     public static double getCostWithTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user) {
 
         double cost = 0;
@@ -88,6 +104,11 @@ public class Main {
         return cost;
     }
 
+    /**
+     * Used to compute the duration of the location
+     * @param user
+     * @return an interval of time used to compute the cost
+     */
     public static double computeRentTime(User user) {
         LocalTime startTime;
         startTime = user.getRentTime();
@@ -107,6 +128,12 @@ public class Main {
 
     }
 
+    /**
+     * Charging the user after he dropped the bicycle
+     * @param user
+     * @param priceToBePayed: compute by the cost function
+     * @param station: station where he dropped the bicycle
+     */
     public static void chargingUser(User user, double priceToBePayed, Station station) {
         // We assume the client is rich
         user.setAllMoneyCharged((float) (user.getAllMoneyCharged() + priceToBePayed));

@@ -9,7 +9,14 @@ import core.system.MyVelibSystem;
 
 public class Main {
 
-
+    /**
+     * Compute the best start and end station according to the least start and end distances strategy.
+     * @param system: system the user is using
+     * @param coordsStart: where the user wants to start the location
+     * @param coordsEnd: where the user wants to stop the location
+     * @param bicycle: the bicycle the user want to rent
+     * @return best sart and end stations
+     */
     public static List<Station> getBestStation(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {
         Point coords;
         double distance;
