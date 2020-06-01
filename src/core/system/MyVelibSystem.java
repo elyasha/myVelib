@@ -91,7 +91,7 @@ public class MyVelibSystem {
     }
 
 
-    public void rentBike(int userID, int StationID) {
+    public void rentBicycle(int userID, int StationID) {
         Station station = null;
         User user = null;
 
