@@ -7,6 +7,10 @@ import java.util.List;
 import core.components.*;
 import core.system.MyVelibSystem;
 
+/**
+ * The Main class of rides.planning module : This class contains all algorithms that are needed to plan a ride given two points.
+ * This class is used by any user when he needs to plan a ride. It will return, in general, the stationID.
+ */
 public class Main {
 
     /**

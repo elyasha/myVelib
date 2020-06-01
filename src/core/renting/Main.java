@@ -8,8 +8,15 @@ import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
 
+/**
+ * The Main class of renting module : This class contains all algorithms that are needed during the renting process.
+ * This class is called when a User need to rent a bicycle
+ */
 public class Main {
 
+    /**
+     * A constant that represents the time added when a user drops its bicycle to a plus station
+     */
     private static final double TIME_ADDED_BY_PLUS_STATION = 5;
 
     /**
@@ -106,7 +113,7 @@ public class Main {
 
     /**
      * Used to compute the duration of the location
-     * @param user
+     * @param user a user
      * @return an interval of time used to compute the cost
      */
     public static double computeRentTime(User user) {
@@ -130,7 +137,7 @@ public class Main {
 
     /**
      * Charging the user after he dropped the bicycle
-     * @param user
+     * @param user a user
      * @param priceToBePayed: compute by the cost function
      * @param station: station where he dropped the bicycle
      */
