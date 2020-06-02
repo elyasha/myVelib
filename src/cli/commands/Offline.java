@@ -26,7 +26,7 @@ public class Offline implements Command {
             MyVelibSystem currentSystem = null;
             Station current_station = null;
             for (MyVelibSystem system: systems){
-                if (system.getName().equals(args[0])){
+                if (system.getName().equalsIgnoreCase(args[0])){
                     currentSystem = system;
                     break;
                 }
