@@ -61,11 +61,13 @@ public class MyVelibCLI {
                     String command = textFile.get(i).split(" ")[0];
 //                    System.out.println(command);
                     String[] argsCommand = textFile.get(i).split(" ");
+                    System.out.println("----------------------------");
 
                     for (int j = 0; j < argsCommand.length; j++) {
                         System.out.println(argsCommand[j]);
                     }
                     RunCommand.main(argsCommand);
+                    System.out.println("----------------------------");
 
                 }
             }

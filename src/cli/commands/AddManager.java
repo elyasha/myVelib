@@ -63,7 +63,8 @@ public class AddManager implements Command {
             return false;
         } else {
             // Check if the cardType is well written
-            if (!args[1].equals("Vmax") && !args[1].equals("Vlibre")) {
+
+            if (!args[1].equals("Vmax") && !args[1].equals("Vlibre") && !args[1].equals("None")) {
                 CardTypeError();
                 return false;
             } else {
