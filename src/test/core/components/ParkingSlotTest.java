@@ -8,16 +8,30 @@ public class ParkingSlotTest {
 
     @Test
     public void testToString() {
-        // TODO
+        ParkingSlot p = new ParkingSlot();
+        int id = 1;
+        int state = 0;
+        String result = "ParkingSlot{" +
+                "id=" + id +
+                ", state=" + state +
+                '}';
+
+        assertEquals(result, p.toString());
     }
 
     @Test
     public void testEquals() {
-        // TODO
+        ParkingSlot p1 = new ParkingSlot();
+        ParkingSlot p2 = new ParkingSlot();
+
+        assertNotEquals(p1, p2);
     }
 
     @Test
     public void testHashCode() {
-        // TODO
+        ParkingSlot p1 = new ParkingSlot();
+        ParkingSlot p2 = new ParkingSlot();
+
+        assertNotEquals(p1.hashCode(), p2.hashCode());
     }
 }
