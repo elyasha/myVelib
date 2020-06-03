@@ -9,12 +9,9 @@ public class ParkingSlotTest {
     @Test
     public void testToString() {
         ParkingSlot p = new ParkingSlot();
-        int id = 1;
+        int id = 1; // TODO: Know how to deal with id when generating tests because this test won't pass when running with all others
         int state = 0;
-        String result = "ParkingSlot{" +
-                "id=" + id +
-                ", state=" + state +
-                '}';
+        String result = "ParkingSlot{" + "id=" + id + ", state=" + state + '}';
 
         assertEquals(result, p.toString());
     }

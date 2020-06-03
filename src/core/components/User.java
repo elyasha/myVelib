@@ -597,16 +597,18 @@ public class User {
 
     /**
      * Used to see the status of the user
+     * @return
      */
-    public void seeMyStatus() {
+    public String seeMyStatus() {
         System.out.println(this);
+        return this.toString();
     }
 
     /**
      * @param system: the system the user is using
      * @param userID: the ID the user wants to see
      */
-    public void seeCurrentStatus(MyVelibSystem system, int userID) {
+    public String seeCurrentStatus(MyVelibSystem system, int userID) {
         if (this.id == userID) {
             this.seeMyStatus();
             System.out.println();
@@ -616,6 +618,8 @@ public class User {
             System.out.println();
         }
 
+        return this.toString();
+
     }
 
     /**
@@ -624,7 +628,7 @@ public class User {
      * @param system:    the system the user is using
      * @param stationID: the station id the user wants to see
      */
-    public void seeCurrentStationState(MyVelibSystem system, int stationID) {
+    public String seeCurrentStationState(MyVelibSystem system, int stationID) {
         // user can only see what is in its system
         if (system.getUsers().contains(this)) {
 
@@ -646,8 +650,11 @@ public class User {
                 System.out.println(currentStation);
                 System.out.println();
             }
-
+        return currentStation.toString();
         }
+
+        return "";
+
     }
 
     /**
@@ -655,13 +662,16 @@ public class User {
      *
      * @param system: the system the user is using
      */
-    public void displaySystemReport(MyVelibSystem system) {
+    public String displaySystemReport(MyVelibSystem system) {
         if (system.getUsers().contains(this)) {
             System.out.println();
             System.out.println("SYSTEM REPORT");
             System.out.println(system);
             System.out.println();
+
+            return system.toString();
         }
+        return "";
     }
 
 

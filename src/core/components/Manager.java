@@ -24,9 +24,11 @@ public class Manager extends User {
 
     /**
      * This is the method that allows the manager to see his current status (toString method)
+     * @return
      */
-    public void seeMyStatus() {
+    public String seeMyStatus() {
         System.out.println(this);
+        return this.toString();
     }
 
     /**
@@ -35,7 +37,7 @@ public class Manager extends User {
      * @param system The MyVelibSystem that the user is in
      * @param userID The user id
      */
-    public void seeCurrentStatus(MyVelibSystem system, int userID) {
+    public String seeCurrentStatus(MyVelibSystem system, int userID) {
         User currentUser = null;
 
         for (User user : system.getUsers()) {
@@ -51,6 +53,8 @@ public class Manager extends User {
             System.out.println(currentUser);
         }
 
+        return currentUser.toString();
+
 
     }
 
@@ -60,7 +64,7 @@ public class Manager extends User {
      * @param system    the system that the station is supposed to be
      * @param stationID the station id
      */
-    public void seeCurrentStationState(MyVelibSystem system, int stationID) {
+    public String seeCurrentStationState(MyVelibSystem system, int stationID) {
         // Manager can see all systems
         System.out.println();
         Station currentStation = null;
@@ -82,6 +86,8 @@ public class Manager extends User {
             System.out.println();
         }
 
+        return currentStation.toString();
+
 
     }
 
@@ -90,11 +96,13 @@ public class Manager extends User {
      *
      * @param system the system that will be studied
      */
-    public void displaySystemReport(MyVelibSystem system) {
+    public String displaySystemReport(MyVelibSystem system) {
         // Manager can see all systems
         System.out.println();
         System.out.println("SYSTEM REPORT");
         System.out.println(system);
         System.out.println();
+
+        return system.toString();
     }
 }
