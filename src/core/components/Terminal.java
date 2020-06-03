@@ -170,39 +170,43 @@ public final class Terminal {
      */
     public void dropBicycle(Bicycle bicycle, User user, Station station) {
 
-        // Compute the time of the journey
-        double intervalOfTime; // [minutes]
-        intervalOfTime = Main.computeRentTime(user);
-        System.out.println(intervalOfTime);
-        Time intervalOfTimeTIME;
-        intervalOfTimeTIME = new Time(0, (int) intervalOfTime, 0);
-        System.out.println(intervalOfTimeTIME);
-        // Compute the rent cost for the user
-        double rentCost = Main.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
+        if(user.getBicycle()==null){
+            System.out.println("You don't have a bicycle to return");
+        }
+        else{
+            // Compute the time of the journey
+            double intervalOfTime; // [minutes]
+            intervalOfTime = Main.computeRentTime(user);
+            System.out.println(intervalOfTime);
+            Time intervalOfTimeTIME;
+            intervalOfTimeTIME = new Time(0, (int) intervalOfTime, 0);
+            System.out.println(intervalOfTimeTIME);
+            // Compute the rent cost for the user
+            double rentCost = Main.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
 
-        // Take the money of the user !!!!
-        Main.chargingUser(user, rentCost, station);
+            // Take the money of the user !!!!
+            Main.chargingUser(user, rentCost, station);
 
-        // Changer rentTime
-        user.setRentTime(null);
+            // Changer rentTime
+            user.setRentTime(null);
 
-        // Set hasBicycle = true and rentStationID in User
-        user.setBicycle(null);
-        user.setRentStationID(-1); // an impossible id
+            // Set hasBicycle = true and rentStationID in User
+            user.setBicycle(null);
+            user.setRentStationID(-1); // an impossible id
 
-        // Change the state of parkingSlot
-        ParkingSlot slot = station.getParkingSlotTypeBicycle(bicycle);
-        slot.setState(1);
-        slot.setBicycle(bicycle);
+            // Change the state of parkingSlot
+            ParkingSlot slot = station.getParkingSlotTypeBicycle(bicycle);
+            slot.setState(1);
+            slot.setBicycle(bicycle);
 
-        // Return bicycle
-        System.out.println();
-        System.out.println(user + "You rent is finalized!");
-        System.out.println();
-        System.out.println(rentCost);
+            // Return bicycle
+            System.out.println();
+            System.out.println(user + "You rent is finalized!");
+            System.out.println();
+            System.out.println(rentCost);
 
-        station.addNumberOfDroppings(1);
-
+            station.addNumberOfDroppings(1);
+        }
 
     }
 

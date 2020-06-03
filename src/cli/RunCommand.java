@@ -33,6 +33,9 @@ public class RunCommand {
                 case "addUser":
                     AddUser.main(argsCommand);
                     break;
+
+                case "addManager":
+                    AddManager.main(argsCommand);
                 case "display":
                     Display.main(argsCommand);
                     break;
