@@ -16,7 +16,7 @@ public class RentBicycle implements Command {
      * main() is the implementation of the command. It will interact with the core.Main application
      * rentBicycle [userID, stationID] : to let the user userID renting a bike from station
      * stationID (if no bikes are available should behave accordingly)
-     *
+     * <p>
      * The application can have many myVelib systems (networks) and so
      *
      * @param args the arguments of the command
@@ -28,19 +28,19 @@ public class RentBicycle implements Command {
             System.out.println("The rentBicycle command!");
             List<MyVelibSystem> systems = Main.getSystems();
             boolean alreadyFind = false;
-            for (MyVelibSystem system: systems) {
-                for(User user: system.getUsers()){
-                    if (user.getId()==Integer.parseInt(args[0]) && !alreadyFind){
-                        for(Station station: system.getStations()){
-                            if(station.getId()==Integer.parseInt(args[1])){
-                                station.getStationTerminal().rentBicycle(BicycleFactory.createMechanicalBicycle(),user,station);
+            for (MyVelibSystem system : systems) {
+                for (User user : system.getUsers()) {
+                    if (user.getId() == Integer.parseInt(args[0]) && !alreadyFind) {
+                        for (Station station : system.getStations()) {
+                            if (station.getId() == Integer.parseInt(args[1])) {
+                                station.getStationTerminal().rentBicycle(BicycleFactory.createMechanicalBicycle(), user, station);
                                 alreadyFind = true;
                             }
                         }
                     }
                 }
             }
-            if(alreadyFind == false){
+            if (alreadyFind == false) {
                 System.out.println("You cannot rent a bicycle");
                 System.out.println("The station id or/and user id do not exist");
             }
@@ -74,6 +74,9 @@ public class RentBicycle implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
+        if (args.length != 2) {
+            return false;
+        }
         try {
             int integerValue1 = Integer.parseInt(args[0]);
             int integerValue2 = Integer.parseInt(args[1]);

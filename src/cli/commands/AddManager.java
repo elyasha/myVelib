@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class AddManager implements Command {
     private static final int DEFAULT_CREDIT_CARD_NUMBER = 000;
+    private boolean worked = false;
 
     /**
      * main() is the implementation of the command. It will interact with the core.Main application

@@ -26,6 +26,7 @@ public class ReturnBicycle implements Command {
         } else {
             System.out.println("The returnBike command!");
         }
+        //TODO: Take time into account
         List<MyVelibSystem> systems = Main.getSystems();
         boolean alreadyFind = false;
         for (MyVelibSystem system: systems) {
@@ -71,6 +72,18 @@ public class ReturnBicycle implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
-        return args.length == 2;
+        if (args.length != 3) {
+            return false;
+        }
+        try {
+            int integerValue1 = Integer.parseInt(args[0]);
+            int integerValue2 = Integer.parseInt(args[1]);
+        } catch (NumberFormatException numberFormatException) {
+            System.out.println(numberFormatException.getMessage());
+            ;
+            System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
+            return false;
+        }
+        return args.length == 3;
     }
 }

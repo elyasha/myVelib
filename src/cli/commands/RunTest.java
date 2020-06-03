@@ -98,7 +98,16 @@ public class RunTest implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
-        return args.length <= 1;
+        if (args.length > 1) {
+            return false;
+        }
+        try {
+            int integerValue1 = Integer.parseInt(args[0]);
+            System.out.println("Wrong data type. Expecting a string! Please see your file.txt ;)");
+            return false;
+        } catch (NumberFormatException numberFormatException) {
+            return true;
+        }
     }
 
     public static List<String> readTextFile(String fileName) {

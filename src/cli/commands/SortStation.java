@@ -1,5 +1,6 @@
 package cli.commands;
 
+
 /**
  * This is the SortStation class that implements the sortStation command of the CLI.
  */
@@ -53,8 +54,34 @@ public class SortStation implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
-        return args.length <= 2;
-    }
+        if (args.length > 2 || args.length == 0) {
+            return false;
+        }
+
+        if (args.length == 1) {
+            try {
+                int integerValue = Integer.parseInt(args[0]);
+                System.out.println("Wrong data type. Expecting a string! Please see your file.txt ;)");
+                return false;
+            } catch (NumberFormatException numberFormatException) {
+                return true;
+            }
+        }
+        try{
+            int integerValue = Integer.parseInt(args[0]);
+            return false;
+        }catch (NumberFormatException e){
+            try {
+                int integerValue = Integer.parseInt(args[1]);
+                return false;
+            }catch (NumberFormatException e1){
+                return true;
+            }
+        }
+
+
+
+}
 
 
 }

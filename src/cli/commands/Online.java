@@ -76,6 +76,9 @@ public class Online implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
+        if(args.length != 2){
+            return false;
+        }
         try {
             int integerValue = Integer.parseInt(args[1]);
         } catch (NumberFormatException numberFormatException) {

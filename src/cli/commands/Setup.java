@@ -76,9 +76,13 @@ public class Setup implements Command {
         if (args.length == 5) {
             try {
                 int integerValue = Integer.parseInt(args[1]);
-                integerValue = Integer.parseInt(args[2]);
+                int integerValue2 = Integer.parseInt(args[2]);
                 integerValue = Integer.parseInt(args[3]);
-                integerValue = Integer.parseInt(args[4]);
+                int integerValue4 = Integer.parseInt(args[4]);
+
+                if(integerValue4 > integerValue2){
+                    return false;
+                }
 
             } catch (NumberFormatException numberFormatException) {
                 System.out.println(numberFormatException.getMessage());
