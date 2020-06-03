@@ -1,9 +1,9 @@
-setup "velib1" numberOfStations numberOfSlots squareSide numberOfBicycles
-addManager "Matheus" "none" "velib1"
-addUser "Charlito" "Vmax" "velib1"
-addUser "Valdisa" "Vlibre" "velib1"
-rentBicycle userID stationID
-returnBicycle userID stationID time
-displayUser "velib1" 2
-displayStation "velib1" 1
-display "velib1"
+setup velib1 10 10 100 5
+addManager Matheus none velib1
+addUser Charlito Vmax velib1
+addUser Valdisa Vlibre velib1
+rentBicycle 1 1
+returnBicycle 1 1 80
+displayUser velib1 2
+displayStation velib1 1
+display velib1

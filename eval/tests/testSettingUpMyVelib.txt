@@ -1,4 +1,4 @@
-setup "velib1" numberOfStations numberOfSlots squareSide numberOfBicycles
-addUser "Matheus" "none" "velib1"
-addUser "Charlito" "Vmax" "velib1"
-addUser "Valdisa" "Vlibre" "velib1"
+setup velib1 numberOfStations numberOfSlots squareSide numberOfBicycles
+addUser Matheus none velib1
+addUser Charlito Vmax velib1
+addUser Valdisa Vlibre velib1
