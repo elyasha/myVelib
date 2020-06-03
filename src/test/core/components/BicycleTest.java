@@ -1,21 +1,32 @@
 package core.components;
 
+import core.components.factories.BicycleFactory;
+import org.junit.Before;
+
 import static org.junit.Assert.*;
 
 public class BicycleTest {
 
+
     @org.junit.Test
     public void testToString() {
-        // TODO: testToString
+        Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
+        int id = 1;
+        String result = "Bicycle{" + "id=" + id + '}';
+        assertEquals(result,bicycle.toString());
     }
 
     @org.junit.Test
     public void testEquals() {
-        // TODO
+        Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
+        Bicycle bicycle1 = BicycleFactory.createMechanicalBicycle();
+        assertNotEquals(bicycle,bicycle1);
     }
 
     @org.junit.Test
     public void testHashCode() {
-        // TODO
+        Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
+        Bicycle bicycle1 = BicycleFactory.createMechanicalBicycle();
+        assertNotEquals(bicycle1.hashCode(),bicycle.hashCode());
     }
 }
