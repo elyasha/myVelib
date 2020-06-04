@@ -81,11 +81,14 @@ public class AddUser implements Command {
             return false;
         } else {
             // Check if the cardType is well written
-            if (!args[1].equalsIgnoreCase("Vmax") && !args[1].equalsIgnoreCase("Vlibre") && !args[1].equalsIgnoreCase("None")) {
-                CardTypeError();
-                return false;
-            } else {
-                return true;
+            switch (args[1]) {
+                case "Vmax":
+                case "Vlibre":
+                case "None":
+                    return true;
+                default:
+                    CardTypeError();
+                    return false;
             }
         }
     }
@@ -95,6 +98,6 @@ public class AddUser implements Command {
      */
     private static void CardTypeError() {
         System.out.println("There is an error in the card type!");
-        System.out.println("Please, add a coherent card type (Vmax, Vlibre, none)");
+        System.out.println("Please, add a coherent card type (Vmax, Vlibre, None)");
     }
 }
