@@ -12,29 +12,6 @@ import static org.junit.Assert.*;
 
 public class StationTest {
 
-
-    /**
-    public Station(Point coordinate, boolean onService, java.util.List<ParkingSlot> parkingSlots, double money, int numberOfDroppings) {
-        this.coordinate = coordinate;
-        this.onService = onService;
-        this.parkingSlots = parkingSlots;
-        this.terminal = new Terminal(onService, this.id);
-        this.money = money;
-        this.numberOfDroppings = numberOfDroppings;
-    }**/
-
-    /**
-    public Station(Point coordinate, boolean onService, List<ParkingSlot> parkingSlots) {
-        this.coordinate = coordinate;
-        this.onService = onService;
-        this.parkingSlots = parkingSlots;
-        this.terminal = new Terminal(onService, this.id); // TODO: Create a TerminalFactory
-        this.money = 0; // the initial money of the station is zero
-        this.numberOfDroppings = 0; // the number of droppings is set to zero
-    }
-     **/
-
-
     @Test
     public void getExistTypeBikeTest() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
