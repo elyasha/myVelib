@@ -1,1 +1,1 @@
-setup "myvelib"
+setup "myvelib" 10 10 1000 5
