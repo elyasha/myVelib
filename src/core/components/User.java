@@ -423,7 +423,7 @@ public class User {
     /**
      * Add a new card for the user
      *
-     * @param cardType a string for the card type (Can be Vmax, Vlibre or none)
+     * @param cardType a string for the card type (Can be Vmax, Vlibre or None)
      */
     public void addCard(String cardType) {
 

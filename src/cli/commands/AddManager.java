@@ -13,7 +13,6 @@ import java.util.List;
  */
 public class AddManager implements Command {
     private static final int DEFAULT_CREDIT_CARD_NUMBER = 000;
-    private boolean worked = false;
 
     /**
      * main() is the implementation of the command. It will interact with the core.Main application
@@ -62,12 +61,14 @@ public class AddManager implements Command {
             return false;
         } else {
             // Check if the cardType is well written
-
-            if (!args[1].equalsIgnoreCase("Vmax") && !args[1].equalsIgnoreCase("Vlibre") && !args[1].equalsIgnoreCase("None")) {
-                CardTypeError();
-                return false;
-            } else {
-                return true;
+            switch (args[1]) {
+                case "Vmax":
+                case "Vlibre":
+                case "None":
+                    return true;
+                default:
+                    CardTypeError();
+                    return false;
             }
         }
     }
@@ -77,7 +78,7 @@ public class AddManager implements Command {
      */
     private static void CardTypeError() {
         System.out.println("There is an error in the card type!");
-        System.out.println("Please, add a coherent card type (Vmax, Vlibre, none)");
+        System.out.println("Please, add a coherent card type (Vmax, Vlibre, None)");
     }
 
 
@@ -89,7 +90,7 @@ public class AddManager implements Command {
     public static void helpCommand(String[] args) {
         System.out.println("The addManager command!");
         System.out.println("addManager <userName,cardType, velibnetworkName> :");
-        System.out.println("to add a user with name {userName} and card {cardType:Vmax/Vlibre/none}");
+        System.out.println("to add a user with name {userName} and card {cardType:Vmax/Vlibre/None}");
         System.out.println("(i.e. ``none'' if the user has no card) to a myVelib network {velibnetworkName}");
 
     }

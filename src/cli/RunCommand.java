@@ -32,6 +32,7 @@ public class RunCommand {
                     break;
                 case "addManager":
                     AddManager.main(argsCommand);
+                    break;
                 case "display":
                     Display.main(argsCommand);
                     break;
