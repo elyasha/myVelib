@@ -177,25 +177,31 @@ public class UserTest {
 
     @Test
     public void addSpentTimeOnElectricalBicycle() {
+        List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        List<Station> stations = new ArrayList<Station>();
+        stations.add(station);
+        MyVelibSystemFactory.createMyVelibSystem(stations);
+        List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
+        systems = Main.getSystems();
+        User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
+        user1.addSpentTimeOnElectricalBicycle(100);
+        user1.addSpentTimeOnElectricalBicycle(20);
+        assertTrue(user1.getTimeSpentOnElectricalBicycle()==120);
     }
 
     @Test
     public void addSpentTimeOnMechanicalBicycle() {
-    }
-
-    @Test
-    public void seeMyStatus() {
-    }
-
-    @Test
-    public void seeCurrentStatus() {
-    }
-
-    @Test
-    public void seeCurrentStationState() {
-    }
-
-    @Test
-    public void displaySystemReport() {
+        List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        List<Station> stations = new ArrayList<Station>();
+        stations.add(station);
+        MyVelibSystemFactory.createMyVelibSystem(stations);
+        List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
+        systems = Main.getSystems();
+        User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
+        user1.addSpentTimeOnMechanicalBicycle(100);
+        user1.addSpentTimeOnMechanicalBicycle(20);
+        assertTrue(user1.getTimeSpentOnMechanicalBicycle()==120);
     }
 }
