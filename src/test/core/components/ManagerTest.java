@@ -24,8 +24,7 @@ public class ManagerTest {
     public void seeCurrentStatus() {
         MyVelibSystem system = new MyVelibSystem();
         Manager user = UserFactory.addManager(system, "Matheus", new Point(0,0), 0000, 50);
-        // TODO: Verify why this unit test passes when running alone but not when running with everything all together
-        assertEquals(user.toString(), user.seeCurrentStatus(system, 1));
+        assertEquals(user.toString(), user.seeCurrentStatus(system, user.getId()));
 
     }
 

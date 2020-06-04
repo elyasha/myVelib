@@ -9,7 +9,7 @@ public class CardTest {
     @org.junit.Test
     public void testToString() {
         Card card = new Vmax();
-        int id = 1;
+        int id = card.getId();
         String result = "Card{" + "id=" + id + '}';
 
         assertEquals(result, card.toString());

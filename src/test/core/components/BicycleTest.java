@@ -11,7 +11,7 @@ public class BicycleTest {
     @org.junit.Test
     public void testToString() {
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
-        int id = 1;
+        int id = bicycle.getId();
         String result = "Bicycle{" + "id=" + id + '}';
         assertEquals(result,bicycle.toString());
     }
