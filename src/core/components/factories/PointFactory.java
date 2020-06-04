@@ -13,6 +13,7 @@ public class PointFactory {
 
     /**
      * This method creates a new point instance
+     *
      * @param x the x coordinate on the x-axis
      * @param y the y coordinate on the y-axis
      * @return the Point instance

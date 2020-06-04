@@ -13,7 +13,6 @@ import java.util.Arrays;
 public class VisualizationStatistics {
 
 
-
     public static void main(String[] args) {
 
         // Setup the system
@@ -27,7 +26,7 @@ public class VisualizationStatistics {
         int userID1 = Integer.parseInt(args[0]);
 
         User user1 = null;
-        for (User user_i: system.getUsers()) {
+        for (User user_i : system.getUsers()) {
             if (user_i.getId() == userID1) {
                 user1 = user_i;
             }
@@ -42,7 +41,7 @@ public class VisualizationStatistics {
 //    given ID
         int stationID1 = Integer.parseInt(args[1]);
         Station station1 = null;
-        for (Station station_i: system.getStations()) {
+        for (Station station_i : system.getStations()) {
             if (station_i.getId() == stationID1) {
                 station1 = station_i;
             }

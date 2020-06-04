@@ -80,7 +80,7 @@ public class Setup implements Command {
                 integerValue = Integer.parseInt(args[3]);
                 int integerValue4 = Integer.parseInt(args[4]);
 
-                if(integerValue4 > integerValue2){
+                if (integerValue4 > integerValue2) {
                     return false;
                 }
 

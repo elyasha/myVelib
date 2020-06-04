@@ -15,7 +15,7 @@ public class CardFactoryTest {
     @Test
     public void addVmax() {
         MyVelibSystem system = new MyVelibSystem();
-        User user = new User("Matheus", new Point(0,0), 0000, 0);
+        User user = new User("Matheus", new Point(0, 0), 0000, 0);
         // Adding user to system
         system.getUsers().add(user);
         // Adding card
@@ -29,7 +29,7 @@ public class CardFactoryTest {
     @Test
     public void addVlibre() {
         MyVelibSystem system = new MyVelibSystem();
-        User user = new User("Matheus", new Point(0,0), 0000, 0);
+        User user = new User("Matheus", new Point(0, 0), 0000, 0);
         // Adding user to system
         system.getUsers().add(user);
         // Adding card

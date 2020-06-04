@@ -25,27 +25,26 @@ public class Offline implements Command {
             List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             Station current_station = null;
-            for (MyVelibSystem system: systems){
-                if (system.getName().equalsIgnoreCase(args[0])){
+            for (MyVelibSystem system : systems) {
+                if (system.getName().equalsIgnoreCase(args[0])) {
                     currentSystem = system;
                     break;
                 }
             }
-            if (currentSystem != null){
+            if (currentSystem != null) {
                 List<Station> stations = currentSystem.getStations();
-                for(Station station: stations){
-                    if(station.getId() == Integer.parseInt(args[1])) {
+                for (Station station : stations) {
+                    if (station.getId() == Integer.parseInt(args[1])) {
                         current_station = station;
                         current_station.setOnService(false);
                         break;
                     }
                 }
-                if(current_station == null){
+                if (current_station == null) {
                     System.out.println("The id of the station does not exist");
                 }
 
-            }
-            else{
+            } else {
                 System.out.println("The system does not exist");
             }
         }
@@ -76,7 +75,7 @@ public class Offline implements Command {
      * @return true, if the command has good input. false, otherwise
      */
     public static boolean hasGoodInput(String[] args) {
-        if(args.length != 2){
+        if (args.length != 2) {
             return false;
         }
         try {

@@ -15,14 +15,14 @@ public class DisplayStationTest {
     @Test
     public void hasGoodInputTest() {
         //[velibnetworkName, stationID]
-        String[] args = {"myVelib","1"};
-        assertEquals(true,hasGoodInput(args));
+        String[] args = {"myVelib", "1"};
+        assertEquals(true, hasGoodInput(args));
     }
 
     @Test
     public void hasGoodInputTest1() {
         //[velibnetworkName, stationID]
-        String[] args = {"myVelib","badID"};
-        assertEquals(false,hasGoodInput(args));
+        String[] args = {"myVelib", "badID"};
+        assertEquals(false, hasGoodInput(args));
     }
 }

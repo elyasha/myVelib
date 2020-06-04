@@ -17,11 +17,12 @@ public class UserFactory {
 
     /**
      * This method is responsible for adding a (new) user to a system with some initial information.
-     * @param system the system that the user is requesting to be inserted in
-     * @param name the name of the new user
-     * @param coordinate the (initial) coordinate of the user
+     *
+     * @param system           the system that the user is requesting to be inserted in
+     * @param name             the name of the new user
+     * @param coordinate       the (initial) coordinate of the user
      * @param creditCardNumber the credit card number of the new user
-     * @param money the (initial) money of the user in the application
+     * @param money            the (initial) money of the user in the application
      * @return the User instance
      */
     public static User addUser(MyVelibSystem system, String name, Point coordinate, int creditCardNumber, double money) {
@@ -34,8 +35,9 @@ public class UserFactory {
 
     /**
      * This method is responsible for adding a (new) user to a system with some initial information. It can be simpler in some cases.
-     * @param system the system that the user is requesting to be inserted in
-     * @param name the name of the new user
+     *
+     * @param system           the system that the user is requesting to be inserted in
+     * @param name             the name of the new user
      * @param creditCardNumber the credit card number of the new user
      * @return the User instance
      */
@@ -50,11 +52,12 @@ public class UserFactory {
 
     /**
      * This method is responsible for adding a (new) manager to a system with some initial information.
-     * @param system the system that the user is requesting to be inserted in
-     * @param name the name of the new user
-     * @param coordinate the (initial) coordinate of the manager
+     *
+     * @param system           the system that the user is requesting to be inserted in
+     * @param name             the name of the new user
+     * @param coordinate       the (initial) coordinate of the manager
      * @param creditCardNumber the credit card number of the new user
-     * @param money the (initial) money of the user in the application
+     * @param money            the (initial) money of the user in the application
      * @return the Manager instance
      */
     public static Manager addManager(MyVelibSystem system, String name, Point coordinate, int creditCardNumber, double money) {
@@ -67,8 +70,9 @@ public class UserFactory {
 
     /**
      * This method is responsible for adding a (new) manager to a system with some initial information. It can be simpler in some cases.
-     * @param system the system that the user is requesting to be inserted in
-     * @param name the name of the new user
+     *
+     * @param system           the system that the user is requesting to be inserted in
+     * @param name             the name of the new user
      * @param creditCardNumber the credit card number of the new manager
      * @return the Manager instance
      */

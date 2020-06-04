@@ -15,6 +15,7 @@ public class RentalBicycle {
 
     /**
      * The main method that executes the rentBicycle methods to test whether or not the rentBicycle algorithm works
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {

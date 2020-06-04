@@ -14,11 +14,12 @@ public class StationFactory {
 
     /**
      * This method creates a plus station and add it to a given system.
-     * @param system the system that will have the new station
-     * @param coordinate the coordinate of the station
-     * @param onService the onService boolean
-     * @param parkingSlots a list of parking slots
-     * @param money the initial money of the station
+     *
+     * @param system            the system that will have the new station
+     * @param coordinate        the coordinate of the station
+     * @param onService         the onService boolean
+     * @param parkingSlots      a list of parking slots
+     * @param money             the initial money of the station
      * @param numberOfDroppings the (initial) number of droppings
      * @return the PlusStation instance
      */
@@ -40,9 +41,10 @@ public class StationFactory {
 
     /**
      * This method creates a plus station and add it to a given system with fewer arguments. It can be simpler in some cases.
-     * @param system the system that will have the new station
-     * @param coordinate the coordinate of the station
-     * @param onService the onService boolean
+     *
+     * @param system       the system that will have the new station
+     * @param coordinate   the coordinate of the station
+     * @param onService    the onService boolean
      * @param parkingSlots a list of parking slots
      * @return the PlusStation instance
      */
@@ -64,11 +66,12 @@ public class StationFactory {
 
     /**
      * This method creates a standard station and add it to a given system.
-     * @param system the system that will have the new station
-     * @param coordinate the coordinate of the station
-     * @param onService the onService boolean
-     * @param parkingSlots a list of parking slots
-     * @param money the initial money of the station
+     *
+     * @param system            the system that will have the new station
+     * @param coordinate        the coordinate of the station
+     * @param onService         the onService boolean
+     * @param parkingSlots      a list of parking slots
+     * @param money             the initial money of the station
      * @param numberOfDroppings the (initial) number of droppings
      * @return the StandardStation instance
      */
@@ -91,9 +94,10 @@ public class StationFactory {
 
     /**
      * This method creates a standard station and add it to a given system with fewer arguments. It can be simpler in some cases.
-     * @param system the system that will have the new station
-     * @param coordinate the coordinate of the station
-     * @param onService the onService boolean
+     *
+     * @param system       the system that will have the new station
+     * @param coordinate   the coordinate of the station
+     * @param onService    the onService boolean
      * @param parkingSlots a list of parking slots
      * @return the StandardStation instance
      */

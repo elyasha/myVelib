@@ -14,9 +14,10 @@ public class MyVelibSystemFactory {
 
     /**
      * Method for creating a new system in the core main application
+     *
      * @param stations a list of stations
-     * @param users a list of users
-     * @param money an amount of money for the (new) system
+     * @param users    a list of users
+     * @param money    an amount of money for the (new) system
      * @return the system created
      */
     public static MyVelibSystem createMyVelibSystem(List<Station> stations, List<User> users, double money) {
@@ -27,6 +28,7 @@ public class MyVelibSystemFactory {
 
     /**
      * (Simpler) method for creating a new system in the core main application
+     *
      * @return the system created
      */
     public static MyVelibSystem createMyVelibSystem() {
@@ -37,6 +39,7 @@ public class MyVelibSystemFactory {
 
     /**
      * (Intermediate) method for creating a new system in the core main application
+     *
      * @param stations a list of stations
      * @return the (new) system
      */

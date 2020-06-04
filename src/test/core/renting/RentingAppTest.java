@@ -18,9 +18,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         Card card = new Vmax();
-        Time interval = new Time(0,60,0);
+        Time interval = new Time(0, 60, 0);
 
-        assertEquals(1.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(1.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
     @Test
@@ -28,9 +28,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         Card card = new Vmax();
-        Time interval = new Time(0,59,0);
+        Time interval = new Time(0, 59, 0);
 
-        assertEquals(0.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(0.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
     @Test
@@ -38,9 +38,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         Card card = new Vmax();
-        Time interval = new Time(0,120,0);
+        Time interval = new Time(0, 120, 0);
 
-        assertEquals(2.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
     @Test
@@ -48,9 +48,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         Card card = new Vlibre();
-        Time interval = new Time(0,120,0);
+        Time interval = new Time(0, 120, 0);
 
-        assertEquals(2.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
     @Test
@@ -58,9 +58,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         Card card = null;
-        Time interval = new Time(0,120,0);
+        Time interval = new Time(0, 120, 0);
 
-        assertEquals(2.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
     @Test
@@ -68,9 +68,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         Card card = null;
-        Time interval = new Time(0,120,0);
+        Time interval = new Time(0, 120, 0);
 
-        assertEquals(4.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(4.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
     @Test
@@ -78,9 +78,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         Card card = new Vlibre();
-        Time interval = new Time(0,120,0);
+        Time interval = new Time(0, 120, 0);
 
-        assertEquals(5.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(5.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
     @Test
@@ -88,9 +88,9 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime)
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         Card card = new Vmax();
-        Time interval = new Time(0,120,0);
+        Time interval = new Time(0, 120, 0);
 
-        assertEquals(2.0,getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
+        assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
 
@@ -99,8 +99,8 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         Card card = new Vmax();
-        Time interval = new Time(0,120,0);
-        User user = new User("Paolo", new Point(0,0), 0000, 50);
+        Time interval = new Time(0, 120, 0);
+        User user = new User("Paolo", new Point(0, 0), 0000, 50);
         user.setCard(card);
         user.setTimeCreditBalance(100); // 100 minutes
 
@@ -112,8 +112,8 @@ public class RentingAppTest {
         // Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         Card card = new Vmax();
-        Time interval = new Time(0,120,0);
-        User user = new User("Paolo", new Point(0,0), 0000, 50);
+        Time interval = new Time(0, 120, 0);
+        User user = new User("Paolo", new Point(0, 0), 0000, 50);
         user.setCard(card);
         user.setTimeCreditBalance(5); // 100 minutes
 
@@ -122,12 +122,12 @@ public class RentingAppTest {
 
     @Test
     public void computeRentTimeTest() {
-        User user = new User("Paolo", new Point(0,0), 0000, 50);
+        User user = new User("Paolo", new Point(0, 0), 0000, 50);
         user.setRentTime(LocalTime.MIDNIGHT);
         LocalTime nowTime = LocalTime.now();
         double nowTime2 = nowTime.getHour() * 60 + nowTime.getMinute();
 
-        assertEquals(nowTime2, computeRentTime(user),1e-3);
+        assertEquals(nowTime2, computeRentTime(user), 1e-3);
     }
 
     @Test

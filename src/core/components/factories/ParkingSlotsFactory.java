@@ -15,6 +15,7 @@ public class ParkingSlotsFactory {
 
     /**
      * This methods creates free parking slots (as a list) and return the new instances
+     *
      * @param numberOfParkingSlots the quantity of parking slots that we need
      * @return a list of free parking slots
      */
@@ -31,6 +32,7 @@ public class ParkingSlotsFactory {
 
     /**
      * This methods create a free parking slot and return the new instance
+     *
      * @return a free parking slot instance
      */
     public static ParkingSlot createFreeParkingSlot() {
@@ -40,6 +42,7 @@ public class ParkingSlotsFactory {
 
     /**
      * This methods creates an electrical bicycle parking slot and return the new instance
+     *
      * @return an electrical bicycle slot instance
      */
     public static ParkingSlot createElectricalBicycleSlot() {
@@ -48,6 +51,7 @@ public class ParkingSlotsFactory {
 
     /**
      * This methods creates electrical parking slots (as a list) and return the new instances
+     *
      * @param numberOfBicycles the quantity of parking slots that we need
      * @return a list of electrical parking slots
      */
@@ -65,6 +69,7 @@ public class ParkingSlotsFactory {
 
     /**
      * This methods creates a mechanical bicycle parking slot and return the new instance
+     *
      * @return an electrical bicycle slot instance
      */
     public static ParkingSlot createMechanicalBicycleSlot() {
@@ -73,6 +78,7 @@ public class ParkingSlotsFactory {
 
     /**
      * This methods creates mechanical parking slots (as a list) and return the new instances
+     *
      * @param numberOfBicycles the quantity of parking slots that we need
      * @return a list of mechanical parking slots
      */

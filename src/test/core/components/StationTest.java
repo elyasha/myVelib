@@ -15,7 +15,7 @@ public class StationTest {
     @Test
     public void getExistTypeBikeTest() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         assertTrue(station.getExistTypeBike(bicycle));
     }
@@ -23,7 +23,7 @@ public class StationTest {
     @Test
     public void hasAvailableElectricalBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         assertTrue(station.hasAvailableElectricalBicycle());
     }
@@ -31,7 +31,7 @@ public class StationTest {
     @Test
     public void hasAvailableMechanicalBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createMechanicalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         assertTrue(station.hasAvailableMechanicalBicycle());
     }
@@ -39,16 +39,16 @@ public class StationTest {
     @Test
     public void hasOneSlotFree() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createFreeParkingSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         assertTrue(station.hasOneSlotFree());
     }
 
     @Test
     public void getOneFreeSlot() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createFreeParkingSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         boolean hasOneSlotFree = false;
-        if(station.getOneFreeSlot()!=null)
+        if (station.getOneFreeSlot() != null)
             hasOneSlotFree = true;
         assertTrue(hasOneSlotFree);
     }
@@ -56,10 +56,10 @@ public class StationTest {
     @Test
     public void getParkingSlotTypeBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createMechanicalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         boolean hasOneSlotFree = false;
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
-        if(station.getParkingSlotTypeBicycle(bicycle)!=null)
+        if (station.getParkingSlotTypeBicycle(bicycle) != null)
             hasOneSlotFree = true;
         assertTrue(hasOneSlotFree);
     }
@@ -67,10 +67,10 @@ public class StationTest {
     @Test
     public void getElectricalParkingSlot() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         boolean hasOneSlotFree = false;
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
-        if(station.getParkingSlotTypeBicycle(bicycle)!=null)
+        if (station.getParkingSlotTypeBicycle(bicycle) != null)
             hasOneSlotFree = true;
         assertTrue(hasOneSlotFree);
     }
@@ -78,10 +78,10 @@ public class StationTest {
     @Test
     public void getMechanicalParkingSlot() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         boolean hasOneSlotFree = false;
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
-        if(station.getParkingSlotTypeBicycle(bicycle)!=null)
+        if (station.getParkingSlotTypeBicycle(bicycle) != null)
             hasOneSlotFree = true;
         assertTrue(hasOneSlotFree);
     }
@@ -89,24 +89,24 @@ public class StationTest {
     @Test
     public void addMoney() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         station.addMoney(100);
-        assertTrue(station.getMoney()== 200);
+        assertTrue(station.getMoney() == 200);
     }
 
     @Test
     public void removeMoney() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         station.removeMoney(100);
-        assertTrue(station.getMoney()== 0);
+        assertTrue(station.getMoney() == 0);
     }
 
     @Test
     public void addNumberOfDroppings() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
-        PlusStation station = new PlusStation(PointFactory.addPoint(0,0),true,listPark,100,0);
+        PlusStation station = new PlusStation(PointFactory.addPoint(0, 0), true, listPark, 100, 0);
         station.addNumberOfDroppings(100);
-        assertTrue(station.getNumberOfDroppings()== 100);
+        assertTrue(station.getNumberOfDroppings() == 100);
     }
 }

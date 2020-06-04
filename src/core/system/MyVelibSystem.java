@@ -35,6 +35,7 @@ public class MyVelibSystem {
 
     /**
      * Getter for the stations parameter
+     *
      * @return stations
      */
     public List<Station> getStations() {
@@ -43,6 +44,7 @@ public class MyVelibSystem {
 
     /**
      * Setter for the stations parameter
+     *
      * @param stations a list of stations
      */
     public void setStations(List<Station> stations) {
@@ -51,6 +53,7 @@ public class MyVelibSystem {
 
     /**
      * Getter for the users parameter
+     *
      * @return users
      */
     public List<User> getUsers() {
@@ -59,6 +62,7 @@ public class MyVelibSystem {
 
     /**
      * Setter for users
+     *
      * @param users a list of user objects
      */
     public void setUsers(List<User> users) {
@@ -67,6 +71,7 @@ public class MyVelibSystem {
 
     /**
      * Getter for the money parameter
+     *
      * @return money
      */
     public double getMoney() {
@@ -75,6 +80,7 @@ public class MyVelibSystem {
 
     /**
      * Setter for money
+     *
      * @param money the amount of money that the system will have
      */
     public void setMoney(double money) {
@@ -83,6 +89,7 @@ public class MyVelibSystem {
 
     /**
      * Getter for the name
+     *
      * @return name of the system
      */
     public String getName() {
@@ -91,6 +98,7 @@ public class MyVelibSystem {
 
     /**
      * Setter for the name of the system
+     *
      * @param name A string that represents the new name of the system
      */
     public void setName(String name) {
@@ -102,9 +110,10 @@ public class MyVelibSystem {
 
     /**
      * Constructor for the system class
+     *
      * @param stations a list of stations
-     * @param users a list of users
-     * @param money an amount of money that the system will have
+     * @param users    a list of users
+     * @param money    an amount of money that the system will have
      */
     public MyVelibSystem(List<Station> stations, List<User> users, double money) {
         this.stations = stations;
@@ -114,6 +123,7 @@ public class MyVelibSystem {
 
     /**
      * (Simpler) constructor for the system class
+     *
      * @param stations a list of stations
      */
     public MyVelibSystem(List<Station> stations) {
@@ -134,6 +144,7 @@ public class MyVelibSystem {
 
     /**
      * toString method
+     *
      * @return a string that represents the system
      */
     @Override
@@ -146,6 +157,7 @@ public class MyVelibSystem {
 
     /**
      * equals method
+     *
      * @param o an object
      * @return true or false
      */
@@ -160,6 +172,7 @@ public class MyVelibSystem {
 
     /**
      * hashCode method
+     *
      * @return hash(stations, users)
      */
     @Override
@@ -170,7 +183,8 @@ public class MyVelibSystem {
 
     /**
      * This method is responsible to implement a way to rent a bicycle in the system class. It will ask for the algorithm in the Terminal class
-     * @param userID the user id
+     *
+     * @param userID    the user id
      * @param StationID the station id
      */
     public void rentBicycle(int userID, int StationID) {
@@ -243,6 +257,7 @@ public class MyVelibSystem {
 
     /**
      * This methods is responsible for adding money in the system
+     *
      * @param money the amount of money to be added
      */
     public void addMoney(double money) {
@@ -251,6 +266,7 @@ public class MyVelibSystem {
 
     /**
      * This methods is responsible for removing money from the system
+     *
      * @param money the amount of money to be removed
      */
     public void removeMoney(double money) {
@@ -263,6 +279,7 @@ public class MyVelibSystem {
 
     /**
      * This method displays a report for a given user in the system
+     *
      * @param user the user that will be studied
      */
     public void displayUserReport(User user) {
@@ -279,6 +296,7 @@ public class MyVelibSystem {
 
     /**
      * This method displays a report for a given station in the system
+     *
      * @param station the station
      */
     public void displayStationReport(Station station) {

@@ -1,4 +1,5 @@
 package cli.commands;
+
 import core.CoreApp;
 import core.components.User;
 import core.components.factories.UserFactory;
@@ -31,17 +32,16 @@ public class AddManager implements Command {
 
             List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
-            for (MyVelibSystem system: systems){
-                if (system.getName().equals(args[2])){
+            for (MyVelibSystem system : systems) {
+                if (system.getName().equals(args[2])) {
                     currentSystem = system;
                     break;
                 }
             }
-            if (currentSystem != null){
-                User user = UserFactory.addManager(currentSystem,args[0],DEFAULT_CREDIT_CARD_NUMBER);
+            if (currentSystem != null) {
+                User user = UserFactory.addManager(currentSystem, args[0], DEFAULT_CREDIT_CARD_NUMBER);
                 user.addCard(args[1]);
-            }
-            else{
+            } else {
                 System.out.println("The system does not exist");
             }
 

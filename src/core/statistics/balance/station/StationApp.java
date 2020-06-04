@@ -8,13 +8,14 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *  The Main class in statistics.balance.station : This class has all the algorithms and methods that we need to calculate the statistics
- *  in the application for stations, that is to say, plus stations and standard stations.
+ * The Main class in statistics.balance.station : This class has all the algorithms and methods that we need to calculate the statistics
+ * in the application for stations, that is to say, plus stations and standard stations.
  */
 public class StationApp {
 
     /**
      * Getter of the most used station of a give system
+     *
      * @param system the system that is being studied
      * @return the station that has is most used (the number of droppings is used to compare). Return the first one, if there are more
      */
@@ -35,6 +36,7 @@ public class StationApp {
 
     /**
      * Getter for the least occupied station
+     *
      * @param system the system that is being studied
      * @return the station that is least used (the rate of occupation is used). Return the first one, if there are more
      */
@@ -53,6 +55,7 @@ public class StationApp {
      * parameter 1 : average station balance on the system
      * parameter 2 : the station which gained the most in the system
      * parameter 3 : the station which gained the least in the system
+     *
      * @param system the system that will be studied
      */
     public static void stationBalance(MyVelibSystem system) {
@@ -107,6 +110,7 @@ public class StationApp {
 
     /**
      * Getter for the number of rentings
+     *
      * @param station The station that will be studied
      * @return an integer that represents the number of rentings
      */
@@ -116,6 +120,7 @@ public class StationApp {
 
     /**
      * Getter for the number of droppings
+     *
      * @param station The station that will be studied
      * @return an integer that represents the number of droppings
      */
@@ -125,6 +130,7 @@ public class StationApp {
 
     /**
      * This methods is used to compute the average rate of occupation of a given station
+     *
      * @param station the station that is being studied
      * @return a double that represents the average rate of occupation of a given station
      */
@@ -135,6 +141,7 @@ public class StationApp {
 
     /**
      * This method is used to sort a list of station by the most used policy
+     *
      * @param stations the list of stations that is being used
      * @return the list sorted
      */
@@ -148,6 +155,7 @@ public class StationApp {
 
     /**
      * This method is used to sort a list of station by the least occupied policy
+     *
      * @param stations the list of stations that is being used
      */
     public static void sortStationByLeastOccupied(List<Station> stations) {

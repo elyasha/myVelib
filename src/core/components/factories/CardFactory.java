@@ -14,8 +14,9 @@ public class CardFactory {
 
     /**
      * This method is responsible to add a new Vmax card to a user
+     *
      * @param system the system in which the user is supposed to be in
-     * @param user the supposed user that we want to add a new Vmax card (he may not be on the system)
+     * @param user   the supposed user that we want to add a new Vmax card (he may not be on the system)
      */
     public static void addVmax(MyVelibSystem system, User user) {
         // Check if the user is on the system and has no card
@@ -31,8 +32,9 @@ public class CardFactory {
 
     /**
      * This method is responsible to add a new Vlibre card to a user
+     *
      * @param system the system in which the user is supposed to be in
-     * @param user the supposed user that we want to add a new Vlibre card (he may not be on the system)
+     * @param user   the supposed user that we want to add a new Vlibre card (he may not be on the system)
      */
     public static void addVlibre(MyVelibSystem system, User user) {
         // Check if the user is on the system and has no card

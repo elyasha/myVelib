@@ -30,15 +30,13 @@ public class RunTest implements Command {
                 System.out.println("Please add an argument with the path to the file that you are going to test!");
                 System.out.println("Usage: runTest [fileName.txt]");
 
-            }
-            else {
+            } else {
 
                 String fileName = args[0];
 
                 // Read file.txt and execute commands
                 // TODO: check commands. For now, we assume the file has no errors
                 List<String> textFile = readTextFile(fileName);
-
 
 
                 boolean fileHasProblem = false; // We assume the file is correct
@@ -64,8 +62,7 @@ public class RunTest implements Command {
                         RunCommand.main(argsCommand);
 
                     }
-                }
-                else {
+                } else {
                     System.out.println("You file has a syntax error!");
                 }
             }

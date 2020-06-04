@@ -18,8 +18,9 @@ public class RentingApp {
 
     /**
      * Used to compute the cost according to some criteria
-     * @param bicycle: Type of bicycle the user wants to rent
-     * @param card: type of card the user is using
+     *
+     * @param bicycle:        Type of bicycle the user wants to rent
+     * @param card:           type of card the user is using
      * @param intervalOfTime: interval of renting time used to compute the cost
      * @return cost
      */
@@ -60,8 +61,7 @@ public class RentingApp {
                     cost = 0; // TODO: Learn know to import CSV file
                 }
 
-            }
-            else {
+            } else {
                 cost = intervalOfTime.getHours();
             }
 
@@ -71,11 +71,12 @@ public class RentingApp {
 
     /**
      * sed to compute the cost according to some criteria
-     * @param bicycle: Type of bicycle the user wants to rent
-     * @param card: type of card the user is using
+     *
+     * @param bicycle:        Type of bicycle the user wants to rent
+     * @param card:           type of card the user is using
      * @param intervalOfTime: interval of renting time used to compute the cost
-     * @param timeCredit: User's time credit
-     * @param user: user who wants to rent a bicycle
+     * @param timeCredit:     User's time credit
+     * @param user:           user who wants to rent a bicycle
      * @return cost
      */
     public static double getCostWithTimeCredit(Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user) {
@@ -113,6 +114,7 @@ public class RentingApp {
 
     /**
      * Used to compute the duration of the location
+     *
      * @param user a user
      * @return an interval of time used to compute the cost
      */
@@ -137,9 +139,10 @@ public class RentingApp {
 
     /**
      * Charging the user after he dropped the bicycle
-     * @param user a user
+     *
+     * @param user            a user
      * @param priceToBePayed: compute by the cost function
-     * @param station: station where he dropped the bicycle
+     * @param station:        station where he dropped the bicycle
      */
     public static void chargingUser(User user, double priceToBePayed, Station station) {
         // We assume the client is rich

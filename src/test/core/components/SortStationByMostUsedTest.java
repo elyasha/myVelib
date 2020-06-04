@@ -17,8 +17,8 @@ public class SortStationByMostUsedTest {
     public void compare1() {
         // super(coordinate, onService, parkingSlots, money, numberOfDroppings);
         List<ParkingSlot> listParking = ParkingSlotsFactory.createFreeParkingSlots(10);
-        Station station1 = new PlusStation(new Point(0,0), true, listParking, 1000, 50);
-        Station station2 = new StandardStation(new Point(0,0), true, listParking, 1000, 10);
+        Station station1 = new PlusStation(new Point(0, 0), true, listParking, 1000, 50);
+        Station station2 = new StandardStation(new Point(0, 0), true, listParking, 1000, 10);
 
         List<Station> list = new ArrayList<>();
 

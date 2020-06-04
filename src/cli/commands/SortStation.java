@@ -67,21 +67,20 @@ public class SortStation implements Command {
                 return true;
             }
         }
-        try{
+        try {
             int integerValue = Integer.parseInt(args[0]);
             return false;
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             try {
                 int integerValue = Integer.parseInt(args[1]);
                 return false;
-            }catch (NumberFormatException e1){
+            } catch (NumberFormatException e1) {
                 return true;
             }
         }
 
 
-
-}
+    }
 
 
 }

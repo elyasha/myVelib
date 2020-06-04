@@ -6,6 +6,7 @@ import core.components.factories.BicycleFactory;
 import core.components.factories.PointFactory;
 import core.rides.planning.PlanningApp;
 import core.system.MyVelibSystem;
+
 import java.util.List;
 
 import java.awt.*;
@@ -33,7 +34,6 @@ public class PlanningRide {
         Point endPoint = PointFactory.addPoint(Integer.parseInt(args[4]), Integer.parseInt(args[5]));
 
 
-
 //        2. the user receives the source and destination stations
         List<Station> bestStations = PlanningApp.getBestStation(system, startPoint, endPoint, BicycleFactory.createMechanicalBicycle());
         System.out.println(bestStations);
@@ -42,7 +42,7 @@ public class PlanningRide {
 //        instant of time
 
         User user = null;
-        for (User user_i: system.getUsers()) {
+        for (User user_i : system.getUsers()) {
             if (user_i.getId() == userID) {
                 user = user_i;
             }
@@ -50,17 +50,14 @@ public class PlanningRide {
 
         if (user == null) {
             System.out.println("User does not exist in the system!");
-        }
-        else {
+        } else {
             user.rentBicyclePlanning(system, startPoint, endPoint, BicycleFactory.createMechanicalBicycle());
         }
 
 
-
-
 //        4. the user that is holding a bicycle returns it (in a given free slot) at a given station at
 //        a given instant of time.
-          double INTERVAL_OF_TIME = Double.parseDouble(args[6]);
+        double INTERVAL_OF_TIME = Double.parseDouble(args[6]);
 
         assert user != null;
         user.dropBicyclePlanningWithIntervalOfTime(system, startPoint, endPoint, INTERVAL_OF_TIME);

@@ -24,16 +24,15 @@ public class Display implements Command {
             System.out.println("The display command!");
             List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
-            for (MyVelibSystem system: systems){
-                if (system.getName().equals(args[0])){
+            for (MyVelibSystem system : systems) {
+                if (system.getName().equals(args[0])) {
                     currentSystem = system;
                     break;
                 }
             }
-            if (currentSystem != null){
+            if (currentSystem != null) {
                 currentSystem.displaySystemReport();
-            }
-            else{
+            } else {
                 System.out.println("The system does not exist");
             }
         }

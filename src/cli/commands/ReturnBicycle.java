@@ -28,19 +28,19 @@ public class ReturnBicycle implements Command {
         //TODO: Take time into account
         List<MyVelibSystem> systems = CoreApp.getSystems();
         boolean alreadyFind = false;
-        for (MyVelibSystem system: systems) {
-            for(User user: system.getUsers()){
-                if (user.getId()==Integer.parseInt(args[0]) && !alreadyFind){
-                    for(Station station: system.getStations()){
-                        if(station.getId()==Integer.parseInt(args[1])){
-                            station.getStationTerminal().dropBicycle(user.getBicycle(),user,station);
+        for (MyVelibSystem system : systems) {
+            for (User user : system.getUsers()) {
+                if (user.getId() == Integer.parseInt(args[0]) && !alreadyFind) {
+                    for (Station station : system.getStations()) {
+                        if (station.getId() == Integer.parseInt(args[1])) {
+                            station.getStationTerminal().dropBicycle(user.getBicycle(), user, station);
                             alreadyFind = true;
                         }
                     }
                 }
             }
         }
-        if(alreadyFind == false){
+        if (alreadyFind == false) {
             System.out.println("You cannot drop a bicycle");
             System.out.println("The station id or/and user id do not exist");
         }

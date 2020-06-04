@@ -16,6 +16,7 @@ public class MyVelibCLI {
      * This is the main() method of the CLI class. It waits for the users to call the "myvelib" program and expect 0 or 1 argument.
      * If there are 0 arguments, then we will enter in the interpreter mode (just like python)
      * If there is 1 arguments, the CLI will assume it is a file path and will run the runTest command with the file provided.
+     *
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
@@ -41,11 +42,9 @@ public class MyVelibCLI {
                 currentArgs = scanner.nextLine().split(" ");
                 System.out.println();
 
-            };
+            }
 
-
-        }
-        else {
+        } else {
             RunTest.main(args);
         }
     }

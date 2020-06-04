@@ -170,10 +170,9 @@ public final class Terminal {
      */
     public void dropBicycle(Bicycle bicycle, User user, Station station) {
 
-        if(user.getBicycle()==null){
+        if (user.getBicycle() == null) {
             System.out.println("You don't have a bicycle to return");
-        }
-        else{
+        } else {
             // Compute the time of the journey
             double intervalOfTime; // [minutes]
             intervalOfTime = RentingApp.computeRentTime(user);

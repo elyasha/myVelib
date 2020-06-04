@@ -24,6 +24,7 @@ public class Manager extends User {
 
     /**
      * This is the method that allows the manager to see his current status (toString method)
+     *
      * @return
      */
     public String seeMyStatus() {

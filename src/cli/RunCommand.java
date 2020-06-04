@@ -20,8 +20,7 @@ public class RunCommand {
         // Check if there is any argument for the program
         if (args.length == 0) {
             Help.wrongArgumentHelp();
-        }
-        else {
+        } else {
             String[] argsCommand = new String[args.length - 1];
 
             System.arraycopy(args, 1, argsCommand, 0, args.length - 1);
@@ -73,7 +72,6 @@ public class RunCommand {
                     System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help]");
             }
         }
-
 
 
     }

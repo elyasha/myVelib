@@ -33,7 +33,7 @@ public class OnlineTest {
 
     @Test
     public void hasGoodInput4() {
-        String[] args = {"myVelib", "1","arg3"};
+        String[] args = {"myVelib", "1", "arg3"};
         assertFalse(hasGoodInput(args));
     }
 }

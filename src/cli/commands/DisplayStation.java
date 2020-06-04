@@ -25,27 +25,26 @@ public class DisplayStation implements Command {
             List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             Station current_station = null;
-            for (MyVelibSystem system: systems){
-                if (system.getName().equalsIgnoreCase(args[0])){
+            for (MyVelibSystem system : systems) {
+                if (system.getName().equalsIgnoreCase(args[0])) {
                     currentSystem = system;
                     break;
                 }
             }
-            if (currentSystem != null){
+            if (currentSystem != null) {
                 List<Station> stations = currentSystem.getStations();
-                for(Station station: stations){
-                    if(station.getId() == Integer.parseInt(args[1])) {
+                for (Station station : stations) {
+                    if (station.getId() == Integer.parseInt(args[1])) {
                         current_station = station;
                         currentSystem.displayStationReport(station);
                         break;
                     }
                 }
-                if(current_station == null){
+                if (current_station == null) {
                     System.out.println("The id of the station does not exist");
                 }
 
-            }
-            else{
+            } else {
                 System.out.println("The system does not exist");
             }
         }
@@ -80,9 +79,9 @@ public class DisplayStation implements Command {
     public static boolean hasGoodInput(String[] args) {
         try {
             int integerValue = Integer.parseInt(args[1]);
-        }
-        catch (NumberFormatException numberFormatException) {
-            System.out.println(numberFormatException.getMessage());;
+        } catch (NumberFormatException numberFormatException) {
+            System.out.println(numberFormatException.getMessage());
+            ;
             System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
             return false;
         }

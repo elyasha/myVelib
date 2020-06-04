@@ -7,13 +7,14 @@ import core.components.User;
 import core.system.MyVelibSystem;
 
 /**
- *  The Main class in statistics.balance.user : This class has all the algorithms and methods that we need to calculate the statistics
- *  in the application for users, that is to say, standard users or managers.
+ * The Main class in statistics.balance.user : This class has all the algorithms and methods that we need to calculate the statistics
+ * in the application for users, that is to say, standard users or managers.
  */
 public class UserApp {
 
     /**
      * Getter for the number of rides (or rentings). If the user is still with a bicycle, it will show here a message.
+     *
      * @param user The user that is being studied
      * @return an integer that represents the number of rides (or rentings)
      */
@@ -28,7 +29,8 @@ public class UserApp {
 
     /**
      * Getter for the time spend on bicycle type (Electrical, Mechanical, or other future types due to the Design Patterns used)
-     * @param user the user
+     *
+     * @param user    the user
      * @param bicycle an instance of the bicycle type that we need
      * @return a double that represents the time spent [in minutes]
      */
@@ -44,6 +46,7 @@ public class UserApp {
 
     /**
      * Getter for the time credit earned by a user. It calls the getter in the user class
+     *
      * @param user The used that is being studied
      * @return The time credit earned by the user in the current time of the application
      */
@@ -53,6 +56,7 @@ public class UserApp {
 
     /**
      * This method is used to get the time spent on electrical bicycles.
+     *
      * @param user the user that is being studied
      * @return the time spent on electrical bicycle
      */
@@ -62,6 +66,7 @@ public class UserApp {
 
     /**
      * This method is used to get the time spent on mechanical bicycles.
+     *
      * @param user the user that is being studied
      * @return the time spent on mechanical bicycle
      */
@@ -74,6 +79,7 @@ public class UserApp {
      * parameter 1 : average user balance
      * parameter 2 : average of all charged money
      * parameter 3 : user who paid the most in the system
+     *
      * @param system the system that will be studied
      */
     public static void userBalance(MyVelibSystem system) {

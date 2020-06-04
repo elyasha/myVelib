@@ -14,28 +14,28 @@ public class RentBicycleTest {
     @Test
     public void hasGoodInput1() {
         //[userID, stationID]
-        String [] args = {"1","1"};
+        String[] args = {"1", "1"};
         assertTrue(hasGoodInput(args));
     }
 
     @Test
     public void hasGoodInput2() {
         //[userID, stationID]
-        String [] args = {"1","stringArg"};
+        String[] args = {"1", "stringArg"};
         assertFalse(hasGoodInput(args));
     }
 
     @Test
     public void hasGoodInput3() {
         //[userID, stationID]
-        String [] args = {"stringArg","1"};
+        String[] args = {"stringArg", "1"};
         assertFalse(hasGoodInput(args));
     }
 
     @Test
     public void hasGoodInput4() {
         //[userID, stationID]
-        String [] args = {};
+        String[] args = {};
         assertFalse(hasGoodInput(args));
     }
 }

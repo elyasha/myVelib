@@ -14,14 +14,14 @@ public class RunTestTest {
     @Test
     public void hasGoodInput1() {
         //[FileName.txt]
-        String [] args = {"fileName"};
+        String[] args = {"fileName"};
         assertTrue(hasGoodInput(args));
     }
 
     @Test
     public void hasGoodInput2() {
         //[FileName.txt]
-        String [] args = {"2"};
+        String[] args = {"2"};
         assertFalse(hasGoodInput(args));
     }
 

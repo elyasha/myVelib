@@ -16,7 +16,7 @@ public class SetupTest {
         //[velibnetworkName]
         // [name, nstations, nslots, s, nbikes]
 
-        String [] args = {"myVelib","10","10","1200","5"};
+        String[] args = {"myVelib", "10", "10", "1200", "5"};
         assertTrue(hasGoodInput(args));
     }
 
@@ -25,7 +25,7 @@ public class SetupTest {
         //[velibnetworkName]
         // [name, nstations, nslots, s, nbikes]
 
-        String [] args = {"myVelib","10","10","1200","15"};
+        String[] args = {"myVelib", "10", "10", "1200", "15"};
         assertFalse(hasGoodInput(args));
     }
 
@@ -34,7 +34,7 @@ public class SetupTest {
         //[velibnetworkName]
         // [name, nstations, nslots, s, nbikes]
 
-        String [] args = {"myVelib","stringArg","10","1200","5"};
+        String[] args = {"myVelib", "stringArg", "10", "1200", "5"};
         assertFalse(hasGoodInput(args));
     }
 

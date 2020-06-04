@@ -597,6 +597,7 @@ public class User {
 
     /**
      * Used to see the status of the user
+     *
      * @return
      */
     public String seeMyStatus() {
@@ -650,7 +651,7 @@ public class User {
                 System.out.println(currentStation);
                 System.out.println();
             }
-        return currentStation.toString();
+            return currentStation.toString();
         }
 
         return "";

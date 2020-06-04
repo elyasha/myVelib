@@ -15,10 +15,11 @@ public class PlanningApp {
 
     /**
      * Compute the best start and end station according to the least start and end distances strategy.
-     * @param system: system the user is using
+     *
+     * @param system:      system the user is using
      * @param coordsStart: where the user wants to start the location
-     * @param coordsEnd: where the user wants to stop the location
-     * @param bicycle: the bicycle the user want to rent
+     * @param coordsEnd:   where the user wants to stop the location
+     * @param bicycle:     the bicycle the user want to rent
      * @return best start and end stations
      */
     public static List<Station> getBestStation(MyVelibSystem system, Point coordsStart, Point coordsEnd, Bicycle bicycle) {

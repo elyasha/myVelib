@@ -13,13 +13,13 @@ public class ExitTest {
 
     @Test
     public void hasGoodInput1() {
-        String [] args = {};
-        assertEquals(true,hasGoodInput(args));
+        String[] args = {};
+        assertEquals(true, hasGoodInput(args));
     }
 
     @Test
     public void hasGoodInput2() {
-        String [] args = {"badArg"};
-        assertEquals(false,hasGoodInput(args));
+        String[] args = {"badArg"};
+        assertEquals(false, hasGoodInput(args));
     }
 }

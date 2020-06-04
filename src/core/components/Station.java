@@ -245,6 +245,7 @@ public abstract class Station {
 
     /**
      * toString method for Station
+     *
      * @return a string that represents the station
      */
     @Override
@@ -263,6 +264,7 @@ public abstract class Station {
 
     /**
      * equals method for Station
+     *
      * @param o an object
      * @return true or false
      */
@@ -283,6 +285,7 @@ public abstract class Station {
 
     /**
      * hashCode method for Station
+     *
      * @return hash(id, coordinate, onService, parkingSlots, terminal, money, numberOfDroppings, numberOfRentings)
      */
     @Override

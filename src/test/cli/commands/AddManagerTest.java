@@ -19,14 +19,14 @@ public class AddManagerTest {
     @Test
     public void hasGoodInputTest() {
         //addManager [userName,cardType, velibnetworkName]
-        String[] args = {"Tom", "Vmax","myVelib"};
-        assertEquals(true,hasGoodInput(args));
+        String[] args = {"Tom", "Vmax", "myVelib"};
+        assertEquals(true, hasGoodInput(args));
     }
 
     @Test
     public void hasGoodInputTest2() {
         //addManager [userName,cardType, velibnetworkName]
-        String[] args = {"Tom", " 1 ","myVelib"};
-        assertEquals(false,hasGoodInput(args));
+        String[] args = {"Tom", " 1 ", "myVelib"};
+        assertEquals(false, hasGoodInput(args));
     }
 }

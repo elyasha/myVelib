@@ -13,20 +13,20 @@ public class BicycleTest {
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         int id = bicycle.getId();
         String result = "Bicycle{" + "id=" + id + '}';
-        assertEquals(result,bicycle.toString());
+        assertEquals(result, bicycle.toString());
     }
 
     @org.junit.Test
     public void testEquals() {
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         Bicycle bicycle1 = BicycleFactory.createMechanicalBicycle();
-        assertNotEquals(bicycle,bicycle1);
+        assertNotEquals(bicycle, bicycle1);
     }
 
     @org.junit.Test
     public void testHashCode() {
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
         Bicycle bicycle1 = BicycleFactory.createMechanicalBicycle();
-        assertNotEquals(bicycle1.hashCode(),bicycle.hashCode());
+        assertNotEquals(bicycle1.hashCode(), bicycle.hashCode());
     }
 }
