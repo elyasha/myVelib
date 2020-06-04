@@ -427,10 +427,12 @@ public class User {
      */
     public void addCard(String cardType) {
 
-        if (cardType.equals("Vlible")) {
-            this.card = new Vlibre();
-        } else if (cardType.equals("Vmax")) {
-            this.card = new Vmax();
+        if (cardType.equalsIgnoreCase("Vlibre")) {
+            this.setCard(new Vlibre());
+        } else if (cardType.equalsIgnoreCase("Vmax")) {
+            this.setCard(new Vmax());
+        } else if (cardType.equalsIgnoreCase("None")) {
+            this.setCard(null);
         } else {
             System.out.println("Error! The type does not exist.");
         }
