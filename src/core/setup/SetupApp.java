@@ -10,11 +10,8 @@ public class SetupApp {
 
     public static void initializeProgramWithInitialFile() {
         String[] fileName = new String[1];
-        fileName[0] = "eval\\myvelibInitialization.txt";
+        fileName[0] = "eval\\myvelibInitialization.txt"; // Change to my_velib.ini if you prefer
 
         RunTest.main(fileName);
     }
-
-
-
 }

@@ -36,32 +36,31 @@ public class RunTest implements Command {
                 String fileName = args[0];
 
                 // Read file.txt and execute commands
-                // TODO: check commands
+                // TODO: check commands. For now, we assume the file has no errors
                 List<String> textFile = readTextFile(fileName);
 
-//            System.out.println(textFile.get(2));
-                // Read file line by line (check if the first word is a command)
+
 
                 boolean fileHasProblem = false; // We assume the file is correct
 
                 // Check line by line
-                // TODO: Create the cli interactive functionality
-
-
-
 
                 // If success : run the file line by line
                 if (!fileHasProblem) {
                     // run the file
-                    for (int i = 0; i < textFile.size(); i++) {
-                        // Execute the line
-                        String command = textFile.get(i).split(" ")[0];
-//                    System.out.println(command);
-                        String[] argsCommand = textFile.get(i).split(" ");
 
-                        for (int j = 0; j < argsCommand.length; j++) {
-                            System.out.println(argsCommand[j]);
-                        }
+                    // Read file line by line (check if the first word is a command)
+                    for (String s : textFile) {
+                        // Execute the line
+                        String command = s.split(" ")[0];
+//                    System.out.println(command);
+                        String[] argsCommand = s.split(" ");
+
+                        // Uncomment for tests
+//                        for (String value : argsCommand) {
+//                            System.out.println(value);
+//                        }
+
                         RunCommand.main(argsCommand);
 
                     }

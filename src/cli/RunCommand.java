@@ -24,16 +24,13 @@ public class RunCommand {
         else {
             String[] argsCommand = new String[args.length - 1];
 
-            for (int j = 1; j < args.length; j++) {
-                argsCommand[j - 1] = args[j];
-            }
+            System.arraycopy(args, 1, argsCommand, 0, args.length - 1);
             // Check the type of first argument and delegate the work for each class
             switch (args[0]) {
 
                 case "addUser":
                     AddUser.main(argsCommand);
                     break;
-
                 case "addManager":
                     AddManager.main(argsCommand);
                 case "display":

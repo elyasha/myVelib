@@ -35,12 +35,10 @@ public class MyVelibCLI {
                 // Execute the next command
                 RunCommand.main(currentArgs);
                 System.out.println();
-                System.out.println();
 
                 // Ask for the next command
                 System.out.println(">>> : Please enter the next command!");
                 currentArgs = scanner.nextLine().split(" ");
-                System.out.println();
                 System.out.println();
 
             };
