@@ -27,20 +27,20 @@ public class MyVelibCLI {
             String[] currentArgs; // A list of args that will change each iteration
 
             // Initialization of the system
+            System.out.println("CLI to interact with myVelib");
+            System.out.println("myVelib Framework v1.0 [create with win32-x64 and java11.0.7]");
             SetupApp.initializeProgramWithInitialFile();
-            System.out.println(">>> : Please enter the next command!");
+            System.out.println(">>>");
             currentArgs = scanner.nextLine().split(" ");
 
             // While loop to run commands
             while (!currentArgs[0].equals("exit")) {
                 // Execute the next command
                 RunCommand.main(currentArgs);
-                System.out.println();
 
                 // Ask for the next command
-                System.out.println(">>> : Please enter the next command!");
+                System.out.println(">>>");
                 currentArgs = scanner.nextLine().split(" ");
-                System.out.println();
 
             }
 
