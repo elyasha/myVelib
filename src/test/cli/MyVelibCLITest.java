@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static cli.MyVelibCLI.readTextFile;
+import static cli.commands.RunTest.readTextFile;
+
 
 public class MyVelibCLITest extends TestCase {
 

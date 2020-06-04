@@ -1,1 +1,1 @@
-setup "MyVelibDefaultNetwork0"
+setup "myvelib"
