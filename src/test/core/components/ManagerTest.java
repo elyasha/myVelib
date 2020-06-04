@@ -1,6 +1,8 @@
 package core.components;
 
+import core.Main;
 import core.components.factories.ParkingSlotsFactory;
+import core.components.factories.PointFactory;
 import core.components.factories.StationFactory;
 import core.components.factories.UserFactory;
 import core.system.MyVelibSystem;
@@ -8,6 +10,7 @@ import core.system.MyVelibSystemFactory;
 import org.junit.Test;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -26,15 +29,6 @@ public class ManagerTest {
         Manager user = UserFactory.addManager(system, "Matheus", new Point(0,0), 0000, 50);
         assertEquals(user.toString(), user.seeCurrentStatus(system, user.getId()));
 
-    }
-
-    @Test
-    public void seeCurrentStationState() {
-        MyVelibSystem system = new MyVelibSystem();
-        Manager user = UserFactory.addManager(system, "Matheus", new Point(0,0), 0000, 50);
-        List<ParkingSlot> parkingSlots = ParkingSlotsFactory.createFreeParkingSlots(10);
-        Station station = StationFactory.addPlusStation(system, new Point(0,0), true, parkingSlots);
-        assertEquals(station.toString(), user.seeCurrentStationState(system, 1));
     }
 
     @Test
