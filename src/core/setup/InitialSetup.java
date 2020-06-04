@@ -10,7 +10,6 @@ import core.system.MyVelibSystem;
 import core.system.MyVelibSystemFactory;
 
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -36,27 +35,35 @@ public class InitialSetup {
      * Constant of percentage of plus stations
      */
     private static final double PERCENTAGE_OF_PLUS_STATIONS = 0.5;
+    private static final String USER_WITHOUT_CARD_NAME = "Matheus";
+    private static final int USER_WITHOUT_CARD_CREDITCARD = 0000;
+    private static final double USER_WITHOUT_CARD_MONEY = 100;
+    private static final String USER_VMAX_NAME = "Charles";
+    private static final int USER_VMAX_CREDITCARD = 0000;
+    private static final double USER_VMAX_MONEY = 100;
+    private static final String USER_VLIBRE_NAME = "Valdisa";
+    private static final int USER_VLIBRE_CREDITCARD = 0000;
+    private static final double USER_VLIBRE_MONEY = 100;
 
     /**
      * This method will be used when running the initialSetup command to get an initial system with some stations, and even maybe users
+     *
      * @param args the command line arguments
      * @return the new system (with setup)
      */
     public static MyVelibSystem getInitialSetupSystem(String[] args) {
 
         if (args.length == 1) {
-            MyVelibSystem system0 = MyVelibSystemFactory.createMyVelibSystem();
-            system0.setName(args[0]);
-            return system0;
-        }
-        else {
+            MyVelibSystem system = MyVelibSystemFactory.createMyVelibSystem();
+            system.setName(args[0]);
+            return system;
+        } else {
             // Creation of the myVelib system
-            MyVelibSystem system0 = MyVelibSystemFactory.createMyVelibSystem();
+            MyVelibSystem system = MyVelibSystemFactory.createMyVelibSystem();
 
-            // Name of the myVelib system
+            // Setting name of the myVelib system
             String name = args[0];
-
-            system0.setName(name);
+            system.setName(name);
 
             // Quantity of stations
             int numberOfStations = Integer.parseInt(args[1]);
@@ -64,31 +71,33 @@ public class InitialSetup {
             // Quantity of parking slots
             int numberOfSlots = Integer.parseInt(args[2]);
 
-            // Station occupied percentage
-            double stationOccupiedPercentage = STATION_OCCUPIED_PERCENTAGE;
-
-            int numberOfOccupiedSlots = (int) (STATION_OCCUPIED_PERCENTAGE * numberOfSlots);
-
-            int numberOfFreeSlots = numberOfSlots - numberOfOccupiedSlots;
-
-            // Percentage of electrical bicycle
-            double percentageOfElectricalBicycle = PERCENTAGE_OF_ELECTRICAL_BICYCLE;
-
-            double percentageOfPlusStations = PERCENTAGE_OF_PLUS_STATIONS;
-
-            int numberOfPlusStations = (int) (PERCENTAGE_OF_PLUS_STATIONS * numberOfStations);
-
-            int numberOfStandardStations = numberOfStations - numberOfPlusStations;
-
-            int numberOfElectricalBicycleSlots = (int) (PERCENTAGE_OF_ELECTRICAL_BICYCLE * numberOfOccupiedSlots);
-
-            int numberOfMechanicalBicycleSlots = numberOfOccupiedSlots - numberOfElectricalBicycleSlots;
-
             // Area of the myVelib system
             double squareSide = Double.parseDouble(args[3]);
 
             // Number of bicycles
             int numberOfBicycles = Integer.parseInt(args[4]);
+
+            // Station occupied percentage
+
+            int numberOfOccupiedSlots = (int) (STATION_OCCUPIED_PERCENTAGE * numberOfSlots);
+
+            int numberOfFreeSlots = numberOfSlots - numberOfOccupiedSlots;
+
+            // If number of bicycles is larger than the number of occupied slots, we will create less bicycles
+            if (numberOfBicycles > numberOfOccupiedSlots) {
+                numberOfBicycles = numberOfOccupiedSlots;
+            }
+
+
+            // Percentage of electrical bicycle
+
+            int numberOfPlusStations = (int) (PERCENTAGE_OF_PLUS_STATIONS * numberOfStations);
+
+            int numberOfStandardStations = numberOfStations - numberOfPlusStations;
+
+            int numberOfElectricalBicycleSlots = (int) (PERCENTAGE_OF_ELECTRICAL_BICYCLE * numberOfBicycles);
+
+            int numberOfMechanicalBicycleSlots = numberOfBicycles - numberOfElectricalBicycleSlots;
 
 
             // Creating of input parameters to createMyVelibSystem
@@ -113,7 +122,7 @@ public class InitialSetup {
                     // Coordinate y will be an integer between 0 and squareSide
                     int x = rand.nextInt((int) squareSide);
                     int y = rand.nextInt((int) squareSide);
-                    station = StationFactory.addPlusStation(system0, PointFactory.addPoint(x, y), true, allSlots);
+                    station = StationFactory.addPlusStation(system, PointFactory.addPoint(x, y), true, allSlots);
                 }
                 station = null;
             }
@@ -125,7 +134,7 @@ public class InitialSetup {
                     // Coordinate y will be an integer between 0 and squareSide
                     int x = rand.nextInt((int) squareSide);
                     int y = rand.nextInt((int) squareSide);
-                    station = StationFactory.addStandardStation(system0, PointFactory.addPoint(x, y), true, allSlots);
+                    station = StationFactory.addStandardStation(system, PointFactory.addPoint(x, y), true, allSlots);
                 }
                 station = null;
 
@@ -137,21 +146,21 @@ public class InitialSetup {
             int x, y;
             x = rand.nextInt((int) squareSide);
             y = rand.nextInt((int) squareSide);
-            UserFactory.addUser(system0, "Matheus", PointFactory.addPoint(x, y), 30109903, 1000);
+            UserFactory.addUser(system, USER_WITHOUT_CARD_NAME, PointFactory.addPoint(x, y), USER_WITHOUT_CARD_CREDITCARD, USER_WITHOUT_CARD_MONEY);
 
             // Add User with Vmax
             x = rand.nextInt((int) squareSide);
             y = rand.nextInt((int) squareSide);
-            User user = UserFactory.addUser(system0, "Charlito", PointFactory.addPoint(x, y), 192340, 0);
-            CardFactory.addVmax(system0, user);
+            User user = UserFactory.addUser(system, USER_VMAX_NAME, PointFactory.addPoint(x, y), USER_VMAX_CREDITCARD, USER_VMAX_MONEY);
+            CardFactory.addVmax(system, user);
 
             // Add User with Vlibre
             x = rand.nextInt((int) squareSide);
             y = rand.nextInt((int) squareSide);
-            User user2 = UserFactory.addUser(system0, "Valdisa", PointFactory.addPoint(x, y), 124340, 0);
-            CardFactory.addVlibre(system0, user2);
+            User user2 = UserFactory.addUser(system, USER_VLIBRE_NAME, PointFactory.addPoint(x, y), USER_VLIBRE_CREDITCARD, USER_VLIBRE_MONEY);
+            CardFactory.addVlibre(system, user2);
 
-            return system0;
+            return system;
         }
 
     }
@@ -161,7 +170,7 @@ public class InitialSetup {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        MyVelibSystem system0 = getInitialSetupSystem(args);
+        MyVelibSystem system = getInitialSetupSystem(args);
     }
 
 }
