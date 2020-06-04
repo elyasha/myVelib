@@ -4,7 +4,7 @@ import core.components.Station;
 import core.components.User;
 import core.components.factories.BicycleFactory;
 import core.components.factories.PointFactory;
-import core.statistics.balance.station.Main;
+import core.statistics.balance.station.StationApp;
 import core.system.MyVelibSystem;
 
 import java.util.List;
@@ -69,7 +69,7 @@ public class ComputationStatistics {
 
 //        4. stations are displayed sorted w.r.t. the most used station (first)
 
-        List<Station> mostUsedStations = Main.sortStationByMostUsed(system.getStations());
+        List<Station> mostUsedStations = StationApp.sortStationByMostUsed(system.getStations());
 
         System.out.println("MOST USED STATIONS");
         for (Station station : mostUsedStations) {

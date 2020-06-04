@@ -1,17 +1,10 @@
 package core.components;
 
-import core.Main;
-import core.components.factories.ParkingSlotsFactory;
-import core.components.factories.PointFactory;
-import core.components.factories.StationFactory;
 import core.components.factories.UserFactory;
 import core.system.MyVelibSystem;
-import core.system.MyVelibSystemFactory;
 import org.junit.Test;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.*;
 

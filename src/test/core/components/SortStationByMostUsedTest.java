@@ -1,7 +1,7 @@
 package core.components;
 
 import core.components.factories.ParkingSlotsFactory;
-import core.statistics.balance.station.Main;
+import core.statistics.balance.station.StationApp;
 import org.junit.Test;
 
 import java.awt.*;
@@ -26,7 +26,7 @@ public class SortStationByMostUsedTest {
         list.add(station1);
         list.add(station2);
 
-        List<Station> mostUsedStations = Main.sortStationByMostUsed(list); // Should return station1, station2 in this order
+        List<Station> mostUsedStations = StationApp.sortStationByMostUsed(list); // Should return station1, station2 in this order
 
         assertEquals(list, mostUsedStations);
     }

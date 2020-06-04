@@ -1,6 +1,6 @@
 package cli.commands;
 
-import core.Main;
+import core.CoreApp;
 import core.components.Station;
 import core.components.User;
 import core.components.factories.BicycleFactory;
@@ -26,7 +26,7 @@ public class RentBicycle implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The rentBicycle command!");
-            List<MyVelibSystem> systems = Main.getSystems();
+            List<MyVelibSystem> systems = CoreApp.getSystems();
             boolean alreadyFind = false;
             for (MyVelibSystem system : systems) {
                 for (User user : system.getUsers()) {

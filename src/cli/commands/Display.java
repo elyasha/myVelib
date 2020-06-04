@@ -1,8 +1,6 @@
 package cli.commands;
 
-import core.Main;
-import core.components.User;
-import core.components.factories.UserFactory;
+import core.CoreApp;
 import core.system.MyVelibSystem;
 
 import java.util.List;
@@ -24,7 +22,7 @@ public class Display implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The display command!");
-            List<MyVelibSystem> systems = Main.getSystems();
+            List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             for (MyVelibSystem system: systems){
                 if (system.getName().equals(args[0])){

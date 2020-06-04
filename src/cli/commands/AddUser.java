@@ -1,6 +1,6 @@
 package cli.commands;
 
-import core.Main;
+import core.CoreApp;
 import core.components.User;
 import core.components.factories.UserFactory;
 import core.system.MyVelibSystem;
@@ -29,7 +29,7 @@ public class AddUser implements Command {
             System.out.println("The addUser command!");
             // Check if the system exists in the application
 
-            List<MyVelibSystem> systems = Main.getSystems();
+            List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             for (MyVelibSystem system: systems){
                 if (system.getName().equals(args[2])){

@@ -11,7 +11,7 @@ import core.system.MyVelibSystem;
  * The Main class of rides.planning module : This class contains all algorithms that are needed to plan a ride given two points.
  * This class is used by any user when he needs to plan a ride. It will return, in general, the stationID.
  */
-public class Main {
+public class PlanningApp {
 
     /**
      * Compute the best start and end station according to the least start and end distances strategy.

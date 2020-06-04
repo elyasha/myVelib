@@ -1,6 +1,6 @@
 package core.components;
 
-import core.Main;
+import core.CoreApp;
 import core.components.factories.BicycleFactory;
 import core.components.factories.ParkingSlotsFactory;
 import core.components.factories.PointFactory;
@@ -24,7 +24,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         assertTrue(user.getName()=="Charlito");
     }
@@ -37,7 +37,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         User user2 = UserFactory.addUser(systems.get(0),"Matheus",PointFactory.addPoint(0,0),999,200);
         assertFalse(user1.equals(user2));
@@ -51,7 +51,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         User user2 = UserFactory.addUser(systems.get(0),"Matheus",PointFactory.addPoint(0,0),999,200);
         assertTrue(user1.hashCode()!= user2.hashCode());
@@ -65,7 +65,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         user1.addCard("Vmax");
         assertTrue(user1.getCard()!=null);
@@ -79,7 +79,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         user1.addMoney(100);
         assertTrue(user1.getMoney()==300);
@@ -93,7 +93,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         user1.removeMoney(100);
         assertTrue(user1.getMoney()==100);
@@ -107,7 +107,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         user1.addTimeCredit(100);
         assertTrue(user1.getTimeCreditBalance()==100);
@@ -121,7 +121,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         user1.addTimeCredit(100);
         user1.removeTimeCredit(50);
@@ -136,7 +136,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         user1.rentBicyclePlanning(systems.get(0),PointFactory.addPoint(0,0),PointFactory.addPoint(50,50),bicycle);
@@ -151,7 +151,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         user1.rentBicyclePlanning(systems.get(0),PointFactory.addPoint(0,0),PointFactory.addPoint(50,50),bicycle);
@@ -168,7 +168,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         int oldNumberRenting = user1.getNumberOfRentings();
         user1.addRenting();
@@ -183,7 +183,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         user1.addSpentTimeOnElectricalBicycle(100);
         user1.addSpentTimeOnElectricalBicycle(20);
@@ -198,7 +198,7 @@ public class UserTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user1 = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         user1.addSpentTimeOnMechanicalBicycle(100);
         user1.addSpentTimeOnMechanicalBicycle(20);

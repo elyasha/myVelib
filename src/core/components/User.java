@@ -1,6 +1,6 @@
 package core.components;
 
-import core.rides.planning.Main;
+import core.rides.planning.PlanningApp;
 import core.system.MyVelibSystem;
 
 import java.awt.*;
@@ -494,7 +494,7 @@ public class User {
         Terminal termStart;
 
         // Get best start and end stations
-        allStations = Main.getBestStation(system, coordsStart, coordsEnd, bicycle);
+        allStations = PlanningApp.getBestStation(system, coordsStart, coordsEnd, bicycle);
 //        System.out.println(allStations);  // [null, null]
         // Get terminals of start and end stations
         termStart = allStations.get(0).getStationTerminal();
@@ -525,7 +525,7 @@ public class User {
             System.out.println("You have not a bicycle!!!");
         } else {
             // Get best start and end stations
-            allStations = Main.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
+            allStations = PlanningApp.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
 
             // Get terminals of start and end stations
             termEnd = allStations.get(1).getStationTerminal();
@@ -556,7 +556,7 @@ public class User {
             System.out.println("You have not a bicycle!!!");
         } else {
             // Get best start and end stations
-            allStations = Main.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
+            allStations = PlanningApp.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
 
             // Get terminals of start and end stations
             termEnd = allStations.get(1).getStationTerminal();

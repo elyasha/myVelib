@@ -10,7 +10,7 @@ import core.system.MyVelibSystem;
  *  The Main class in statistics.balance.user : This class has all the algorithms and methods that we need to calculate the statistics
  *  in the application for users, that is to say, standard users or managers.
  */
-public class Main {
+public class UserApp {
 
     /**
      * Getter for the number of rides (or rentings). If the user is still with a bicycle, it will show here a message.

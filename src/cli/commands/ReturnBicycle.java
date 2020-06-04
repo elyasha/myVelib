@@ -1,9 +1,8 @@
 package cli.commands;
 
-import core.Main;
+import core.CoreApp;
 import core.components.Station;
 import core.components.User;
-import core.components.factories.BicycleFactory;
 import core.system.MyVelibSystem;
 
 import java.util.List;
@@ -27,7 +26,7 @@ public class ReturnBicycle implements Command {
             System.out.println("The returnBike command!");
         }
         //TODO: Take time into account
-        List<MyVelibSystem> systems = Main.getSystems();
+        List<MyVelibSystem> systems = CoreApp.getSystems();
         boolean alreadyFind = false;
         for (MyVelibSystem system: systems) {
             for(User user: system.getUsers()){

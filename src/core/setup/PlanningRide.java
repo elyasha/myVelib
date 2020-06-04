@@ -4,7 +4,7 @@ import core.components.Station;
 import core.components.User;
 import core.components.factories.BicycleFactory;
 import core.components.factories.PointFactory;
-import core.rides.planning.Main;
+import core.rides.planning.PlanningApp;
 import core.system.MyVelibSystem;
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class PlanningRide {
 
 
 //        2. the user receives the source and destination stations
-        List<Station> bestStations = Main.getBestStation(system, startPoint, endPoint, BicycleFactory.createMechanicalBicycle());
+        List<Station> bestStations = PlanningApp.getBestStation(system, startPoint, endPoint, BicycleFactory.createMechanicalBicycle());
         System.out.println(bestStations);
 
 //        3. the user retrieve a bicycle from the source station of the planned ride at a given

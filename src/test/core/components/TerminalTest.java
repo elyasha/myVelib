@@ -1,6 +1,6 @@
 package core.components;
 
-import core.Main;
+import core.CoreApp;
 import core.components.factories.BicycleFactory;
 import core.components.factories.ParkingSlotsFactory;
 import core.components.factories.PointFactory;
@@ -25,7 +25,7 @@ public class TerminalTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         term.rentBicycle(bicycle,user,systems.get(0).getStations().get(0));
@@ -42,7 +42,7 @@ public class TerminalTest {
         stations.add(station);
         MyVelibSystemFactory.createMyVelibSystem(stations);
         List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
-        systems = Main.getSystems();
+        systems = CoreApp.getSystems();
         User user = UserFactory.addUser(systems.get(0),"Charlito",PointFactory.addPoint(0,0),999,200);
         Bicycle bicycle = BicycleFactory.createElectricalBicycle();
         term.rentBicycle(bicycle,user,systems.get(0).getStations().get(0));

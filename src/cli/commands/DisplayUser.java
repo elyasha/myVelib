@@ -1,7 +1,6 @@
 package cli.commands;
 
-import core.Main;
-import core.components.Station;
+import core.CoreApp;
 import core.components.User;
 import core.system.MyVelibSystem;
 
@@ -23,7 +22,7 @@ public class DisplayUser implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The displayStation command!");
-            List<MyVelibSystem> systems = Main.getSystems();
+            List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             User currentUser = null;
             for (MyVelibSystem system : systems) {

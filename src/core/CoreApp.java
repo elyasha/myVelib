@@ -9,7 +9,7 @@ import java.util.List;
  * The Main class: This class is responsible to be the core class that executes the core package when running the java myVelib framework
  * It is indeed the core main application itself
  */
-public class Main {
+public class CoreApp {
 
     /**
      * This is where all systems will be saved when running the application
@@ -31,7 +31,7 @@ public class Main {
      * @param systems A list of systems that is used to set all systems in the application
      */
     public static void setSystems(List<MyVelibSystem> systems) {
-        Main.systems = systems;
+        CoreApp.systems = systems;
     }
 
     /**

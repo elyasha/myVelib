@@ -3,7 +3,7 @@ package cli;
 import cli.commands.*;
 
 /**
- * The Main class for the CLI application. This class will use the main() from the commands package.
+ * The RunCommand class for the CLI application. This class will use the main() from the commands package.
  * This will be used when calling the interpreter or running the program to read a .txt file.
  */
 public class RunCommand {

@@ -125,10 +125,10 @@ public final class Terminal {
         intervalOfTimeTIME = new Time(0, (int) intervalOfTime, 0);
         System.out.println(intervalOfTimeTIME);
         // Compute the rent cost for the user
-        double rentCost = Main.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
+        double rentCost = RentingApp.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
 
         // Take the money of the user !!!!
-        Main.chargingUser(user, rentCost, station);
+        RentingApp.chargingUser(user, rentCost, station);
 
         // Add user spent time to the type of bicycle
         if (bicycle instanceof ElectricalBicycle) {
@@ -176,16 +176,16 @@ public final class Terminal {
         else{
             // Compute the time of the journey
             double intervalOfTime; // [minutes]
-            intervalOfTime = Main.computeRentTime(user);
+            intervalOfTime = RentingApp.computeRentTime(user);
             System.out.println(intervalOfTime);
             Time intervalOfTimeTIME;
             intervalOfTimeTIME = new Time(0, (int) intervalOfTime, 0);
             System.out.println(intervalOfTimeTIME);
             // Compute the rent cost for the user
-            double rentCost = Main.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
+            double rentCost = RentingApp.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
 
             // Take the money of the user !!!!
-            Main.chargingUser(user, rentCost, station);
+            RentingApp.chargingUser(user, rentCost, station);
 
             // Changer rentTime
             user.setRentTime(null);

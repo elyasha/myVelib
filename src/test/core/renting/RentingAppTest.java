@@ -2,17 +2,16 @@ package core.renting;
 
 import core.components.*;
 import core.components.factories.BicycleFactory;
-import core.components.factories.CardFactory;
 import org.junit.Test;
 
 import java.awt.*;
 import java.sql.Time;
 import java.time.LocalTime;
 
-import static core.renting.Main.*;
+import static core.renting.RentingApp.*;
 import static org.junit.Assert.*;
 
-public class MainTest {
+public class RentingAppTest {
 
     @Test
     public void getCostWithoutTimeCreditTest() {

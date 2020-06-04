@@ -1,6 +1,6 @@
 package cli.commands;
 
-import core.Main;
+import core.CoreApp;
 import core.components.Station;
 import core.system.MyVelibSystem;
 
@@ -22,7 +22,7 @@ public class Online implements Command {
             wrongArgumentHelp();
         } else {
             System.out.println("The online command!");
-            List<MyVelibSystem> systems = Main.getSystems();
+            List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             Station current_station = null;
             for (MyVelibSystem system: systems){
