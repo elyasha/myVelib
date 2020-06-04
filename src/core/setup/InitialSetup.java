@@ -35,14 +35,50 @@ public class InitialSetup {
      * Constant of percentage of plus stations
      */
     private static final double PERCENTAGE_OF_PLUS_STATIONS = 0.5;
+
+    /**
+     * Constant for the user without card
+     */
     private static final String USER_WITHOUT_CARD_NAME = "Matheus";
+
+    /**
+     * Constant for the user without card
+     */
     private static final int USER_WITHOUT_CARD_CREDITCARD = 0000;
+
+    /**
+     * Constant for the user without card
+     */
     private static final double USER_WITHOUT_CARD_MONEY = 100;
+
+    /**
+     * Constant for the user with Vmax
+     */
     private static final String USER_VMAX_NAME = "Charles";
+
+    /**
+     * Constant for the user with Vmax
+     */
     private static final int USER_VMAX_CREDITCARD = 0000;
+
+    /**
+     * Constant for the user with Vmax
+     */
     private static final double USER_VMAX_MONEY = 100;
+
+    /**
+     * Constant for the user with Vlibre
+     */
     private static final String USER_VLIBRE_NAME = "Valdisa";
+
+    /**
+     * Constant for the user with Vlibre
+     */
     private static final int USER_VLIBRE_CREDITCARD = 0000;
+
+    /**
+     * Constant for the user with Vlibre
+     */
     private static final double USER_VLIBRE_MONEY = 100;
 
     /**
