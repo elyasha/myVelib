@@ -6,4 +6,3 @@
 4. Visitor pattern (rides payment)
 5. Singleton pattern (to classes that will have only one instance)
 6. Observer pattern (terminal must be informed if the station is on service or not)
-7. State pattern (for the CLI state)
