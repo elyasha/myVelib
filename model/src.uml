@@ -26,11 +26,14 @@
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="0.5825688073394496" x="307.5" y="316.99999999999994" />
-  <SelectedNodes>
-    <node>com</node>
-  </SelectedNodes>
-  <Categories />
+  <settings layout="Hierarchic Group" zoom="0.6391437308868502" x="307.5" y="307.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>

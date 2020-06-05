@@ -4,17 +4,17 @@
   <OriginalElement>core</OriginalElement>
   <nodes>
     <node x="0.0" y="304.0">core.renting</node>
-    <node x="312.0" y="0.0">core.MainTest</node>
+    <node x="312.0" y="0.0">core.CoreAppTest</node>
+    <node x="0.0" y="0.0">core.CoreApp</node>
     <node x="0.0" y="207.0">core.components</node>
     <node x="0.0" y="401.0">core.rides</node>
     <node x="197.0" y="304.0">core.system</node>
     <node x="221.0" y="207.0">core.statistics</node>
-    <node x="0.0" y="0.0">core.Main</node>
     <node x="181.0" y="401.0">core.setup</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="248.5" y="226.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="198.5" y="171.5" />
   <SelectedNodes>
     <node>core.renting</node>
   </SelectedNodes>
@@ -22,6 +22,7 @@
     <Category>Fields</Category>
     <Category>Constructors</Category>
     <Category>Methods</Category>
+    <Category>Properties</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

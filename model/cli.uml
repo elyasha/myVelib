@@ -3,17 +3,21 @@
   <ID>JAVA</ID>
   <OriginalElement>cli</OriginalElement>
   <nodes>
-    <node x="0.0" y="198.0">cli.commands</node>
-    <node x="0.0" y="0.0">cli.Main</node>
-    <node x="0.0" y="99.0">cli.MainTest</node>
+    <node x="0.0" y="220.0">cli.RunCommand</node>
+    <node x="0.0" y="121.0">cli.RunCommandTest</node>
+    <node x="0.0" y="319.0">cli.commands</node>
+    <node x="0.0" y="0.0">cli.MyVelibCLITest</node>
+    <node x="192.0" y="220.0">cli.MyVelibCLI</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="80.0" y="125.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="411.5" y="171.5" />
   <SelectedNodes />
   <Categories>
-    <Category>Constructors</Category>
     <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

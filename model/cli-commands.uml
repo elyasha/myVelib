@@ -3,132 +3,132 @@
   <ID>JAVA</ID>
   <OriginalElement>cli.commands</OriginalElement>
   <nodes>
-    <node x="505.0" y="184.0">cli.commands.Online</node>
-    <node x="1310.0" y="381.0">cli.commands.RunTestTest</node>
+    <node x="3214.0" y="184.0">cli.commands.Online</node>
+    <node x="2409.0" y="381.0">cli.commands.RunTestTest</node>
     <node x="238.0" y="152.0">cli.commands.AddUser</node>
-    <node x="1695.0" y="184.0">cli.commands.Help</node>
-    <node x="1933.0" y="184.0">cli.commands.Setup</node>
-    <node x="1514.0" y="381.0">cli.commands.OnlineTest</node>
-    <node x="981.0000000000001" y="184.0">cli.commands.Offline</node>
-    <node x="2171.0" y="184.0">cli.commands.DisplayStation</node>
-    <node x="3152.0" y="184.0">cli.commands.RentBicycle</node>
-    <node x="466.0" y="381.0">cli.commands.SortStationTest</node>
-    <node x="1718.0" y="381.0">cli.commands.HelpTest</node>
-    <node x="2409.0" y="152.0">cli.commands.AddManager</node>
-    <node x="0.0" y="381.0">cli.commands.DisplayStationTest</node>
-    <node x="1219.0" y="184.0">cli.commands.SortStation</node>
-    <node x="679.0" y="381.0">cli.commands.DisplayUserTest</node>
-    <node x="1922.0" y="381.0">cli.commands.SetupTest</node>
-    <node x="1457.0" y="184.0">cli.commands.DisplayUser</node>
-    <node x="2914.0" y="184.0">cli.commands.Display</node>
-    <node x="892.0" y="381.0">cli.commands.RentBicycleTest</node>
-    <node x="2126.0" y="381.0">cli.commands.AddUserTest</node>
-    <node x="743.0000000000001" y="184.0">cli.commands.RunTest</node>
-    <node x="2330.0" y="381.0">cli.commands.DisplayTest</node>
-    <node x="2534.0" y="381.0">cli.commands.OfflineTest</node>
-    <node x="1105.0" y="381.0">cli.commands.AddManagerTest</node>
-    <node x="237.0" y="381.0">cli.commands.ReturnBicycleTest</node>
-    <node x="2738.0" y="381.0">cli.commands.ExitTest</node>
-    <node x="2676.0" y="184.0">cli.commands.Exit</node>
-    <node x="0.0" y="184.0">cli.commands.ReturnBicycle</node>
-    <node x="1633.0" y="0.0">cli.commands.Command</node>
+    <node x="1043.0" y="184.0">cli.commands.Help</node>
+    <node x="1995.0" y="184.0">cli.commands.Setup</node>
+    <node x="655.0" y="381.0">cli.commands.OnlineTest</node>
+    <node x="2976.0" y="184.0">cli.commands.Offline</node>
+    <node x="1757.0" y="184.0">cli.commands.DisplayStation</node>
+    <node x="2738.0" y="184.0">cli.commands.RentBicycle</node>
+    <node x="229.0" y="381.0">cli.commands.SortStationTest</node>
+    <node x="1520.0" y="381.0">cli.commands.HelpTest</node>
+    <node x="2233.0" y="152.0">cli.commands.AddManager</node>
+    <node x="1940.0" y="381.0">cli.commands.DisplayStationTest</node>
+    <node x="746.0" y="162.0">cli.commands.SortStation</node>
+    <node x="1307.0" y="381.0">cli.commands.DisplayUserTest</node>
+    <node x="1730.0" y="381.0">cli.commands.SetupTest</node>
+    <node x="1281.0" y="184.0">cli.commands.DisplayUser</node>
+    <node x="2500.0" y="184.0">cli.commands.Display</node>
+    <node x="442.0" y="381.0">cli.commands.RentBicycleTest</node>
+    <node x="1075.0" y="381.0">cli.commands.AddUserTest</node>
+    <node x="505.0" y="162.0">cli.commands.RunTest</node>
+    <node x="2619.0" y="381.0">cli.commands.DisplayTest</node>
+    <node x="865.0" y="381.0">cli.commands.OfflineTest</node>
+    <node x="2177.0" y="381.0">cli.commands.AddManagerTest</node>
+    <node x="0.0" y="381.0">cli.commands.ReturnBicycleTest</node>
+    <node x="2829.0" y="381.0">cli.commands.ExitTest</node>
+    <node x="1519.0" y="184.0">cli.commands.ReturnBicycle</node>
+    <node x="0.0" y="184.0">cli.commands.Exit</node>
+    <node x="1695.0" y="0.0">cli.commands.Command</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="cli.commands.DisplayStation" target="cli.commands.Command">
-      <point x="0.0" y="-60.0" />
-      <point x="2280.0" y="112.0" />
-      <point x="1703.571428571429" y="112.0" />
-      <point x="18.57142857142867" y="26.0" />
-    </edge>
     <edge source="cli.commands.Exit" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="2785.0" y="92.0" />
-      <point x="1718.4285714285716" y="92.0" />
-      <point x="33.42857142857133" y="26.0" />
+      <point x="109.0" y="72.0" />
+      <point x="1698.7142857142858" y="72.0" />
+      <point x="-48.28571428571422" y="26.0" />
+    </edge>
+    <edge source="cli.commands.DisplayStation" target="cli.commands.Command">
+      <point x="0.0" y="-60.0" />
+      <point x="1866.0" y="132.0" />
+      <point x="1750.7142857142858" y="132.0" />
+      <point x="3.7142857142857792" y="26.0" />
     </edge>
     <edge source="cli.commands.AddUser" target="cli.commands.Command">
       <point x="0.0" y="-92.0" />
       <point x="361.5" y="82.0" />
-      <point x="1644.1428571428573" y="82.0" />
+      <point x="1706.142857142857" y="82.0" />
       <point x="-40.85714285714289" y="26.0" />
     </edge>
     <edge source="cli.commands.Help" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="1804.0" y="132.0" />
-      <point x="1688.7142857142858" y="132.0" />
-      <point x="3.7142857142857792" y="26.0" />
+      <point x="1152.0" y="112.0" />
+      <point x="1728.4285714285713" y="112.0" />
+      <point x="-18.57142857142867" y="26.0" />
     </edge>
     <edge source="cli.commands.SortStation" target="cli.commands.Command">
-      <point x="0.0" y="-60.0" />
-      <point x="1328.0" y="122.0" />
-      <point x="1673.8571428571431" y="122.0" />
-      <point x="-11.14285714285711" y="26.0" />
+      <point x="0.0" y="-82.0" />
+      <point x="884.5" y="102.0" />
+      <point x="1721.0" y="102.0" />
+      <point x="-26.0" y="26.0" />
     </edge>
     <edge source="cli.commands.RentBicycle" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="3261.0" y="72.0" />
-      <point x="1733.2857142857142" y="72.0" />
-      <point x="48.28571428571422" y="26.0" />
+      <point x="2847.0" y="92.0" />
+      <point x="1780.4285714285713" y="92.0" />
+      <point x="33.42857142857133" y="26.0" />
     </edge>
     <edge source="cli.commands.Online" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="614.0" y="92.0" />
-      <point x="1651.571428571429" y="92.0" />
-      <point x="-33.42857142857133" y="26.0" />
+      <point x="3323.0" y="72.0" />
+      <point x="1795.2857142857142" y="72.0" />
+      <point x="48.28571428571422" y="26.0" />
     </edge>
     <edge source="cli.commands.Offline" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="1090.0" y="112.0" />
-      <point x="1666.4285714285716" y="112.0" />
-      <point x="-18.57142857142867" y="26.0" />
+      <point x="3085.0" y="82.0" />
+      <point x="1787.857142857143" y="82.0" />
+      <point x="40.85714285714289" y="26.0" />
     </edge>
     <edge source="cli.commands.DisplayUser" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="1566.0" y="132.0" />
-      <point x="1681.2857142857142" y="132.0" />
-      <point x="-3.7142857142857792" y="26.0" />
+      <point x="1390.0" y="122.0" />
+      <point x="1735.857142857143" y="122.0" />
+      <point x="-11.14285714285711" y="26.0" />
     </edge>
     <edge source="cli.commands.ReturnBicycle" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="109.0" y="72.0" />
-      <point x="1636.7142857142858" y="72.0" />
-      <point x="-48.28571428571422" y="26.0" />
+      <point x="1628.0" y="132.0" />
+      <point x="1743.2857142857142" y="132.0" />
+      <point x="-3.7142857142857792" y="26.0" />
     </edge>
     <edge source="cli.commands.AddManager" target="cli.commands.Command">
       <point x="0.0" y="-92.0" />
-      <point x="2532.5" y="102.0" />
-      <point x="1711.0" y="102.0" />
-      <point x="26.0" y="26.0" />
+      <point x="2356.5" y="112.0" />
+      <point x="1765.5714285714287" y="112.0" />
+      <point x="18.57142857142867" y="26.0" />
     </edge>
     <edge source="cli.commands.RunTest" target="cli.commands.Command">
-      <point x="0.0" y="-60.0" />
-      <point x="852.0000000000001" y="102.0" />
-      <point x="1659.0" y="102.0" />
-      <point x="-26.0" y="26.0" />
+      <point x="0.0" y="-82.0" />
+      <point x="615.5" y="92.0" />
+      <point x="1713.5714285714287" y="92.0" />
+      <point x="-33.42857142857133" y="26.0" />
     </edge>
     <edge source="cli.commands.Display" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="3023.0" y="82.0" />
-      <point x="1725.8571428571431" y="82.0" />
-      <point x="40.85714285714289" y="26.0" />
+      <point x="2609.0" y="102.0" />
+      <point x="1773.0" y="102.0" />
+      <point x="26.0" y="26.0" />
     </edge>
     <edge source="cli.commands.Setup" target="cli.commands.Command">
       <point x="0.0" y="-60.0" />
-      <point x="2042.0" y="122.0" />
-      <point x="1696.1428571428573" y="122.0" />
+      <point x="2104.0" y="122.0" />
+      <point x="1758.142857142857" y="122.0" />
       <point x="11.14285714285711" y="26.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.6329449152542372" x="924.0000000000001" y="199.0" />
+  <settings layout="Hierarchic Group" zoom="0.7907838983050848" x="2001.0" y="297.2947086403215" />
   <SelectedNodes>
     <node>cli.commands.Command</node>
   </SelectedNodes>
   <Categories>
-    <Category>Properties</Category>
-    <Category>Methods</Category>
     <Category>Constructors</Category>
     <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

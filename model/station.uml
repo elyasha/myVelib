@@ -3,14 +3,14 @@
   <ID>JAVA</ID>
   <OriginalElement>core.statistics.balance.station</OriginalElement>
   <nodes>
-    <node x="0.0" y="0.0">core.statistics.balance.station.Main</node>
-    <node x="0.0" y="253.0">core.statistics.balance.station.MainTest</node>
+    <node x="0.0" y="253.0">core.statistics.balance.station.StationAppTest</node>
+    <node x="0.0" y="0.0">core.statistics.balance.station.StationApp</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="56.0" y="246.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="80.0" y="168.0" />
   <SelectedNodes>
-    <node>core.statistics.balance.station.Main</node>
+    <node>core.statistics.balance.station.StationAppTest</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

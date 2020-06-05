@@ -4,13 +4,14 @@
   <OriginalElement>core.statistics.balance</OriginalElement>
   <nodes>
     <node x="0.0" y="0.0">core.statistics.balance.station</node>
-    <node x="0.0" y="97.0">core.statistics.balance.system</node>
-    <node x="0.0" y="194.0">core.statistics.balance.user</node>
+    <node x="0.0" y="97.0">core.statistics.balance.user</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="76.0" y="123.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0" x="76.0" y="74.5" />
+  <SelectedNodes>
+    <node>core.statistics.balance.station</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
