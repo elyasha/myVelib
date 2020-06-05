@@ -14,7 +14,7 @@ public class CoreApp {
     /**
      * This is where all systems will be saved when running the application
      */
-    private static List<MyVelibSystem> systems = new ArrayList<MyVelibSystem>();
+    private static List<MyVelibSystem> systems = new ArrayList<>();
 
     /**
      * a getter for systems
@@ -35,30 +35,12 @@ public class CoreApp {
     }
 
     /**
-     * This is the main() method of our myVelib application. The myVelib application itself
+     * This is the main() method of our myVelib core app. It is here only for consistence, but it is not required to run the cli application.
      *
      * @param args the arguments of our core myVelib application
      */
     public static void main(String[] args) {
-
-
-        // Mode interpreter
-        // Application
-
-        // It will run until the exit command is prompted
-
-        // State 1 : Waiting for a command to be prompted
-
-        // State 2 : Figuring out the command to be executed
-
-        // State 3 : Executing the command
-
-        // Mode read a file and execute
-        // TODO : We need to code the fact that the application will read a txt file
-        // Usage: myvelib file.txt
-        // Output: Execute the commands in file.txt
-
-
+        // This method does not need to be implemented. Actually the core package will be used by the cli package to run the cli application
     }
 
     /**

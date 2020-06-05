@@ -128,7 +128,7 @@ public class MyVelibSystem {
      */
     public MyVelibSystem(List<Station> stations) {
         this.stations = stations;
-        this.users = new ArrayList<User>();
+        this.users = new ArrayList<>();
         this.money = 0;
     }
 
@@ -136,8 +136,8 @@ public class MyVelibSystem {
      * (Simplest) constructor for the system class, will create an (empty) system
      */
     public MyVelibSystem() {
-        this.stations = new ArrayList<Station>();
-        this.users = new ArrayList<User>();
+        this.stations = new ArrayList<>();
+        this.users = new ArrayList<>();
         this.money = 0;
     }
 
@@ -223,7 +223,7 @@ public class MyVelibSystem {
             System.out.println("Enter the bicycle type (Electrical/Mechanical)");
             bicycleType = scanner.nextLine();
         }
-        while ((!bicycleType.equals("Electrical") || !bicycleType.equals("Mechanical")));
+        while ((!bicycleType.equals("Electrical") && !bicycleType.equals("Mechanical")));
         {
             System.out.println("Enter the bicycle type (Electrical/Mechanical)");
             bicycleType = scanner.nextLine();
@@ -234,7 +234,9 @@ public class MyVelibSystem {
             Bicycle electricalBicycle = new ElectricalBicycle();
 
             // Ask terminal to rent a bike for the given station
+            assert station != null;
             if (station.getExistTypeBike(electricalBicycle) && station.isOnService()) {
+                assert user != null;
                 station.getStationTerminal().rentBicycle(electricalBicycle, user, station);
                 // Make parking slot free
             } else {
@@ -244,7 +246,9 @@ public class MyVelibSystem {
             Bicycle mechanicalBicycle = new MechanicalBicycle();
 
             // Ask terminal to rent a bike for the given station
+            assert station != null;
             if (station.getExistTypeBike(mechanicalBicycle) && station.isOnService()) {
+                assert user != null;
                 station.getStationTerminal().rentBicycle(mechanicalBicycle, user, station);
                 // Make parking slot free
             } else {
