@@ -5,6 +5,9 @@ import org.junit.Test;
 import static cli.commands.DisplayUser.hasGoodInput;
 import static org.junit.Assert.*;
 
+/**
+ * Testing DisplayUser Class
+ */
 public class DisplayUserTest {
 
     @Test
@@ -12,6 +15,9 @@ public class DisplayUserTest {
         //TODO
     }
 
+    /**
+     * Testing good input arguments
+     */
     @Test
     public void hasGoodInput1() {
         //[velibnetworkName, userID]
@@ -19,6 +25,9 @@ public class DisplayUserTest {
         assertEquals(true, hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput2() {
         //[velibnetworkName, userID]
@@ -26,6 +35,9 @@ public class DisplayUserTest {
         assertEquals(false, hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput3() {
         //[velibnetworkName, userID]

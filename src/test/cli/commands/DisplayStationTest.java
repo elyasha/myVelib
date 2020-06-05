@@ -5,7 +5,7 @@ import org.junit.Test;
 import static cli.commands.DisplayStation.hasGoodInput;
 import static org.junit.Assert.*;
 /**
- * Testing DisplayStationTest Class
+ * Testing DisplayStation Class
  */
 public class DisplayStationTest {
 

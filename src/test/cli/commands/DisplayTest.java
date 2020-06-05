@@ -6,7 +6,7 @@ import static cli.commands.Display.hasGoodInput;
 import static org.junit.Assert.*;
 
 /**
- * Testing DisplayTest Class
+ * Testing Display Class
  */
 public class DisplayTest {
 
