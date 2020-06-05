@@ -4,7 +4,9 @@ import org.junit.Test;
 
 import static cli.commands.DisplayStation.hasGoodInput;
 import static org.junit.Assert.*;
-
+/**
+ * Testing DisplayStationTest Class
+ */
 public class DisplayStationTest {
 
     @Test
@@ -12,6 +14,9 @@ public class DisplayStationTest {
         //TODO
     }
 
+    /**
+     * Testing good input arguments
+     */
     @Test
     public void hasGoodInputTest() {
         //[velibnetworkName, stationID]
@@ -19,6 +24,9 @@ public class DisplayStationTest {
         assertEquals(true, hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInputTest1() {
         //[velibnetworkName, stationID]
