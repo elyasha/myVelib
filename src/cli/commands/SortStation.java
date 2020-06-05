@@ -1,6 +1,13 @@
 package cli.commands;
 
 
+import core.CoreApp;
+import core.components.Station;
+import core.statistics.balance.station.StationApp;
+import core.system.MyVelibSystem;
+
+import java.util.List;
+
 /**
  * This is the SortStation class that implements the sortStation command of the CLI.
  */
@@ -15,17 +22,31 @@ public class SortStation implements Command {
      * @param args the arguments of the command
      */
     public static void main(String[] args) {
+        System.out.println("The sortStation command!");
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
             if (args.length == 1) {
-                System.out.println("The sortStation command without policies!");
-                // TODO: Design command without policies
+                mostUsedStationStrategy(args);
             } else {
-                System.out.println("The sortStation command with policies!");
-                // TODO: [Optional] Design command with policies
+                // Check if the sortPolicy == "mostUsed"
+                if (args[1].equalsIgnoreCase("mostUsed")) {
+                    mostUsedStationStrategy(args);
+                }
+
+                // Else
+                if (args[1].equalsIgnoreCase("leastOccupied")) {
+                    leastOccupiedStationStrategy(args);
+                }
             }
         }
+
+    }
+
+    private static void leastOccupiedStationStrategy(String[] args) {
+        // TODO: [Optional] Design command with policies
+        // TODO: Implement the leastOccupied policy
+        System.out.println("Not yet implemented! Sorry, but the developers are working on it!");
     }
 
     /**
@@ -80,6 +101,29 @@ public class SortStation implements Command {
         }
 
 
+    }
+
+
+    private static void mostUsedStationStrategy(String[] args) {
+        System.out.println("The sortStation command without policies (will show the most used policy(!");
+        List<MyVelibSystem> systems = CoreApp.getSystems();
+        MyVelibSystem currentSystem = null;
+        for (MyVelibSystem system : systems) {
+            if (system.getName().equals(args[0])) {
+                currentSystem = system;
+                break;
+            }
+        }
+        if (currentSystem != null) {
+            List<Station> mostUsedStations = StationApp.sortStationByMostUsed(currentSystem.getStations());
+            System.out.println("Displaying the most used stations by most used order.");
+            for (Station station : mostUsedStations
+            ) {
+                System.out.println(station);
+            }
+        } else {
+            System.out.println("The system does not exist");
+        }
     }
 
 
