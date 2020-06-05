@@ -5,6 +5,9 @@ import org.junit.Test;
 import static cli.commands.AddUser.hasGoodInput;
 import static org.junit.Assert.*;
 
+/**
+ * Testing add user class
+ */
 public class AddUserTest {
 
     @Test
@@ -12,6 +15,9 @@ public class AddUserTest {
         // TODO: AddUser
     }
 
+    /**
+     * Testing good input arguments
+     */
     @Test
     public void hasGoodInputTest() {
         //addUser [userName,cardType, velibnetworkName]
@@ -19,6 +25,9 @@ public class AddUserTest {
         assertEquals(true, hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInputTest2() {
         //addUser [userName,cardType, velibnetworkName]
@@ -26,6 +35,9 @@ public class AddUserTest {
         assertEquals(false, hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInputTest3() {
         //addUser [userName,cardType, velibnetworkName]
