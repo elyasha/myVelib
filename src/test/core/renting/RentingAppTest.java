@@ -11,8 +11,14 @@ import java.time.LocalTime;
 import static core.renting.RentingApp.*;
 import static org.junit.Assert.*;
 
+/**
+ * Testing RentingApp Class
+ */
 public class RentingAppTest {
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -23,6 +29,9 @@ public class RentingAppTest {
         assertEquals(1.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest2() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -33,6 +42,9 @@ public class RentingAppTest {
         assertEquals(0.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest3() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -43,6 +55,9 @@ public class RentingAppTest {
         assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest4() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -53,6 +68,9 @@ public class RentingAppTest {
         assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest5() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -63,6 +81,9 @@ public class RentingAppTest {
         assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest6() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -73,6 +94,9 @@ public class RentingAppTest {
         assertEquals(4.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest7() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -83,6 +107,9 @@ public class RentingAppTest {
         assertEquals(5.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void getCostWithoutTimeCreditTest8() {
         // Bicycle bicycle, Card card, Time intervalOfTime)
@@ -93,7 +120,9 @@ public class RentingAppTest {
         assertEquals(2.0, getCostWithoutTimeCredit(bicycle, card, interval), 1e-3);
     }
 
-
+    /**
+     * Testing getCostWithTimeCreditTest method
+     */
     @Test
     public void getCostWithTimeCreditTest1() {
         // Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user
@@ -107,6 +136,9 @@ public class RentingAppTest {
         assertEquals(0, getCostWithTimeCredit(bicycle, card, interval, user.getTimeCreditBalance(), user), 1e-3);
     }
 
+    /**
+     * Testing getCostWithTimeCreditTest method
+     */
     @Test
     public void getCostWithTimeCreditTest2() {
         // Bicycle bicycle, Card card, Time intervalOfTime, double timeCredit, User user
@@ -120,6 +152,9 @@ public class RentingAppTest {
         assertEquals(1, getCostWithTimeCredit(bicycle, card, interval, user.getTimeCreditBalance(), user), 1e-3);
     }
 
+    /**
+     * Testing computeRentTimeTest method
+     */
     @Test
     public void computeRentTimeTest() {
         User user = new User("Paolo", new Point(0, 0), 0000, 50);
@@ -130,6 +165,9 @@ public class RentingAppTest {
         assertEquals(nowTime2, computeRentTime(user), 1e-3);
     }
 
+    /**
+     * Testing getCostWithoutTimeCreditTest method
+     */
     @Test
     public void chargingUserTest() {
         // TODO
