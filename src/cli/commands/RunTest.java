@@ -2,9 +2,7 @@ package cli.commands;
 
 import cli.RunCommand;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +32,9 @@ public class RunTest implements Command {
 
 
                 String fileName = args[0];
-
+                // We assume the fileName will have the .txt extension
+                String fileOutputName = args[0].substring(0, args[0].length()-4) + "OUTPUT.txt";
+                // TODO: write on the file output
 
                 // Read file.txt and execute commands
                 // TODO: check commands. For now, we assume the file has no errors
@@ -142,5 +142,29 @@ public class RunTest implements Command {
             }
         }
         return returnValue;
+
+
+    }
+
+    public static void writeTextFile(String fileName, String s) {
+        FileWriter output = null;
+        try {
+            output = new FileWriter(fileName);
+            BufferedWriter writer = new BufferedWriter(output);
+            writer.write(s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (output != null) {
+                try {
+                    output.close();
+                    System.out.println("writing file " + fileName +" closing" );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    System.out.println("writing file " + fileName +" IOException" );
+                }
+            }
+        }
+
     }
 }
