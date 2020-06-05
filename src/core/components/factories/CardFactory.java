@@ -1,10 +1,10 @@
 package core.components.factories;
 
-import core.components.*;
+import core.components.Card;
+import core.components.User;
+import core.components.Vlibre;
+import core.components.Vmax;
 import core.system.MyVelibSystem;
-
-import java.awt.*;
-import java.util.List;
 
 /**
  * The CardFactory class : This is the factory to create and add new cards to users

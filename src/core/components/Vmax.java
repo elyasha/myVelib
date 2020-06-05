@@ -1,7 +1,5 @@
 package core.components;
 
-import core.components.Card;
-
 /**
  * The Vmax class: This class implements the Vmax card behaviour
  */

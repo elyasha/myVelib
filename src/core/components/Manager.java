@@ -25,7 +25,7 @@ public class Manager extends User {
     /**
      * This is the method that allows the manager to see his current status (toString method)
      *
-     * @return
+     * @return the manager toString
      */
     public String seeMyStatus() {
         System.out.println(this);
@@ -54,6 +54,7 @@ public class Manager extends User {
             System.out.println(currentUser);
         }
 
+        assert currentUser != null;
         return currentUser.toString();
 
 
@@ -87,6 +88,7 @@ public class Manager extends User {
             System.out.println();
         }
 
+        assert currentStation != null;
         return currentStation.toString();
 
 

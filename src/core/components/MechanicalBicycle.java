@@ -1,7 +1,5 @@
 package core.components;
 
-import core.components.Bicycle;
-
 /**
  * The MechanicalBicycle class : This class defines what is a mechanical bicycle in the application
  */

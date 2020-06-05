@@ -1,13 +1,11 @@
 package core.components.factories;
 
-import core.components.Card;
 import core.components.Manager;
 import core.components.User;
 import core.system.MyVelibSystem;
 
-import java.util.List;
-
 import java.awt.*;
+import java.util.List;
 
 /**
  * The UserFactory class : This is the factory to create and add new users. We will always add users to a given system

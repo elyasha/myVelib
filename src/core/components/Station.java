@@ -42,7 +42,7 @@ public abstract class Station {
     /**
      * The terminal of the station, it is used by the users to rent or drop bicycles
      */
-    private Terminal terminal;
+    private final Terminal terminal;
 
     /**
      * The amount of money that the user has in the application

@@ -51,17 +51,17 @@ public class User {
      * Time credit balance given by some type of station for the User
      * Expressed in minutes
      */
-    private float timeCreditBalance = 0;
+    private float timeCreditBalance;
 
     /**
      * All money the user paid for its location
      */
-    private float allMoneyCharged = 0;
+    private float allMoneyCharged;
 
     /**
      * Current money charged for the actual location
      */
-    private float currentMoneyCharged = 0;
+    private float currentMoneyCharged;
 
     /**
      * Money balance of the user
@@ -600,7 +600,7 @@ public class User {
     /**
      * Used to see the status of the user
      *
-     * @return
+     * @return user's toString
      */
     public String seeMyStatus() {
         System.out.println(this);
@@ -653,6 +653,7 @@ public class User {
                 System.out.println(currentStation);
                 System.out.println();
             }
+            assert currentStation != null;
             return currentStation.toString();
         }
 

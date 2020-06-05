@@ -1,7 +1,5 @@
 package core.components;
 
-import core.components.Card;
-
 /**
  * The Vlibre class: This class implements the Vlibre card behaviour
  */

@@ -1,9 +1,6 @@
 package core.components.factories;
 
-import java.awt.Point;
-
-import core.components.User;
-import core.system.MyVelibSystem;
+import java.awt.*;
 
 /**
  * The PointFactory class : This is the factory to create and add new points, that represent the coordinates in the project
