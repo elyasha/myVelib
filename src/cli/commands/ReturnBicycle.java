@@ -41,7 +41,7 @@ public class ReturnBicycle implements Command {
                     }
                 }
             }
-            if (alreadyFind == false) {
+            if (!alreadyFind) {
                 System.out.println("You cannot drop a bicycle");
                 System.out.println("The station id or/and user id do not exist");
             }
@@ -82,10 +82,9 @@ public class ReturnBicycle implements Command {
             int integerValue2 = Integer.parseInt(args[1]);
         } catch (NumberFormatException numberFormatException) {
             System.out.println(numberFormatException.getMessage());
-            ;
             System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
             return false;
         }
-        return args.length == 3;
+        return true;
     }
 }

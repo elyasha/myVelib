@@ -12,7 +12,11 @@ import java.util.List;
  * This is the AddManager class that implements the addManager command of the CLI.
  */
 public class AddManager implements Command {
-    private static final int DEFAULT_CREDIT_CARD_NUMBER = 000;
+
+    /**
+     * Default credit card number
+     */
+    private static final int DEFAULT_CREDIT_CARD_NUMBER = 0000;
 
     /**
      * main() is the implementation of the command. It will interact with the core.Main application

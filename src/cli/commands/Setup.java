@@ -42,7 +42,6 @@ public class Setup implements Command {
      */
     public static void helpCommand(String[] args) {
         System.out.println("The setup command!");
-        System.out.println();
         System.out.println("setup <velibnetworkName>: to create a myVelib network with given name and");
         System.out.println("consisting of 10 stations each of which has 10 parking slots and such that stations");
         System.out.println("are arranged on a square grid whose of side 4km and initially populated with a 75%");
@@ -52,7 +51,6 @@ public class Setup implements Command {
         System.out.println("with given name and consisting of nstations stations each of which has nslots");
         System.out.println("parking slots and such that stations are arranged in as uniform as possible manner");
         System.out.println("over an area you may assume either being circular of radium s or squared of side s");
-        System.out.println("");
 
 
     }

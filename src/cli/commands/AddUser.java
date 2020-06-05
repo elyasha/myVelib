@@ -11,6 +11,9 @@ import java.util.List;
  * This is the AddUser class that implements the addUser command of the CLI.
  */
 public class AddUser implements Command {
+    /**
+     * Default credit card number
+     */
     private static final int DEFAULT_CREDIT_CARD_NUMBER = 0000;
 
     /**

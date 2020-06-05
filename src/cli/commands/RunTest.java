@@ -33,7 +33,7 @@ public class RunTest implements Command {
 
                 String fileName = args[0];
                 // We assume the fileName will have the .txt extension
-                String fileOutputName = args[0].substring(0, args[0].length()-4) + "OUTPUT.txt";
+                String fileOutputName = args[0].substring(0, args[0].length() - 4) + "OUTPUT.txt";
                 // TODO: write on the file output
 
                 // Read file.txt and execute commands
@@ -52,8 +52,6 @@ public class RunTest implements Command {
                     // Read file line by line (check if the first word is a command)
                     for (String s : textFile) {
                         // Execute the line
-                        String command = s.split(" ")[0];
-//                    System.out.println(command);
                         String[] argsCommand = s.split(" ");
 
                         // Uncomment for tests
@@ -110,7 +108,7 @@ public class RunTest implements Command {
 
     public static List<String> readTextFile(String fileName) {
 
-        List<String> returnValue = new ArrayList<String>();
+        List<String> returnValue = new ArrayList<>();
         FileReader file = null;
         BufferedReader reader = null;
 
@@ -120,7 +118,7 @@ public class RunTest implements Command {
 
             // open input buffered reader to read file line by line
             reader = new BufferedReader(file);
-            String line = "";
+            String line;
 
             // reading input file line by line
             while ((line = reader.readLine()) != null) {
@@ -133,6 +131,7 @@ public class RunTest implements Command {
             if (file != null) {
                 try {
                     file.close();
+                    assert reader != null;
                     reader.close();
 
                 } catch (IOException e) {
@@ -158,10 +157,10 @@ public class RunTest implements Command {
             if (output != null) {
                 try {
                     output.close();
-                    System.out.println("writing file " + fileName +" closing" );
+                    System.out.println("writing file " + fileName + " closing");
                 } catch (IOException e) {
                     e.printStackTrace();
-                    System.out.println("writing file " + fileName +" IOException" );
+                    System.out.println("writing file " + fileName + " IOException");
                 }
             }
         }

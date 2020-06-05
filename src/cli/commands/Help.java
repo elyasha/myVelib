@@ -23,9 +23,7 @@ public class Help implements Command {
             } else {
                 String[] argsCommand = new String[args.length - 1];
 
-                for (int j = 1; j < args.length; j++) {
-                    argsCommand[j - 1] = args[j];
-                }
+                System.arraycopy(args, 1, argsCommand, 0, args.length - 1);
                 // sout the help for the particular command
                 // Check the type of first argument and delegate the work for each class
                 switch (args[0]) {
@@ -72,7 +70,6 @@ public class Help implements Command {
                         break;
                     default:
                         System.out.println("Not the good usage of the myVelib program. Please see the documentation [myvelib help [COMMAND]]");
-                        // TODO: Learn how to use exceptions and error in Java
                 }
 
             }
@@ -101,11 +98,7 @@ public class Help implements Command {
             // Check if the input is a real command
             // TODO: Create a file to store constants (list of commands)
             List<String> commandList = Arrays.asList("addManager", "addUser", "display", "displayStation", "displayUser", "exit", "help", "offline", "online", "rentBicycle", "returnBicycle", "runTest", "setup", "sortStation");
-            if (commandList.contains(args[0])) {
-                return true;
-            } else {
-                return false;
-            }
+            return commandList.contains(args[0]);
         }
         return false;
     }

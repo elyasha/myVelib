@@ -82,11 +82,10 @@ public class Offline implements Command {
             int integerValue = Integer.parseInt(args[1]);
         } catch (NumberFormatException numberFormatException) {
             System.out.println(numberFormatException.getMessage());
-            ;
             System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
             return false;
         }
-        return args.length == 2;
+        return true;
     }
 }
 
