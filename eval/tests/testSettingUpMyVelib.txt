@@ -1,4 +1,4 @@
-setup velib1 numberOfStations numberOfSlots squareSide numberOfBicycles
-addUser Matheus none velib1
+setup velib1 100 100 10000 5
+addUser Matheus None velib1
 addUser Charlito Vmax velib1
 addUser Valdisa Vlibre velib1

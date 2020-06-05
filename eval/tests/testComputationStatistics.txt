@@ -9,6 +9,4 @@ returnBicycle 2 8 50
 rentBicycle 3 1
 returnBicycle 3 2 100
 rentBicycle 1 1
-returnBicycle 1 2 800
-sortStation myvelib mostUsed
-sortStation myvelib leastOccupied
+returnBicycle 1 1 800

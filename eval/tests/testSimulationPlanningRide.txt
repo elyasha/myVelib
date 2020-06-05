@@ -1,6 +1,6 @@
-setup velib1 numberOfStations numberOfSlots squareSide numberOfBicycles
-addUser Matheus none velib1
+setup velib1 100 100 100 5
+addUser Matheus None velib1
 addUser Charlito Vmax velib1
 addUser Valdisa Vlibre velib1
-rentBicycle userID stationID
-returnBicycle userID stationID time
+rentBicycle 1 1
+returnBicycle 1 2 300

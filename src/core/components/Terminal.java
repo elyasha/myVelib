@@ -147,7 +147,7 @@ public final class Terminal {
         user.setRentStationID(-1); // an impossible id
 
         // Change the state of parkingSlot
-        ParkingSlot slot = station.getParkingSlotTypeBicycle(bicycle);
+        ParkingSlot slot = station.getOneFreeSlot();
         slot.setState(1);
         slot.setBicycle(bicycle);
 

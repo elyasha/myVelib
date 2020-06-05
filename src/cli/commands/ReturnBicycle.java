@@ -20,30 +20,33 @@ public class ReturnBicycle implements Command {
      * @param args the arguments of the command
      */
     public static void main(String[] args) {
+        System.out.println("The returnBicycle command!");
+
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The returnBike command!");
-        }
-        //TODO: Take time into account
-        List<MyVelibSystem> systems = CoreApp.getSystems();
-        boolean alreadyFind = false;
-        for (MyVelibSystem system : systems) {
-            for (User user : system.getUsers()) {
-                if (user.getId() == Integer.parseInt(args[0]) && !alreadyFind) {
-                    for (Station station : system.getStations()) {
-                        if (station.getId() == Integer.parseInt(args[1])) {
-                            station.getStationTerminal().dropBicycle(user.getBicycle(), user, station);
-                            alreadyFind = true;
+            //TODO: Take time into account
+            List<MyVelibSystem> systems = CoreApp.getSystems();
+            boolean alreadyFind = false;
+            for (MyVelibSystem system : systems) {
+                for (User user : system.getUsers()) {
+                    if (user.getId() == Integer.parseInt(args[0]) && !alreadyFind) {
+                        for (Station station : system.getStations()) {
+                            if (station.getId() == Integer.parseInt(args[1])) {
+                                station.getStationTerminal().dropBicycleWithIntervalOfTime(user.getBicycle(), user, station, Double.parseDouble(args[2]));
+                                alreadyFind = true;
+                                break;
+                            }
                         }
                     }
                 }
             }
+            if (alreadyFind == false) {
+                System.out.println("You cannot drop a bicycle");
+                System.out.println("The station id or/and user id do not exist");
+            }
         }
-        if (alreadyFind == false) {
-            System.out.println("You cannot drop a bicycle");
-            System.out.println("The station id or/and user id do not exist");
-        }
+
     }
 
     /**

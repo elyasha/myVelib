@@ -32,7 +32,9 @@ public class RunTest implements Command {
 
             } else {
 
+
                 String fileName = args[0];
+
 
                 // Read file.txt and execute commands
                 // TODO: check commands. For now, we assume the file has no errors
@@ -125,7 +127,8 @@ public class RunTest implements Command {
                 returnValue.add(line);
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println("The file cannot be found! If you are running tests, please use (without the {} and change nameOfTheTest):");
+            System.out.println("runTest eval\\tests\\{nameOfTheTest}.txt");
         } finally {
             if (file != null) {
                 try {

@@ -26,7 +26,6 @@ public class AddUser implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The addUser command!");
             // Check if the system exists in the application
 
             List<MyVelibSystem> systems = CoreApp.getSystems();

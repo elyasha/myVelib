@@ -23,12 +23,11 @@ public class AddManager implements Command {
      * @param args the arguments of the command
      */
     public static void main(String[] args) {
+        System.out.println("The addManager command!");
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The addManager command!");
             // Check if the system exists in the application
-
             List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             for (MyVelibSystem system : systems) {

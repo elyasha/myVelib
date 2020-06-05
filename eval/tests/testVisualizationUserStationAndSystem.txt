@@ -1,5 +1,5 @@
 setup velib1 10 10 100 5
-addManager Matheus none velib1
+addManager Matheus None velib1
 addUser Charlito Vmax velib1
 addUser Valdisa Vlibre velib1
 rentBicycle 1 1
