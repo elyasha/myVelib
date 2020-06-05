@@ -5,6 +5,9 @@ import org.junit.Test;
 import static cli.commands.Online.hasGoodInput;
 import static org.junit.Assert.*;
 
+/**
+ * Testing Online Class
+ */
 public class OnlineTest {
 
     @Test
@@ -12,6 +15,9 @@ public class OnlineTest {
         //TODO
     }
 
+    /**
+     * Testing good input arguments
+     */
     @Test
     public void hasGoodInput1() {
         //[velibnetworkName, stationID]
@@ -19,18 +25,27 @@ public class OnlineTest {
         assertTrue(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput2() {
         String[] args = {"myVelib", "stringArg"};
         assertFalse(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput3() {
         String[] args = {};
         assertFalse(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput4() {
         String[] args = {"myVelib", "1", "arg3"};

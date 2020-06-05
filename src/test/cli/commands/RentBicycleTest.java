@@ -5,12 +5,18 @@ import org.junit.Test;
 import static cli.commands.RentBicycle.hasGoodInput;
 import static org.junit.Assert.*;
 
+/**
+ * Testing RentBicycle Class
+ */
 public class RentBicycleTest {
 
     @Test
     public void main() {
     }
 
+    /**
+     * Testing good input arguments
+     */
     @Test
     public void hasGoodInput1() {
         //[userID, stationID]
@@ -18,6 +24,9 @@ public class RentBicycleTest {
         assertTrue(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput2() {
         //[userID, stationID]
@@ -25,6 +34,9 @@ public class RentBicycleTest {
         assertFalse(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput3() {
         //[userID, stationID]
@@ -32,6 +44,9 @@ public class RentBicycleTest {
         assertFalse(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput4() {
         //[userID, stationID]

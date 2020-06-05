@@ -5,12 +5,18 @@ import org.junit.Test;
 import static cli.commands.RunTest.hasGoodInput;
 import static org.junit.Assert.*;
 
+/**
+ * Testing RunTest Class
+ */
 public class RunTestTest {
 
     @Test
     public void main() {
     }
 
+    /**
+     * Testing good input arguments
+     */
     @Test
     public void hasGoodInput1() {
         //[FileName.txt]
@@ -18,6 +24,9 @@ public class RunTestTest {
         assertTrue(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput2() {
         //[FileName.txt]

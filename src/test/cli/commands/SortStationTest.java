@@ -5,12 +5,18 @@ import org.junit.Test;
 import static cli.commands.SortStation.hasGoodInput;
 import static org.junit.Assert.*;
 
+/**
+ * Testing SortStation Class
+ */
 public class SortStationTest {
 
     @Test
     public void main() {
     }
 
+    /**
+     * Testing good input arguments
+     */
     @Test
     public void hasGoodInput1() {
         //[velibnetworkName, sortpolicy]
@@ -18,6 +24,9 @@ public class SortStationTest {
         assertTrue(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput2() {
         //[velibnetworkName, sortpolicy]
@@ -25,6 +34,9 @@ public class SortStationTest {
         assertTrue(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput3() {
         //[velibnetworkName, sortpolicy]
@@ -32,6 +44,9 @@ public class SortStationTest {
         assertFalse(hasGoodInput(args));
     }
 
+    /**
+     * Testing bad input arguments
+     */
     @Test
     public void hasGoodInput4() {
         //[velibnetworkName, sortpolicy]
