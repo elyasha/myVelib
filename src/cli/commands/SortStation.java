@@ -22,7 +22,7 @@ public class SortStation implements Command {
      * @param args the arguments of the command
      */
     public static void main(String[] args) {
-        System.out.println("The sortStation command!");
+        System.out.println("The sortStation command");
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
@@ -45,7 +45,7 @@ public class SortStation implements Command {
 
     private static void leastOccupiedStationStrategy(String[] args) {
         // TODO: Implement the leastOccupied policy
-        System.out.println("Not yet implemented! Sorry, but the developers are working on it!");
+        System.out.println("Not yet implemented. Sorry, but the developers are working on it.");
     }
 
     /**
@@ -54,7 +54,7 @@ public class SortStation implements Command {
      * @param args the arguments of the command
      */
     public static void helpCommand(String[] args) {
-        System.out.println("The sortStation command!");
+        System.out.println("The sortStation command.");
         System.out.println("sortStation<velibnetworkName, sortpolicy> : to display the stations in increasing order w.r.t. to the sorting policy (as of Section 2.4) of user sortpolicy.");
         System.out.println("the sortpolicy parameter is optional, if you don't use it. We won't apply any policy");
     }
@@ -63,8 +63,8 @@ public class SortStation implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed.");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**
@@ -81,7 +81,7 @@ public class SortStation implements Command {
         if (args.length == 1) {
             try {
                 int integerValue = Integer.parseInt(args[0]);
-                System.out.println("Wrong data type. Expecting a string! Please see your file.txt ;)");
+                System.out.println("Wrong data type. Expecting a string. Please see your file.txt ;)");
                 return false;
             } catch (NumberFormatException numberFormatException) {
                 return true;

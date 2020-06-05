@@ -82,8 +82,8 @@ public class Help implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**

@@ -14,7 +14,7 @@ public class Exit implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The exit command!");
+            System.out.println("The exit command");
             System.exit(0);
 
         }
@@ -26,7 +26,7 @@ public class Exit implements Command {
      * @param args the arguments of the command
      */
     public static void helpCommand(String[] args) {
-        System.out.println("The exit command!");
+        System.out.println("The exit command");
         System.out.println("Exit command: this commands exists the myVelib application");
     }
 
@@ -34,8 +34,8 @@ public class Exit implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**

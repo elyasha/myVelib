@@ -25,7 +25,7 @@ public class RunTest implements Command {
 //            System.out.println("The runTest command");
             if (args.length == 0) {
                 // While loop to run commands
-                System.out.println("Please add an argument with the path to the file that you are going to test!");
+                System.out.println("Please add an argument with the path to the file that you are going to test");
                 System.out.println("Usage: runTest [fileName.txt]");
 
             } else {
@@ -63,7 +63,7 @@ public class RunTest implements Command {
 
                     }
                 } else {
-                    System.out.println("You file has a syntax error!");
+                    System.out.println("You file has a syntax error");
                 }
             }
         }
@@ -83,8 +83,8 @@ public class RunTest implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**
@@ -99,7 +99,7 @@ public class RunTest implements Command {
         }
         try {
             int integerValue1 = Integer.parseInt(args[0]);
-            System.out.println("Wrong data type. Expecting a string! Please see your file.txt ;)");
+            System.out.println("Wrong data type. Expecting a string. Please see your file.txt ;)");
             return false;
         } catch (NumberFormatException numberFormatException) {
             return true;
@@ -130,7 +130,7 @@ public class RunTest implements Command {
                 returnValue.add(line);
             }
         } catch (Exception e) {
-            System.out.println("The file cannot be found! If you are running tests, please use (without the {} and change nameOfTheTest):");
+            System.out.println("The file cannot be found. If you are running tests, please use (without the {} and change nameOfTheTest):");
             System.out.println("runTest eval\\tests\\{nameOfTheTest}.txt");
         } finally {
             if (file != null) {

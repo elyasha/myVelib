@@ -30,7 +30,7 @@ public class Setup implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The setup command!");
+            System.out.println("The setup command");
             MyVelibSystem system = getInitialSetupSystem(args);
         }
     }
@@ -41,7 +41,7 @@ public class Setup implements Command {
      * @param args the arguments of the command
      */
     public static void helpCommand(String[] args) {
-        System.out.println("The setup command!");
+        System.out.println("The setup command");
         System.out.println("setup <velibnetworkName>: to create a myVelib network with given name and");
         System.out.println("consisting of 10 stations each of which has 10 parking slots and such that stations");
         System.out.println("are arranged on a square grid whose of side 4km and initially populated with a 75%");
@@ -59,8 +59,8 @@ public class Setup implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**
@@ -84,7 +84,7 @@ public class Setup implements Command {
 
             } catch (NumberFormatException numberFormatException) {
                 System.out.println(numberFormatException.getMessage());
-                System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
+                System.out.println("Wrong data type. Expecting an integer. Please see your file.txt ;)");
                 return false;
             }
         }

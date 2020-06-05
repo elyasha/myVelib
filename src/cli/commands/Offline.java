@@ -21,7 +21,7 @@ public class Offline implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The offline command!");
+            System.out.println("The offline command");
             List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             Station current_station = null;
@@ -56,7 +56,7 @@ public class Offline implements Command {
      * @param args the arguments of the command
      */
     public static void helpCommand(String[] args) {
-        System.out.println("The offline command!");
+        System.out.println("The offline command");
         System.out.println("offline <velibnetworkName, stationID> : to put offline the station stationID of the myVelib network velibnetworkName");
     }
 
@@ -64,8 +64,8 @@ public class Offline implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**
@@ -82,7 +82,7 @@ public class Offline implements Command {
             int integerValue = Integer.parseInt(args[1]);
         } catch (NumberFormatException numberFormatException) {
             System.out.println(numberFormatException.getMessage());
-            System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
+            System.out.println("Wrong data type. Expecting an integer. Please see your file.txt ;)");
             return false;
         }
         return true;

@@ -20,7 +20,7 @@ public class ReturnBicycle implements Command {
      * @param args the arguments of the command
      */
     public static void main(String[] args) {
-        System.out.println("The returnBicycle command!");
+        System.out.println("The returnBicycle command");
 
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
@@ -54,7 +54,7 @@ public class ReturnBicycle implements Command {
      * @param args the arguments of the command
      */
     public static void helpCommand(String[] args) {
-        System.out.println("The returnBicycle command!");
+        System.out.println("The returnBicycle command");
         System.out.println("returnBicycle <userID, stationID, time> : to let the user userID returning a bike to station stationID at a given instant of time time (if no parking bay is available should behave accordingly). This command should display the cost of the rent");
     }
 
@@ -62,8 +62,8 @@ public class ReturnBicycle implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**
@@ -81,7 +81,7 @@ public class ReturnBicycle implements Command {
             int integerValue2 = Integer.parseInt(args[1]);
         } catch (NumberFormatException numberFormatException) {
             System.out.println(numberFormatException.getMessage());
-            System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
+            System.out.println("Wrong data type. Expecting an integer. Please see your file.txt ;)");
             return false;
         }
         return true;

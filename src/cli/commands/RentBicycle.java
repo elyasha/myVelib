@@ -25,7 +25,7 @@ public class RentBicycle implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The rentBicycle command!");
+            System.out.println("The rentBicycle command");
             List<MyVelibSystem> systems = CoreApp.getSystems();
             boolean alreadyFind = false;
             for (MyVelibSystem system : systems) {
@@ -53,7 +53,7 @@ public class RentBicycle implements Command {
      * @param args the arguments of the command
      */
     public static void helpCommand(String[] args) {
-        System.out.println("The rentBicycle command!");
+        System.out.println("The rentBicycle command");
         System.out.println("rentBicycle <userID, stationID> : to let the user userID renting a bike from station stationID (if no bikes are available should behave accordingly)");
 
     }
@@ -62,8 +62,8 @@ public class RentBicycle implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**
@@ -81,7 +81,7 @@ public class RentBicycle implements Command {
             int integerValue2 = Integer.parseInt(args[1]);
         } catch (NumberFormatException numberFormatException) {
             System.out.println(numberFormatException.getMessage());
-            System.out.println("Wrong data type. Expecting an integer! Please see your file.txt ;)");
+            System.out.println("Wrong data type. Expecting an integer. Please see your file.txt ;)");
             return false;
         }
         return true;

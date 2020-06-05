@@ -25,7 +25,7 @@ public class AddUser implements Command {
      * @param args the arguments of the command
      */
     public static void main(String[] args) {
-        System.out.println("The addUser command!");
+        System.out.println("The addUser command");
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
@@ -57,7 +57,7 @@ public class AddUser implements Command {
      */
 
     public static void helpCommand(String[] args) {
-        System.out.println("The addUser command!");
+        System.out.println("The addUser command");
         System.out.println("addUser <userName,cardType, velibnetworkName> :");
         System.out.println("to add a user with name {userName} and card {cardType: Vmax/Vlibre/none}");
         System.out.println("(i.e. ``none'' if the user has no card) to a myVelib network {velibnetworkName}");
@@ -67,8 +67,8 @@ public class AddUser implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument. For help: myvelib help [COMMAND]");
     }
 
     /**
@@ -99,7 +99,7 @@ public class AddUser implements Command {
      * This methods prints a message related to the card type error
      */
     private static void CardTypeError() {
-        System.out.println("There is an error in the card type!");
+        System.out.println("There is an error in the card type");
         System.out.println("Please, add a coherent card type (Vmax, Vlibre, None)");
     }
 }

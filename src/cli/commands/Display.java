@@ -21,7 +21,7 @@ public class Display implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            System.out.println("The display command!");
+            System.out.println("The display command");
             List<MyVelibSystem> systems = CoreApp.getSystems();
             MyVelibSystem currentSystem = null;
             for (MyVelibSystem system : systems) {
@@ -44,7 +44,7 @@ public class Display implements Command {
      * @param args the arguments of the command
      */
     public static void helpCommand(String[] args) {
-        System.out.println("The display command!");
+        System.out.println("The display command");
         System.out.println("display <velibnetworkName>: to display the entire status (stations, parking bays, users) of an a myVelib network velibnetworkName.");
     }
 
@@ -52,8 +52,8 @@ public class Display implements Command {
      * This method implements all the help that will be displayed to the user if he enters a wrong input
      */
     public static void wrongArgumentHelp() {
-        System.out.println("There is a problem with the arguments passed!");
-        System.out.println("Please add some (consistent) argument! For help: myvelib help [COMMAND]");
+        System.out.println("There is a problem with the arguments passed");
+        System.out.println("Please add some (consistent) argument For help: myvelib help [COMMAND]");
     }
 
     /**
