@@ -104,8 +104,6 @@ public class StationApp {
 
         // Calculate other stuff
 
-        // TODO: (Charlito) See if we can add more stuff here and maybe refactor the methods
-
     }
 
     /**
@@ -159,6 +157,6 @@ public class StationApp {
      * @param stations the list of stations that is being used
      */
     public static void sortStationByLeastOccupied(List<Station> stations) {
-        // TODO
+        // TODO: Design method
     }
 }

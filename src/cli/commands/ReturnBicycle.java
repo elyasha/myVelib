@@ -25,7 +25,6 @@ public class ReturnBicycle implements Command {
         if (!hasGoodInput(args)) {
             wrongArgumentHelp();
         } else {
-            //TODO: Take time into account
             List<MyVelibSystem> systems = CoreApp.getSystems();
             boolean alreadyFind = false;
             for (MyVelibSystem system : systems) {

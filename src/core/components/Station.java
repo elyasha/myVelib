@@ -100,7 +100,7 @@ public abstract class Station {
         this.coordinate = coordinate;
         this.onService = onService;
         this.parkingSlots = parkingSlots;
-        this.terminal = new Terminal(onService, this.id); // TODO: Create a TerminalFactory
+        this.terminal = new Terminal(onService, this.id);
         this.money = 0; // the initial money of the station is zero
         this.numberOfDroppings = 0; // the number of droppings is set to zero
     }

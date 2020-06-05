@@ -44,7 +44,6 @@ public class SortStation implements Command {
     }
 
     private static void leastOccupiedStationStrategy(String[] args) {
-        // TODO: [Optional] Design command with policies
         // TODO: Implement the leastOccupied policy
         System.out.println("Not yet implemented! Sorry, but the developers are working on it!");
     }

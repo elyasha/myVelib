@@ -37,7 +37,7 @@ public class RunTest implements Command {
                 // TODO: write on the file output
 
                 // Read file.txt and execute commands
-                // TODO: check commands. For now, we assume the file has no errors
+                // TODO: check commands. For now, we assume the file has no errors. Of course, when executing the file, the commands will output a message saying it has an wrong input
                 List<String> textFile = readTextFile(fileName);
 
 

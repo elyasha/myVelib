@@ -124,9 +124,5 @@ public class UserApp {
         System.out.println("User who paid the most to the system is: " + userWhoPaidTheMost + "!");
         System.out.println();
 
-        // Calculate other stuff
-
-        // TODO: (Charlito) See if we can add more stuff here and maybe refactor the methods
-
     }
 }
