@@ -14,8 +14,14 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Testing the user class
+ */
 public class UserTest {
 
+    /**
+     * Testing the get name
+     */
     @Test
     public void testGetName() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -29,6 +35,9 @@ public class UserTest {
         assertTrue(user.getName() == "Charlito");
     }
 
+    /**
+     * Testing the equals method
+     */
     @Test
     public void testEquals() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -43,6 +52,9 @@ public class UserTest {
         assertFalse(user1.equals(user2));
     }
 
+    /**
+     * Testing the hashCode method
+     */
     @Test
     public void testHashCode() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -57,6 +69,9 @@ public class UserTest {
         assertTrue(user1.hashCode() != user2.hashCode());
     }
 
+    /**
+     * Testing the addCard method
+     */
     @Test
     public void addCard() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -71,6 +86,9 @@ public class UserTest {
         assertTrue(user1.getCard() != null);
     }
 
+    /**
+     * Testing the addMoney method
+     */
     @Test
     public void addMoney() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -85,6 +103,9 @@ public class UserTest {
         assertTrue(user1.getMoney() == 300);
     }
 
+    /**
+     * Testing the removeMoney method
+     */
     @Test
     public void removeMoney() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -99,6 +120,9 @@ public class UserTest {
         assertTrue(user1.getMoney() == 100);
     }
 
+    /**
+     * Testing the addTimeCredit method
+     */
     @Test
     public void addTimeCredit() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -113,6 +137,9 @@ public class UserTest {
         assertTrue(user1.getTimeCreditBalance() == 100);
     }
 
+    /**
+     * Testing the removeTimeCredit method
+     */
     @Test
     public void removeTimeCredit() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -128,6 +155,9 @@ public class UserTest {
         assertTrue(user1.getTimeCreditBalance() == 50);
     }
 
+    /**
+     * Testing rentBicyclePlanning method
+     */
     @Test
     public void rentBicyclePlanning() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -143,6 +173,9 @@ public class UserTest {
         assertTrue(user1.getBicycle().getClass() == bicycle.getClass());
     }
 
+    /**
+     * Testing the dropBicyclePlanning
+     */
     @Test
     public void dropBicyclePlanning() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -159,7 +192,9 @@ public class UserTest {
         assertTrue(user1.getBicycle() == null);
     }
 
-
+    /**
+     * Testing the addRenting method
+     */
     @Test
     public void addRenting() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -175,6 +210,9 @@ public class UserTest {
         assertTrue(user1.getNumberOfRentings() == oldNumberRenting + 1);
     }
 
+    /**
+     * Testing the addSpentTimeOnElectricalBicycle method
+     */
     @Test
     public void addSpentTimeOnElectricalBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -190,6 +228,9 @@ public class UserTest {
         assertTrue(user1.getTimeSpentOnElectricalBicycle() == 120);
     }
 
+    /**
+     * Testing the addSpentTimeOnMechanicalBicycle method
+     */
     @Test
     public void addSpentTimeOnMechanicalBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);

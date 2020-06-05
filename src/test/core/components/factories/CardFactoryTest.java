@@ -10,8 +10,14 @@ import java.awt.*;
 
 import static org.junit.Assert.*;
 
+/**
+ * Testing the card factory class
+ */
 public class CardFactoryTest {
 
+    /**
+     * Testing the creation of Vmax card
+     */
     @Test
     public void addVmax() {
         MyVelibSystem system = new MyVelibSystem();
@@ -26,6 +32,9 @@ public class CardFactoryTest {
 
     }
 
+    /**
+     * Testing the creation of Vlibre
+     */
     @Test
     public void addVlibre() {
         MyVelibSystem system = new MyVelibSystem();
