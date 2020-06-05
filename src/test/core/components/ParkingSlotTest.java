@@ -4,8 +4,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Testing ParkingSlot Class
+ */
 public class ParkingSlotTest {
 
+    /**
+     * Testing tostring method
+     */
     @Test
     public void testToString() {
         ParkingSlot p = new ParkingSlot();
@@ -16,6 +22,9 @@ public class ParkingSlotTest {
         assertEquals(result, p.toString());
     }
 
+    /**
+     * Testing Equals method
+     */
     @Test
     public void testEquals() {
         ParkingSlot p1 = new ParkingSlot();
@@ -24,6 +33,9 @@ public class ParkingSlotTest {
         assertNotEquals(p1, p2);
     }
 
+    /**
+     * Testing Hashcode method
+     */
     @Test
     public void testHashCode() {
         ParkingSlot p1 = new ParkingSlot();

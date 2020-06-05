@@ -10,8 +10,14 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Testing Station Class
+ */
 public class StationTest {
 
+    /**
+     * Testing getExistTypeBike method
+     */
     @Test
     public void getExistTypeBikeTest() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -20,6 +26,9 @@ public class StationTest {
         assertTrue(station.getExistTypeBike(bicycle));
     }
 
+    /**
+     * Testing hasAvailableElectricalBicycle method
+     */
     @Test
     public void hasAvailableElectricalBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -28,6 +37,9 @@ public class StationTest {
         assertTrue(station.hasAvailableElectricalBicycle());
     }
 
+    /**
+     * Testing hasAvailableMechanicalBicycle method
+     */
     @Test
     public void hasAvailableMechanicalBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createMechanicalBicycleSlots(10);
@@ -36,6 +48,9 @@ public class StationTest {
         assertTrue(station.hasAvailableMechanicalBicycle());
     }
 
+    /**
+     * Testing hasOneSlotFree method
+     */
     @Test
     public void hasOneSlotFree() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createFreeParkingSlots(10);
@@ -43,6 +58,9 @@ public class StationTest {
         assertTrue(station.hasOneSlotFree());
     }
 
+    /**
+     * Testing getOneFreeSlot method
+     */
     @Test
     public void getOneFreeSlot() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createFreeParkingSlots(10);
@@ -53,6 +71,9 @@ public class StationTest {
         assertTrue(hasOneSlotFree);
     }
 
+    /**
+     * Testing getParkingSlotTypeBicycle method
+     */
     @Test
     public void getParkingSlotTypeBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createMechanicalBicycleSlots(10);
@@ -64,6 +85,9 @@ public class StationTest {
         assertTrue(hasOneSlotFree);
     }
 
+    /**
+     * Testing getElectricalParkingSlot method
+     */
     @Test
     public void getElectricalParkingSlot() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -75,6 +99,9 @@ public class StationTest {
         assertTrue(hasOneSlotFree);
     }
 
+    /**
+     * Testing getMechanicalParkingSlot method
+     */
     @Test
     public void getMechanicalParkingSlot() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -86,6 +113,9 @@ public class StationTest {
         assertTrue(hasOneSlotFree);
     }
 
+    /**
+     * Testing addMoney method
+     */
     @Test
     public void addMoney() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -94,6 +124,9 @@ public class StationTest {
         assertTrue(station.getMoney() == 200);
     }
 
+    /**
+     * Testing removeMoney method
+     */
     @Test
     public void removeMoney() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -102,6 +135,9 @@ public class StationTest {
         assertTrue(station.getMoney() == 0);
     }
 
+    /**
+     * Testing addNumberOfDroppings method
+     */
     @Test
     public void addNumberOfDroppings() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);

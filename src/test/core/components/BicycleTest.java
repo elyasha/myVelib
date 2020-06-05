@@ -5,9 +5,14 @@ import org.junit.Before;
 
 import static org.junit.Assert.*;
 
+/**
+ * Testing Bicycle Class
+ */
 public class BicycleTest {
 
-
+    /**
+     * Testing toString method
+     */
     @org.junit.Test
     public void testToString() {
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
@@ -16,6 +21,9 @@ public class BicycleTest {
         assertEquals(result, bicycle.toString());
     }
 
+    /**
+     * Testing equals method
+     */
     @org.junit.Test
     public void testEquals() {
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();
@@ -23,6 +31,9 @@ public class BicycleTest {
         assertNotEquals(bicycle, bicycle1);
     }
 
+    /**
+     * Testing hashcode method
+     */
     @org.junit.Test
     public void testHashCode() {
         Bicycle bicycle = BicycleFactory.createMechanicalBicycle();

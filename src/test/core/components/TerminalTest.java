@@ -14,8 +14,14 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Testing Terminal Class
+ */
 public class TerminalTest {
 
+    /**
+     * Testing rentBicycle method
+     */
     @Test
     public void rentBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);
@@ -32,7 +38,9 @@ public class TerminalTest {
         assertTrue(user.getBicycle() != null);
     }
 
-
+    /**
+     * Testing dropBicycle method
+     */
     @Test
     public void dropBicycle() {
         List<ParkingSlot> listPark = ParkingSlotsFactory.createElectricalBicycleSlots(10);

@@ -4,8 +4,14 @@ import core.components.factories.CardFactory;
 
 import static org.junit.Assert.*;
 
+/**
+ * Testing Card Class
+ */
 public class CardTest {
 
+    /**
+     * Testing toString method
+     */
     @org.junit.Test
     public void testToString() {
         Card card = new Vmax();
@@ -15,6 +21,9 @@ public class CardTest {
         assertEquals(result, card.toString());
     }
 
+    /**
+     * Testing equals method
+     */
     @org.junit.Test
     public void testEquals() {
         Card card1 = new Vlibre();
@@ -23,6 +32,9 @@ public class CardTest {
         assertNotEquals(card1, card2);
     }
 
+    /**
+     * Testing hashcode method
+     */
     @org.junit.Test
     public void testHashCode() {
         Card card1 = new Vlibre();

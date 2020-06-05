@@ -10,9 +10,14 @@ import java.util.List;
 
 
 import static org.junit.Assert.*;
-
+/**
+ * Testing SortStationByMostUsed Class
+ */
 public class SortStationByMostUsedTest {
 
+    /**
+     * Testing compare method
+     */
     @Test
     public void compare1() {
         // super(coordinate, onService, parkingSlots, money, numberOfDroppings);
