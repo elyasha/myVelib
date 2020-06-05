@@ -103,6 +103,10 @@ public class SortStation implements Command {
     }
 
 
+    /**
+     * Strategy to order station by the most used
+     * @param args: system we want to analyze
+     */
     private static void mostUsedStationStrategy(String[] args) {
         System.out.println("The sortStation command without policies (will show the most used policy)");
         List<MyVelibSystem> systems = CoreApp.getSystems();

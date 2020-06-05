@@ -44,7 +44,6 @@ public class RentBicycle implements Command {
                 System.out.println("You cannot rent a bicycle");
                 System.out.println("The station id or/and user id do not exist");
             }
-            // TODO: Study parameters
         }
     }
 
