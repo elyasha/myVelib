@@ -38,7 +38,7 @@ public class RentingApp {
 
             } else if (card instanceof Vmax) {
                 if (intervalOfTime.getHours() >= 1) {
-                    cost = (intervalOfTime.getHours() * 1);
+                    cost = (intervalOfTime.getHours());
                 } else {
                     cost = 0;
                 }
@@ -49,14 +49,14 @@ public class RentingApp {
         } else if (bicycle instanceof MechanicalBicycle) {
             if (card instanceof Vlibre) {
                 if (intervalOfTime.getHours() >= 1) {
-                    cost = (intervalOfTime.getHours() * 1);
+                    cost = (intervalOfTime.getHours());
                 } else {
                     cost = 0; // TODO: Learn know to import CSV file
                 }
 
             } else if (card instanceof Vmax) {
                 if (intervalOfTime.getHours() >= 1) {
-                    cost = (intervalOfTime.getHours() * 1);
+                    cost = (intervalOfTime.getHours());
                 } else {
                     cost = 0; // TODO: Learn know to import CSV file
                 }

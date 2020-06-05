@@ -30,7 +30,7 @@ public class PlanningApp {
         Station bestStationStart = null;
         Station bestStationEnd = null;
         List<Station> allStations = system.getStations();
-        List<Station> bestStations = new ArrayList<Station>(2);
+        List<Station> bestStations = new ArrayList<>(2);
 
 
         for (Station station : allStations) {
