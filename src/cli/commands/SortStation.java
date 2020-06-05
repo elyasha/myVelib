@@ -104,7 +104,7 @@ public class SortStation implements Command {
 
 
     private static void mostUsedStationStrategy(String[] args) {
-        System.out.println("The sortStation command without policies (will show the most used policy(!");
+        System.out.println("The sortStation command without policies (will show the most used policy)");
         List<MyVelibSystem> systems = CoreApp.getSystems();
         MyVelibSystem currentSystem = null;
         for (MyVelibSystem system : systems) {
