@@ -108,6 +108,7 @@ public class RunTest implements Command {
 
     /**
      * This method reads text file
+     *
      * @param fileName: name of the file we want to read
      * @return: string that wad contained in the fileName
      */
@@ -152,8 +153,9 @@ public class RunTest implements Command {
 
     /**
      * This method writes in a text file
+     *
      * @param fileName: name of the file we want to read
-     * @param s: what we want to write in the file
+     * @param s:        what we want to write in the file
      */
     public static void writeTextFile(String fileName, String s) {
         FileWriter output = null;

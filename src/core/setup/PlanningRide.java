@@ -18,6 +18,7 @@ public class PlanningRide {
 
     /**
      * The main method for planning ride
+     *
      * @param args arguments
      */
     public static void main(String[] args) {

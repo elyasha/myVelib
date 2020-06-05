@@ -105,6 +105,7 @@ public class SortStation implements Command {
 
     /**
      * Strategy to order station by the most used
+     *
      * @param args: system we want to analyze
      */
     private static void mostUsedStationStrategy(String[] args) {

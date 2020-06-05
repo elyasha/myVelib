@@ -16,6 +16,7 @@ public class ComputationStatistics {
 
     /**
      * The main method for the computation statistics
+     *
      * @param args arguments
      */
     public static void main(String[] args) {
