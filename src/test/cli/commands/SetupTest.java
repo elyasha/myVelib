@@ -5,12 +5,21 @@ import org.junit.Test;
 import static cli.commands.Setup.hasGoodInput;
 import static org.junit.Assert.*;
 
+/**
+ * Testing SetupTest class
+ */
 public class SetupTest {
 
+    /**
+     * Test that need to be implemented
+     */
     @Test
     public void main() {
     }
 
+    /**
+     * Testing has good input
+     */
     @Test
     public void hasGoodInput1() {
         //[velibnetworkName]
@@ -20,6 +29,9 @@ public class SetupTest {
         assertTrue(hasGoodInput(args));
     }
 
+    /**
+     * Testing has good input
+     */
     @Test
     public void hasGoodInput2() {
         //[velibnetworkName]
@@ -29,6 +41,9 @@ public class SetupTest {
         assertFalse(hasGoodInput(args));
     }
 
+    /**
+     * Testing has good input
+     */
     @Test
     public void hasGoodInput3() {
         //[velibnetworkName]

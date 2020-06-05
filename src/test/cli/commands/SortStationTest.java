@@ -10,6 +10,9 @@ import static org.junit.Assert.*;
  */
 public class SortStationTest {
 
+    /**
+     * Test that need to be implemented
+     */
     @Test
     public void main() {
     }

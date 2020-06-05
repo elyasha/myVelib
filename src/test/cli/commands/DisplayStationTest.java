@@ -9,6 +9,9 @@ import static org.junit.Assert.*;
  */
 public class DisplayStationTest {
 
+    /**
+     * Test that need to be implemented
+     */
     @Test
     public void main() {
         //TODO
