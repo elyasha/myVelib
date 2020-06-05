@@ -10,10 +10,14 @@ import core.system.MyVelibSystem;
 import java.util.List;
 
 /**
- * The InitialSetup class : This is the class to implement the computation statistics of a myvelib system or network
+ * The ComputationStatistics class : This is the class to implement the computation statistics of a myvelib system or network
  */
 public class ComputationStatistics {
 
+    /**
+     * The main method for the computation statistics
+     * @param args arguments
+     */
     public static void main(String[] args) {
 
         // Setup the system

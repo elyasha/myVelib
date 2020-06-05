@@ -6,7 +6,7 @@ import java.sql.Time;
 import java.time.LocalTime;
 
 /**
- * The Main class of renting module : This class contains all algorithms that are needed during the renting process.
+ * The RentingApp class of renting module : This class contains all algorithms that are needed during the renting process.
  * This class is called when a User need to rent a bicycle
  */
 public class RentingApp {
@@ -85,7 +85,7 @@ public class RentingApp {
         double hours;
 
         if (timeCredit < 0) {
-            System.out.println("ERROR ! TIME CREDIT MUST BE POSITIVE");
+            System.out.println("ERROR: TIME CREDIT MUST BE POSITIVE");
         }
         if (timeCredit == 0) {
             cost = getCostWithoutTimeCredit(bicycle, card, intervalOfTime);

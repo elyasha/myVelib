@@ -454,7 +454,7 @@ public abstract class Station {
      */
     public void removeMoney(double money) {
         if (this.money - money < 0) {
-            System.out.println("ERROR! You don't have the money bro.");
+            System.out.println("ERROR: You don't have the money.");
         } else {
             this.money -= money;
         }

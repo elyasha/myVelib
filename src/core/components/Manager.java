@@ -49,7 +49,7 @@ public class Manager extends User {
         }
 
         if (currentUser == null) {
-            System.out.println("This user is not in the system!");
+            System.out.println("This user is not in the system");
         } else {
             System.out.println(currentUser);
         }
@@ -80,7 +80,7 @@ public class Manager extends User {
         }
 
         if (currentStation == null) {
-            System.out.println("The station does not exist in our system!");
+            System.out.println("The station does not exist in our system");
         } else {
             System.out.println();
             System.out.println("STATION REPORT");

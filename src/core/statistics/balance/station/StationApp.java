@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * The Main class in statistics.balance.station : This class has all the algorithms and methods that we need to calculate the statistics
+ * The StationApp class in statistics.balance.station : This class has all the algorithms and methods that we need to calculate the statistics
  * in the application for stations, that is to say, plus stations and standard stations.
  */
 public class StationApp {

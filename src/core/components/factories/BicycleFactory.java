@@ -27,7 +27,7 @@ public class BicycleFactory {
             freeSlot.setState(1);
             freeSlot.setBicycle(bicycle);
         } else {
-            System.out.println("There is no available slot!");
+            System.out.println("There is no available slot");
         }
 
 
@@ -60,7 +60,7 @@ public class BicycleFactory {
             freeSlot.setState(1);
             freeSlot.setBicycle(bicycle);
         } else {
-            System.out.println("There is no available slot!");
+            System.out.println("There is no available slot");
         }
     }
 

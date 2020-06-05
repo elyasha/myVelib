@@ -77,14 +77,14 @@ public final class Terminal {
 
         // A user can only rent 1 bicycle
         if (user.getBicycle() != null) {
-            System.out.println("You cannot rent another bicycle! Please drop your bicycle first.");
+            System.out.println("You cannot rent another bicycle. Please drop your bicycle first.");
         } else {
             // If there is a bicycle available
-            System.out.println("Here you go!" + user);
+            System.out.println("Here you go. " + user.getName());
             if (bicycle instanceof ElectricalBicycle) {
-                System.out.println("A electrical bicycle!");
+                System.out.println("A electrical bicycle");
             } else if (bicycle instanceof MechanicalBicycle) {
-                System.out.println("A mechanical bicycle!");
+                System.out.println("A mechanical bicycle");
             }
 
             // Save rentTime
@@ -127,7 +127,7 @@ public final class Terminal {
         // Compute the rent cost for the user
         double rentCost = RentingApp.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
 
-        // Take the money of the user !!!!
+        // Take the money of the user
         RentingApp.chargingUser(user, rentCost, station);
 
         // Add user spent time to the type of bicycle
@@ -136,7 +136,7 @@ public final class Terminal {
         } else if (bicycle instanceof MechanicalBicycle) {
             user.addSpentTimeOnMechanicalBicycle(intervalOfTime);
         } else {
-            System.out.println("ERROR!");
+            System.out.println("ERROR");
         }
 
         // Changer rentTime
@@ -154,7 +154,7 @@ public final class Terminal {
         // Return bicycle
         System.out.println();
         System.out.println(user);
-        System.out.println("You rent is finalized!");
+        System.out.println("You rent is finalized");
         System.out.println("Your ride cost : " + rentCost);
 
         station.addNumberOfDroppings(1);
@@ -183,7 +183,7 @@ public final class Terminal {
             // Compute the rent cost for the user
             double rentCost = RentingApp.getCostWithTimeCredit(bicycle, user.getCard(), intervalOfTimeTIME, user.getTimeCreditBalance(), user);
 
-            // Take the money of the user !!!!
+            // Take the money of the user
             RentingApp.chargingUser(user, rentCost, station);
 
             // Changer rentTime
@@ -200,7 +200,7 @@ public final class Terminal {
 
             // Return bicycle
             System.out.println();
-            System.out.println(user + "You rent is finalized!");
+            System.out.println(user + "You rent is finalized.");
             System.out.println();
             System.out.println(rentCost);
 

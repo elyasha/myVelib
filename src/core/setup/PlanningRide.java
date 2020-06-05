@@ -16,7 +16,10 @@ import java.awt.*;
  */
 public class PlanningRide {
 
-
+    /**
+     * The main method for planning ride
+     * @param args arguments
+     */
     public static void main(String[] args) {
 
         // Setup the system
@@ -49,7 +52,7 @@ public class PlanningRide {
         }
 
         if (user == null) {
-            System.out.println("User does not exist in the system!");
+            System.out.println("User does not exist in the system");
         } else {
             user.rentBicyclePlanning(system, startPoint, endPoint, BicycleFactory.createMechanicalBicycle());
         }

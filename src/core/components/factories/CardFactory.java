@@ -26,7 +26,7 @@ public class CardFactory {
             user.setCard(vmax);
 
         } else {
-            System.out.println("User is not in the system or has already a card!");
+            System.out.println("User is not in the system or has already a card");
         }
     }
 
@@ -44,7 +44,7 @@ public class CardFactory {
             user.setCard(vlibre);
 
         } else {
-            System.out.println("User is not in the system or has already a card!");
+            System.out.println("User is not in the system or has already a card");
         }
     }
 }

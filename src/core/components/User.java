@@ -434,7 +434,7 @@ public class User {
         } else if (cardType.equalsIgnoreCase("None")) {
             this.setCard(null);
         } else {
-            System.out.println("Error! The type does not exist.");
+            System.out.println("Error: The type does not exist.");
         }
     }
 
@@ -454,7 +454,7 @@ public class User {
      */
     public void removeMoney(double money) {
         if (this.money - money < 0) {
-            System.out.println("ATTENTION! You are negative.");
+            System.out.println("ATTENTION: You are negative.");
         }
         this.money -= money;
 
@@ -476,7 +476,7 @@ public class User {
      */
     public void removeTimeCredit(double time) {
         if (this.timeCreditBalance - time < 0) {
-            System.out.println("You cannot have a negative time credit balance!");
+            System.out.println("You cannot have a negative time credit balance");
         } else {
             this.timeCreditBalance -= time;
         }
@@ -524,7 +524,7 @@ public class User {
 
         // Check if the user has indeed a bicycle
         if (this.bicycle == null) {
-            System.out.println("You have not a bicycle!!!");
+            System.out.println("You have not a bicycle");
         } else {
             // Get best start and end stations
             allStations = PlanningApp.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
@@ -555,7 +555,7 @@ public class User {
 
         // Check if the user has indeed a bicycle
         if (this.bicycle == null) {
-            System.out.println("You have not a bicycle!!!");
+            System.out.println("You have not a bicycle");
         } else {
             // Get best start and end stations
             allStations = PlanningApp.getBestStation(system, coordsStart, coordsEnd, this.bicycle);
@@ -617,8 +617,8 @@ public class User {
             this.seeMyStatus();
             System.out.println();
         } else {
-            System.out.println("You are not allowed to see other people information!");
-            System.out.println("Please ask a manager for this information!");
+            System.out.println("You are not allowed to see other people information");
+            System.out.println("Please ask a manager for this information");
             System.out.println();
         }
 
@@ -648,7 +648,7 @@ public class User {
             }
 
             if (currentStation == null) {
-                System.out.println("The station does not exist in our system!");
+                System.out.println("The station does not exist in our system");
             } else {
                 System.out.println();
                 System.out.println("STATION REPORT");

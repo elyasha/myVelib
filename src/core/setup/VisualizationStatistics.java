@@ -10,6 +10,10 @@ import core.system.MyVelibSystem;
 public class VisualizationStatistics {
 
 
+    /**
+     * The main method for the VisualizationStatistics class
+     * @param args arguments
+     */
     public static void main(String[] args) {
 
         // Setup the system

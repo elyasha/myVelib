@@ -200,7 +200,7 @@ public class MyVelibSystem {
         }
 
         if (station == null) {
-            System.out.println("ERROR ! There is no station with this stationID!");
+            System.out.println("ERROR: There is no station with this stationID");
         }
 
         // Get user with userID
@@ -212,7 +212,7 @@ public class MyVelibSystem {
         }
 
         if (user == null) {
-            System.out.println("ERROR ! There is no user with this userID!");
+            System.out.println("ERROR: There is no user with this userID");
         }
 
         // Ask user for the bicycle type
@@ -240,7 +240,7 @@ public class MyVelibSystem {
                 station.getStationTerminal().rentBicycle(electricalBicycle, user, station);
                 // Make parking slot free
             } else {
-                System.out.println("ERROR ! There are no electrical bicycles!");
+                System.out.println("ERROR: There are no electrical bicycles");
             }
         } else {
             Bicycle mechanicalBicycle = new MechanicalBicycle();
@@ -252,7 +252,7 @@ public class MyVelibSystem {
                 station.getStationTerminal().rentBicycle(mechanicalBicycle, user, station);
                 // Make parking slot free
             } else {
-                System.out.println("ERROR ! There are no mechanical bicycles!");
+                System.out.println("ERROR: There are no mechanical bicycles");
             }
         }
 
@@ -275,7 +275,7 @@ public class MyVelibSystem {
      */
     public void removeMoney(double money) {
         if (this.money - money < 0) {
-            System.out.println("ERROR! You don't have the money bro.");
+            System.out.println("ERROR: You don't have the money");
         } else {
             this.money -= money;
         }
