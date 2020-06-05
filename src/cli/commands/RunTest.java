@@ -106,21 +106,22 @@ public class RunTest implements Command {
         }
     }
 
+
     /**
-     * This method reads text file
+     * This method reads text file path
      *
-     * @param fileName: name of the file we want to read
-     * @return: string that wad contained in the fileName
+     * @param filePath path of the file we want to read
+     * @return string that wad contained in the filePath
      */
-    public static List<String> readTextFile(String fileName) {
+    public static List<String> readTextFile(String filePath) {
 
         List<String> returnValue = new ArrayList<>();
         FileReader file = null;
         BufferedReader reader = null;
 
         try {
-            // open input stream pointing at fileName
-            file = new FileReader(fileName);
+            // open input stream pointing at filePath
+            file = new FileReader(filePath);
 
             // open input buffered reader to read file line by line
             reader = new BufferedReader(file);
@@ -141,7 +142,7 @@ public class RunTest implements Command {
                     reader.close();
 
                 } catch (IOException e) {
-                    System.out.println("File not found: " + fileName);
+                    System.out.println("File not found: " + filePath);
                     // Ignore issues during closing
                 }
             }
