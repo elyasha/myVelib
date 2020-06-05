@@ -4,9 +4,6 @@ import core.components.Station;
 import core.components.User;
 import core.system.MyVelibSystem;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 /**
  * The VisualizationStatistics class : It is responsible to test and implement the visualization part of the project
  */
@@ -56,7 +53,7 @@ public class VisualizationStatistics {
 //    system
 
         system.displaySystemReport();
-//6. the system displays a summary report of the system (including list of online/offine
+//6. the system displays a summary report of the system (including list of online/offline
 //            stations, list of users of myVelib , etc.)
 
     }

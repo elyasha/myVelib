@@ -146,7 +146,7 @@ public class InitialSetup {
             allSlots = Stream.concat(allSlots.stream(), electricalSlots.stream()).collect(Collectors.toList());
 
             // stations
-            List<Station> stations = new ArrayList<Station>();
+            List<Station> stations = new ArrayList<>();
             Station station = null;
             Random rand = new Random();
 

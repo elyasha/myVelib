@@ -1,6 +1,5 @@
 package core.setup;
 
-import core.components.Bicycle;
 import core.components.User;
 import core.components.factories.BicycleFactory;
 import core.components.factories.PointFactory;

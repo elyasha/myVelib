@@ -22,7 +22,7 @@ public class ComputationStatistics {
 
 //        Computation of statistics
 //        1. the myVelib system stores relevant data in form of records representing N rental bike
-//        simulations (by diferent users, on diferent stations, and with diferent duration)
+//        simulations (by different users, on different stations, and with different duration)
         // User without card
         User userWithoutCard = system.getUsers().get(0);
         userWithoutCard.rentBicyclePlanning(system, PointFactory.addPoint(0, 0), PointFactory.addPoint(20, 20), BicycleFactory.createElectricalBicycle());
