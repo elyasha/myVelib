@@ -610,6 +610,7 @@ public class User {
     /**
      * @param system: the system the user is using
      * @param userID: the ID the user wants to see
+     * @return A string to see the current status
      */
     public String seeCurrentStatus(MyVelibSystem system, int userID) {
         if (this.id == userID) {
@@ -630,6 +631,7 @@ public class User {
      *
      * @param system:    the system the user is using
      * @param stationID: the station id the user wants to see
+     * @return A string to see the current status
      */
     public String seeCurrentStationState(MyVelibSystem system, int stationID) {
         // user can only see what is in its system
@@ -665,6 +667,7 @@ public class User {
      * Used to display the system the user is using
      *
      * @param system: the system the user is using
+     * @return A string to see the current status
      */
     public String displaySystemReport(MyVelibSystem system) {
         if (system.getUsers().contains(this)) {
